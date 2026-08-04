@@ -15,6 +15,10 @@ export function absoluteUrl(path: string): string {
   return `${getSiteUrl()}${normalized}`;
 }
 
+export function defaultOgImageUrl(): string {
+  return absoluteUrl("/opengraph-image");
+}
+
 export interface PageMetadataInput {
   title: string;
   description: string;
@@ -29,11 +33,15 @@ export function createPageMetadata({
   index = isProduction(),
 }: PageMetadataInput): Metadata {
   const url = absoluteUrl(path);
+  const ogImage = defaultOgImageUrl();
 
   return {
     title,
     description,
-    alternates: { canonical: url },
+    alternates: {
+      canonical: url,
+      languages: { "fr-FR": url },
+    },
     openGraph: {
       title,
       description,
@@ -41,11 +49,13 @@ export function createPageMetadata({
       siteName: company.name,
       locale: "fr_FR",
       type: "website",
+      images: [{ url: ogImage, width: 1200, height: 630, alt: company.name }],
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
+      images: [ogImage],
     },
     robots: index ? { index: true, follow: true } : { index: false, follow: false },
   };

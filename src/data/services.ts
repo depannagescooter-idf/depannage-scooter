@@ -6,7 +6,7 @@ const servicesData: Service[] = [
     category: "depannage",
     name: "Réparation de crevaison",
     h1: "Dépannage crevaison scooter et moto en Île-de-France",
-    metaTitle: "Crevaison scooter moto IDF | DépannageScooter",
+    metaTitle: "Crevaison scooter moto IDF",
     metaDescription:
       "Crevaison sur route en Île-de-France ? Réparation sur place de pneu scooter ou moto, déplacement rapide 24h/24. Intervention en 25 à 40 minutes selon zone.",
     shortAnswer:
@@ -89,7 +89,7 @@ const servicesData: Service[] = [
     category: "depannage",
     name: "Remplacement de batterie",
     h1: "Dépannage batterie scooter et moto en Île-de-France",
-    metaTitle: "Batterie scooter moto IDF | DépannageScooter",
+    metaTitle: "Batterie scooter moto IDF",
     metaDescription:
       "Batterie à plat sur votre scooter ou moto en IDF ? Test, remplacement sur place et remise en route 24h/24. Compatible scooters, motos et maxi-scooters.",
     shortAnswer:
@@ -177,7 +177,7 @@ const servicesData: Service[] = [
     category: "depannage",
     name: "Démarrage et booster",
     h1: "Démarrage booster scooter et moto en Île-de-France",
-    metaTitle: "Démarrage booster moto IDF | DépannageScooter",
+    metaTitle: "Démarrage booster moto IDF",
     metaDescription:
       "Scooter ou moto qui ne démarre plus en IDF ? Démarrage au booster sur place, diagnostic rapide batterie ou carburant. Intervention 24h/24, 7j/7.",
     shortAnswer:
@@ -260,7 +260,7 @@ const servicesData: Service[] = [
     category: "depannage",
     name: "Panne d'essence",
     h1: "Panne d'essence scooter et moto en Île-de-France",
-    metaTitle: "Panne essence scooter moto IDF | DépannageScooter",
+    metaTitle: "Panne essence scooter moto IDF",
     metaDescription:
       "Réservoir vide ou panne d'essence en IDF ? Livraison de carburant sur place pour scooter et moto, remise en route rapide. Disponible 24h/24.",
     shortAnswer:
@@ -348,7 +348,7 @@ const servicesData: Service[] = [
     category: "depannage",
     name: "Ouverture de selle bloquée",
     h1: "Ouverture de selle bloquée scooter et moto en IDF",
-    metaTitle: "Selle bloquée scooter moto IDF | DépannageScooter",
+    metaTitle: "Selle bloquée scooter moto IDF",
     metaDescription:
       "Selle ou trappe bloquée sur votre scooter ou moto en IDF ? Ouverture sans casse, accès au réservoir et au coffre. Technicien sur place 24h/24.",
     shortAnswer:
@@ -431,7 +431,7 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Remorquage de scooter",
     h1: "Remorquage de scooter en Île-de-France",
-    metaTitle: "Remorquage scooter IDF | DépannageScooter",
+    metaTitle: "Remorquage scooter IDF",
     metaDescription:
       "Remorquage de scooter en panne en Île-de-France : chargement sécurisé, transport vers garage ou domicile. Disponible 24h/24, plateau adapté 2-roues.",
     shortAnswer:
@@ -519,7 +519,7 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Remorquage de moto",
     h1: "Remorquage de moto en Île-de-France",
-    metaTitle: "Remorquage moto IDF | DépannageScooter",
+    metaTitle: "Remorquage moto IDF",
     metaDescription:
       "Remorquage de moto en panne en Île-de-France : plateau sécurisé, transport vers garage ou concession. Toutes cylindrées, service disponible 24h/24.",
     shortAnswer:
@@ -602,7 +602,7 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Remorquage moto accidentée",
     h1: "Remorquage de moto accidentée en Île-de-France",
-    metaTitle: "Moto accidentée remorquage IDF | DépannageScooter",
+    metaTitle: "Moto accidentée remorquage IDF",
     metaDescription:
       "Moto accidentée en IDF ? Enlèvement sécurisé sur plateau, véhicule endommagé ou non roulant. Transport vers garage, expert ou fourrière 24h/24.",
     shortAnswer:
@@ -690,7 +690,7 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Remorquage 3 roues",
     h1: "Remorquage scooter et moto 3 roues en Île-de-France",
-    metaTitle: "Remorquage 3 roues IDF | DépannageScooter",
+    metaTitle: "Remorquage 3 roues IDF",
     metaDescription:
       "Remorquage de scooters et motos 3 roues en IDF : Piaggio MP3, Can-Am, Yamaha Tricity. Plateau adapté, calage renforcé. Service disponible 24h/24.",
     shortAnswer:
@@ -773,7 +773,7 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Transfert garage et concession",
     h1: "Transfert de deux-roues vers garage ou concession en IDF",
-    metaTitle: "Transfert garage moto IDF | DépannageScooter",
+    metaTitle: "Transfert garage moto IDF",
     metaDescription:
       "Transfert planifié de scooter ou moto vers garage, concession ou expert en Île-de-France. Remorquage sur rendez-vous, véhicule roulant ou non.",
     shortAnswer:

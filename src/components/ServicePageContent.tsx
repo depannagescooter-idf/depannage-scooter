@@ -10,7 +10,7 @@ import { formatPrice, pricing } from "@/data/pricing";
 import type { Service } from "@/data/types";
 import { getServiceBySlug } from "@/data/services";
 import { getZoneBySlug } from "@/data/zones";
-import { breadcrumbSchema, faqPageSchema, serviceSchema } from "@/lib/schema";
+import { faqPageSchema, serviceSchema } from "@/lib/schema";
 
 const majorZoneSlugs = ["paris-11e", "paris-20e", "boulogne-billancourt", "montreuil", "nanterre"];
 
@@ -61,11 +61,6 @@ export function ServicePageContent({
             priceKey: service.priceKey,
           }),
           faqPageSchema(service.faqs),
-          breadcrumbSchema([
-            { name: "Accueil", path: "/" },
-            { name: hubLabel, path: hubPath },
-            { name: service.name },
-          ]),
         ]}
       />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">

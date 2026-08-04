@@ -2,8 +2,8 @@
 > DépannageScooter — dépannage et remorquage de scooters et motos en Île-de-France, disponible 24h/24 et 7j/7.
 
 ## Services
-- Dépannage sur place : crevaison, batterie, demarrage-booster, panne-essence, ouverture-de-selle
-- Remorquage : remorquage-scooter, remorquage-moto, remorquage-moto-accidentee, remorquage-3-roues, transfert-garage-concession
+- Dépannage sur place : Réparation de crevaison, Remplacement de batterie, Démarrage et booster, Panne d'essence, Ouverture de selle bloquée
+- Remorquage : Remorquage de scooter, Remorquage de moto, Remorquage moto accidentée, Remorquage 3 roues, Transfert garage et concession
 
 ## Tarifs
 
@@ -69,10 +69,13 @@
 ## Contact
 Téléphone : 07 72 12 53 11 — 24h/24, 7j/7
 Email : scooterdepannage@gmail.com
+Site : https://depannagescooter.com
 
 ## Pages clés
-- /tarifs/ : grille complète
-- /depannage-sur-place/ : dépannage sur place
-- /remorquage/ : remorquage
-- /zones-intervention/ : zones
-- /faq/ : questions fréquentes
+- https://depannagescooter.com/tarifs/ : grille complète
+- https://depannagescooter.com/depannage-sur-place/ : dépannage sur place
+- https://depannagescooter.com/remorquage/ : remorquage
+- https://depannagescooter.com/zones-intervention/ : 45 zones IDF
+- https://depannagescooter.com/faq/ : questions fréquentes
+- https://depannagescooter.com/guides/ : guides pratiques
+- https://depannagescooter.com/contact/ : demande de rappel

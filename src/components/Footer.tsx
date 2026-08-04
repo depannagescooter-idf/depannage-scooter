@@ -29,7 +29,7 @@ export function Footer() {
           <CallButton origin="footer" />
         </div>
 
-        <div className="grid gap-10 md:grid-cols-3">
+        <div className="grid gap-10 md:grid-cols-4">
           <section aria-labelledby="footer-nap">
             <h2 id="footer-nap" className="font-display text-sm font-semibold text-white">
               Contact
@@ -39,6 +39,8 @@ export function Footer() {
               <p>
                 <a
                   href={`tel:${company.phone}`}
+                  data-track-origin="footer"
+                  data-track-event="call_click"
                   className="font-data tabular-nums transition-colors hover:text-signal"
                 >
                   {company.phoneDisplay}
@@ -92,7 +94,29 @@ export function Footer() {
                 { href: "/remorquage/", label: "Remorquage" },
                 { href: "/tarifs/", label: "Tarifs" },
                 { href: "/faq/", label: "FAQ" },
+                { href: "/guides/", label: "Guides pratiques" },
                 { href: "/a-propos/", label: "À propos" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="text-stone-400 transition-colors hover:text-white">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          <section aria-labelledby="footer-info">
+            <h2 id="footer-info" className="font-display text-sm font-semibold text-white">
+              Informations
+            </h2>
+            <ul className="mt-4 space-y-2 text-sm">
+              {[
+                { href: "/contact/", label: "Contact" },
+                { href: "/avis/", label: "Avis clients" },
+                { href: "/zones-intervention/paris-11e/", label: "Dépannage Paris 11e" },
+                { href: "/depannage-sur-place/crevaison/", label: "Crevaison scooter" },
+                { href: "/remorquage/remorquage-scooter/", label: "Remorquage scooter" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-stone-400 transition-colors hover:text-white">

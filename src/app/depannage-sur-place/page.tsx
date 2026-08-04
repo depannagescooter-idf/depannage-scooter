@@ -7,7 +7,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { depannageServices } from "@/data/services";
 import { createPageMetadata } from "@/lib/metadata";
-import { breadcrumbSchema } from "@/lib/schema";
+import { itemListSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Dépannage scooter et moto sur place – IDF",
@@ -20,10 +20,20 @@ export default function DepannageHubPage() {
   return (
     <PageShell>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Accueil", path: "/" },
-          { name: "Dépannage sur place" },
-        ])}
+        data={[
+          webPageSchema({
+            name: "Dépannage scooter et moto sur place",
+            description: "Dépannage sur place en Île-de-France, 24h/24.",
+            path: "/depannage-sur-place/",
+          }),
+          itemListSchema({
+            name: "Services de dépannage sur place",
+            items: depannageServices.map((s) => ({
+              name: s.name,
+              url: `/depannage-sur-place/${s.slug}/`,
+            })),
+          }),
+        ]}
       />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Dépannage sur place" }]} />
@@ -37,8 +47,14 @@ export default function DepannageHubPage() {
             selle bloquée. Tarification : forfait + indemnité kilométrique. Disponible 24h/24.
           </ShortAnswer>
         </div>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap gap-3">
           <CallButton origin="inline" />
+          <Link href="/tarifs/" className="text-sm font-medium text-gyro hover:underline">
+            Voir les tarifs →
+          </Link>
+          <Link href="/zones-intervention/" className="text-sm font-medium text-gyro hover:underline">
+            Zones couvertes →
+          </Link>
         </div>
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {depannageServices.map((s) => (

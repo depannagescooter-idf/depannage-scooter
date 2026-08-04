@@ -9,7 +9,7 @@ import { company } from "@/data/company";
 import { depannageServices, remorquageServices } from "@/data/services";
 import type { Zone } from "@/data/types";
 import { getZoneBySlug } from "@/data/zones";
-import { autoRepairSchema, breadcrumbSchema } from "@/lib/schema";
+import { zoneLocalBusinessSchema } from "@/lib/schema";
 
 export function ZonePageContent({ zone }: { zone: Zone }) {
   const neighbours = zone.neighbours
@@ -20,16 +20,7 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
 
   return (
     <>
-      <JsonLd
-        data={[
-          autoRepairSchema(zone.name),
-          breadcrumbSchema([
-            { name: "Accueil", path: "/" },
-            { name: "Zones", path: "/zones-intervention/" },
-            { name: zone.name },
-          ]),
-        ]}
-      />
+      <JsonLd data={zoneLocalBusinessSchema(zone)} />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb
           items={[
@@ -85,6 +76,9 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
             <div className="mt-4">
               <PriceTable showDsp={false} showSurcharges={false} />
             </div>
+            <Link href="/tarifs/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
+              Grille complète et majorations →
+            </Link>
           </section>
 
           <section className="mt-10">

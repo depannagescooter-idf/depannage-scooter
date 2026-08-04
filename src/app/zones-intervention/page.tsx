@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { publishedZones, getZonesByDepartement } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
-import { breadcrumbSchema } from "@/lib/schema";
+import { itemListSchema, webPageSchema } from "@/lib/schema";
 
 const deptLabels: Record<string, string> = {
   "75": "Paris",
@@ -28,10 +28,20 @@ export default function ZonesHubPage() {
   return (
     <PageShell>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Accueil", path: "/" },
-          { name: "Zones d'intervention" },
-        ])}
+        data={[
+          webPageSchema({
+            name: "Zones d'intervention DépannageScooter",
+            description: "Paris et petite couronne — dépannage et remorquage 24h/24.",
+            path: "/zones-intervention/",
+          }),
+          itemListSchema({
+            name: "Zones d'intervention",
+            items: publishedZones.map((z) => ({
+              name: z.name,
+              url: `/zones-intervention/${z.slug}/`,
+            })),
+          }),
+        ]}
       />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Zones" }]} />

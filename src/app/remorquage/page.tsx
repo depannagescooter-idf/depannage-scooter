@@ -8,7 +8,7 @@ import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { remorquageServices } from "@/data/services";
 import { createPageMetadata } from "@/lib/metadata";
-import { breadcrumbSchema } from "@/lib/schema";
+import { itemListSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Remorquage moto et scooter Île-de-France 24h/24",
@@ -21,10 +21,20 @@ export default function RemorquageHubPage() {
   return (
     <PageShell>
       <JsonLd
-        data={breadcrumbSchema([
-          { name: "Accueil", path: "/" },
-          { name: "Remorquage" },
-        ])}
+        data={[
+          webPageSchema({
+            name: "Remorquage scooter et moto",
+            description: "Remorquage sur plateau en Île-de-France, 24h/24.",
+            path: "/remorquage/",
+          }),
+          itemListSchema({
+            name: "Services de remorquage",
+            items: remorquageServices.map((s) => ({
+              name: s.name,
+              url: `/remorquage/${s.slug}/`,
+            })),
+          }),
+        ]}
       />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Remorquage" }]} />
@@ -38,8 +48,11 @@ export default function RemorquageHubPage() {
             domicile, garage ou concession. Disponible 24h/24.
           </ShortAnswer>
         </div>
-        <div className="mt-6">
+        <div className="mt-6 flex flex-wrap gap-3">
           <CallButton origin="inline" />
+          <Link href="/zones-intervention/" className="text-sm font-medium text-gyro hover:underline">
+            Zones couvertes →
+          </Link>
         </div>
         <ul className="mt-10 grid gap-4 sm:grid-cols-2">
           {remorquageServices.map((s) => (
@@ -55,6 +68,9 @@ export default function RemorquageHubPage() {
           <div className="mt-4">
             <PriceTable showDsp={false} />
           </div>
+          <Link href="/tarifs/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
+            Grille complète →
+          </Link>
         </section>
       </main>
     </PageShell>

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { guides } from "@/data/guides";
+import { getVerifiedReviews } from "@/data/reviews";
 import { depannageServices, remorquageServices } from "@/data/services";
 import { getPublishedZoneSlugs } from "@/data/zones";
 import { getSiteUrl } from "@/lib/metadata";
@@ -7,25 +8,29 @@ import { getSiteUrl } from "@/lib/metadata";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
   const now = new Date();
+  const hasReviews = getVerifiedReviews().length > 0;
 
-  const staticPages = [
-    "",
-    "/depannage-sur-place/",
-    "/remorquage/",
-    "/tarifs/",
-    "/zones-intervention/",
-    "/guides/",
-    "/faq/",
-    "/avis/",
-    "/a-propos/",
-    "/contact/",
+  const staticPages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] }[] = [
+    { path: "", priority: 1, changeFrequency: "weekly" },
+    { path: "/depannage-sur-place/", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/remorquage/", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/tarifs/", priority: 0.95, changeFrequency: "monthly" },
+    { path: "/zones-intervention/", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/guides/", priority: 0.75, changeFrequency: "weekly" },
+    { path: "/faq/", priority: 0.8, changeFrequency: "monthly" },
+    { path: "/a-propos/", priority: 0.6, changeFrequency: "monthly" },
+    { path: "/contact/", priority: 0.85, changeFrequency: "monthly" },
   ];
 
-  const entries: MetadataRoute.Sitemap = staticPages.map((path) => ({
+  if (hasReviews) {
+    staticPages.push({ path: "/avis/", priority: 0.65, changeFrequency: "monthly" });
+  }
+
+  const entries: MetadataRoute.Sitemap = staticPages.map(({ path, priority, changeFrequency }) => ({
     url: `${base}${path || "/"}`,
     lastModified: now,
-    changeFrequency: path === "" ? "weekly" : "monthly",
-    priority: path === "" ? 1 : path.includes("tarifs") ? 0.9 : 0.8,
+    changeFrequency,
+    priority,
   }));
 
   for (const s of depannageServices) {
@@ -51,7 +56,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       url: `${base}/zones-intervention/${slug}/`,
       lastModified: now,
       changeFrequency: "monthly",
-      priority: 0.75,
+      priority: 0.8,
     });
   }
 

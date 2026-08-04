@@ -8,7 +8,7 @@ import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { company } from "@/data/company";
 import { createPageMetadata } from "@/lib/metadata";
-import { breadcrumbSchema, offerCatalogSchema } from "@/lib/schema";
+import { offerCatalogSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Tarifs dépannage & remorquage moto IDF",
@@ -20,15 +20,7 @@ export const metadata: Metadata = createPageMetadata({
 export default function TarifsPage() {
   return (
     <PageShell>
-      <JsonLd
-        data={[
-          offerCatalogSchema(),
-          breadcrumbSchema([
-            { name: "Accueil", path: "/" },
-            { name: "Tarifs" },
-          ]),
-        ]}
-      />
+      <JsonLd data={offerCatalogSchema()} />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Tarifs" }]} />
         <h1 className="mt-6 font-display text-3xl font-extrabold text-asphalte sm:text-4xl">

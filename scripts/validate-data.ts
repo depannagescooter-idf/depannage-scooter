@@ -38,6 +38,9 @@ else ok("Slugs uniques");
 // Services
 for (const s of services) {
   if (s.metaTitle.length > 60) fail(`${s.slug}: metaTitle ${s.metaTitle.length} > 60`);
+  if (s.metaTitle.includes("DépannageScooter")) {
+    fail(`${s.slug}: metaTitle ne doit pas inclure la marque (template layout)`);
+  }
   if (s.metaDescription.length < 140 || s.metaDescription.length > 158) {
     fail(`${s.slug}: metaDescription ${s.metaDescription.length} hors 140-158`);
   }

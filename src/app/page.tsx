@@ -13,9 +13,10 @@ import { globalFaqs } from "@/data/faqs";
 import { formatPrice, pricing } from "@/data/pricing";
 import { depannageServices, remorquageServices } from "@/data/services";
 import { publishedZones } from "@/data/zones";
+import { guides } from "@/data/guides";
 import { createPageMetadata } from "@/lib/metadata";
 import {
-  autoRepairSchema,
+  localBusinessSchema,
   faqPageSchema,
   organizationSchema,
   webSiteSchema,
@@ -38,7 +39,7 @@ export default function HomePage() {
         data={[
           organizationSchema(),
           webSiteSchema(),
-          autoRepairSchema(),
+          localBusinessSchema(),
           faqPageSchema(previewFaqs),
         ]}
       />
@@ -154,6 +155,26 @@ export default function HomePage() {
         </div>
         <Link href="/tarifs/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
           Grille complète et majorations →
+        </Link>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <h2 className="section-title">Guides pratiques</h2>
+        <ul className="mt-6 grid gap-3 sm:grid-cols-2">
+          {guides.slice(0, 4).map((g) => (
+            <li key={g.slug}>
+              <Link
+                href={`/guides/${g.slug}/`}
+                className="card block px-5 py-4 transition-shadow hover:shadow-card"
+              >
+                <span className="font-display font-semibold text-asphalte">{g.title}</span>
+                <p className="mt-1 text-sm text-beton line-clamp-2">{g.shortAnswer}</p>
+              </Link>
+            </li>
+          ))}
+        </ul>
+        <Link href="/guides/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
+          Tous les guides →
         </Link>
       </section>
 

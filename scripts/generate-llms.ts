@@ -9,13 +9,15 @@ import { depannageServices, remorquageServices } from "../src/data/services";
 import { formatPrice, pricing } from "../src/data/pricing";
 import { publishedZones } from "../src/data/zones";
 
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? company.url).replace(/\/$/, "");
+
 const lines: string[] = [
   `# ${company.name}`,
   `> ${company.description}`,
   "",
   "## Services",
-  "- Dépannage sur place : " + depannageServices.map((s) => s.slug).join(", "),
-  "- Remorquage : " + remorquageServices.map((s) => s.slug).join(", "),
+  "- Dépannage sur place : " + depannageServices.map((s) => s.name).join(", "),
+  "- Remorquage : " + remorquageServices.map((s) => s.name).join(", "),
   "",
   "## Tarifs",
   "",
@@ -38,13 +40,16 @@ lines.push(
   "## Contact",
   `Téléphone : ${company.phoneDisplay} — ${company.openingHours}`,
   `Email : ${company.email}`,
+  `Site : ${siteUrl}`,
   "",
   "## Pages clés",
-  "- /tarifs/ : grille complète",
-  "- /depannage-sur-place/ : dépannage sur place",
-  "- /remorquage/ : remorquage",
-  "- /zones-intervention/ : zones",
-  "- /faq/ : questions fréquentes",
+  `- ${siteUrl}/tarifs/ : grille complète`,
+  `- ${siteUrl}/depannage-sur-place/ : dépannage sur place`,
+  `- ${siteUrl}/remorquage/ : remorquage`,
+  `- ${siteUrl}/zones-intervention/ : ${publishedZones.length} zones IDF`,
+  `- ${siteUrl}/faq/ : questions fréquentes`,
+  `- ${siteUrl}/guides/ : guides pratiques`,
+  `- ${siteUrl}/contact/ : demande de rappel`,
   "",
 );
 

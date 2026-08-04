@@ -7,8 +7,9 @@ import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { guides, getGuideBySlug } from "@/data/guides";
+import { guideRelatedLinks } from "@/lib/guide-links";
 import { createPageMetadata } from "@/lib/metadata";
-import { breadcrumbSchema } from "@/lib/schema";
+import { articleSchema } from "@/lib/schema";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -32,28 +33,19 @@ export default async function GuidePage({ params }: Props) {
   const guide = getGuideBySlug(slug);
   if (!guide) notFound();
 
+  const related = guideRelatedLinks[slug] ?? [];
+
   return (
     <PageShell>
       <JsonLd
-        data={[
-          {
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: guide.title,
-            description: guide.shortAnswer,
-            author: {
-              "@type": "Person",
-              name: guide.author.name,
-              jobTitle: guide.author.role,
-            },
-            datePublished: guide.publishedAt,
-          },
-          breadcrumbSchema([
-            { name: "Accueil", path: "/" },
-            { name: "Guides", path: "/guides/" },
-            { name: guide.title },
-          ]),
-        ]}
+        data={articleSchema({
+          title: guide.title,
+          description: guide.shortAnswer,
+          path: `/guides/${guide.slug}/`,
+          publishedAt: guide.publishedAt,
+          authorName: guide.author.name,
+          authorRole: guide.author.role,
+        })}
       />
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
         <Breadcrumb
@@ -79,6 +71,23 @@ export default async function GuidePage({ params }: Props) {
               <p className="mt-3 leading-relaxed text-beton">{section.answer}</p>
             </section>
           ))}
+          {related.length > 0 && (
+            <section className="mt-10">
+              <h2 className="section-title">Pages utiles</h2>
+              <ul className="mt-4 flex flex-wrap gap-2">
+                {related.map((link) => (
+                  <li key={link.href}>
+                    <Link
+                      href={link.href}
+                      className="rounded-full border border-border px-3 py-1.5 text-sm font-medium text-asphalte hover:border-signal hover:text-signal"
+                    >
+                      {link.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </section>
+          )}
           <div className="card mt-12 px-6 py-8 text-center">
             <p className="font-display font-semibold text-asphalte">Besoin d&apos;une intervention ?</p>
             <div className="mt-4 flex justify-center">

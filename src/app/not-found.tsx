@@ -3,14 +3,12 @@ import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { CallButton } from "@/components/CallButton";
 import { depannageServices, remorquageServices } from "@/data/services";
-import { createPageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = createPageMetadata({
+export const metadata: Metadata = {
   title: "Page introuvable",
-  description: "Page introuvable.",
-  path: "/404/",
-  index: false,
-});
+  description: "Cette page n'existe pas. Contactez DépannageScooter pour une intervention 24h/24.",
+  robots: { index: false, follow: true },
+};
 
 export default function NotFound() {
   return (

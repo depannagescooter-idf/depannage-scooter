@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { JsonLd } from "@/components/JsonLd";
-import { company } from "@/data/company";
+import { breadcrumbSchema } from "@/lib/schema";
 
 export interface BreadcrumbItem {
   label: string;
@@ -12,16 +12,12 @@ export interface BreadcrumbProps {
 }
 
 export function Breadcrumb({ items }: BreadcrumbProps) {
-  const jsonLd = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
-      position: index + 1,
+  const jsonLd = breadcrumbSchema(
+    items.map((item) => ({
       name: item.label,
-      ...(item.href ? { item: `${company.url}${item.href}` } : {}),
+      path: item.href,
     })),
-  };
+  );
 
   return (
     <>
