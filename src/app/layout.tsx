@@ -24,10 +24,13 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
+const isProduction = process.env.NEXT_PUBLIC_ENV === "production";
+
 export const metadata: Metadata = {
   title: "DépannageScooter — dépannage scooter & moto 24h/24",
-  description: "Dépannage et remorquage de scooters et motos en Île-de-France.",
-  robots: { index: false, follow: false },
+  description:
+    "Dépannage et remorquage de scooters et motos en Île-de-France, 24h/24 et 7j/7. Appelez le 07 72 12 53 11.",
+  robots: isProduction ? { index: true, follow: true } : { index: false, follow: false },
 };
 
 export default function RootLayout({

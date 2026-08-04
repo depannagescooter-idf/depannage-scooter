@@ -44,7 +44,22 @@ npm run build                # vérification production
 - [ ] Phase 6 — Conversion et mesure
 - [ ] Phase 7 — Recette
 
-Pour enchaîner : *« Exécute la Phase 1 de ROADMAP.md »*
+## Déploiement Vercel
+
+1. [vercel.com](https://vercel.com) → compte `scooterdepannage@gmail.com`
+2. **Import** → `depannagescooter-idf/depannage-scooter`
+3. Variables d'environnement :
+
+| Variable | Valeur |
+|---|---|
+| `NEXT_PUBLIC_ENV` | `production` |
+| `NEXT_PUBLIC_SITE_URL` | `https://depannagescooter.fr` |
+| `CONTACT_EMAIL` | `contact@depannagescooter.fr` |
+
+4. Région : **Paris (cdg1)** — configurée dans `vercel.json`
+5. Domaine : **Settings → Domains** → `depannagescooter.fr`
+
+Chaque `git push` sur `main` redéploie automatiquement.
 
 ## À remplir avant de commencer
 
