@@ -88,7 +88,22 @@ export const pricing: PricingConfig = {
     lat: 48.8566,
     lng: 2.3522,
   },
+  difficultySurcharge: {
+    label: "Supplément pénibilité (sous-sol, selle Neiman, accidenté)",
+    amount: 30,
+  },
 };
+
+/** Fourchette tarifaire remorquage (Paris min → 30+ km max). */
+export function getTowingPriceRangeLabel(): string {
+  const amounts = Object.values(pricing.towing)
+    .map((t) => t.amount)
+    .filter((a): a is number => a !== null);
+  if (amounts.length === 0) return "Sur devis";
+  const min = Math.min(...amounts);
+  const max = Math.max(...amounts);
+  return `${formatPrice(min)} à ${formatPrice(max)}`;
+}
 
 /** Formate un montant ou affiche un placeholder si non renseigné. */
 export function formatPrice(amount: number | null, currency = pricing.currency): string {

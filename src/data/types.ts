@@ -112,4 +112,8 @@ export interface PricingConfig {
     lat: number | null;
     lng: number | null;
   };
+  difficultySurcharge: {
+    label: string;
+    amount: number;
+  };
 }

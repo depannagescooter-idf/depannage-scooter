@@ -65,7 +65,7 @@ export const guides: Guide[] = [
     metaDescription:
       "Tarifs remorquage moto et scooter en IDF : forfait Paris, paliers km, majorations nuit et week-end. Grille transparente et facteurs de prix.",
     shortAnswer:
-      "En Île-de-France, un remorquage moto ou scooter coûte généralement entre 85 et 155 € en journée selon la distance, Paris intra-muros étant au forfait le plus bas. Nuit, week-end et situations complexes (sous-sol, accident) entraînent des majorations.",
+      "En Île-de-France, le tarif remorquage dépend de la distance (Paris intra-muros au forfait le plus bas, puis paliers kilométriques). Consultez la grille à jour sur la page tarifs. Nuit, week-end et situations complexes entraînent des majorations.",
     intro:
       "Le prix d'un remorquage dépend moins du type de moto que de la distance, de l'horaire et de la difficulté d'accès. Voici comment lire une grille tarifaire et éviter les mauvaises surprises.",
     sections: [

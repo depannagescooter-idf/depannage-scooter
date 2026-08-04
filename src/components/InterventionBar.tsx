@@ -15,29 +15,29 @@ export function InterventionBar({ etaMinutes: etaProp }: InterventionBarProps) {
 
   return (
     <aside
-      className="pointer-events-none fixed inset-x-0 bottom-0 z-50 px-3 pb-3 sm:px-4 sm:pb-4"
+      className="pointer-events-none fixed inset-x-0 bottom-0 z-50 px-0 pb-0"
       aria-label="Bandeau d'intervention"
     >
-      <div className="pointer-events-auto mx-auto flex max-w-lg items-center gap-3 rounded-2xl border border-border-soft bg-surface/95 p-3 shadow-float backdrop-blur-xl sm:max-w-xl sm:gap-4 sm:p-4">
+      <div className="pointer-events-auto mx-auto flex max-w-2xl items-center gap-3 border-t border-white/10 bg-asphalte px-4 py-3 sm:gap-4 sm:px-6">
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <span className="relative flex size-10 shrink-0 items-center justify-center rounded-xl bg-alerte/10">
-            <span className="status-dot" aria-hidden="true" />
+          <span className="relative flex size-2.5 shrink-0 rounded-full bg-[#FFC300]" aria-hidden="true">
+            <span className="absolute inset-0 animate-ping rounded-full bg-[#FFC300]/60" />
           </span>
           <div className="min-w-0">
-            <p className="truncate text-xs font-semibold text-alerte sm:text-sm">
+            <p className="truncate text-xs font-semibold uppercase tracking-wide text-[#FFC300] sm:text-sm">
               Équipes disponibles
             </p>
-            <p className="flex items-center gap-1 truncate text-xs text-beton sm:text-sm">
+            <p className="flex items-center gap-1 truncate text-xs text-stone-300 sm:text-sm">
               <Clock className="size-3 shrink-0" aria-hidden="true" />
               <span>
                 {zoneName ? (
                   <>
-                    <span className="font-semibold text-asphalte">{zoneName}</span>
+                    <span className="font-semibold text-white">{zoneName}</span>
                     {" · "}
                   </>
                 ) : null}
-                Arrivée en{" "}
-                <span className="font-data font-semibold tabular-nums text-asphalte">
+                Arrivée{" "}
+                <span className="font-data font-semibold tabular-nums text-white">
                   {min}–{max} min
                 </span>
               </span>
@@ -48,7 +48,7 @@ export function InterventionBar({ etaMinutes: etaProp }: InterventionBarProps) {
           href={`tel:${company.phone}`}
           data-track-origin="intervention-bar"
           data-track-event="call_click"
-          className="btn-primary flex shrink-0 items-center gap-2 rounded-full px-4 py-2.5 font-display text-sm font-semibold text-white sm:px-5"
+          className="btn-primary flex shrink-0 items-center gap-2 rounded-sm px-4 py-2.5 font-display text-sm font-semibold text-white sm:px-5"
           aria-label={`Appeler ${company.name}`}
         >
           <Phone className="size-4" strokeWidth={2.5} aria-hidden="true" />

@@ -7,6 +7,7 @@ import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { company } from "@/data/company";
+import { pricing } from "@/data/pricing";
 import { createPageMetadata } from "@/lib/metadata";
 import { offerCatalogSchema } from "@/lib/schema";
 
@@ -44,7 +45,7 @@ export default function TarifsPage() {
           <h2 className="font-display font-semibold text-asphalte">Mentions tarifaires</h2>
           <ul className="mt-2 list-inside list-disc space-y-1">
             <li>Tarifs TTC, jour (8h–20h) sauf majorations indiquées.</li>
-            <li>Supplément pénibilité (+30 €) : sous-sol, Neiman bloqué, véhicule accidenté.</li>
+            <li>Supplément pénibilité (+{pricing.difficultySurcharge.amount} €) : sous-sol, Neiman bloqué, véhicule accidenté.</li>
             <li>Distance = lieu de panne → destination (remorquage).</li>
             <li>Aucune intervention sans accord préalable sur le montant.</li>
           </ul>

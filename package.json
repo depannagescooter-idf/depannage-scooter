@@ -6,6 +6,7 @@
     "dev": "next dev --turbopack",
     "generate:llms": "npx tsx scripts/generate-llms.ts",
     "validate:data": "npx tsx scripts/validate-data.ts",
+    "check:nojs": "npx tsx scripts/check-nojs.ts",
     "prebuild": "npm run generate:llms",
     "build": "next build",
     "start": "next start",

@@ -1,23 +1,24 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock, Phone, Shield, Wrench } from "lucide-react";
+import { Clock, Phone, Shield, Star, Wrench } from "lucide-react";
 import { PageShell } from "@/components/PageShell";
 import { CallButton } from "@/components/CallButton";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { PriceTable } from "@/components/PriceTable";
+import { ReassuranceStrip } from "@/components/ReassuranceStrip";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { company } from "@/data/company";
 import { globalFaqs } from "@/data/faqs";
+import { guides } from "@/data/guides";
 import { formatPrice, pricing } from "@/data/pricing";
 import { depannageServices, remorquageServices } from "@/data/services";
 import { publishedZones } from "@/data/zones";
-import { guides } from "@/data/guides";
 import { createPageMetadata } from "@/lib/metadata";
 import {
-  localBusinessSchema,
   faqPageSchema,
+  localBusinessSchema,
   organizationSchema,
   webSiteSchema,
 } from "@/lib/schema";
@@ -47,7 +48,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_-10%,rgb(249_115_22/0.12),transparent)]" />
         <div className="relative mx-auto max-w-6xl">
-          <span className="inline-flex items-center rounded-full bg-alerte/10 px-3 py-1 text-xs font-semibold text-alerte">
+          <span className="inline-flex items-center rounded-sm bg-[#FFC300]/15 px-3 py-1 text-xs font-semibold text-[#b8860b]">
             ● Équipes disponibles — {company.openingHours}
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight text-asphalte sm:text-5xl lg:text-6xl">
@@ -69,15 +70,25 @@ export default function HomePage() {
             <WhatsAppButton origin="hero" />
           </div>
 
-          <dl className="mt-10 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <ReassuranceStrip />
+
+          <dl className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
-              { icon: Clock, label: "Délai moyen", value: `${company.defaultEtaMinutes[0]}–${company.defaultEtaMinutes[1]} min` },
+              {
+                icon: Clock,
+                label: "Délai moyen",
+                value: `${company.defaultEtaMinutes[0]}–${company.defaultEtaMinutes[1]} min`,
+              },
               { icon: Shield, label: "Disponibilité", value: company.openingHours },
-              { icon: Wrench, label: "Paris intra-muros", value: formatPrice(pricing.towing.PARIS_INTRA_MUROS.amount) },
+              {
+                icon: Wrench,
+                label: "Paris intra-muros",
+                value: formatPrice(pricing.towing.PARIS_INTRA_MUROS.amount),
+              },
               { icon: Phone, label: "Devis", value: "Avant départ" },
             ].map(({ icon: Icon, label, value }) => (
               <div key={label} className="card flex items-center gap-4 px-5 py-4">
-                <span className="flex size-10 shrink-0 items-center justify-center rounded-xl bg-signal/10 text-signal">
+                <span className="flex size-10 shrink-0 items-center justify-center rounded-sm bg-signal/10 text-signal">
                   <Icon className="size-5" aria-hidden="true" />
                 </span>
                 <div>
@@ -91,7 +102,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <h2 className="section-title">Dépannage sur place</h2>
+        <h2 className="section-title">Quels dépannages sur place en Île-de-France ?</h2>
         <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {depannageServices.map((s) => (
             <li key={s.slug}>
@@ -105,13 +116,16 @@ export default function HomePage() {
             </li>
           ))}
         </ul>
-        <Link href="/depannage-sur-place/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
+        <Link
+          href="/depannage-sur-place/"
+          className="mt-4 inline-block text-sm font-medium text-gyro hover:underline"
+        >
           Tous les dépannages →
         </Link>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <h2 className="section-title">Remorquage</h2>
+        <h2 className="section-title">Quand faut-il un remorquage scooter ou moto ?</h2>
         <ul className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
           {remorquageServices.map((s) => (
             <li key={s.slug}>
@@ -130,26 +144,29 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <h2 className="section-title">Zones d&apos;intervention</h2>
+        <h2 className="section-title">Où intervenons-nous en Île-de-France ?</h2>
         <ul className="mt-6 flex flex-wrap gap-2">
           {previewZones.map((z) => (
             <li key={z.slug}>
               <Link
                 href={`/zones-intervention/${z.slug}/`}
-                className="rounded-full border border-border bg-surface px-3 py-1.5 text-sm transition-colors hover:border-signal hover:text-signal"
+                className="rounded-sm border border-border bg-surface px-3 py-1.5 text-sm transition-colors hover:border-signal hover:text-signal"
               >
                 {z.name}
               </Link>
             </li>
           ))}
         </ul>
-        <Link href="/zones-intervention/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
+        <Link
+          href="/zones-intervention/"
+          className="mt-4 inline-block text-sm font-medium text-gyro hover:underline"
+        >
           {publishedZones.length} zones en Île-de-France →
         </Link>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <h2 className="section-title">Tarifs transparents</h2>
+        <h2 className="section-title">Combien coûte un dépannage ou remorquage ?</h2>
         <div className="mt-6">
           <PriceTable showSurcharges={false} />
         </div>
@@ -159,7 +176,23 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <h2 className="section-title">Guides pratiques</h2>
+        <h2 className="section-title">Que disent nos clients ?</h2>
+        <div className="card mt-6 px-6 py-8 text-center">
+          <Star className="mx-auto size-8 text-signal" aria-hidden="true" />
+          <p className="mt-4 font-display text-lg font-semibold text-asphalte">
+            Avis clients vérifiés bientôt disponibles
+          </p>
+          <p className="mt-2 text-sm text-beton">
+            Après votre intervention, laissez-nous un avis sur Google ou consultez la page dédiée.
+          </p>
+          <Link href="/avis/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
+            Page avis →
+          </Link>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <h2 className="section-title">Quels guides pour votre panne ?</h2>
         <ul className="mt-6 grid gap-3 sm:grid-cols-2">
           {guides.slice(0, 4).map((g) => (
             <li key={g.slug}>
@@ -179,7 +212,7 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 pb-16 sm:px-6">
-        <h2 className="section-title">Questions fréquentes</h2>
+        <h2 className="section-title">Questions fréquentes sur le dépannage 2-roues</h2>
         <div className="mt-6">
           <FaqAccordion items={previewFaqs} id="home-faq" />
         </div>

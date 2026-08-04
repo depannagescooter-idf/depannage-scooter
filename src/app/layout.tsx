@@ -2,10 +2,7 @@ import type { Metadata } from "next";
 import { DM_Sans, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import { AnalyticsProvider, GoogleAnalyticsScript } from "@/components/AnalyticsProvider";
-import { CookieConsent } from "@/components/CookieConsent";
-import { GeolocationProvider } from "@/components/GeolocationProvider";
-import { InterventionBar } from "@/components/InterventionBar";
+import { ClientChrome } from "@/components/ClientChrome";
 import { company } from "@/data/company";
 import { isProduction } from "@/lib/metadata";
 import "./globals.css";
@@ -55,13 +52,8 @@ export default function RootLayout({
       className={`${jakarta.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
     >
       <body className="has-intervention-bar">
-        <GeolocationProvider>
-          {children}
-          <InterventionBar />
-        </GeolocationProvider>
-        <CookieConsent />
-        <AnalyticsProvider />
-        <GoogleAnalyticsScript />
+        {children}
+        <ClientChrome />
         <Analytics />
         <SpeedInsights />
       </body>

@@ -63,11 +63,11 @@ export default function AProposPage() {
               démarrage au booster
             </Link>
             ,{" "}
-            <Link href="/depannage-sur-place/essence/" className="text-gyro hover:underline">
+            <Link href="/depannage-sur-place/panne-essence/" className="text-gyro hover:underline">
               panne d&apos;essence
             </Link>{" "}
             et{" "}
-            <Link href="/depannage-sur-place/selle/" className="text-gyro hover:underline">
+            <Link href="/depannage-sur-place/ouverture-de-selle/" className="text-gyro hover:underline">
               selle bloquée
             </Link>
             . Si la réparation sur place n&apos;est pas possible, nous proposons un{" "}

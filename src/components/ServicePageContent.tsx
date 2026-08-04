@@ -6,25 +6,13 @@ import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { company } from "@/data/company";
-import { formatPrice, pricing } from "@/data/pricing";
+import { ServicePriceTable } from "@/components/ServicePriceTable";
 import type { Service } from "@/data/types";
 import { getServiceBySlug } from "@/data/services";
 import { getZoneBySlug } from "@/data/zones";
 import { faqPageSchema, serviceSchema } from "@/lib/schema";
 
 const majorZoneSlugs = ["paris-11e", "paris-20e", "boulogne-billancourt", "montreuil", "nanterre"];
-
-function getPriceLabel(priceKey: string): string {
-  if (priceKey in pricing.dsp) {
-    const tier = pricing.dsp[priceKey as keyof typeof pricing.dsp];
-    return `Forfait ${formatPrice(tier.baseFee)} + ${tier.perKm} €/km`;
-  }
-  if (priceKey in pricing.towing) {
-    const tier = pricing.towing[priceKey as keyof typeof pricing.towing];
-    return formatPrice(tier.amount);
-  }
-  return "Sur devis";
-}
 
 export function ServicePageContent({
   service,
@@ -118,13 +106,10 @@ export function ServicePageContent({
 
           <section className="mt-10">
             <h2 className="section-title">Combien ça coûte ?</h2>
-            <p className="mt-2 text-beton">
-              Tarif de référence pour cette prestation :{" "}
-              <span className="font-data font-semibold tabular-nums text-signal">
-                {getPriceLabel(service.priceKey)}
-              </span>
-              . Majorations nuit et week-end applicables.
-            </p>
+            <div className="mt-4">
+              <ServicePriceTable priceKey={service.priceKey} />
+            </div>
+            <p className="mt-3 text-sm text-beton">Majorations nuit, week-end et jours fériés applicables.</p>
             <p className="mt-2">
               <Link href="/tarifs/" className="font-medium text-gyro hover:underline">
                 Voir la grille tarifaire complète →

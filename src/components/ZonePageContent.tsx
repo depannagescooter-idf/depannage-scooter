@@ -5,10 +5,10 @@ import { JsonLd } from "@/components/JsonLd";
 import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { company } from "@/data/company";
 import { depannageServices, remorquageServices } from "@/data/services";
 import type { Zone } from "@/data/types";
 import { getZoneBySlug } from "@/data/zones";
+import { buildZoneShortAnswer } from "@/lib/zone-short-answer";
 import { zoneLocalBusinessSchema } from "@/lib/schema";
 
 export function ZonePageContent({ zone }: { zone: Zone }) {
@@ -16,7 +16,7 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
     .map((slug) => getZoneBySlug(slug))
     .filter((z): z is Zone => Boolean(z));
 
-  const shortAnswer = `${company.name} intervient à ${zone.name} pour dépannage et remorquage scooter et moto, 24h/24. Délai habituel : ${zone.etaMinutes[0]} à ${zone.etaMinutes[1]} minutes. Appelez le ${company.phoneDisplay} pour un devis ferme avant déplacement.`;
+  const shortAnswer = buildZoneShortAnswer(zone);
 
   return (
     <>
@@ -127,6 +127,19 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
             </section>
           )}
         </article>
+
+        <section className="card mt-12 bg-gradient-to-br from-signal/5 to-gyro/5 px-6 py-8 text-center">
+          <h2 className="font-display text-xl font-bold text-asphalte">
+            Panne à {zone.name} ?
+          </h2>
+          <p className="mt-2 text-beton">
+            Délai {zone.etaMinutes[0]}–{zone.etaMinutes[1]} min — devis confirmé au téléphone.
+          </p>
+          <div className="mt-4 flex flex-wrap justify-center gap-3">
+            <CallButton origin="inline" />
+            <WhatsAppButton origin="inline" />
+          </div>
+        </section>
       </main>
     </>
   );

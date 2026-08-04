@@ -6,8 +6,11 @@ import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { depannageServices } from "@/data/services";
+import { getZoneBySlug } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
 import { itemListSchema, webPageSchema } from "@/lib/schema";
+
+const hubZoneSlugs = ["paris-11e", "paris-20e", "montreuil"] as const;
 
 export const metadata: Metadata = createPageMetadata({
   title: "Dépannage scooter et moto sur place – IDF",
@@ -66,6 +69,25 @@ export default function DepannageHubPage() {
             </li>
           ))}
         </ul>
+        <section className="mt-10">
+          <h2 className="section-title">Zones couvertes</h2>
+          <ul className="mt-4 flex flex-wrap gap-2">
+            {hubZoneSlugs.map((slug) => {
+              const zone = getZoneBySlug(slug);
+              if (!zone) return null;
+              return (
+                <li key={slug}>
+                  <Link
+                    href={`/zones-intervention/${slug}/`}
+                    className="rounded-sm border border-border px-3 py-1.5 text-sm hover:border-signal hover:text-signal"
+                  >
+                    {zone.name}
+                  </Link>
+                </li>
+              );
+            })}
+          </ul>
+        </section>
       </main>
     </PageShell>
   );
