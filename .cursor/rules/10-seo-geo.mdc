@@ -1,0 +1,37 @@
+---
+description: Règles SEO et visibilité IA, à appliquer à toute page ou contenu
+alwaysApply: true
+---
+
+# SEO — obligatoire sur chaque page
+
+- `generateMetadata` systématique. `title` unique ≤ 60 caractères, mot-clé en tête. `description` unique 140–158 caractères.
+- `alternates.canonical` en URL absolue.
+- Un seul `<h1>` par page. Hiérarchie H2/H3 sans saut de niveau.
+- Fil d'Ariane visible + `BreadcrumbList` en JSON-LD.
+- JSON-LD selon le tableau du §6.2 de PROJECT_SPEC.md, valeurs lues depuis `src/data/`.
+- Maillage : chaque page service → 3 services liés + `/tarifs/` + 3 zones. Chaque page zone → zones voisines + les 10 services. Aucune page orpheline.
+- Images : `alt` descriptif et unique, jamais le nom du fichier, jamais vide sur une image de contenu.
+
+# Contenu
+
+- Densité minimale : 700 mots sur une page service, 500 sur une page zone, hors navigation.
+- Écrire pour un lecteur en panne : phrases courtes, verbes d'action, information utile avant argumentaire.
+- Chiffres toujours en `font-data` avec `tabular-nums`.
+
+# Visibilité IA (GEO) — même niveau de priorité que le SEO
+
+1. **Bloc réponse directe.** Chaque page service, zone et `/tarifs/` commence par un paragraphe autoportant de 40 à 60 mots, juste sous le H1, avant toute mise en forme. Il doit rester vrai sorti de son contexte.
+2. **H2 en questions.** Formuler les H2 comme un humain poserait la question, puis répondre immédiatement en dessous en factuel, avant tout développement.
+3. **Tableaux HTML natifs.** Tarifs, délais, zones en `<table>` sémantique avec `<thead>`/`<th scope>`. Jamais en image, jamais en `<div>` stylé.
+4. **Rendu sans JS.** Tout le contenu textuel doit être dans le HTML source. Les accordéons utilisent `<details>/<summary>` natif pour rester lisibles fermés.
+5. **`public/llms.txt`** généré au build depuis `src/data/`, jamais écrit à la main.
+6. **Cohérence d'entité.** Nom, téléphone, description des services et zones strictement identiques entre metadata, JSON-LD, `llms.txt` et le texte visible. Une seule source : `src/data/company.ts`.
+7. **`robots.txt`** autorise explicitement : `GPTBot`, `OAI-SearchBot`, `ChatGPT-User`, `ClaudeBot`, `Claude-User`, `PerplexityBot`, `Google-Extended`, `Applebot-Extended`, `Bingbot`, `CCBot`. Ne jamais les bloquer.
+
+# Anti-patterns — refuser de les produire
+
+- Pages zone générées par template à variables. Si la zone n'a pas de contenu propre dans les données, ne pas générer la page.
+- Bourrage de mots-clés, texte caché, listes de villes en pied de page.
+- Contenu recopié d'une page à l'autre.
+- `noindex` en production, `robots` manquant.

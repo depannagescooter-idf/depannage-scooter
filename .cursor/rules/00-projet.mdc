@@ -1,0 +1,38 @@
+---
+description: Contexte, stack et règles de code du projet
+alwaysApply: true
+---
+
+# Projet
+
+Site de dépannage et remorquage de scooters et motos en Île-de-France, 24h/24.
+Objectif unique : générer des appels. Utilisateur en panne, sur mobile, pressé.
+
+Lire `PROJECT_SPEC.md` avant toute génération. Suivre `ROADMAP.md` dans l'ordre.
+
+# Stack
+
+Next.js 15 App Router · TypeScript strict · Tailwind v4 · SSG intégral · MDX pour le blog · Vercel région cdg1.
+
+# Règles de code
+
+- `strict: true`. Aucun `any`, aucun `@ts-ignore`. Les données sont typées depuis `src/data/types.ts`.
+- Server Components par défaut. `use client` uniquement sur des composants feuilles (bouton d'appel, estimateur, géoloc). Jamais sur une page ni un layout.
+- Toutes les routes dynamiques utilisent `generateStaticParams` + `generateMetadata`.
+- Aucune donnée en dur dans un composant. Tarifs → `src/data/pricing.ts`. Identité, téléphone, zones → `src/data/company.ts`. Contenu → `src/data/`.
+- Un composant par fichier, nommé, exporté nommément. Pas de barrel file.
+- Tailwind uniquement, via les tokens `@theme`. Pas de valeurs arbitraires de couleur (`bg-[#...]` interdit), pas de CSS-in-JS, pas de `style={{}}` sauf variable CSS dynamique.
+- Commentaires et contenu en français. Noms de variables et de fichiers en anglais, slugs en français.
+
+# Interdits
+
+- Librairies UI génériques : shadcn/ui, MUI, Chakra, Bootstrap, DaisyUI.
+- Librairies d'animation : framer-motion, GSAP.
+- Carrousels, vidéos en autoplay, pop-ups, exit intent, chatbots tiers.
+- Images de banque d'images. Utiliser des placeholders `TODO-PHOTO-REELLE`.
+- Scripts tiers bloquants.
+
+# Quand tu bloques
+
+Si une information manque (un tarif, une donnée de zone, un nom), ne l'invente pas.
+Crée un placeholder explicite et signale-le dans ta réponse.

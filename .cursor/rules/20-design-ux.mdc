@@ -1,0 +1,68 @@
+---
+description: Direction artistique, UX de conversion et budget performance
+globs: ["**/*.tsx", "**/*.css"]
+alwaysApply: true
+---
+
+# Direction
+
+Le site d'un service de secours, pas d'une agence. Vocabulaire visuel du terrain :
+plateau de remorquage, marquage routier, gilet haute visibilité, console de dispatch.
+Lisible de nuit, sous la pluie, à bout de bras.
+
+# Tokens — n'utiliser que ceux-ci
+
+| Token | Hex | Usage |
+|---|---|---|
+| `asphalte` | `#16181D` | fonds sombres, header, bandeau |
+| `marquage` | `#F7F7F5` | fond principal, texte sur asphalte |
+| `signal` | `#FF5A1F` | **uniquement** l'action d'appel |
+| `gyro` | `#1B4DFF` | liens, accents secondaires, rare |
+| `beton` | `#8A8F98` | texte secondaire, bordures |
+| `alerte` | `#FFC300` | bandes de danger, statut disponible |
+
+Typographie : `display` = Archivo 700/800 · `body` = Public Sans · `data` = JetBrains Mono.
+
+**Règle signature :** tout chiffre — prix, kilométrage, délai, téléphone, horaire — est
+rendu en `font-data` avec `tabular-nums`. Le site se lit comme un afficheur de dispatch.
+
+**Élément signature :** le bandeau d'intervention fixe en bas d'écran, sur toutes les pages :
+point de statut + « Équipes disponibles », délai estimé en mono, bouton d'appel en signal.
+C'est le composant le plus important du site. Il ne disparaît jamais au scroll.
+
+**Séparateurs :** bandes diagonales de danger (asphalte/alerte, 45°, 8px), filet de 4px,
+**deux emplois maximum par page**. Ailleurs, filets 1px en `beton`.
+
+**Angles :** `border-radius` ≤ 2px. Univers industriel, pas applicatif.
+
+# UX de conversion
+
+- Mobile-first strict. La version desktop est une adaptation.
+- Au-dessus de la ligne de flottaison sur mobile : promesse + délai chiffré + numéro cliquable + WhatsApp. Rien d'autre.
+- Tous les CTA en `tel:` ou `https://wa.me/…`, avec attribut de tracking d'origine.
+- Formulaire : 3 champs maximum. Honeypot, pas de captcha visible.
+- Un seul objectif par page. Pas de newsletter, pas de pop-up.
+- Géolocalisation optionnelle et non bloquante.
+
+# Accessibilité — plancher non négociable
+
+- Contraste AA partout, AAA sur le bandeau d'intervention.
+- Cibles tactiles ≥ 48×48 px.
+- Focus clavier visible et contrasté sur tout élément interactif.
+- `prefers-reduced-motion` respecté : le point de statut cesse de clignoter.
+- HTML sémantique : `<nav>`, `<main>`, `<article>`, `<table>`, `<details>`.
+
+# Animation
+
+Autorisée uniquement pour : le point de statut, les survols (150 ms), l'ouverture des
+accordéons. Toute autre animation est à justifier ou à supprimer.
+
+# Budget performance — bloquant
+
+LCP < 2,0 s · INP < 200 ms · CLS < 0,05 · Performance ≥ 95 · SEO 100 · A11y ≥ 95
+JS accueil < 90 ko gzip · poids total accueil < 500 ko (mobile, 4G bridée).
+
+- `next/image` en AVIF/WebP, `priority` uniquement sur le visuel du hero.
+- `next/font`, `display: swap`, subset latin, 2 graisses max par famille.
+- Analytics en `afterInteractive`. Aucun script tiers bloquant.
+- Si une fonctionnalité fait dépasser le budget, la supprimer ou la signaler.
