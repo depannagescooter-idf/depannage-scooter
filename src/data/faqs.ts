@@ -64,7 +64,7 @@ export const globalFaqs: Faq[] = [
   {
     question: "Quelle est la zone couverte exactement ?",
     answer:
-      "Paris intra-muros et la petite couronne (92, 93, 94), plus une partie de la grande couronne. Consultez la page zones d'intervention pour la liste des communes. Hors zone : devis sur demande.",
+      "Paris intra-muros et l'ensemble de l'Île-de-France (77, 78, 91, 92, 93, 94, 95) : plus de 120 communes couvertes. Consultez la page zones d'intervention pour la liste complète. Hors zone : devis sur demande.",
   },
   {
     question: "Puis-je suivre l'arrivée du dépanneur ?",

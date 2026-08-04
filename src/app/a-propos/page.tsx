@@ -89,7 +89,7 @@ export default function AProposPage() {
           </p>
           <h2 className="font-display text-xl font-bold text-asphalte">Zone d&apos;intervention</h2>
           <p>
-            Nous couvrent Paris et la petite couronne avec {publishedZones.length} zones
+            Nous couvrons l&apos;Île-de-France avec {publishedZones.length} zones
             référencées, de Paris 1er à Nanterre, Montreuil ou Boulogne-Billancourt. Retrouvez la
             liste complète sur la page{" "}
             <Link href="/zones-intervention/" className="text-gyro hover:underline">

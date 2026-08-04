@@ -28,6 +28,10 @@ export const company: Company = {
     "Hauts-de-Seine (92)",
     "Seine-Saint-Denis (93)",
     "Val-de-Marne (94)",
+    "Seine-et-Marne (77)",
+    "Yvelines (78)",
+    "Essonne (91)",
+    "Val-d'Oise (95)",
   ],
   defaultEtaMinutes: [25, 40],
 };

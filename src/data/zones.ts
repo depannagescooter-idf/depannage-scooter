@@ -1,10 +1,11 @@
 import type { Zone } from "./types";
+import { buildExtendedZones } from "./zones-extended";
 
 /**
- * Données zones — Paris (20 arrondissements) + 25 communes petite couronne.
+ * Données zones — Paris (20 arrondissements) + petite couronne + grande couronne IDF.
  * Contenu unique par zone, sans flag draft (toutes publiées).
  */
-export const zones: Zone[] = [
+const coreZones: Zone[] = [
   {
     slug: "paris-1er",
     name: "Paris 1er",
@@ -954,6 +955,8 @@ export const zones: Zone[] = [
     neighbours: ["paris-13e", "ivry-sur-seine", "vitry-sur-seine", "montrouge", "creteil"],
   },
 ];
+
+export const zones: Zone[] = [...coreZones, ...buildExtendedZones(coreZones)];
 
 /** Zones publiées (identique à zones — aucune en draft). */
 export const publishedZones: Zone[] = zones;

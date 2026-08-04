@@ -10,20 +10,24 @@ import { itemListSchema, webPageSchema } from "@/lib/schema";
 
 const deptLabels: Record<string, string> = {
   "75": "Paris",
+  "77": "Seine-et-Marne",
+  "78": "Yvelines",
+  "91": "Essonne",
   "92": "Hauts-de-Seine",
   "93": "Seine-Saint-Denis",
   "94": "Val-de-Marne",
+  "95": "Val-d'Oise",
 };
 
 export const metadata: Metadata = createPageMetadata({
   title: "Zones d'intervention dépannage moto IDF",
   description:
-    "Zones d'intervention DépannageScooter : Paris, 92, 93, 94. Dépannage et remorquage scooter moto 24h/24.",
+    "Zones d'intervention DépannageScooter en Île-de-France : Paris, 77, 78, 91, 92, 93, 94, 95. Dépannage et remorquage scooter moto 24h/24.",
   path: "/zones-intervention/",
 });
 
 export default function ZonesHubPage() {
-  const departements = ["75", "92", "93", "94"];
+  const departements = ["75", "92", "93", "94", "77", "78", "91", "95"];
 
   return (
     <PageShell>
@@ -31,7 +35,7 @@ export default function ZonesHubPage() {
         data={[
           webPageSchema({
             name: "Zones d'intervention DépannageScooter",
-            description: "Paris et petite couronne — dépannage et remorquage 24h/24.",
+            description: "Île-de-France — dépannage et remorquage 24h/24.",
             path: "/zones-intervention/",
           }),
           itemListSchema({
@@ -50,8 +54,9 @@ export default function ZonesHubPage() {
         </h1>
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
-            DépannageScooter couvre Paris (20 arrondissements) et la petite couronne : Hauts-de-Seine,
-            Seine-Saint-Denis et Val-de-Marne. Intervention 24h/24, délai annoncé selon la zone.
+            DépannageScooter couvre Paris (20 arrondissements), la petite couronne (92, 93, 94)
+            et la grande couronne (77, 78, 91, 95) : plus de 110 communes en Île-de-France.
+            Intervention 24h/24, délai annoncé selon la zone.
           </ShortAnswer>
         </div>
         {departements.map((dep) => {

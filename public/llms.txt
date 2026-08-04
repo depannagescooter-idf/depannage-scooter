@@ -65,6 +65,88 @@
 - Charenton-le-Pont
 - Alfortville
 - Villejuif
+- Meaux
+- Melun
+- Chelles
+- Pontault-Combault
+- Savigny-le-Temple
+- Fontainebleau
+- Torcy
+- Lagny-sur-Marne
+- Brie-Comte-Robert
+- Combs-la-Ville
+- Lieusaint
+- Ozoir-la-Ferrière
+- Roissy-en-Brie
+- Dammarie-les-Lys
+- Provins
+- Versailles
+- Saint-Germain-en-Laye
+- Poissy
+- Conflans-Sainte-Honorine
+- Mantes-la-Jolie
+- Sartrouville
+- Houilles
+- Montigny-le-Bretonneux
+- Trappes
+- Rambouillet
+- Plaisir
+- Les Mureaux
+- Chatou
+- Le Chesnay-Rocquencourt
+- Guyancourt
+- Évry-Courcouronnes
+- Massy
+- Palaiseau
+- Corbeil-Essonnes
+- Savigny-sur-Orge
+- Athis-Mons
+- Viry-Châtillon
+- Grigny
+- Brétigny-sur-Orge
+- Sainte-Geneviève-des-Bois
+- Longjumeau
+- Les Ulis
+- Yerres
+- Draveil
+- Montgeron
+- Argenteuil
+- Cergy
+- Sarcelles
+- Garges-lès-Gonesse
+- Franconville
+- Ermont
+- Montmorency
+- Enghien-les-Bains
+- Goussainville
+- Taverny
+- Bezons
+- Herblay-sur-Seine
+- Pontoise
+- Gonesse
+- Roissy-en-France
+- Rueil-Malmaison
+- Colombes
+- Antony
+- Clamart
+- Puteaux
+- Suresnes
+- Gennevilliers
+- Bagneux
+- Bondy
+- Le Raincy
+- Livry-Gargan
+- Sevran
+- Drancy
+- Le Blanc-Mesnil
+- Épinay-sur-Seine
+- L'Haÿ-les-Roses
+- Thiais
+- Choisy-le-Roi
+- Orly
+- Fresnes
+- Cachan
+- Arcueil
 
 ## Contact
 Téléphone : 07 72 12 53 11 — 24h/24, 7j/7
@@ -75,7 +157,7 @@ Site : https://www.depannagescooter.com
 - https://www.depannagescooter.com/tarifs/ : grille complète
 - https://www.depannagescooter.com/depannage-sur-place/ : dépannage sur place
 - https://www.depannagescooter.com/remorquage/ : remorquage
-- https://www.depannagescooter.com/zones-intervention/ : 45 zones IDF
+- https://www.depannagescooter.com/zones-intervention/ : 127 zones IDF
 - https://www.depannagescooter.com/faq/ : questions fréquentes
 - https://www.depannagescooter.com/guides/ : guides pratiques
 - https://www.depannagescooter.com/contact/ : demande de rappel
