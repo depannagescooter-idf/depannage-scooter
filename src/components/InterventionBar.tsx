@@ -20,9 +20,7 @@ export function InterventionBar({ etaMinutes: etaProp }: InterventionBarProps) {
     >
       <div className="pointer-events-auto mx-auto flex max-w-2xl items-center gap-3 border-t border-white/10 bg-asphalte px-4 py-3 sm:gap-4 sm:px-6">
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <span className="relative flex size-2.5 shrink-0 rounded-full bg-[#FFC300]" aria-hidden="true">
-            <span className="absolute inset-0 animate-ping rounded-full bg-[#FFC300]/60" />
-          </span>
+          <span className="relative flex size-2.5 shrink-0 rounded-full bg-[#FFC300]" aria-hidden="true" />
           <div className="min-w-0">
             <p className="truncate text-xs font-semibold uppercase tracking-wide text-[#FFC300] sm:text-sm">
               Équipes disponibles

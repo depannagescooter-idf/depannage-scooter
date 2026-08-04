@@ -1,85 +1,82 @@
 # Site dépannage & remorquage 2-roues — Île-de-France
 
-Application Next.js 15 · TypeScript strict · Tailwind v4 · SSG.
+Application Next.js 15 · TypeScript strict · Tailwind v4 · SSG · [depannagescooter.com](https://www.depannagescooter.com)
 
 ## Documentation projet
 
-```
-PROJECT_SPEC.md              Spécification maîtresse — produit, technique, SEO, design
-ROADMAP.md                   8 phases d'implémentation, avec prompts et critères d'acceptation
-CONTENT_MAP.md               Inventaire éditorial de toutes les pages
-.cursor/rules/
-  ├── 00-projet.mdc          Contexte, stack, règles de code
-  ├── 10-seo-geo.mdc         SEO et visibilité IA
-  └── 20-design-ux.mdc       Direction artistique, UX, performance
-```
+| Fichier | Contenu |
+|---------|---------|
+| `PROJECT_SPEC.md` | Spécification maîtresse |
+| `ROADMAP.md` | 8 phases d'implémentation |
+| `SEO_INITIATIVES.md` | 30 initiatives SEO autonomes |
+| `RECETTE.md` | Checklist Phase 7 (Lighthouse, GSC, mobile) |
+| `.cursor/rules/` | Règles Cursor (projet, SEO, design) |
 
 ## Installation
 
 ```bash
 npm install
-cp .env.example .env.local   # puis remplir les valeurs
+cp .env.example .env.local
 npm run dev                  # http://localhost:3000
-npm run build                # vérification production
+npm run build
+```
+
+## Scripts qualité
+
+```bash
+npm run validate:data        # Intégrité données (meta, FAQ, zones)
+npm run check:nojs           # Conformité SSG (pas de use client page/layout)
+npm run check:duplicates     # Détection titres/descriptions dupliqués
+npm run generate:llms        # Régénère public/llms.txt
 ```
 
 ## Où modifier quoi
 
 | Fichier | Contenu |
-|---|---|
-| `src/data/company.ts` | Nom, téléphone, email, SIREN, zones |
-| `src/data/pricing.ts` | Tous les tarifs (seule source des prix) |
-| `src/data/services.ts` | Pages service (Phase 2) |
-| `src/data/zones.ts` | Pages zone (Phase 2) |
-| `public/images/` | Photos réelles (hero, plateau, équipe…) |
+|---------|---------|
+| `src/data/company.ts` | Identité, téléphone, email, zones |
+| `src/data/pricing.ts` | **Seule source** des tarifs |
+| `src/data/services.ts` | 10 pages service |
+| `src/data/zones.ts` | 45 pages zone |
+| `src/data/reviews.ts` | Avis clients (`verified: true` pour publication) |
+| `public/images/` | Photos réelles |
 
-## Avancement roadmap
+## Avancement
 
-- [x] **Phase 0 — Socle** : Next.js, tokens design, données de base, build vert
-- [x] **Phase 1 — Design system** : composants UI, bandeau d'intervention, `/design-system`
-- [x] **Phase 2 — Données** : 10 services, 45 zones, 25 FAQ, 5 guides, `validate:data`
-- [x] **Phase 3 — Pages** : accueil, services, zones, tarifs, guides, contact, légal, 404
-- [x] **Phase 4 — SEO** : sitemap, robots (crawlers IA), JSON-LD, OG image, manifest
-- [x] **Phase 5 — Visibilité IA** : `llms.txt` auto-généré, ShortAnswer, H2 questions
-- [ ] Phase 6 — Conversion (API formulaire, GA4, analytics)
-- [ ] Phase 7 — Recette
+- [x] Phases 0–5 : site complet (~83 pages SSG)
+- [x] Phase 6 : formulaire API, GA4, analytics, cookies
+- [x] Phase 7 (code) : recette scripts, a11y, perf, `/design-system` supprimé
+- [ ] Phase 7 (manuel) : Lighthouse PSI, test mobile 4G, indexation GSC
 
 ## Déploiement Vercel
 
-1. [vercel.com](https://vercel.com) → compte `scooterdepannage@gmail.com`
-2. **Import** → `depannagescooter-idf/depannage-scooter`
-3. Variables d'environnement :
+1. Repo : `depannagescooter-idf/depannage-scooter`
+2. Variables **Production** :
 
 | Variable | Valeur |
-|---|---|
+|----------|--------|
 | `NEXT_PUBLIC_ENV` | `production` |
-| `NEXT_PUBLIC_SITE_URL` | `https://depannagescooter.com` |
+| `NEXT_PUBLIC_SITE_URL` | `https://www.depannagescooter.com` |
 | `CONTACT_EMAIL` | `scooterdepannage@gmail.com` |
+| `CONTACT_RATE_LIMIT_SECRET` | *(chaîne aléatoire)* |
+| `SMTP_*` | *(Gmail app password — formulaire)* |
+| `NEXT_PUBLIC_GA_ID` | *(optionnel)* |
 
-4. Région : **Paris (cdg1)** — configurée dans `vercel.json`
-5. Domaine : **Settings → Domains** → `depannagescooter.com`
+3. Région : **cdg1** (`vercel.json`)
+4. Domaine : `www.depannagescooter.com` (+ redirect apex automatique)
 
-Chaque `git push` sur `main` redéploie automatiquement.
+Chaque `git push` sur `main` redéploie.
 
-## À remplir avant de commencer
+## GitHub (compte DépannageScooter)
 
-- [ ] Nom commercial, numéro de téléphone, WhatsApp, email, SIREN, forme juridique
-- [ ] Montants : forfait DSP, barème d'indemnité kilométrique, forfait Paris intra-muros, tarifs 0–15 km / 15–30 km / +30 km, majorations nuit et week-end
-- [ ] Point de départ de référence pour le calcul des distances
-- [ ] Délais d'intervention réels par département (ne pas inventer, ils engagent)
-- [ ] Photos du matériel, des plateaux, de l'équipe, d'une intervention de nuit
-- [ ] Liste réelle des communes couvertes
-- [ ] Nom de domaine
+```bash
+git remote -v
+# origin  git@github-scooter:depannagescooter-idf/depannage-scooter.git
+git push origin main
+```
 
 ## Points de vigilance
 
-**Les pages zone sont le principal risque du projet.** 45 pages générées à partir d'un
-même gabarit textuel sont une pénalité assurée. La spec impose un contrôle de similarité
-automatique en phase 2 : le laisser actif.
-
-**Le bandeau d'intervention est l'élément qui fait la conversion.** S'il est mal exécuté ou
-s'il disparaît au scroll, tout le reste perd sa valeur.
-
-**Le référencement local se joue hors du repo.** Google Business Profile, les avis et le
-netlinking pèsent plus lourd que le site lui-même sur ce métier. Le site est nécessaire,
-il n'est pas suffisant.
+- **Pages zone** : contenu unique validé par `validate:data` (similarité Jaccard)
+- **Bandeau d'intervention** : élément clé de conversion (fixe en bas)
+- **SEO local** : GBP + avis + annuaires = indispensable hors repo

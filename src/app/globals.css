@@ -17,7 +17,7 @@
   /* Typographie */
   --font-display: var(--font-jakarta), system-ui, sans-serif;
   --font-body: var(--font-dm-sans), system-ui, sans-serif;
-  --font-data: var(--font-dm-sans), system-ui, sans-serif;
+  --font-data: var(--font-mono), ui-monospace, monospace;
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;
@@ -61,6 +61,29 @@
 }
 
 @layer utilities {
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+  }
+
+  .focus\:not-sr-only:focus {
+    position: fixed;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+  }
+
   .font-data {
     font-family: var(--font-data);
     font-variant-numeric: tabular-nums;

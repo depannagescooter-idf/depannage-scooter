@@ -31,7 +31,9 @@ export function GeolocationProvider({ children }: { children: ReactNode }) {
   useEffect(() => {
     if (typeof window === "undefined" || !("geolocation" in navigator)) return;
     if (sessionStorage.getItem(PROMPT_KEY)) return;
-    setShowPrompt(true);
+
+    const timer = window.setTimeout(() => setShowPrompt(true), 4000);
+    return () => window.clearTimeout(timer);
   }, []);
 
   const applyPosition = useCallback((lat: number, lng: number) => {
