@@ -1,13 +1,16 @@
 "use client";
 
 import { Clock, Phone } from "lucide-react";
+import { useGeolocationHint } from "@/components/GeolocationProvider";
 import { company } from "@/data/company";
 
 export interface InterventionBarProps {
   etaMinutes?: [number, number];
 }
 
-export function InterventionBar({ etaMinutes = company.defaultEtaMinutes }: InterventionBarProps) {
+export function InterventionBar({ etaMinutes: etaProp }: InterventionBarProps) {
+  const { etaMinutes: geoEta, zoneName } = useGeolocationHint();
+  const etaMinutes = geoEta ?? etaProp ?? company.defaultEtaMinutes;
   const [min, max] = etaMinutes;
 
   return (
@@ -27,6 +30,12 @@ export function InterventionBar({ etaMinutes = company.defaultEtaMinutes }: Inte
             <p className="flex items-center gap-1 truncate text-xs text-beton sm:text-sm">
               <Clock className="size-3 shrink-0" aria-hidden="true" />
               <span>
+                {zoneName ? (
+                  <>
+                    <span className="font-semibold text-asphalte">{zoneName}</span>
+                    {" · "}
+                  </>
+                ) : null}
                 Arrivée en{" "}
                 <span className="font-data font-semibold tabular-nums text-asphalte">
                   {min}–{max} min

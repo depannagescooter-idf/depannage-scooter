@@ -53,11 +53,11 @@ npm run build                # vérification production
 | Variable | Valeur |
 |---|---|
 | `NEXT_PUBLIC_ENV` | `production` |
-| `NEXT_PUBLIC_SITE_URL` | `https://depannagescooter.fr` |
-| `CONTACT_EMAIL` | `contact@depannagescooter.fr` |
+| `NEXT_PUBLIC_SITE_URL` | `https://depannagescooter.com` |
+| `CONTACT_EMAIL` | `scooterdepannage@gmail.com` |
 
 4. Région : **Paris (cdg1)** — configurée dans `vercel.json`
-5. Domaine : **Settings → Domains** → `depannagescooter.fr`
+5. Domaine : **Settings → Domains** → `depannagescooter.com`
 
 Chaque `git push` sur `main` redéploie automatiquement.
 

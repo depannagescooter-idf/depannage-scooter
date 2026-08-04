@@ -11,7 +11,7 @@ export const company: Company = {
   phone: "+33772125311",
   phoneDisplay: "07 72 12 53 11",
   whatsapp: "33772125311",
-  email: "contact@depannagescooter.fr",
+  email: "scooterdepannage@gmail.com",
   address: {
     street: "TODO-adresse",
     city: "Paris",
@@ -21,7 +21,7 @@ export const company: Company = {
   openingHours: "24h/24, 7j/7",
   description:
     "DépannageScooter — dépannage et remorquage de scooters et motos en Île-de-France, disponible 24h/24 et 7j/7.",
-  url: "https://depannagescooter.fr",
+  url: "https://depannagescooter.com",
   logoPath: "/images/logo.svg",
   serviceAreas: [
     "Paris",

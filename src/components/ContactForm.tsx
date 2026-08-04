@@ -1,28 +1,63 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { company } from "@/data/company";
+import { trackFormSubmit } from "@/lib/analytics";
+import type { ContactFormPayload } from "@/lib/contact-schema";
 
 export function ContactForm() {
-  const [submitted, setSubmitted] = useState(false);
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
-  if (submitted) {
-    return (
-      <p className="card px-5 py-4 text-alerte">
-        Demande enregistrée (mode démo). Branchement email prévu en Phase 6.
-      </p>
-    );
+  async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+    setLoading(true);
+    setError(null);
+
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload: ContactFormPayload = {
+      phone: String(formData.get("phone") ?? ""),
+      location: String(formData.get("location") ?? ""),
+      issue: String(formData.get("issue") ?? "") as ContactFormPayload["issue"],
+      website: String(formData.get("website") ?? ""),
+    };
+
+    try {
+      const response = await fetch("/api/contact/", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      });
+
+      const data = (await response.json()) as { error?: string; ok?: boolean };
+
+      if (!response.ok) {
+        setError(data.error ?? "Une erreur est survenue. Réessayez ou appelez-nous.");
+        return;
+      }
+
+      trackFormSubmit();
+      router.push("/contact/merci/");
+    } catch {
+      setError("Connexion impossible. Appelez le 07 72 12 53 11.");
+    } finally {
+      setLoading(false);
+    }
   }
 
   return (
-    <form
-      className="card space-y-4 px-5 py-6"
-      onSubmit={(e) => {
-        e.preventDefault();
-        setSubmitted(true);
-      }}
-    >
-      <input type="text" name="website" className="hidden" tabIndex={-1} autoComplete="off" aria-hidden="true" />
+    <form className="card space-y-4 px-5 py-6" onSubmit={handleSubmit}>
+      <input
+        type="text"
+        name="website"
+        className="hidden"
+        tabIndex={-1}
+        autoComplete="off"
+        aria-hidden="true"
+      />
       <div>
         <label htmlFor="phone" className="block text-sm font-medium text-asphalte">
           Téléphone *
@@ -70,12 +105,22 @@ export function ContactForm() {
           <option value="autre">Autre</option>
         </select>
       </div>
-      <button type="submit" className="btn-primary w-full rounded-full py-3 font-display font-semibold text-white">
-        Demander un rappel
+      {error ? <p className="text-sm text-alerte">{error}</p> : null}
+      <button
+        type="submit"
+        disabled={loading}
+        className="btn-primary w-full rounded-full py-3 font-display font-semibold text-white disabled:opacity-60"
+      >
+        {loading ? "Envoi…" : "Demander un rappel"}
       </button>
       <p className="text-center text-xs text-beton">
         Urgence ? Appelez directement le{" "}
-        <a href={`tel:${company.phone}`} className="font-data text-signal">
+        <a
+          href={`tel:${company.phone}`}
+          data-track-origin="inline"
+          data-track-event="call_click"
+          className="font-data text-signal"
+        >
           {company.phoneDisplay}
         </a>
       </p>

@@ -33,7 +33,12 @@ export default function ContactPage() {
           <address className="card space-y-3 px-5 py-6 not-italic text-beton">
             <p className="font-display font-bold text-asphalte">{company.name}</p>
             <p>
-              <a href={`tel:${company.phone}`} className="font-data text-lg text-signal">
+              <a
+                href={`tel:${company.phone}`}
+                data-track-origin="inline"
+                data-track-event="call_click"
+                className="font-data text-lg text-signal"
+              >
                 {company.phoneDisplay}
               </a>
             </p>
