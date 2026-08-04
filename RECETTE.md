@@ -2,7 +2,21 @@
 
 Checklist de validation avant mise en production définitive.
 
-## Lighthouse mobile (seuils PROJECT_SPEC §10)
+## Résultats Lighthouse (baseline mobile — juillet 2026)
+
+Mesure locale sur https://www.depannagescooter.com/ :
+
+| Catégorie | Score | Cible |
+|-----------|-------|-------|
+| Performance | 91 | ≥ 95 |
+| Accessibilité | 89 | ≥ 95 |
+| SEO | 66* | 100 |
+| LCP | 2,5 s | < 2,0 s |
+| CLS | 0,005 | < 0,05 |
+
+\* **SEO 66** : vérifier `NEXT_PUBLIC_ENV=production` sur Vercel. Sans cette variable, le site reste en `noindex` → pénalité Lighthouse SEO majeure.
+
+Après correction Vercel + redéploiement, retester sur [PageSpeed Insights](https://pagespeed.web.dev/).
 
 Tester sur **PageSpeed Insights** (mobile, 4G) :
 
