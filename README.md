@@ -37,11 +37,11 @@ npm run build                # vérification production
 
 - [x] **Phase 0 — Socle** : Next.js, tokens design, données de base, build vert
 - [x] **Phase 1 — Design system** : composants UI, bandeau d'intervention, `/design-system`
-- [ ] Phase 2 — Données
-- [ ] Phase 3 — Pages
-- [ ] Phase 4 — SEO technique
-- [ ] Phase 5 — Visibilité IA
-- [ ] Phase 6 — Conversion et mesure
+- [x] **Phase 2 — Données** : 10 services, 45 zones, 25 FAQ, 5 guides, `validate:data`
+- [x] **Phase 3 — Pages** : accueil, services, zones, tarifs, guides, contact, légal, 404
+- [x] **Phase 4 — SEO** : sitemap, robots (crawlers IA), JSON-LD, OG image, manifest
+- [x] **Phase 5 — Visibilité IA** : `llms.txt` auto-généré, ShortAnswer, H2 questions
+- [ ] Phase 6 — Conversion (API formulaire, GA4, analytics)
 - [ ] Phase 7 — Recette
 
 ## Déploiement Vercel

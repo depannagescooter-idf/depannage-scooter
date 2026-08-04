@@ -1,0 +1,78 @@
+# DépannageScooter
+> DépannageScooter — dépannage et remorquage de scooters et motos en Île-de-France, disponible 24h/24 et 7j/7.
+
+## Services
+- Dépannage sur place : crevaison, batterie, demarrage-booster, panne-essence, ouverture-de-selle
+- Remorquage : remorquage-scooter, remorquage-moto, remorquage-moto-accidentee, remorquage-3-roues, transfert-garage-concession
+
+## Tarifs
+
+| Prestation | Tarif |
+|---|---|
+| Remorquage Paris intra-muros | 85 € |
+| Remorquage 0 – 15 km | 95 € |
+| Remorquage 15 – 30 km | 125 € |
+| Remorquage Plus de 30 km | 155 € |
+| Réparation de crevaison sur place | 75 € + 0.9 €/km |
+| Remplacement de batterie | 85 € + 0.9 €/km |
+| Démarrage / booster | 65 € + 0.9 €/km |
+| Livraison de carburant | 75 € + 0.9 €/km |
+| Ouverture de selle bloquée | 75 € + 0.9 €/km |
+
+## Zones desservies
+- Paris 1er
+- Paris 2e
+- Paris 3e
+- Paris 4e
+- Paris 5e
+- Paris 6e
+- Paris 7e
+- Paris 8e
+- Paris 9e
+- Paris 10e
+- Paris 11e
+- Paris 12e
+- Paris 13e
+- Paris 14e
+- Paris 15e
+- Paris 16e
+- Paris 17e
+- Paris 18e
+- Paris 19e
+- Paris 20e
+- Boulogne-Billancourt
+- Nanterre
+- Levallois-Perret
+- Neuilly-sur-Seine
+- Issy-les-Moulineaux
+- Courbevoie
+- Clichy
+- Asnières-sur-Seine
+- Montrouge
+- Saint-Denis
+- Montreuil
+- Aubervilliers
+- Pantin
+- Saint-Ouen
+- Bobigny
+- Noisy-le-Grand
+- Aulnay-sous-Bois
+- Créteil
+- Vitry-sur-Seine
+- Ivry-sur-Seine
+- Vincennes
+- Saint-Maur-des-Fossés
+- Charenton-le-Pont
+- Alfortville
+- Villejuif
+
+## Contact
+Téléphone : 07 72 12 53 11 — 24h/24, 7j/7
+Email : contact@depannagescooter.fr
+
+## Pages clés
+- /tarifs/ : grille complète
+- /depannage-sur-place/ : dépannage sur place
+- /remorquage/ : remorquage
+- /zones-intervention/ : zones
+- /faq/ : questions fréquentes
