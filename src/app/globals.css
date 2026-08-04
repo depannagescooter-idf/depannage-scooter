@@ -61,27 +61,25 @@
 }
 
 @layer utilities {
-  .sr-only {
+  .skip-link {
     position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    left: -9999px;
+    top: 0;
+    z-index: 100;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-asphalte);
+    background: var(--color-surface);
+    border: 2px solid var(--color-signal);
+    border-radius: var(--radius-sm);
+    box-shadow: var(--shadow-soft);
     white-space: nowrap;
-    border-width: 0;
   }
 
-  .focus\:not-sr-only:focus {
-    position: fixed;
-    width: auto;
-    height: auto;
-    padding: inherit;
-    margin: inherit;
-    overflow: visible;
-    clip: auto;
-    white-space: normal;
+  .skip-link:focus-visible {
+    left: 1rem;
+    top: 1rem;
   }
 
   .font-data {
