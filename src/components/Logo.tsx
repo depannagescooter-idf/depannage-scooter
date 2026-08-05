@@ -22,7 +22,7 @@ export function Logo({ compact = false, variant = "default" }: LogoProps) {
       {!compact && (
         <span className="font-display text-lg font-bold tracking-tight">
           <span className={isLight ? "text-white" : "text-asphalte"}>Dépannage</span>
-          <span className="text-signal">Scooter</span>
+          <span className={isLight ? "text-orange-400" : "text-signal"}>Scooter</span>
         </span>
       )}
     </Link>
