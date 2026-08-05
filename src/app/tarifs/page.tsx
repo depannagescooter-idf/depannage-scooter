@@ -7,14 +7,14 @@ import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { company } from "@/data/company";
-import { pricing } from "@/data/pricing";
+import { formatPrice, getTowingPriceRangeLabel, pricing } from "@/data/pricing";
 import { createPageMetadata } from "@/lib/metadata";
 import { offerCatalogSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Tarifs dépannage & remorquage moto IDF",
   description:
-    "Tarifs dépannage et remorquage scooter moto en Île-de-France : forfaits Paris, paliers km, majorations. Devis ferme au 07 72 12 53 11.",
+    "Tarifs dépannage et remorquage scooter moto en Île-de-France : 50 € + déplacement, paliers km remorquage. Devis ferme au 07 72 12 53 11.",
   path: "/tarifs/",
 });
 
@@ -29,9 +29,13 @@ export default function TarifsPage() {
         </h1>
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
-            {company.name} applique des forfaits jour TTC : dépannage sur place (forfait +
-            km) et remorquage par paliers de distance. Majorations nuit, week-end et jours fériés.
-            Devis ferme au {company.phoneDisplay} avant toute intervention.
+            {company.name} applique des tarifs jour TTC : dépannage sur place à{" "}
+            {formatPrice(pricing.dsp.baseFee)} + déplacement (Paris{" "}
+            {formatPrice(pricing.travelFees.PARIS.amount)}, petite couronne{" "}
+            {formatPrice(pricing.travelFees.PETITE_COURONNE.amount)}, grande couronne{" "}
+            {formatPrice(pricing.travelFees.GRANDE_COURONNE.amount)}), remorquage de{" "}
+            {getTowingPriceRangeLabel()}. Majorations nuit, week-end et jours fériés. Devis ferme
+            au {company.phoneDisplay} avant toute intervention.
           </ShortAnswer>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">

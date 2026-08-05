@@ -91,15 +91,22 @@ export type DspPriceKey =
   | "DSP_ESSENCE"
   | "DSP_SELLE";
 
+export type TravelZoneKey = "PARIS" | "PETITE_COURONNE" | "GRANDE_COURONNE";
+
 export type TowPriceKey =
-  | "PARIS_INTRA_MUROS"
-  | "KM_0_15"
-  | "KM_15_30"
-  | "KM_30_PLUS";
+  | "KM_0_5"
+  | "KM_5_10"
+  | "KM_10_15"
+  | "KM_15_20"
+  | "KM_20_PLUS";
 
 export interface PricingConfig {
   currency: string;
-  dsp: Record<DspPriceKey, { label: string; baseFee: number | null; perKm: number | null }>;
+  dsp: {
+    baseFee: number;
+    services: Record<DspPriceKey, { label: string }>;
+  };
+  travelFees: Record<TravelZoneKey, { label: string; amount: number }>;
   towing: Record<TowPriceKey, { label: string; amount: number | null }>;
   surcharges: {
     night: { label: string; percent: number | null };

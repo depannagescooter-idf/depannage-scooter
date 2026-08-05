@@ -1,72 +1,58 @@
-import type { PricingConfig } from "./types";
+import type { PricingConfig, TravelZoneKey } from "./types";
 
 /**
  * Tarification centralisée — seule source des montants affichés sur le site.
  * Aucun prix ne doit être écrit ailleurs (composants, textes, JSON-LD).
  *
- * Benchmark marché IDF (2026) — dépanneurs spécialisés 2-roues :
- * ┌─────────────────────┬──────────┬──────────┬──────────┬──────────┐
- * │ Prestation          │ Depango  │ BHH      │ 2-Roues  │ R-Moto   │
- * ├─────────────────────┼──────────┼──────────┼──────────┼──────────┤
- * │ Paris intra-muros   │ 79 €     │ 89 €     │ 65 €     │ 70 €     │
- * │ 0 – 15 km           │ 89 €     │ 98 €     │ 55 €     │ 80 €     │
- * │ 15 – 30 km          │ 109 €    │ 130 €    │ 100 €    │ 100 €    │
- * │ 30 – 50 km          │ 129 €    │ 165 €    │ 150 €    │ 130 €    │
- * │ Booster / batterie  │ dès 65 € │ —        │ 65 €     │ 70 €     │
- * │ Indemnité km (DSP)  │ 0,90 €   │ —        │ —        │ —        │
- * │ Majoration nuit     │ +30 %    │ +40 €    │ ×1,85    │ +43 %    │
- * │ Majoration week-end │ +25–50 % │ +25 %    │ —        │ —        │
- * └─────────────────────┴──────────┴──────────┴──────────┴──────────┘
- *
- * Positionnement DépannageScooter : médiane du marché — compétitif sans
- * être le moins cher. Tarifs jour TTC, hors suppléments pénibilité
- * (sous-sol, Neiman bloqué, accidenté : +30 €, aligné Depango/BHH).
+ * Dépannage sur place : 50 € TTC + déplacement selon zone.
+ * Remorquage : paliers kilométriques (0–20 km), au-delà sur devis.
  */
 export const pricing: PricingConfig = {
   currency: "EUR",
   dsp: {
-    DSP_CREVAISON: {
-      label: "Réparation de crevaison sur place",
-      baseFee: 75,
-      perKm: 0.9,
+    baseFee: 50,
+    services: {
+      DSP_CREVAISON: { label: "Réparation de crevaison sur place" },
+      DSP_BATTERIE: { label: "Remplacement de batterie" },
+      DSP_DEMARRAGE: { label: "Démarrage / booster" },
+      DSP_ESSENCE: { label: "Livraison de carburant" },
+      DSP_SELLE: { label: "Ouverture de selle bloquée" },
     },
-    DSP_BATTERIE: {
-      label: "Remplacement de batterie",
-      baseFee: 85,
-      perKm: 0.9,
+  },
+  travelFees: {
+    PARIS: {
+      label: "Paris",
+      amount: 20,
     },
-    DSP_DEMARRAGE: {
-      label: "Démarrage / booster",
-      baseFee: 65,
-      perKm: 0.9,
+    PETITE_COURONNE: {
+      label: "Petite couronne (92, 93, 94)",
+      amount: 30,
     },
-    DSP_ESSENCE: {
-      label: "Livraison de carburant",
-      baseFee: 75,
-      perKm: 0.9,
-    },
-    DSP_SELLE: {
-      label: "Ouverture de selle bloquée",
-      baseFee: 75,
-      perKm: 0.9,
+    GRANDE_COURONNE: {
+      label: "Grande couronne (77, 78, 91, 95)",
+      amount: 40,
     },
   },
   towing: {
-    PARIS_INTRA_MUROS: {
-      label: "Paris intra-muros",
-      amount: 85,
+    KM_0_5: {
+      label: "0 – 5 km",
+      amount: 79,
     },
-    KM_0_15: {
-      label: "0 – 15 km",
-      amount: 95,
+    KM_5_10: {
+      label: "5 – 10 km",
+      amount: 89,
     },
-    KM_15_30: {
-      label: "15 – 30 km",
-      amount: 125,
+    KM_10_15: {
+      label: "10 – 15 km",
+      amount: 99,
     },
-    KM_30_PLUS: {
-      label: "Plus de 30 km",
-      amount: 155,
+    KM_15_20: {
+      label: "15 – 20 km",
+      amount: 120,
+    },
+    KM_20_PLUS: {
+      label: "Plus de 20 km",
+      amount: null,
     },
   },
   surcharges: {
@@ -94,7 +80,20 @@ export const pricing: PricingConfig = {
   },
 };
 
-/** Fourchette tarifaire remorquage (Paris min → 30+ km max). */
+/** Total dépannage sur place = forfait prestation + déplacement zone. */
+export function getDspTotal(zone: TravelZoneKey): number {
+  return pricing.dsp.baseFee + pricing.travelFees[zone].amount;
+}
+
+/** Fourchette dépannage (Paris min → grande couronne max). */
+export function getDspPriceRangeLabel(): string {
+  const totals = Object.keys(pricing.travelFees).map((z) =>
+    getDspTotal(z as TravelZoneKey),
+  );
+  return `${formatPrice(Math.min(...totals))} à ${formatPrice(Math.max(...totals))}`;
+}
+
+/** Fourchette tarifaire remorquage (0–5 km min → 15–20 km max). */
 export function getTowingPriceRangeLabel(): string {
   const amounts = Object.values(pricing.towing)
     .map((t) => t.amount)
@@ -115,15 +114,23 @@ export function formatPrice(amount: number | null, currency = pricing.currency):
   }).format(amount);
 }
 
-/** Calcule le tarif DSP : forfait + indemnité kilométrique. */
-export function calculateDspPrice(priceKey: keyof typeof pricing.dsp, km: number): number {
-  const tier = pricing.dsp[priceKey];
-  const base = tier.baseFee ?? 0;
-  const perKm = tier.perKm ?? 0;
-  return base + perKm * km;
+/** @deprecated Utiliser getDspTotal(zone) — conservé pour compatibilité interne. */
+export function calculateDspPrice(_priceKey: string, zone: TravelZoneKey = "PARIS"): number {
+  return getDspTotal(zone);
 }
 
 /** Applique une majoration en pourcentage. */
 export function applySurcharge(amount: number, percent: number): number {
   return Math.round(amount * (1 + percent / 100));
+}
+
+/** Prix de départ affiché pour une prestation (DSP Paris ou 1er palier remorquage). */
+export function getStartingPrice(priceKey: string): number | null {
+  if (priceKey in pricing.dsp.services) {
+    return getDspTotal("PARIS");
+  }
+  if (priceKey in pricing.towing) {
+    return pricing.towing[priceKey as keyof typeof pricing.towing].amount;
+  }
+  return null;
 }

@@ -1,4 +1,9 @@
-import { formatPrice, pricing } from "@/data/pricing";
+import {
+  formatPrice,
+  getDspTotal,
+  pricing,
+} from "@/data/pricing";
+import type { TravelZoneKey } from "@/data/types";
 
 export interface PriceTableProps {
   showDsp?: boolean;
@@ -40,7 +45,7 @@ export function PriceTable({
             <thead>
               <tr className="border-b border-border-soft text-left text-xs uppercase tracking-wide text-beton">
                 <th scope="col" className="px-5 py-3 font-medium">
-                  Distance
+                  Distance (panne → destination)
                 </th>
                 <th scope="col" className="px-5 py-3 font-medium">
                   Tarif
@@ -65,39 +70,58 @@ export function PriceTable({
       )}
 
       {showDsp && (
-        <TableCard title="Dépannage sur place — forfait + km" id="price-dsp">
-          <table className="w-full min-w-[320px] text-sm">
-            <thead>
-              <tr className="border-b border-border-soft text-left text-xs uppercase tracking-wide text-beton">
-                <th scope="col" className="px-5 py-3 font-medium">
-                  Prestation
-                </th>
-                <th scope="col" className="px-5 py-3 font-medium">
-                  Forfait
-                </th>
-                <th scope="col" className="px-5 py-3 font-medium">
-                  / km
-                </th>
-              </tr>
-            </thead>
-            <tbody>
-              {Object.entries(pricing.dsp).map(([, tier], i) => (
-                <tr
-                  key={tier.label}
-                  className={i % 2 === 0 ? "bg-surface" : "bg-surface-muted/40"}
-                >
-                  <td className="px-5 py-3.5 text-asphalte">{tier.label}</td>
-                  <td className="px-5 py-3.5 font-data font-semibold tabular-nums text-asphalte">
-                    {formatPrice(tier.baseFee)}
+        <>
+          <TableCard title="Dépannage sur place — forfait prestation" id="price-dsp-base">
+            <table className="w-full min-w-[280px] text-sm">
+              <tbody>
+                <tr className="bg-surface">
+                  <td className="px-5 py-3.5 text-asphalte">
+                    Toutes prestations (crevaison, batterie, booster, essence, selle)
                   </td>
-                  <td className="px-5 py-3.5 font-data tabular-nums text-beton">
-                    {tier.perKm !== null ? `${tier.perKm.toLocaleString("fr-FR")} €` : "—"}
+                  <td className="px-5 py-3.5 font-data font-semibold tabular-nums text-signal">
+                    {formatPrice(pricing.dsp.baseFee)}
                   </td>
                 </tr>
-              ))}
-            </tbody>
-          </table>
-        </TableCard>
+              </tbody>
+            </table>
+          </TableCard>
+
+          <TableCard title="Dépannage — frais de déplacement TTC" id="price-dsp-travel">
+            <table className="w-full min-w-[320px] text-sm">
+              <thead>
+                <tr className="border-b border-border-soft text-left text-xs uppercase tracking-wide text-beton">
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Zone
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Déplacement
+                  </th>
+                  <th scope="col" className="px-5 py-3 font-medium">
+                    Total TTC
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {(Object.entries(pricing.travelFees) as [TravelZoneKey, (typeof pricing.travelFees)[TravelZoneKey]][]).map(
+                  ([zone, tier], i) => (
+                    <tr
+                      key={zone}
+                      className={i % 2 === 0 ? "bg-surface" : "bg-surface-muted/40"}
+                    >
+                      <td className="px-5 py-3.5 text-asphalte">{tier.label}</td>
+                      <td className="px-5 py-3.5 font-data tabular-nums text-beton">
+                        +{formatPrice(tier.amount)}
+                      </td>
+                      <td className="px-5 py-3.5 font-data font-semibold tabular-nums text-signal">
+                        {formatPrice(getDspTotal(zone))}
+                      </td>
+                    </tr>
+                  ),
+                )}
+              </tbody>
+            </table>
+          </TableCard>
+        </>
       )}
 
       {showSurcharges && (

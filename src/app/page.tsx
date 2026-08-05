@@ -12,7 +12,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { company } from "@/data/company";
 import { globalFaqs } from "@/data/faqs";
 import { guides } from "@/data/guides";
-import { formatPrice, pricing } from "@/data/pricing";
+import { formatPrice, getDspTotal, pricing } from "@/data/pricing";
 import { depannageServices, remorquageServices } from "@/data/services";
 import { publishedZones } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
@@ -82,10 +82,14 @@ export default function HomePage() {
               { icon: Shield, label: "Disponibilité", value: company.openingHours },
               {
                 icon: Wrench,
-                label: "Paris intra-muros",
-                value: formatPrice(pricing.towing.PARIS_INTRA_MUROS.amount),
+                label: "Dépannage Paris",
+                value: formatPrice(getDspTotal("PARIS")),
               },
-              { icon: Phone, label: "Devis", value: "Avant départ" },
+              {
+                icon: Phone,
+                label: "Remorquage",
+                value: `dès ${formatPrice(pricing.towing.KM_0_5.amount)}`,
+              },
             ].map(({ icon: Icon, label, value }) => (
               <li key={label} className="card flex items-center gap-4 px-5 py-4">
                 <span className="flex size-10 shrink-0 items-center justify-center rounded-sm bg-signal/10 text-signal">

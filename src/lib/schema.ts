@@ -1,5 +1,5 @@
 import { company } from "@/data/company";
-import { pricing } from "@/data/pricing";
+import { formatPrice, getDspTotal, getStartingPrice, pricing } from "@/data/pricing";
 import { absoluteUrl, getSiteUrl } from "@/lib/metadata";
 
 function postalAddressSchema() {
@@ -40,14 +40,8 @@ function openingHoursSchema() {
 
 function priceFromKey(priceKey?: string): number | undefined {
   if (!priceKey) return undefined;
-  if (priceKey in pricing.dsp) {
-    return pricing.dsp[priceKey as keyof typeof pricing.dsp].baseFee ?? undefined;
-  }
-  if (priceKey in pricing.towing) {
-    const amount = pricing.towing[priceKey as keyof typeof pricing.towing].amount;
-    return amount ?? undefined;
-  }
-  return undefined;
+  const starting = getStartingPrice(priceKey);
+  return starting ?? undefined;
 }
 
 export function organizationSchema() {
@@ -194,12 +188,12 @@ export function offerCatalogSchema() {
     identifier: key,
   }));
 
-  const dspOffers = Object.entries(pricing.dsp).map(([key, tier]) => ({
+  const dspOffers = Object.entries(pricing.dsp.services).map(([key, service]) => ({
     "@type": "Offer",
-    name: tier.label,
-    price: tier.baseFee,
+    name: service.label,
+    price: getDspTotal("PARIS"),
     priceCurrency: pricing.currency,
-    description: `Forfait + ${tier.perKm} €/km`,
+    description: `${formatPrice(pricing.dsp.baseFee)} prestation + déplacement selon zone`,
     offeredBy: { "@type": "Organization", name: company.name },
     identifier: key,
   }));

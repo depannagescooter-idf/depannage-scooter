@@ -6,7 +6,12 @@ import { writeFileSync } from "fs";
 import { join } from "path";
 import { company } from "../src/data/company";
 import { depannageServices, remorquageServices } from "../src/data/services";
-import { formatPrice, pricing } from "../src/data/pricing";
+import {
+  formatPrice,
+  getDspTotal,
+  pricing,
+} from "../src/data/pricing";
+import type { TravelZoneKey } from "../src/data/types";
 import { publishedZones } from "../src/data/zones";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? company.url).replace(/\/$/, "");
@@ -23,13 +28,18 @@ const lines: string[] = [
   "",
   "| Prestation | Tarif |",
   "|---|---|",
+  `| Dépannage sur place (forfait) | ${formatPrice(pricing.dsp.baseFee)} |`,
 ];
+
+for (const [zone, tier] of Object.entries(pricing.travelFees) as [
+  TravelZoneKey,
+  (typeof pricing.travelFees)[TravelZoneKey],
+][]) {
+  lines.push(`| Dépannage — déplacement ${tier.label} | +${formatPrice(tier.amount)} (total ${formatPrice(getDspTotal(zone))}) |`);
+}
 
 for (const tier of Object.values(pricing.towing)) {
   lines.push(`| Remorquage ${tier.label} | ${formatPrice(tier.amount)} |`);
-}
-for (const tier of Object.values(pricing.dsp)) {
-  lines.push(`| ${tier.label} | ${formatPrice(tier.baseFee)} + ${tier.perKm} €/km |`);
 }
 
 lines.push(

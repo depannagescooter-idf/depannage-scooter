@@ -63,21 +63,21 @@ export const guides: Guide[] = [
     title: "Combien coûte un remorquage de moto en Île-de-France ?",
     metaTitle: "Prix remorquage moto Île-de-France 2026",
     metaDescription:
-      "Tarifs remorquage moto et scooter en IDF : forfait Paris, paliers km, majorations nuit et week-end. Grille transparente et facteurs de prix.",
+      "Tarifs remorquage moto et scooter en IDF : paliers kilométriques, dépannage 50 € + déplacement. Majorations nuit et week-end. Grille transparente.",
     shortAnswer:
-      "En Île-de-France, le tarif remorquage dépend de la distance (Paris intra-muros au forfait le plus bas, puis paliers kilométriques). Consultez la grille à jour sur la page tarifs. Nuit, week-end et situations complexes entraînent des majorations.",
+      "En Île-de-France, le remorquage est facturé par paliers de distance (0–5 km, 5–10 km, 10–15 km, 15–20 km, puis sur devis). Le dépannage sur place coûte 50 € + un forfait de déplacement selon la zone. Consultez la page tarifs pour la grille à jour.",
     intro:
-      "Le prix d'un remorquage dépend moins du type de moto que de la distance, de l'horaire et de la difficulté d'accès. Voici comment lire une grille tarifaire et éviter les mauvaises surprises.",
+      "Le prix d'un remorquage dépend de la distance entre le lieu de panne et la destination, de l'horaire et de la difficulté d'accès. Voici comment lire la grille et éviter les mauvaises surprises.",
     sections: [
       {
-        question: "Comment fonctionne le forfait Paris intra-muros ?",
+        question: "Comment est calculé le dépannage sur place ?",
         answer:
-          "Le dépanneur part d'une base en région parisienne et facture un forfait fixe tant que la prise en charge et la livraison restent dans Paris. Au-delà, des paliers kilométriques s'appliquent.",
+          "Toutes les prestations (crevaison, batterie, booster, essence, selle) sont facturées 50 € TTC, auxquels s'ajoute un forfait de déplacement : 20 € à Paris, 30 € en petite couronne (92, 93, 94) et 40 € en grande couronne (77, 78, 91, 95).",
       },
       {
-        question: "Quels paliers au-delà de Paris ?",
+        question: "Quels paliers pour le remorquage ?",
         answer:
-          "On distingue généralement 0–15 km, 15–30 km et plus de 30 km entre le lieu de panne et la destination. La distance retenue est celle du trajet réel, pas à vol d'oiseau.",
+          "Le tarif dépend de la distance totale panne → destination : 0–5 km, 5–10 km, 10–15 km, 15–20 km, puis sur devis au-delà de 20 km. La distance retenue est celle du trajet réel.",
       },
       {
         question: "Quelles majorations prévoir ?",

@@ -9,15 +9,15 @@
 
 | Prestation | Tarif |
 |---|---|
-| Remorquage Paris intra-muros | 85 € |
-| Remorquage 0 – 15 km | 95 € |
-| Remorquage 15 – 30 km | 125 € |
-| Remorquage Plus de 30 km | 155 € |
-| Réparation de crevaison sur place | 75 € + 0.9 €/km |
-| Remplacement de batterie | 85 € + 0.9 €/km |
-| Démarrage / booster | 65 € + 0.9 €/km |
-| Livraison de carburant | 75 € + 0.9 €/km |
-| Ouverture de selle bloquée | 75 € + 0.9 €/km |
+| Dépannage sur place (forfait) | 50 € |
+| Dépannage — déplacement Paris | +20 € (total 70 €) |
+| Dépannage — déplacement Petite couronne (92, 93, 94) | +30 € (total 80 €) |
+| Dépannage — déplacement Grande couronne (77, 78, 91, 95) | +40 € (total 90 €) |
+| Remorquage 0 – 5 km | 79 € |
+| Remorquage 5 – 10 km | 89 € |
+| Remorquage 10 – 15 km | 99 € |
+| Remorquage 15 – 20 km | 120 € |
+| Remorquage Plus de 20 km | Sur devis |
 
 ## Zones desservies
 - Paris 1er

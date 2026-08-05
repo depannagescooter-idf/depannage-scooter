@@ -92,9 +92,9 @@ export const globalFaqs: Faq[] = [
       "Oui, en cas de panne sèche nous apportons le carburant adapté (SP95/SP98 ou mélange 2 temps selon le véhicule). Vérifiez que la panne vient bien du réservoir vide et non d'un autre défaut.",
   },
   {
-    question: "Combien coûte un remorquage depuis Paris ?",
+    question: "Combien coûte un remorquage en Île-de-France ?",
     answer:
-      "Le tarif dépend de la distance et de l'horaire. Paris intra-muros fait l'objet d'un forfait jour, puis des paliers kilométriques au-delà. Consultez la page tarifs ou appelez pour un devis immédiat.",
+      "Le tarif dépend de la distance entre le lieu de panne et la destination : paliers de 0 à 5 km, 5 à 10 km, 10 à 15 km et 15 à 20 km, puis sur devis au-delà. Consultez la page tarifs ou appelez pour un devis immédiat avant départ.",
   },
   {
     question: "Intervenez-vous sur les trottinettes électriques ?",

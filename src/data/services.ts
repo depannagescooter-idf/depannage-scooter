@@ -512,7 +512,7 @@ const servicesData: Service[] = [
       },
     ],
     relatedServices: ["remorquage-moto", "crevaison", "transfert-garage-concession"],
-    priceKey: "PARIS_INTRA_MUROS",
+    priceKey: "KM_0_5",
   },
   {
     slug: "remorquage-moto",
@@ -595,7 +595,7 @@ const servicesData: Service[] = [
       },
     ],
     relatedServices: ["remorquage-moto-accidentee", "remorquage-scooter", "transfert-garage-concession"],
-    priceKey: "PARIS_INTRA_MUROS",
+    priceKey: "KM_0_5",
   },
   {
     slug: "remorquage-moto-accidentee",
@@ -683,7 +683,7 @@ const servicesData: Service[] = [
       },
     ],
     relatedServices: ["remorquage-moto", "remorquage-3-roues", "transfert-garage-concession"],
-    priceKey: "PARIS_INTRA_MUROS",
+    priceKey: "KM_0_5",
   },
   {
     slug: "remorquage-3-roues",
@@ -766,7 +766,7 @@ const servicesData: Service[] = [
       },
     ],
     relatedServices: ["remorquage-scooter", "remorquage-moto", "remorquage-moto-accidentee"],
-    priceKey: "KM_0_15",
+    priceKey: "KM_10_15",
   },
   {
     slug: "transfert-garage-concession",
@@ -854,7 +854,7 @@ const servicesData: Service[] = [
       },
     ],
     relatedServices: ["remorquage-moto", "remorquage-scooter", "remorquage-moto-accidentee"],
-    priceKey: "KM_15_30",
+    priceKey: "KM_15_20",
   },
 ];
 

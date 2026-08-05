@@ -6,6 +6,7 @@ import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { depannageServices } from "@/data/services";
+import { formatPrice, pricing } from "@/data/pricing";
 import { getZoneBySlug } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
 import { itemListSchema, webPageSchema } from "@/lib/schema";
@@ -47,7 +48,8 @@ export default function DepannageHubPage() {
           <ShortAnswer>
             Le dépannage sur place consiste à réparer votre deux-roues là où il est immobilisé,
             sans remorquage. Nous traitons crevaison, batterie, démarrage, panne d&apos;essence et
-            selle bloquée. Tarification : forfait + indemnité kilométrique. Disponible 24h/24.
+            selle bloquée. Tarification : {formatPrice(pricing.dsp.baseFee)} + déplacement selon
+            zone. Disponible 24h/24.
           </ShortAnswer>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
