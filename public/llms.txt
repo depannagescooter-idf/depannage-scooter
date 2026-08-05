@@ -1,163 +1,42 @@
 # DépannageScooter
 > DépannageScooter — dépannage et remorquage de scooters et motos en Île-de-France, disponible 24h/24 et 7j/7.
 
-## Services
-- Dépannage sur place : Réparation de crevaison, Remplacement de batterie, Démarrage et booster, Panne d'essence, Ouverture de selle bloquée
-- Remorquage : Remorquage de scooter, Remorquage de moto, Remorquage moto accidentée, Remorquage 3 roues, Transfert garage et concession
+DépannageScooter intervient en Île-de-France (127 communes). Contact : 07 72 12 53 11, 24h/24, 7j/7, scooterdepannage@gmail.com.
 
-## Tarifs
+Tarifs jour TTC : dépannage sur place 50 € + déplacement (Paris 20 €, petite couronne 30 €, grande couronne 40 €) ; remorquage 79 € à 120 €, au-delà de 20 km sur devis.
 
-| Prestation | Tarif |
-|---|---|
-| Dépannage sur place (forfait) | 50 € |
-| Dépannage — déplacement Paris | +20 € (total 70 €) |
-| Dépannage — déplacement Petite couronne (92, 93, 94) | +30 € (total 80 €) |
-| Dépannage — déplacement Grande couronne (77, 78, 91, 95) | +40 € (total 90 €) |
-| Remorquage 0 – 5 km | 79 € |
-| Remorquage 5 – 10 km | 89 € |
-| Remorquage 10 – 15 km | 99 € |
-| Remorquage 15 – 20 km | 120 € |
-| Remorquage Plus de 20 km | Sur devis |
+## Pages principales
+- [Accueil](https://www.depannagescooter.com/): Dépannage et remorquage scooter et moto 24h/24 en Île-de-France.
+- [Tarifs](https://www.depannagescooter.com/tarifs/): Grille complète dépannage et remorquage, majorations et mentions.
+- [Zones d'intervention](https://www.depannagescooter.com/zones-intervention/): 127 communes : Paris, 77, 78, 91, 92, 93, 94, 95.
+- [FAQ](https://www.depannagescooter.com/faq/): Tarifs, délais, zones, assurance et types de véhicules pris en charge.
+- [Contact](https://www.depannagescooter.com/contact/): Demande de rappel et coordonnées pour une intervention urgente.
 
-## Zones desservies
-- Paris 1er
-- Paris 2e
-- Paris 3e
-- Paris 4e
-- Paris 5e
-- Paris 6e
-- Paris 7e
-- Paris 8e
-- Paris 9e
-- Paris 10e
-- Paris 11e
-- Paris 12e
-- Paris 13e
-- Paris 14e
-- Paris 15e
-- Paris 16e
-- Paris 17e
-- Paris 18e
-- Paris 19e
-- Paris 20e
-- Boulogne-Billancourt
-- Nanterre
-- Levallois-Perret
-- Neuilly-sur-Seine
-- Issy-les-Moulineaux
-- Courbevoie
-- Clichy
-- Asnières-sur-Seine
-- Montrouge
-- Saint-Denis
-- Montreuil
-- Aubervilliers
-- Pantin
-- Saint-Ouen
-- Bobigny
-- Noisy-le-Grand
-- Aulnay-sous-Bois
-- Créteil
-- Vitry-sur-Seine
-- Ivry-sur-Seine
-- Vincennes
-- Saint-Maur-des-Fossés
-- Charenton-le-Pont
-- Alfortville
-- Villejuif
-- Meaux
-- Melun
-- Chelles
-- Pontault-Combault
-- Savigny-le-Temple
-- Fontainebleau
-- Torcy
-- Lagny-sur-Marne
-- Brie-Comte-Robert
-- Combs-la-Ville
-- Lieusaint
-- Ozoir-la-Ferrière
-- Roissy-en-Brie
-- Dammarie-les-Lys
-- Provins
-- Versailles
-- Saint-Germain-en-Laye
-- Poissy
-- Conflans-Sainte-Honorine
-- Mantes-la-Jolie
-- Sartrouville
-- Houilles
-- Montigny-le-Bretonneux
-- Trappes
-- Rambouillet
-- Plaisir
-- Les Mureaux
-- Chatou
-- Le Chesnay-Rocquencourt
-- Guyancourt
-- Évry-Courcouronnes
-- Massy
-- Palaiseau
-- Corbeil-Essonnes
-- Savigny-sur-Orge
-- Athis-Mons
-- Viry-Châtillon
-- Grigny
-- Brétigny-sur-Orge
-- Sainte-Geneviève-des-Bois
-- Longjumeau
-- Les Ulis
-- Yerres
-- Draveil
-- Montgeron
-- Argenteuil
-- Cergy
-- Sarcelles
-- Garges-lès-Gonesse
-- Franconville
-- Ermont
-- Montmorency
-- Enghien-les-Bains
-- Goussainville
-- Taverny
-- Bezons
-- Herblay-sur-Seine
-- Pontoise
-- Gonesse
-- Roissy-en-France
-- Rueil-Malmaison
-- Colombes
-- Antony
-- Clamart
-- Puteaux
-- Suresnes
-- Gennevilliers
-- Bagneux
-- Bondy
-- Le Raincy
-- Livry-Gargan
-- Sevran
-- Drancy
-- Le Blanc-Mesnil
-- Épinay-sur-Seine
-- L'Haÿ-les-Roses
-- Thiais
-- Choisy-le-Roi
-- Orly
-- Fresnes
-- Cachan
-- Arcueil
+## Dépannage sur place
+- [Hub dépannage](https://www.depannagescooter.com/depannage-sur-place/): Vue d'ensemble des interventions sur place sans remorquage.
+- [Réparation de crevaison](https://www.depannagescooter.com/depannage-sur-place/crevaison/): DépannageScooter répare les crevaisons de scooters et motos directement sur le lieu de panne en Île-de-France. Le tec…
+- [Remplacement de batterie](https://www.depannagescooter.com/depannage-sur-place/batterie/): DépannageScooter intervient en Île-de-France lorsque la batterie de votre scooter ou moto est à plat ou ne retient pl…
+- [Démarrage et booster](https://www.depannagescooter.com/depannage-sur-place/demarrage-booster/): DépannageScooter effectue le démarrage de secours de scooters et motos en panne de batterie ou en difficulté au lance…
+- [Panne d'essence](https://www.depannagescooter.com/depannage-sur-place/panne-essence/): DépannageScooter livre du carburant sur le lieu de panne lorsque votre scooter ou moto est immobilisé pour réservoir …
+- [Ouverture de selle bloquée](https://www.depannagescooter.com/depannage-sur-place/ouverture-de-selle/): DépannageScooter ouvre les selles et trappes de coffre bloquées sur scooters et motos en Île-de-France. Le technicien…
 
-## Contact
-Téléphone : 07 72 12 53 11 — 24h/24, 7j/7
-Email : scooterdepannage@gmail.com
-Site : https://www.depannagescooter.com
+## Remorquage
+- [Hub remorquage](https://www.depannagescooter.com/remorquage/): Transport de deux-roues vers garage, domicile ou concession.
+- [Remorquage de scooter](https://www.depannagescooter.com/remorquage/remorquage-scooter/): DépannageScooter remorque les scooters en panne en Île-de-France vers l'adresse de votre choix : garage, concessionna…
+- [Remorquage de moto](https://www.depannagescooter.com/remorquage/remorquage-moto/): DépannageScooter remorque les motos en panne ou accidentées légères en Île-de-France vers un garage, une concession o…
+- [Remorquage moto accidentée](https://www.depannagescooter.com/remorquage/remorquage-moto-accidentee/): DépannageScooter prend en charge le remorquage de motos accidentées en Île-de-France lorsque le véhicule est non roul…
+- [Remorquage 3 roues](https://www.depannagescooter.com/remorquage/remorquage-3-roues/): DépannageScooter remorque les scooters et motos à trois roues en Île-de-France — Piaggio MP3, Peugeot Metropolis, Yam…
+- [Transfert garage et concession](https://www.depannagescooter.com/remorquage/transfert-garage-concession/): DépannageScooter organise le transfert de scooters et motos vers un garage réparateur, une concession ou un expert en…
 
-## Pages clés
-- https://www.depannagescooter.com/tarifs/ : grille complète
-- https://www.depannagescooter.com/depannage-sur-place/ : dépannage sur place
-- https://www.depannagescooter.com/remorquage/ : remorquage
-- https://www.depannagescooter.com/zones-intervention/ : 127 zones IDF
-- https://www.depannagescooter.com/faq/ : questions fréquentes
-- https://www.depannagescooter.com/guides/ : guides pratiques
-- https://www.depannagescooter.com/contact/ : demande de rappel
+## Optional
+- [Guides pratiques](https://www.depannagescooter.com/guides/): Conseils crevaison, batterie, prix remorquage et panne sèche.
+- [Mon scooter ne démarre plus : 6 causes et quoi faire](https://www.depannagescooter.com/guides/scooter-ne-demarre-plus/): Un scooter qui ne démarre plus vient souvent de la batterie, d'un contact coupé, d'une bougie ou d'un carburant inada…
+- [Combien coûte un remorquage de moto en Île-de-France ?](https://www.depannagescooter.com/guides/prix-remorquage-moto-idf/): En Île-de-France, le remorquage est facturé par paliers de distance (0–5 km, 5–10 km, 10–15 km, 15–20 km, puis sur de…
+- [Batterie de scooter : durée de vie, symptômes, remplacement](https://www.depannagescooter.com/guides/batterie-scooter-duree-vie/): Une batterie de scooter dure en moyenne 2 à 4 ans selon l'usage. Signes de fin de vie : démarrage lent, feux faibles,…
+- [Crevaison en scooter : réparer sur place ou remorquer ?](https://www.depannagescooter.com/guides/crevaison-scooter-reparer-ou-remorquer/): Une crevaison réparable sur place concerne les pneus tubeless avec objet retirable et talon intact. Roue à rayons, pn…
+- [Après une chute à moto : constat, remorquage, assurance](https://www.depannagescooter.com/guides/apres-chute-moto-demarches/): Après une chute, priorité à la sécurité et aux blessures. Ne déplacez pas la moto si les forces de l'ordre intervienn…
+- [À propos](https://www.depannagescooter.com/a-propos/): Identité, méthode et zone d'intervention de l'équipe.
+- [Avis clients](https://www.depannagescooter.com/avis/): Retours d'expérience sur les interventions en Île-de-France.
+- [Mentions légales](https://www.depannagescooter.com/mentions-legales/): Informations légales de l'éditeur du site.
+- [Confidentialité](https://www.depannagescooter.com/confidentialite/): Politique de traitement des données personnelles.
+- [Exemple zone — Paris 1er](https://www.depannagescooter.com/zones-intervention/paris-1er/): Page locale avec délai, tarifs et interventions fréquentes dans la commune.
