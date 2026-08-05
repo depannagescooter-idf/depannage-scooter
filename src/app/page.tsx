@@ -48,7 +48,7 @@ export default function HomePage() {
       <section className="relative overflow-hidden px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_70%_60%_at_50%_-10%,rgb(249_115_22/0.12),transparent)]" />
         <div className="relative mx-auto max-w-6xl">
-          <span className="inline-flex items-center rounded-sm bg-[#FFC300]/15 px-3 py-1 text-xs font-semibold text-[#b8860b]">
+          <span className="inline-flex items-center rounded-sm bg-amber-100 px-3 py-1 text-xs font-semibold text-amber-950">
             ● Équipes disponibles — {company.openingHours}
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight text-asphalte sm:text-5xl lg:text-6xl">
@@ -72,7 +72,7 @@ export default function HomePage() {
 
           <ReassuranceStrip />
 
-          <dl className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+          <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[
               {
                 icon: Clock,
@@ -87,17 +87,17 @@ export default function HomePage() {
               },
               { icon: Phone, label: "Devis", value: "Avant départ" },
             ].map(({ icon: Icon, label, value }) => (
-              <div key={label} className="card flex items-center gap-4 px-5 py-4">
+              <li key={label} className="card flex items-center gap-4 px-5 py-4">
                 <span className="flex size-10 shrink-0 items-center justify-center rounded-sm bg-signal/10 text-signal">
                   <Icon className="size-5" aria-hidden="true" />
                 </span>
                 <div>
-                  <dt className="text-xs font-medium text-beton">{label}</dt>
-                  <dd className="font-data font-semibold tabular-nums text-asphalte">{value}</dd>
+                  <p className="text-xs font-medium text-beton">{label}</p>
+                  <p className="font-data font-semibold tabular-nums text-asphalte">{value}</p>
                 </div>
-              </div>
+              </li>
             ))}
-          </dl>
+          </ul>
         </div>
       </section>
 
