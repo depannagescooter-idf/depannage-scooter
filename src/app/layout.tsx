@@ -1,16 +1,18 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { DeferredClientShell } from "@/components/DeferredClientShell";
-import { SiteChrome } from "@/components/SiteChrome";
+import { DeferredGeolocation } from "@/components/DeferredGeolocation";
+import { InterventionBar } from "@/components/InterventionBar";
 import { company } from "@/data/company";
+import { criticalCss } from "@/lib/critical-css";
 import { isProduction } from "@/lib/metadata";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["400", "600", "700"],
+  weight: ["600", "700"],
   variable: "--font-jakarta",
-  display: "swap",
+  display: "optional",
   preload: true,
   adjustFontFallback: true,
 });
@@ -34,13 +36,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="fr"
-      className={jakarta.variable}
-    >
+    <html lang="fr" className={jakarta.variable}>
+      <head>
+        <style dangerouslySetInnerHTML={{ __html: criticalCss }} />
+      </head>
       <body className="has-intervention-bar">
         {children}
-        <SiteChrome />
+        <InterventionBar />
+        <DeferredGeolocation />
         <DeferredClientShell />
       </body>
     </html>

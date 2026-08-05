@@ -5,6 +5,14 @@ const nextConfig: NextConfig = {
   experimental: {
     optimizeCss: true,
   },
+  webpack: (config) => {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      "../build/polyfills/polyfill-module": false,
+      "next/dist/build/polyfills/polyfill-module": false,
+    };
+    return config;
+  },
   images: {
     formats: ["image/avif", "image/webp"],
   },

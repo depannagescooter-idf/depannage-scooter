@@ -1,17 +1,9 @@
-"use client";
-
-import { Clock, Phone } from "lucide-react";
-import { useGeolocationHint } from "@/components/GeolocationProvider";
+import { IconClock, IconPhone } from "@/components/icons";
 import { company } from "@/data/company";
 
-export interface InterventionBarProps {
-  etaMinutes?: [number, number];
-}
-
-export function InterventionBar({ etaMinutes: etaProp }: InterventionBarProps) {
-  const { etaMinutes: geoEta, zoneName } = useGeolocationHint();
-  const etaMinutes = geoEta ?? etaProp ?? company.defaultEtaMinutes;
-  const [min, max] = etaMinutes;
+/** Bandeau fixe — composant serveur, zéro JS client requis. */
+export function InterventionBar() {
+  const [min, max] = company.defaultEtaMinutes;
 
   return (
     <aside
@@ -26,16 +18,11 @@ export function InterventionBar({ etaMinutes: etaProp }: InterventionBarProps) {
               Équipes disponibles
             </p>
             <p className="flex items-center gap-1 truncate text-xs text-stone-200 sm:text-sm">
-              <Clock className="size-3 shrink-0" aria-hidden="true" />
-              <span>
-                {zoneName ? (
-                  <>
-                    <span className="font-semibold text-white">{zoneName}</span>
-                    {" · "}
-                  </>
-                ) : null}
+              <IconClock className="size-3 shrink-0" />
+              <span id="intervention-eta-line">
+                <span id="intervention-zone-label" className="hidden font-semibold text-white" />
                 Arrivée{" "}
-                <span className="font-data font-semibold tabular-nums text-white">
+                <span id="intervention-eta-value" className="font-data font-semibold tabular-nums text-white">
                   {min}–{max} min
                 </span>
               </span>
@@ -49,7 +36,7 @@ export function InterventionBar({ etaMinutes: etaProp }: InterventionBarProps) {
           className="btn-primary flex shrink-0 items-center gap-2 rounded-sm px-4 py-2.5 font-display text-sm font-semibold text-white sm:px-5"
           aria-label={`Appeler ${company.name}`}
         >
-          <Phone className="size-4" strokeWidth={2.5} aria-hidden="true" />
+          <IconPhone className="size-4" />
           <span className="hidden font-data tabular-nums sm:inline">{company.phoneDisplay}</span>
           <span className="sm:hidden">Appeler</span>
         </a>
