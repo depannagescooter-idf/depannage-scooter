@@ -21,6 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: title.length <= 60 ? title : `Dépannage ${zone.name} – DépannageScooter`,
     description: description.slice(0, 158),
     path: `/zones-intervention/${zone.slug}/`,
+    useRouteOg: true,
   });
 }
 

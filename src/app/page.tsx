@@ -26,7 +26,7 @@ import {
 export const metadata: Metadata = createPageMetadata({
   title: "Dépannage scooter & moto Île-de-France 24/7",
   description:
-    "Dépannage et remorquage scooter et moto en Île-de-France, 24h/24. Intervention en 25–40 min. Appelez le 07 72 12 53 11 — devis ferme avant déplacement.",
+    `Dépannage et remorquage scooter et moto en Île-de-France, 24h/24. Intervention en 25–40 min. Appelez le ${company.phoneDisplay} — devis ferme avant déplacement.`,
   path: "/",
 });
 
@@ -41,7 +41,7 @@ export default function HomePage() {
           organizationSchema(),
           webSiteSchema(),
           localBusinessSchema(),
-          faqPageSchema(previewFaqs),
+          faqPageSchema(globalFaqs),
         ]}
       />
 
@@ -71,6 +71,27 @@ export default function HomePage() {
           </div>
 
           <ReassuranceStrip />
+
+          <section className="mt-8 card px-5 py-5 sm:px-6" aria-labelledby="urgence-title">
+            <h2 id="urgence-title" className="font-display text-lg font-bold text-asphalte">
+              En panne ? 3 étapes
+            </h2>
+            <ol className="mt-4 grid gap-3 sm:grid-cols-3">
+              {[
+                { step: "1", title: "Appelez", detail: `${company.phoneDisplay} — 24h/24` },
+                { step: "2", title: "Devis ferme", detail: "Tarif et délai confirmés avant départ" },
+                { step: "3", title: "Intervention", detail: "Dépannage sur place ou remorquage plateau" },
+              ].map(({ step, title, detail }) => (
+                <li key={step} className="flex gap-3">
+                  <span className="font-data text-lg font-bold text-signal">{step}</span>
+                  <div>
+                    <p className="font-display font-semibold text-asphalte">{title}</p>
+                    <p className="text-sm text-beton">{detail}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </section>
 
           <ul className="mt-8 grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {[

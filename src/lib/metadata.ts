@@ -27,6 +27,8 @@ export interface PageMetadataInput {
   description: string;
   path: string;
   index?: boolean;
+  /** true = laisser Next.js utiliser opengraph-image.tsx du dossier route */
+  useRouteOg?: boolean;
 }
 
 export function createPageMetadata({
@@ -34,9 +36,15 @@ export function createPageMetadata({
   description,
   path,
   index = isProduction(),
+  useRouteOg = false,
 }: PageMetadataInput): Metadata {
   const url = absoluteUrl(path);
   const ogImage = defaultOgImageUrl();
+  const imageMeta = useRouteOg
+    ? {}
+    : {
+        images: [{ url: ogImage, width: 1200, height: 630, alt: company.name }],
+      };
 
   return {
     title,
@@ -52,13 +60,13 @@ export function createPageMetadata({
       siteName: company.name,
       locale: "fr_FR",
       type: "website",
-      images: [{ url: ogImage, width: 1200, height: 630, alt: company.name }],
+      ...imageMeta,
     },
     twitter: {
       card: "summary_large_image",
       title,
       description,
-      images: [ogImage],
+      ...(useRouteOg ? {} : { images: [ogImage] }),
     },
     robots: index ? { index: true, follow: true } : { index: false, follow: false },
   };

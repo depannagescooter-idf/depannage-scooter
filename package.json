@@ -8,7 +8,7 @@
     "validate:data": "npx tsx scripts/validate-data.ts",
     "check:nojs": "npx tsx scripts/check-nojs.ts",
     "check:duplicates": "npx tsx scripts/check-duplicates.ts",
-    "prebuild": "npm run generate:llms",
+    "prebuild": "npm run validate:data && npm run check:nojs && npm run generate:llms",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

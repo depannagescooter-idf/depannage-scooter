@@ -14,6 +14,7 @@ import {
   getTowingPriceRangeLabel,
   pricing,
 } from "../src/data/pricing";
+import { getVerifiedReviews } from "../src/data/reviews";
 import { publishedZones } from "../src/data/zones";
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL ?? company.url).replace(/\/$/, "");
@@ -33,6 +34,25 @@ const travelSummary = [
   `petite couronne ${formatPrice(pricing.travelFees.PETITE_COURONNE.amount)}`,
   `grande couronne ${formatPrice(pricing.travelFees.GRANDE_COURONNE.amount)}`,
 ].join(", ");
+
+const hasReviews = getVerifiedReviews().length > 0;
+
+const optionalLinks = [
+  llmsLink("/guides/", "Guides pratiques", "Conseils crevaison, batterie, prix remorquage et panne sèche."),
+  ...guides.map((g) => llmsLink(`/guides/${g.slug}/`, g.title, g.shortAnswer)),
+  llmsLink("/a-propos/", "À propos", "Identité, méthode et zone d'intervention de l'équipe."),
+  ...(hasReviews
+    ? [llmsLink("/avis/", "Avis clients", "Retours d'expérience sur les interventions en Île-de-France.")]
+    : []),
+  llmsLink("/mentions-legales/", "Mentions légales", "Informations légales de l'éditeur du site."),
+  llmsLink("/cgv/", "CGV", "Conditions générales de vente des prestations de dépannage."),
+  llmsLink("/confidentialite/", "Confidentialité", "Politique de traitement des données personnelles."),
+  llmsLink(
+    `/zones-intervention/${publishedZones[0]?.slug ?? "paris-1er"}/`,
+    `Exemple zone — ${publishedZones[0]?.name ?? "Paris 1er"}`,
+    "Page locale avec délai, tarifs et interventions fréquentes dans la commune.",
+  ),
+];
 
 const lines: string[] = [
   `# ${company.name}`,
@@ -62,17 +82,7 @@ const lines: string[] = [
   ),
   "",
   "## Optional",
-  llmsLink("/guides/", "Guides pratiques", "Conseils crevaison, batterie, prix remorquage et panne sèche."),
-  ...guides.map((g) => llmsLink(`/guides/${g.slug}/`, g.title, g.shortAnswer)),
-  llmsLink("/a-propos/", "À propos", "Identité, méthode et zone d'intervention de l'équipe."),
-  llmsLink("/avis/", "Avis clients", "Retours d'expérience sur les interventions en Île-de-France."),
-  llmsLink("/mentions-legales/", "Mentions légales", "Informations légales de l'éditeur du site."),
-  llmsLink("/confidentialite/", "Confidentialité", "Politique de traitement des données personnelles."),
-  llmsLink(
-    `/zones-intervention/${publishedZones[0]?.slug ?? "paris-1er"}/`,
-    `Exemple zone — ${publishedZones[0]?.name ?? "Paris 1er"}`,
-    "Page locale avec délai, tarifs et interventions fréquentes dans la commune.",
-  ),
+  ...optionalLinks,
   "",
 ];
 

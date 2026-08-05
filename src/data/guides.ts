@@ -55,7 +55,7 @@ export const guides: Guide[] = [
           "Si le démarreur ne répond pas après vérification batterie et kill switch, ou si vous entendez un grincement anormal. En Île-de-France, un dépanneur peut tester sur place et remorquer si nécessaire.",
       },
     ],
-    author: { name: "Karim A.", role: "Mécanicien deux-roues", experienceYears: 12 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
     publishedAt: "2026-03-01",
   },
   {
@@ -90,7 +90,7 @@ export const guides: Guide[] = [
           "Beaucoup de contrats moto incluent une assistance. Vérifiez le numéro sur votre attestation avant de payer. Sinon, conservez la facture pour un éventuel remboursement partiel.",
       },
     ],
-    author: { name: "Karim A.", role: "Mécanicien deux-roues", experienceYears: 12 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
     publishedAt: "2026-03-05",
   },
   {
@@ -120,7 +120,7 @@ export const guides: Guide[] = [
           "Un booster suffit si la batterie est jeune et juste déchargée. Si elle a plus de trois ans ou gonfle, le remplacement est préférable. Nous installons la référence adaptée sur place.",
       },
     ],
-    author: { name: "Karim A.", role: "Mécanicien deux-roues", experienceYears: 12 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
     publishedAt: "2026-03-10",
   },
   {
@@ -150,7 +150,7 @@ export const guides: Guide[] = [
           "Feux de détresse, gilet si disponible, scooter sur le trottoir si possible. Sur chaussée, restez visible et éloigné du trafic en attendant le dépanneur.",
       },
     ],
-    author: { name: "Karim A.", role: "Mécanicien deux-roues", experienceYears: 12 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
     publishedAt: "2026-03-12",
   },
   {
@@ -180,7 +180,7 @@ export const guides: Guide[] = [
           "Photos des dégâts, constat amiable ou procès-verbal police, facture de remorquage, certificat médical si blessure. Déclarez sous 5 jours ouvrés en général.",
       },
     ],
-    author: { name: "Karim A.", role: "Mécanicien deux-roues", experienceYears: 12 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
     publishedAt: "2026-03-15",
   },
 ];

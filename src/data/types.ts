@@ -110,7 +110,8 @@ export interface PricingConfig {
   towing: Record<TowPriceKey, { label: string; amount: number | null }>;
   surcharges: {
     night: { label: string; percent: number | null };
-    weekend: { label: string; percent: number | null };
+    weekendSaturday: { label: string; percent: number | null };
+    weekendSunday: { label: string; percent: number | null };
     holiday: { label: string; percent: number | null };
   };
   /** Point de départ pour le calcul des distances (à remplir par le client) */

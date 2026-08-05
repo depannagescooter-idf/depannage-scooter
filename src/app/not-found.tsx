@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 export default function NotFound() {
   return (
     <PageShell>
-      <main className="mx-auto max-w-lg px-4 py-16 text-center sm:px-6">
+      <div className="mx-auto max-w-lg px-4 py-16 text-center sm:px-6">
         <p className="font-data text-6xl font-bold tabular-nums text-signal">404</p>
         <h1 className="mt-4 font-display text-2xl font-bold text-asphalte">Page introuvable</h1>
         <p className="mt-2 text-beton">En panne ? Nous sommes disponibles 24h/24.</p>
@@ -45,7 +45,7 @@ export default function NotFound() {
             Retour à l&apos;accueil
           </Link>
         </section>
-      </main>
+      </div>
     </PageShell>
   );
 }

@@ -4,6 +4,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { ZonesByDepartment } from "@/components/ZonesByDepartment";
+import { getZoneCountLabel } from "@/lib/site-copy";
 import { publishedZones } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
 import { itemListSchema, webPageSchema } from "@/lib/schema";
@@ -42,7 +43,7 @@ export default function ZonesHubPage() {
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
             DépannageScooter couvre Paris (20 arrondissements), la petite couronne (92, 93, 94)
-            et la grande couronne (77, 78, 91, 95) : plus de 110 communes en Île-de-France.
+            et la grande couronne (77, 78, 91, 95) : {getZoneCountLabel()} en Île-de-France.
             Intervention 24h/24, délai annoncé selon la zone.
           </ShortAnswer>
         </div>

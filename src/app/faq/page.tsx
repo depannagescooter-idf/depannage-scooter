@@ -16,6 +16,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Questions fréquentes sur le dépannage et remorquage scooter et moto en Île-de-France : tarifs, délais, assurance, zones.",
   path: "/faq/",
+  useRouteOg: true,
 });
 
 export default function FaqPage() {

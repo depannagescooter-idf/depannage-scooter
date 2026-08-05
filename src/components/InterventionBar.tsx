@@ -12,14 +12,14 @@ export function InterventionBar() {
     >
       <div className="pointer-events-auto mx-auto flex max-w-2xl items-center gap-3 border-t border-white/10 bg-asphalte px-4 py-3 sm:gap-4 sm:px-6">
         <div className="flex min-w-0 flex-1 items-center gap-3">
-          <span className="relative flex size-2.5 shrink-0 rounded-full bg-amber-300" aria-hidden="true" />
+          <span className="status-dot shrink-0" aria-hidden="true" />
           <div className="min-w-0">
             <p className="truncate text-xs font-semibold uppercase tracking-wide text-amber-200 sm:text-sm">
               Équipes disponibles
             </p>
             <p className="flex items-center gap-1 truncate text-xs text-stone-200 sm:text-sm">
               <IconClock className="size-3 shrink-0" />
-              <span id="intervention-eta-line">
+              <span id="intervention-eta-line" aria-live="polite">
                 <span id="intervention-zone-label" className="hidden font-semibold text-white" />
                 Arrivée{" "}
                 <span id="intervention-eta-value" className="font-data font-semibold tabular-nums text-white">

@@ -9,7 +9,8 @@ import { depannageServices, remorquageServices } from "@/data/services";
 import type { Zone } from "@/data/types";
 import { getZoneBySlug } from "@/data/zones";
 import { buildZoneShortAnswer } from "@/lib/zone-short-answer";
-import { zoneLocalBusinessSchema } from "@/lib/schema";
+import { getZoneFaqs } from "@/lib/zone-faqs";
+import { faqPageSchema, zoneLocalBusinessSchema } from "@/lib/schema";
 
 export function ZonePageContent({ zone }: { zone: Zone }) {
   const neighbours = zone.neighbours
@@ -20,7 +21,7 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
 
   return (
     <>
-      <JsonLd data={zoneLocalBusinessSchema(zone)} />
+      <JsonLd data={[zoneLocalBusinessSchema(zone), faqPageSchema(getZoneFaqs(zone))]} />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb
           items={[

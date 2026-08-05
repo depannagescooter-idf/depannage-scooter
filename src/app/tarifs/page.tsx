@@ -14,8 +14,9 @@ import { offerCatalogSchema } from "@/lib/schema";
 export const metadata: Metadata = createPageMetadata({
   title: "Tarifs dépannage & remorquage moto IDF",
   description:
-    "Tarifs dépannage et remorquage scooter moto en Île-de-France : 50 € + déplacement, paliers km remorquage. Devis ferme au 07 72 12 53 11.",
+    `Tarifs dépannage et remorquage scooter moto en Île-de-France : 50 € + déplacement, paliers km remorquage. Devis ferme au ${company.phoneDisplay}.`,
   path: "/tarifs/",
+  useRouteOg: true,
 });
 
 export default function TarifsPage() {

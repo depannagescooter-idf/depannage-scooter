@@ -1,8 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { company } from "@/data/company";
+import { issueTypeLabels, issueTypes } from "@/lib/contact-schema";
 import { trackFormSubmit } from "@/lib/analytics";
 import type { ContactFormPayload } from "@/lib/contact-schema";
 
@@ -22,6 +24,7 @@ export function ContactForm() {
       phone: String(formData.get("phone") ?? ""),
       location: String(formData.get("location") ?? ""),
       issue: String(formData.get("issue") ?? "") as ContactFormPayload["issue"],
+      vehicle: String(formData.get("vehicle") ?? ""),
       website: String(formData.get("website") ?? ""),
     };
 
@@ -42,7 +45,7 @@ export function ContactForm() {
       trackFormSubmit();
       router.push("/contact/merci/");
     } catch {
-      setError("Connexion impossible. Appelez le 07 72 12 53 11.");
+      setError(`Connexion impossible. Appelez le ${company.phoneDisplay}.`);
     } finally {
       setLoading(false);
     }
@@ -86,6 +89,18 @@ export function ContactForm() {
         />
       </div>
       <div>
+        <label htmlFor="vehicle" className="block text-sm font-medium text-asphalte">
+          Marque / modèle (optionnel)
+        </label>
+        <input
+          id="vehicle"
+          name="vehicle"
+          type="text"
+          className="mt-1 w-full rounded-lg border border-border px-4 py-3 focus:border-gyro focus:outline-none focus:ring-2 focus:ring-gyro/20"
+          placeholder="Ex. Peugeot Kisbee, Yamaha NMAX…"
+        />
+      </div>
+      <div>
         <label htmlFor="issue" className="block text-sm font-medium text-asphalte">
           Type de panne *
         </label>
@@ -96,16 +111,14 @@ export function ContactForm() {
           className="mt-1 w-full rounded-lg border border-border px-4 py-3 focus:border-gyro focus:outline-none focus:ring-2 focus:ring-gyro/20"
         >
           <option value="">Choisir…</option>
-          <option value="crevaison">Crevaison</option>
-          <option value="batterie">Batterie</option>
-          <option value="demarrage">Ne démarre pas</option>
-          <option value="essence">Panne d&apos;essence</option>
-          <option value="selle">Selle bloquée</option>
-          <option value="remorquage">Remorquage</option>
-          <option value="autre">Autre</option>
+          {issueTypes.map((value) => (
+            <option key={value} value={value}>
+              {issueTypeLabels[value]}
+            </option>
+          ))}
         </select>
       </div>
-      {error ? <p className="text-sm text-alerte">{error}</p> : null}
+      {error ? <p className="text-sm text-error">{error}</p> : null}
       <button
         type="submit"
         disabled={loading}
@@ -114,7 +127,12 @@ export function ContactForm() {
         {loading ? "Envoi…" : "Demander un rappel"}
       </button>
       <p className="text-center text-xs text-beton">
-        Urgence ? Appelez directement le{" "}
+        En envoyant ce formulaire, vous acceptez que vos données soient traitées pour organiser un
+        rappel.{" "}
+        <Link href="/confidentialite/" className="text-gyro hover:underline">
+          Politique de confidentialité
+        </Link>
+        . Urgence ? Appelez le{" "}
         <a
           href={`tel:${company.phone}`}
           data-track-origin="inline"

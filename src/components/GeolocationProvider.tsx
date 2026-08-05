@@ -62,14 +62,14 @@ export function GeolocationPrompt() {
           <button
             type="button"
             onClick={requestLocation}
-            className="rounded-full bg-gyro px-3 py-1.5 text-xs font-semibold text-white"
+                className="min-h-11 rounded-full bg-gyro px-3 py-2 text-xs font-semibold text-white"
           >
             Oui
           </button>
           <button
             type="button"
             onClick={dismissPrompt}
-            className="rounded-full border border-border px-3 py-1.5 text-xs font-semibold text-beton"
+                className="min-h-11 rounded-full border border-border px-3 py-2 text-xs font-semibold text-beton"
           >
             Non
           </button>

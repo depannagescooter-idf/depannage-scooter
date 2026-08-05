@@ -6,7 +6,9 @@ import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
 import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
+import { ZonesByDepartment } from "@/components/ZonesByDepartment";
 import { remorquageServices } from "@/data/services";
+import { publishedZones } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
 import { itemListSchema, webPageSchema } from "@/lib/schema";
 
@@ -71,6 +73,13 @@ export default function RemorquageHubPage() {
           <Link href="/tarifs/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
             Grille complète →
           </Link>
+        </section>
+        <section className="mt-12">
+          <h2 className="section-title">Zones couvertes en Île-de-France</h2>
+          <p className="mt-2 text-sm text-beton">
+            {publishedZones.length} communes couvertes — Paris, petite et grande couronne.
+          </p>
+          <ZonesByDepartment />
         </section>
       </main>
     </PageShell>

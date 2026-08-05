@@ -9,10 +9,8 @@ import { company } from "@/data/company";
 import { ServicePriceTable } from "@/components/ServicePriceTable";
 import type { Service } from "@/data/types";
 import { getServiceBySlug } from "@/data/services";
-import { getZoneBySlug } from "@/data/zones";
+import { ZonesByDepartment } from "@/components/ZonesByDepartment";
 import { faqPageSchema, serviceSchema } from "@/lib/schema";
-
-const majorZoneSlugs = ["paris-11e", "paris-20e", "boulogne-billancourt", "montreuil", "nanterre"];
 
 export function ServicePageContent({
   service,
@@ -26,10 +24,6 @@ export function ServicePageContent({
   const related = service.relatedServices
     .map((slug) => getServiceBySlug(slug))
     .filter((s): s is Service => Boolean(s));
-
-  const majorZones = majorZoneSlugs
-    .map((slug) => getZoneBySlug(slug))
-    .filter(Boolean);
 
   const remorquageSlug =
     service.category === "depannage"
@@ -157,20 +151,10 @@ export function ServicePageContent({
 
           <section className="mt-10">
             <h2 className="section-title">Où intervenez-vous ?</h2>
-            <ul className="mt-4 flex flex-wrap gap-2">
-              {majorZones.map((zone) =>
-                zone ? (
-                  <li key={zone.slug}>
-                    <Link
-                      href={`/zones-intervention/${zone.slug}/`}
-                      className="rounded-full border border-border px-3 py-1 text-sm text-asphalte transition-colors hover:border-signal hover:text-signal"
-                    >
-                      {zone.name}
-                    </Link>
-                  </li>
-                ) : null,
-              )}
-            </ul>
+            <p className="mt-2 text-sm text-beton">
+              Intervention en Île-de-France — délais et tarifs selon la commune.
+            </p>
+            <ZonesByDepartment />
             <p className="mt-3">
               <Link href="/zones-intervention/" className="text-sm font-medium text-gyro hover:underline">
                 Toutes les zones →

@@ -1,4 +1,6 @@
 import type { Faq } from "./types";
+import { company } from "./company";
+import { publishedZones } from "./zones";
 
 export const globalFaqs: Faq[] = [
   {
@@ -54,7 +56,7 @@ export const globalFaqs: Faq[] = [
   {
     question: "Comment obtenir un tarif avant l'intervention ?",
     answer:
-      "Appelez le 07 72 12 53 11 ou contactez-nous via WhatsApp. Nous établissons un devis ferme en fonction du type de panne, de votre adresse et de l'horaire. Aucune intervention sans accord préalable.",
+      `Appelez le ${company.phoneDisplay} ou contactez-nous via WhatsApp. Nous établissons un devis ferme en fonction du type de panne, de votre adresse et de l'horaire. Aucune intervention sans accord préalable.`,
   },
   {
     question: "Enlèvez-vous les épaves ou scooters abandonnés ?",
@@ -64,7 +66,7 @@ export const globalFaqs: Faq[] = [
   {
     question: "Quelle est la zone couverte exactement ?",
     answer:
-      "Paris intra-muros et l'ensemble de l'Île-de-France (77, 78, 91, 92, 93, 94, 95) : plus de 120 communes couvertes. Consultez la page zones d'intervention pour la liste complète. Hors zone : devis sur demande.",
+      `Paris intra-muros et l'ensemble de l'Île-de-France (77, 78, 91, 92, 93, 94, 95) : ${publishedZones.length} communes couvertes. Consultez la page zones d'intervention pour la liste complète. Hors zone : devis sur demande.`,
   },
   {
     question: "Puis-je suivre l'arrivée du dépanneur ?",

@@ -19,6 +19,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: service.metaTitle,
     description: service.metaDescription,
     path: `/depannage-sur-place/${service.slug}/`,
+    useRouteOg: true,
   });
 }
 

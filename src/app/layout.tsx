@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { DeferredClientShell } from "@/components/DeferredClientShell";
-import { DeferredGeolocation } from "@/components/DeferredGeolocation";
 import { InterventionBar } from "@/components/InterventionBar";
 import { company } from "@/data/company";
 import { criticalCss } from "@/lib/critical-css";
@@ -25,7 +24,7 @@ export const metadata: Metadata = {
     template: `%s | ${company.name}`,
   },
   description:
-    "Dépannage et remorquage de scooters et motos en Île-de-France, 24h/24 et 7j/7. Appelez le 07 72 12 53 11.",
+    "Dépannage et remorquage de scooters et motos en Île-de-France, 24h/24 et 7j/7. Appelez le ${company.phoneDisplay}.",
   metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL ?? company.url),
   robots: isProductionEnv ? { index: true, follow: true } : { index: false, follow: false },
 };
@@ -43,7 +42,6 @@ export default function RootLayout({
       <body className="has-intervention-bar">
         {children}
         <InterventionBar />
-        <DeferredGeolocation />
         <DeferredClientShell />
       </body>
     </html>

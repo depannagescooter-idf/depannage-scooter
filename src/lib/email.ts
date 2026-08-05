@@ -1,17 +1,8 @@
 import nodemailer from "nodemailer";
 import type { ContactFormPayload } from "./contact-schema";
+import { issueTypeLabels } from "./contact-schema";
 
 export type ContactSubmission = Omit<ContactFormPayload, "website">;
-
-const issueLabels: Record<ContactSubmission["issue"], string> = {
-  crevaison: "Crevaison",
-  batterie: "Batterie",
-  demarrage: "Ne démarre pas",
-  essence: "Panne d'essence",
-  selle: "Selle bloquée",
-  remorquage: "Remorquage",
-  autre: "Autre",
-};
 
 function smtpConfigured(): boolean {
   return Boolean(process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS);
@@ -36,13 +27,16 @@ export async function sendContactEmail(payload: ContactSubmission): Promise<bool
     "",
     `Téléphone : ${payload.phone}`,
     `Localisation : ${payload.location}`,
-    `Type de panne : ${issueLabels[payload.issue]}`,
-  ].join("\n");
+    `Type de panne : ${issueTypeLabels[payload.issue]}`,
+    payload.vehicle ? `Véhicule : ${payload.vehicle}` : null,
+  ]
+    .filter(Boolean)
+    .join("\n");
 
   await transporter.sendMail({
     from: process.env.SMTP_USER,
     to,
-    subject: `[Rappel] ${issueLabels[payload.issue]} — ${payload.phone}`,
+    subject: `[Rappel] ${issueTypeLabels[payload.issue]} — ${payload.phone}`,
     text,
   });
 
@@ -61,7 +55,8 @@ export async function sendContactWebhook(payload: ContactSubmission): Promise<bo
       phone: payload.phone,
       location: payload.location,
       issue: payload.issue,
-      issueLabel: issueLabels[payload.issue],
+      issueLabel: issueTypeLabels[payload.issue],
+      vehicle: payload.vehicle || undefined,
       at: new Date().toISOString(),
     }),
   });

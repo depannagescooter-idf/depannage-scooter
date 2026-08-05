@@ -179,7 +179,9 @@ export function breadcrumbSchema(items: { name: string; path?: string }[]) {
 }
 
 export function offerCatalogSchema() {
-  const towingOffers = Object.entries(pricing.towing).map(([key, tier]) => ({
+  const towingOffers = Object.entries(pricing.towing)
+    .filter(([, tier]) => tier.amount !== null)
+    .map(([key, tier]) => ({
     "@type": "Offer",
     name: `Remorquage — ${tier.label}`,
     price: tier.amount,

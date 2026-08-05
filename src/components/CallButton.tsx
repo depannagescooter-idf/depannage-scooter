@@ -1,4 +1,4 @@
-import { Phone } from "lucide-react";
+import { IconPhone } from "@/components/icons";
 import { company } from "@/data/company";
 
 export type CallOrigin =
@@ -24,7 +24,7 @@ export function CallButton({ origin, showNumber = true, className = "" }: CallBu
       className={`btn-primary inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 font-display text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gyro ${className}`}
       aria-label={`Appeler ${company.name} au ${company.phoneDisplay}`}
     >
-      <Phone className="size-4 shrink-0" aria-hidden="true" strokeWidth={2.5} />
+      <IconPhone className="size-4 shrink-0" />
       {showNumber ? (
         <span className="font-data tabular-nums">{company.phoneDisplay}</span>
       ) : (

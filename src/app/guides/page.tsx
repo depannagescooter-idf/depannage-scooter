@@ -13,6 +13,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Guides pratiques : scooter qui ne démarre plus, crevaison, batterie, tarifs remorquage, après une chute. Conseils DépannageScooter.",
   path: "/guides/",
+  useRouteOg: true,
 });
 
 export default function GuidesIndexPage() {

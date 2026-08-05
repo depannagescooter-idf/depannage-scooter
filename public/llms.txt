@@ -36,7 +36,7 @@ Tarifs jour TTC : dépannage sur place 50 € + déplacement (Paris 20 €, pe
 - [Crevaison en scooter : réparer sur place ou remorquer ?](https://www.depannagescooter.com/guides/crevaison-scooter-reparer-ou-remorquer/): Une crevaison réparable sur place concerne les pneus tubeless avec objet retirable et talon intact. Roue à rayons, pn…
 - [Après une chute à moto : constat, remorquage, assurance](https://www.depannagescooter.com/guides/apres-chute-moto-demarches/): Après une chute, priorité à la sécurité et aux blessures. Ne déplacez pas la moto si les forces de l'ordre intervienn…
 - [À propos](https://www.depannagescooter.com/a-propos/): Identité, méthode et zone d'intervention de l'équipe.
-- [Avis clients](https://www.depannagescooter.com/avis/): Retours d'expérience sur les interventions en Île-de-France.
 - [Mentions légales](https://www.depannagescooter.com/mentions-legales/): Informations légales de l'éditeur du site.
+- [CGV](https://www.depannagescooter.com/cgv/): Conditions générales de vente des prestations de dépannage.
 - [Confidentialité](https://www.depannagescooter.com/confidentialite/): Politique de traitement des données personnelles.
 - [Exemple zone — Paris 1er](https://www.depannagescooter.com/zones-intervention/paris-1er/): Page locale avec délai, tarifs et interventions fréquentes dans la commune.

@@ -7,7 +7,7 @@ export function PageShell({ children }: { children: React.ReactNode }) {
     <>
       <SkipLink />
       <Header />
-      <div id="main-content">{children}</div>
+      <main id="main-content">{children}</main>
       <Footer />
     </>
   );

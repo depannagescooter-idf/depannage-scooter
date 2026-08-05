@@ -60,9 +60,13 @@ export const pricing: PricingConfig = {
       label: "Majoration nuit (20h – 8h)",
       percent: 30,
     },
-    weekend: {
-      label: "Majoration week-end (sam. +30 %, dim. +50 %)",
+    weekendSaturday: {
+      label: "Majoration samedi",
       percent: 30,
+    },
+    weekendSunday: {
+      label: "Majoration dimanche",
+      percent: 50,
     },
     holiday: {
       label: "Majoration jour férié",

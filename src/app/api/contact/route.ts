@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { company } from "@/data/company";
 import { contactFormSchema } from "@/lib/contact-schema";
 import { sendContactEmail, sendContactWebhook } from "@/lib/email";
 import { clientIp, isRateLimited } from "@/lib/rate-limit";
@@ -42,8 +43,7 @@ export async function POST(request: Request) {
   if (!emailSent && !webhookSent) {
     return NextResponse.json(
       {
-        error:
-          "Service temporairement indisponible. Appelez le 07 72 12 53 11 pour une intervention immédiate.",
+        error: `Service temporairement indisponible. Appelez le ${company.phoneDisplay} pour une intervention immédiate.`,
       },
       { status: 503 },
     );

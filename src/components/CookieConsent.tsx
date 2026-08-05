@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { getStoredConsent, setStoredConsent } from "@/lib/analytics";
 
@@ -16,12 +17,16 @@ export function CookieConsent() {
     <div
       className="fixed inset-x-0 bottom-24 z-[60] px-4 sm:bottom-28"
       role="dialog"
+      aria-modal="true"
       aria-label="Consentement cookies"
     >
       <div className="mx-auto flex max-w-xl flex-col gap-3 rounded-2xl border border-border-soft bg-surface/95 p-4 shadow-float backdrop-blur-xl sm:flex-row sm:items-center sm:justify-between">
         <p className="text-sm text-beton">
           Nous utilisons des cookies analytics pour mesurer l&apos;audience du site. Aucune
-          publicité.
+          publicité.{" "}
+          <Link href="/confidentialite/" className="font-medium text-gyro hover:underline">
+            En savoir plus
+          </Link>
         </p>
         <div className="flex shrink-0 gap-2">
           <button
@@ -30,7 +35,7 @@ export function CookieConsent() {
               setStoredConsent("denied");
               setVisible(false);
             }}
-            className="rounded-full border border-border px-4 py-2 text-sm font-semibold text-beton"
+            className="min-h-11 rounded-full border border-border px-4 py-2.5 text-sm font-semibold text-beton"
           >
             Refuser
           </button>
@@ -40,7 +45,7 @@ export function CookieConsent() {
               setStoredConsent("granted");
               setVisible(false);
             }}
-            className="rounded-full bg-gyro px-4 py-2 text-sm font-semibold text-white"
+            className="min-h-11 rounded-full bg-gyro px-4 py-2.5 text-sm font-semibold text-white"
           >
             Accepter
           </button>

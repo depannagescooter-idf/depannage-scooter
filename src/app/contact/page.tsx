@@ -15,6 +15,7 @@ export const metadata: Metadata = createPageMetadata({
   description:
     "Contactez DépannageScooter pour un dépannage ou remorquage scooter moto en IDF. Téléphone, WhatsApp ou formulaire de rappel — réponse rapide 24h/24.",
   path: "/contact/",
+  useRouteOg: true,
 });
 
 export default function ContactPage() {
