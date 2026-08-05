@@ -7,7 +7,10 @@ export function getSiteUrl(): string {
 }
 
 export function isProduction(): boolean {
-  return process.env.NEXT_PUBLIC_ENV === "production";
+  return (
+    process.env.NEXT_PUBLIC_ENV === "production" ||
+    process.env.VERCEL_ENV === "production"
+  );
 }
 
 export function absoluteUrl(path: string): string {

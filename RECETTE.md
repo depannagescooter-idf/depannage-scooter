@@ -14,7 +14,7 @@ Mesure locale sur https://www.depannagescooter.com/ :
 | LCP | 2,5 s | < 2,0 s |
 | CLS | 0,005 | < 0,05 |
 
-\* **SEO 66** : vérifier `NEXT_PUBLIC_ENV=production` sur Vercel. Sans cette variable, le site reste en `noindex` → pénalité Lighthouse SEO majeure.
+\* **SEO 66** : si Lighthouse signale « indexation bloquée », vérifier que le déploiement Vercel **Production** n’a pas `NEXT_PUBLIC_ENV=development`. En prod Vercel, `VERCEL_ENV=production` active l’indexation même sans cette variable.
 
 Après correction Vercel + redéploiement, retester sur [PageSpeed Insights](https://pagespeed.web.dev/).
 
