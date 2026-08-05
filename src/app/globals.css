@@ -16,7 +16,7 @@
 
   /* Typographie */
   --font-display: var(--font-jakarta), system-ui, sans-serif;
-  --font-body: var(--font-dm-sans), system-ui, sans-serif;
+  --font-body: var(--font-jakarta), system-ui, sans-serif;
   --font-data: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
   --radius-sm: 0.5rem;

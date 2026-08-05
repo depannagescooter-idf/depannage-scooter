@@ -1,24 +1,18 @@
 import type { Metadata } from "next";
-import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
-import { ClientShell } from "@/components/ClientShell";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import { DeferredClientShell } from "@/components/DeferredClientShell";
+import { SiteChrome } from "@/components/SiteChrome";
 import { company } from "@/data/company";
 import { isProduction } from "@/lib/metadata";
 import "./globals.css";
 
 const jakarta = Plus_Jakarta_Sans({
   subsets: ["latin"],
-  weight: ["600", "700"],
+  weight: ["400", "600", "700"],
   variable: "--font-jakarta",
   display: "swap",
   preload: true,
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  weight: ["400", "600"],
-  variable: "--font-dm-sans",
-  display: "swap",
-  preload: true,
+  adjustFontFallback: true,
 });
 
 const isProductionEnv = isProduction();
@@ -42,11 +36,12 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${jakarta.variable} ${dmSans.variable}`}
+      className={jakarta.variable}
     >
       <body className="has-intervention-bar">
         {children}
-        <ClientShell />
+        <SiteChrome />
+        <DeferredClientShell />
       </body>
     </html>
   );
