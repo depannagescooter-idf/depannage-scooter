@@ -1,23 +1,12 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
-import { publishedZones, getZonesByDepartement } from "@/data/zones";
+import { ZonesByDepartment } from "@/components/ZonesByDepartment";
+import { publishedZones } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
 import { itemListSchema, webPageSchema } from "@/lib/schema";
-
-const deptLabels: Record<string, string> = {
-  "75": "Paris",
-  "77": "Seine-et-Marne",
-  "78": "Yvelines",
-  "91": "Essonne",
-  "92": "Hauts-de-Seine",
-  "93": "Seine-Saint-Denis",
-  "94": "Val-de-Marne",
-  "95": "Val-d'Oise",
-};
 
 export const metadata: Metadata = createPageMetadata({
   title: "Zones d'intervention dépannage moto IDF",
@@ -27,8 +16,6 @@ export const metadata: Metadata = createPageMetadata({
 });
 
 export default function ZonesHubPage() {
-  const departements = ["75", "92", "93", "94", "77", "78", "91", "95"];
-
   return (
     <PageShell>
       <JsonLd
@@ -59,30 +46,7 @@ export default function ZonesHubPage() {
             Intervention 24h/24, délai annoncé selon la zone.
           </ShortAnswer>
         </div>
-        {departements.map((dep) => {
-          const zones = getZonesByDepartement(dep);
-          if (zones.length === 0) return null;
-          return (
-            <section key={dep} className="mt-10">
-              <h2 className="section-title">{deptLabels[dep] ?? dep}</h2>
-              <ul className="mt-4 grid gap-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {zones.map((z) => (
-                  <li key={z.slug}>
-                    <Link
-                      href={`/zones-intervention/${z.slug}/`}
-                      className="card block px-4 py-3 text-sm font-medium text-asphalte hover:shadow-card"
-                    >
-                      {z.name}
-                      <span className="mt-0.5 block font-data text-xs tabular-nums text-beton">
-                        {z.etaMinutes[0]}–{z.etaMinutes[1]} min
-                      </span>
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          );
-        })}
+        <ZonesByDepartment />
         <p className="mt-8 text-sm text-beton">{publishedZones.length} zones publiées.</p>
       </main>
     </PageShell>
