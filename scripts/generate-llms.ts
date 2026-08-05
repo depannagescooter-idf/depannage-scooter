@@ -82,3 +82,29 @@ writeFileSync(out, content, "utf-8");
 
 const sizeKb = (Buffer.byteLength(content, "utf-8") / 1024).toFixed(1);
 console.log(`✓ llms.txt généré → ${out} (${sizeKb} KB)`);
+
+// Coordonnées légères pour la géolocalisation client (évite d'importer les intros zones).
+const coords = publishedZones.map((z) => ({
+  slug: z.slug,
+  name: z.name,
+  lat: z.lat,
+  lng: z.lng,
+  etaMinutes: z.etaMinutes,
+}));
+const coordsOut = join(process.cwd(), "src", "data", "zone-coords.ts");
+writeFileSync(
+  coordsOut,
+  `/** Auto-généré par npm run generate:llms — ne pas éditer à la main. */
+export interface ZoneCoord {
+  slug: string;
+  name: string;
+  lat: number;
+  lng: number;
+  etaMinutes: [number, number];
+}
+
+export const zoneCoords: ZoneCoord[] = ${JSON.stringify(coords, null, 2)};
+`,
+  "utf-8",
+);
+console.log(`✓ zone-coords.ts généré → ${coordsOut} (${coords.length} zones)`);

@@ -1,4 +1,4 @@
-import { zones } from "@/data/zones";
+import { zoneCoords, type ZoneCoord } from "@/data/zone-coords";
 
 function toRad(deg: number): number {
   return (deg * Math.PI) / 180;
@@ -14,14 +14,14 @@ function distanceKm(lat1: number, lng1: number, lat2: number, lng2: number): num
   return r * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
-export function findNearestZone(lat: number, lng: number) {
-  const first = zones[0];
+export function findNearestZone(lat: number, lng: number): ZoneCoord {
+  const first = zoneCoords[0];
   if (!first) throw new Error("Aucune zone configurée");
 
   let nearest = first;
   let minDist = Infinity;
 
-  for (const zone of zones) {
+  for (const zone of zoneCoords) {
     const dist = distanceKm(lat, lng, zone.lat, zone.lng);
     if (dist < minDist) {
       minDist = dist;

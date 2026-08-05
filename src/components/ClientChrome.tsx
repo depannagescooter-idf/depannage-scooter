@@ -1,6 +1,7 @@
 "use client";
 
 import dynamic from "next/dynamic";
+import { useEffect, useState } from "react";
 import { GeolocationProvider } from "@/components/GeolocationProvider";
 import { InterventionBar } from "@/components/InterventionBar";
 
@@ -20,14 +21,30 @@ const GoogleAnalyticsScript = dynamic(
 );
 
 export function ClientChrome() {
+  const [deferSecondary, setDeferSecondary] = useState(false);
+
+  useEffect(() => {
+    const win = window;
+    if (typeof win.requestIdleCallback === "function") {
+      const id = win.requestIdleCallback(() => setDeferSecondary(true), { timeout: 2500 });
+      return () => win.cancelIdleCallback(id);
+    }
+    const timer = win.setTimeout(() => setDeferSecondary(true), 800);
+    return () => win.clearTimeout(timer);
+  }, []);
+
   return (
     <>
       <GeolocationProvider>
         <InterventionBar />
       </GeolocationProvider>
-      <CookieConsent />
-      <AnalyticsProvider />
-      <GoogleAnalyticsScript />
+      {deferSecondary ? (
+        <>
+          <CookieConsent />
+          <AnalyticsProvider />
+          <GoogleAnalyticsScript />
+        </>
+      ) : null}
     </>
   );
 }
