@@ -22,10 +22,10 @@ export function InterventionBar({ etaMinutes: etaProp }: InterventionBarProps) {
         <div className="flex min-w-0 flex-1 items-center gap-3">
           <span className="relative flex size-2.5 shrink-0 rounded-full bg-amber-300" aria-hidden="true" />
           <div className="min-w-0">
-            <p className="truncate text-xs font-semibold uppercase tracking-wide text-amber-300 sm:text-sm">
+            <p className="truncate text-xs font-semibold uppercase tracking-wide text-amber-200 sm:text-sm">
               Équipes disponibles
             </p>
-            <p className="flex items-center gap-1 truncate text-xs text-stone-300 sm:text-sm">
+            <p className="flex items-center gap-1 truncate text-xs text-stone-200 sm:text-sm">
               <Clock className="size-3 shrink-0" aria-hidden="true" />
               <span>
                 {zoneName ? (

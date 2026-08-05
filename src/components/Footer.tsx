@@ -78,7 +78,7 @@ export function Footer() {
             </ul>
             <Link
               href="/zones-intervention/"
-              className="mt-4 inline-block text-sm font-medium text-signal hover:underline"
+              className="mt-4 inline-block text-sm font-medium text-orange-400 hover:underline"
             >
               Toutes les zones →
             </Link>
@@ -130,7 +130,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-white/10">
-        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-xs text-stone-500 sm:flex-row sm:items-center sm:justify-between sm:px-6">
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-xs text-stone-400 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
             © {new Date().getFullYear()} {company.name}
             {company.siren !== "TODO-SIREN" ? ` · SIREN ${company.siren}` : ""}
@@ -138,7 +138,7 @@ export function Footer() {
           <ul className="flex flex-wrap gap-4">
             {legalLinks.map((link) => (
               <li key={link.href}>
-                <Link href={link.href} className="transition-colors hover:text-stone-300">
+                <Link href={link.href} className="transition-colors hover:text-stone-200">
                   {link.label}
                 </Link>
               </li>

@@ -4,9 +4,9 @@
   /* Palette raffinée */
   --color-asphalte: #1c1917;
   --color-marquage: #fafaf9;
-  --color-signal: #f97316;
-  --color-signal-dark: #ea580c;
-  --color-gyro: #0ea5e9;
+  --color-signal: #c2410c;
+  --color-signal-dark: #9a3412;
+  --color-gyro: #0369a1;
   --color-beton: #57534e;
   --color-alerte: #22c55e;
   --color-surface: #ffffff;
@@ -17,7 +17,7 @@
   /* Typographie */
   --font-display: var(--font-jakarta), system-ui, sans-serif;
   --font-body: var(--font-dm-sans), system-ui, sans-serif;
-  --font-data: var(--font-mono), ui-monospace, monospace;
+  --font-data: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
 
   --radius-sm: 0.5rem;
   --radius-md: 0.75rem;

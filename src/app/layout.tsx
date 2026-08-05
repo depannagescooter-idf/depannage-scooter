@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans, JetBrains_Mono, Plus_Jakarta_Sans } from "next/font/google";
+import { DM_Sans, Plus_Jakarta_Sans } from "next/font/google";
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { ClientChrome } from "@/components/ClientChrome";
@@ -12,20 +12,15 @@ const jakarta = Plus_Jakarta_Sans({
   weight: ["600", "700"],
   variable: "--font-jakarta",
   display: "swap",
+  preload: true,
 });
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
+  weight: ["400", "600"],
   variable: "--font-dm-sans",
   display: "swap",
-});
-
-const jetbrainsMono = JetBrains_Mono({
-  subsets: ["latin"],
-  weight: ["500"],
-  variable: "--font-mono",
-  display: "swap",
+  preload: true,
 });
 
 const isProductionEnv = isProduction();
@@ -49,7 +44,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${jakarta.variable} ${dmSans.variable} ${jetbrainsMono.variable}`}
+      className={`${jakarta.variable} ${dmSans.variable}`}
     >
       <body className="has-intervention-bar">
         {children}
