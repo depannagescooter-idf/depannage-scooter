@@ -91,6 +91,8 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {[
                 { href: "/depannage-sur-place/", label: "Dépannage sur place" },
+                { href: "/depannage-sur-place/batterie-voiture/", label: "Batterie voiture" },
+                { href: "/depannage-sur-place/batterie/", label: "Batterie scooter et moto" },
                 { href: "/remorquage/", label: "Remorquage" },
                 { href: "/tarifs/", label: "Tarifs" },
                 { href: "/faq/", label: "FAQ" },

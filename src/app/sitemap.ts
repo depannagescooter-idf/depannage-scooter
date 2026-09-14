@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] }[] = [
     { path: "", priority: 1, changeFrequency: "weekly" },
     { path: "/depannage-sur-place/", priority: 0.9, changeFrequency: "weekly" },
+    { path: "/depannage-sur-place/batterie-voiture/", priority: 0.88, changeFrequency: "monthly" },
     { path: "/remorquage/", priority: 0.9, changeFrequency: "weekly" },
     { path: "/tarifs/", priority: 0.95, changeFrequency: "monthly" },
     { path: "/zones-intervention/", priority: 0.9, changeFrequency: "weekly" },

@@ -15,7 +15,7 @@ import { itemListSchema, webPageSchema } from "@/lib/schema";
 export const metadata: Metadata = createPageMetadata({
   title: "Dépannage scooter et moto sur place – IDF",
   description:
-    "Dépannage sur place de scooter et moto en Île-de-France : crevaison, batterie, booster, essence, selle. 24h/24, devis avant intervention.",
+    "Dépannage sur place scooter, moto et batterie voiture en Île-de-France : crevaison, batterie, booster, essence, selle. 24h/24, devis avant intervention.",
   path: "/depannage-sur-place/",
 });
 
@@ -45,10 +45,10 @@ export default function DepannageHubPage() {
         </h1>
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
-            Le dépannage sur place consiste à réparer votre deux-roues là où il est immobilisé,
-            sans remorquage. Nous traitons crevaison, batterie, démarrage, panne d&apos;essence et
-            selle bloquée. Tarification : {formatPrice(pricing.dsp.baseFee)} + déplacement selon
-            zone. Disponible 24h/24.
+            Dépannage sur place de deux-roues et batterie voiture là où le véhicule est
+            immobilisé. Crevaison, batterie scooter/moto, booster, panne d&apos;essence, selle
+            bloquée et batterie voiture à domicile. Tarif deux-roues :{" "}
+            {formatPrice(pricing.dsp.baseFee)} + déplacement. Disponible 24h/24.
           </ShortAnswer>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -69,6 +69,15 @@ export default function DepannageHubPage() {
               </Link>
             </li>
           ))}
+          <li>
+            <Link
+              href="/depannage-sur-place/batterie-voiture/"
+              className="card block border-signal/30 px-5 py-4 hover:shadow-card"
+            >
+              <h2 className="font-display font-semibold text-asphalte">Batterie voiture à domicile</h2>
+              <p className="mt-1 text-sm text-beton">Démarrage ou remplacement — citadines, berlines, SUV</p>
+            </Link>
+          </li>
         </ul>
         <section className="mt-10">
           <h2 className="section-title">Zones couvertes en Île-de-France</h2>

@@ -57,8 +57,9 @@ export default function HomePage() {
           </h1>
           <div className="mt-6 max-w-2xl">
             <ShortAnswer>
-              {company.name} dépanne et remorque scooters et motos 24h/24 en Île-de-France.
-              Crevaison, batterie, panne sèche ou remorquage : appelez le{" "}
+              {company.name} dépanne et remorque scooters et motos, et intervient pour la
+              batterie voiture à plat, 24h/24 en Île-de-France. Crevaison, batterie, panne sèche
+              ou remorquage : appelez le{" "}
               <span className="font-data font-semibold tabular-nums text-signal">
                 {company.phoneDisplay}
               </span>

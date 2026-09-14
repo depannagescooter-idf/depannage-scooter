@@ -68,6 +68,11 @@ const lines: string[] = [
   llmsLink("/zones-intervention/", "Zones d'intervention", `${publishedZones.length} communes : Paris, 77, 78, 91, 92, 93, 94, 95.`),
   llmsLink("/faq/", "FAQ", "Tarifs, délais, zones, assurance et types de véhicules pris en charge."),
   llmsLink("/contact/", "Contact", "Demande de rappel et coordonnées pour une intervention urgente."),
+  llmsLink(
+    "/depannage-sur-place/batterie-voiture/",
+    "Batterie voiture à domicile",
+    "Démarrage ou remplacement batterie voiture à plat en Île-de-France, 24h/24.",
+  ),
   "",
   "## Dépannage sur place",
   llmsLink("/depannage-sur-place/", "Hub dépannage", "Vue d'ensemble des interventions sur place sans remorquage."),

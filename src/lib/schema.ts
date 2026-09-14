@@ -274,6 +274,34 @@ export function articleSchema(input: {
   };
 }
 
+export function carBatteryServiceSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    serviceType: "Dépannage et remplacement de batterie automobile",
+    name: "Dépannage batterie voiture à domicile",
+    provider: {
+      "@type": "AutoRepair",
+      name: company.name,
+      telephone: company.phone,
+      email: company.email,
+      url: getSiteUrl(),
+      priceRange: "€€",
+      areaServed: {
+        "@type": "AdministrativeArea",
+        name: "Île-de-France",
+      },
+      openingHoursSpecification: openingHoursSchema(),
+    },
+    availableChannel: {
+      "@type": "ServiceChannel",
+      servicePhone: company.phone,
+      availableLanguage: "fr",
+    },
+    url: absoluteUrl("/depannage-sur-place/batterie-voiture/"),
+  };
+}
+
 export function aggregateRatingSchema(input: {
   ratingValue: number;
   reviewCount: number;

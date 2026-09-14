@@ -14,9 +14,14 @@ export const globalFaqs: Faq[] = [
       "En journée, comptez en moyenne 25 à 40 minutes selon la zone et le trafic. Le délai exact vous est annoncé lors de votre appel, avant engagement. La nuit et le week-end, le délai peut être légèrement plus long.",
   },
   {
-    question: "Quels deux-roues prenez-vous en charge ?",
+    question: "Quels véhicules prenez-vous en charge ?",
     answer:
-      "Scooters 50 à 125 cm³, maxi-scooters, motos et la plupart des trois-roues. Indiquez marque et modèle lors de l'appel : certaines configurations (poids, antivol, side-car) orientent vers un remorquage plutôt qu'un dépannage sur place.",
+      "Scooters 50 à 125 cm³, maxi-scooters, motos, trois-roues et voitures (citadines, berlines, SUV, utilitaires légers). Pour une batterie voiture à plat, consultez la page dépannage batterie voiture. Indiquez marque et modèle lors de l'appel.",
+  },
+  {
+    question: "Intervenez-vous pour une batterie de voiture à plat ?",
+    answer:
+      "Oui. Démarrage au booster ou remplacement de batterie voiture à domicile en Île-de-France, 24h/24. Test batterie et alternateur sur place. Devis ferme au téléphone avant déplacement.",
   },
   {
     question: "Comment se paie l'intervention ?",
@@ -46,7 +51,7 @@ export const globalFaqs: Faq[] = [
   {
     question: "Proposez-vous un dépannage batterie à domicile ?",
     answer:
-      "Oui. Nous testons la batterie et le circuit de charge sur place. Si le remplacement est nécessaire, nous installons une batterie adaptée à votre modèle. Un simple booster suffit parfois pour repartir.",
+      "Oui, sur scooter, moto et voiture. Nous testons la batterie et le circuit de charge sur place. Remplacement si nécessaire avec une référence adaptée. Un booster suffit parfois pour repartir — voir les pages batterie deux-roues et batterie voiture.",
   },
   {
     question: "Intervenez-vous dans les parkings souterrains ?",

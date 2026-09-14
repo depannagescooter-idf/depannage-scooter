@@ -124,4 +124,10 @@ export interface PricingConfig {
     label: string;
     amount: number;
   };
+  /** Tarifs batterie voiture — distincts du 2-roues. null = TODO-TARIF (affiché « Sur devis »). */
+  carBattery: {
+    boost: number | null;
+    replacementLabor: number | null;
+    batteryFrom: number | null;
+  };
 }

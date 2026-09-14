@@ -82,6 +82,12 @@ export const pricing: PricingConfig = {
     label: "Supplément pénibilité (sous-sol, selle Neiman, accidenté)",
     amount: 30,
   },
+  /** TODO-TARIF : renseigner les montants voiture avant campagne Ads. */
+  carBattery: {
+    boost: null,
+    replacementLabor: null,
+    batteryFrom: null,
+  },
 };
 
 /** Total dépannage sur place = forfait prestation + déplacement zone. */

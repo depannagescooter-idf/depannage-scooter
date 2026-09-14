@@ -88,14 +88,14 @@ const servicesData: Service[] = [
     slug: "batterie",
     category: "depannage",
     name: "Remplacement de batterie",
-    h1: "Dépannage batterie scooter et moto en Île-de-France",
-    metaTitle: "Batterie scooter moto IDF",
+    h1: "Dépannage batterie scooter et moto à domicile en Île-de-France",
+    metaTitle: "Batterie scooter à plat Paris — remplacement IDF",
     metaDescription:
-      "Batterie à plat sur votre scooter ou moto en IDF ? Test, remplacement sur place et remise en route 24h/24. Compatible scooters, motos et maxi-scooters.",
+      "Batterie scooter ou moto à plat en IDF ? Remplacement à domicile, test YTX/gel/lithium, changement sur place 24h/24. Devis ferme avant déplacement.",
     shortAnswer:
-      "DépannageScooter intervient en Île-de-France lorsque la batterie de votre scooter ou moto est à plat ou ne retient plus la charge. Le technicien teste l'état de la batterie et du circuit de charge, remplace la batterie si nécessaire avec une référence adaptée à votre véhicule, puis vérifie le démarrage avant de vous laisser repartir.",
+      "Batterie scooter ou moto à plat en Île-de-France : DépannageScooter teste l'accumulateur et le circuit de charge sur place, remplace la batterie si nécessaire (références YTX, gel ou plomb courantes) et vérifie le démarrage avant votre départ. Devis ferme par téléphone. Intervention 24h/24 et 7j/7.",
     intro:
-      "Une batterie faible ou déchargée est l'une des pannes les plus fréquentes sur les deux-roues, surtout après une immobilisation prolongée, des trajets courts répétés ou une fin de vie de l'accumulateur. Les symptômes vont du simple clignotement du tableau de bord à l'absence totale de réponse au démarrage. Nous nous déplaçons avec des batteries compatibles aux références courantes de scooters et motos. Le technicien contrôle aussi les cosses, le fusible principal et la tension de charge avant de conclure au remplacement.",
+      "Une batterie faible ou déchargée est la première cause de panne sur scooter et moto — surtout après immobilisation, trajets courts ou fin de vie de l'accumulateur (plomb, gel ou lithium selon modèle). Symptômes : tableau de bord éteint, démarreur qui cliquote, phares faibles. Nous nous déplaçons avec des batteries adaptées (YTX et références courantes). Le technicien contrôle cosses, fusible et charge alternateur avant de conclure au remplacement. Pour une voiture, voir notre page dépannage batterie voiture.",
     symptoms: [
       "Aucun voyant au contact ou tableau de bord éteint",
       "Démarreur qui cliquote sans lancer le moteur",
@@ -176,14 +176,14 @@ const servicesData: Service[] = [
     slug: "demarrage-booster",
     category: "depannage",
     name: "Démarrage et booster",
-    h1: "Démarrage booster scooter et moto en Île-de-France",
-    metaTitle: "Démarrage booster moto IDF",
+    h1: "Scooter ne démarre plus ? Démarrage booster en Île-de-France",
+    metaTitle: "Scooter ne démarre plus — booster Paris IDF",
     metaDescription:
-      "Scooter ou moto qui ne démarre plus en IDF ? Démarrage au booster sur place, diagnostic rapide batterie ou carburant. Intervention 24h/24, 7j/7.",
+      "Scooter ou moto qui ne démarre plus en IDF ? Booster batterie moto sur place, démarreur qui tourne sans prise. Intervention 24h/24, devis ferme.",
     shortAnswer:
-      "DépannageScooter effectue le démarrage de secours de scooters et motos en panne de batterie ou en difficulté au lancement en Île-de-France. Le technicien utilise un booster professionnel ou une batterie auxiliaire, tente la mise en route, puis identifie si la cause est une batterie déchargée, un problème de carburant ou un démarreur défaillant.",
+      "Scooter ou moto qui ne démarre plus en Île-de-France : démarrage au booster professionnel sur place, diagnostic batterie déchargée, carburant ou démarreur. Le technicien relance le moteur ou oriente vers remplacement batterie ou remorquage. Devis ferme avant départ. Disponible 24h/24 et 7j/7.",
     intro:
-      "Le véhicule ne répond plus au démarrage électrique : c'est la situation la plus urgente quand vous devez bouger rapidement. Avant de conclure à une panne mécanique lourde, un booster professionnel permet souvent de relancer le moteur en quelques minutes. Notre intervention couvre les pannes de batterie, les carburateurs gorgés sur les anciens modèles, et les blocages de démarreur simples. Si le booster ne suffit pas, nous orientons vers un remplacement de batterie ou un remorquage.",
+      "Scooter ne démarre plus, démarreur qui tourne sans que le moteur ne prenne, ou silence total au contact : situation urgente en ville. Un booster professionnel relance souvent le moteur en quelques minutes — sans pinces sur un autre véhicule. Nous couvrons batterie déchargée, carburateur gorgé et blocages simples de démarreur. Si le booster ne suffit pas : remplacement batterie ou remorquage. Pour une voiture, voir la page batterie voiture.",
     symptoms: [
       "Le démarreur tourne sans que le moteur ne prenne",
       "Aucun bruit au moment de actionner le démarrage",

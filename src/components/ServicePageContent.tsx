@@ -9,6 +9,7 @@ import { company } from "@/data/company";
 import { ServicePriceTable } from "@/components/ServicePriceTable";
 import type { Service } from "@/data/types";
 import { getServiceBySlug } from "@/data/services";
+import { RemorquageGallery } from "@/components/RemorquageGallery";
 import { ZonesByDepartment } from "@/components/ZonesByDepartment";
 import { faqPageSchema, serviceSchema } from "@/lib/schema";
 
@@ -140,11 +141,48 @@ export function ServicePageContent({
           )}
 
           {service.category === "remorquage" && (
+            <>
+              <section className="mt-10">
+                <RemorquageGallery />
+              </section>
+              <section className="mt-10">
+                <h2 className="section-title">Où emmenons-nous votre véhicule ?</h2>
+                <p className="mt-2 text-beton">
+                  Domicile, garage, concession, fourrière ou expert d&apos;assurance — indiquez la
+                  destination lors de l&apos;appel. Le tarif dépend de la distance totale parcourue.
+                </p>
+              </section>
+            </>
+          )}
+
+          {service.slug === "batterie" && (
             <section className="mt-10">
-              <h2 className="section-title">Où emmenons-nous votre véhicule ?</h2>
+              <h2 className="section-title">Batterie voiture à plat ?</h2>
               <p className="mt-2 text-beton">
-                Domicile, garage, concession, fourrière ou expert d&apos;assurance — indiquez la
-                destination lors de l&apos;appel. Le tarif dépend de la distance totale parcourue.
+                Pour une voiture qui ne démarre plus, consultez notre page dédiée :{" "}
+                <Link
+                  href="/depannage-sur-place/batterie-voiture/"
+                  className="font-medium text-gyro hover:underline"
+                >
+                  dépannage batterie voiture à domicile
+                </Link>
+                .
+              </p>
+            </section>
+          )}
+
+          {service.slug === "demarrage-booster" && (
+            <section className="mt-10">
+              <h2 className="section-title">Voiture immobilisée ?</h2>
+              <p className="mt-2 text-beton">
+                Cette page concerne les deux-roues. Pour une batterie de voiture à plat :{" "}
+                <Link
+                  href="/depannage-sur-place/batterie-voiture/"
+                  className="font-medium text-gyro hover:underline"
+                >
+                  dépannage batterie voiture Paris et IDF
+                </Link>
+                .
               </p>
             </section>
           )}

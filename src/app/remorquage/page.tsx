@@ -6,6 +6,7 @@ import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
 import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
+import { RemorquageGallery } from "@/components/RemorquageGallery";
 import { ZonesByDepartment } from "@/components/ZonesByDepartment";
 import { remorquageServices } from "@/data/services";
 import { publishedZones } from "@/data/zones";
@@ -65,6 +66,9 @@ export default function RemorquageHubPage() {
             </li>
           ))}
         </ul>
+        <section className="mt-12">
+          <RemorquageGallery />
+        </section>
         <section className="mt-12">
           <h2 className="section-title">Grille tarifaire remorquage</h2>
           <div className="mt-4">
