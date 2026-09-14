@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Clock, Phone, Shield, Star, Wrench } from "lucide-react";
+import { Clock, Phone, Shield, Wrench } from "lucide-react";
+import { GoogleReviewsSummary } from "@/components/GoogleReviewsSummary";
 import { PageShell } from "@/components/PageShell";
 import { CallButton } from "@/components/CallButton";
 import { FaqAccordion } from "@/components/FaqAccordion";
@@ -53,7 +54,7 @@ export default function HomePage() {
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight text-asphalte sm:text-5xl lg:text-6xl">
             Dépannage scooter
-            <span className="block text-signal">& moto en Île-de-France</span>
+            <span className="block text-signal"> & moto en Île-de-France</span>
           </h1>
           <div className="mt-6 max-w-2xl">
             <ShortAnswer>
@@ -203,18 +204,10 @@ export default function HomePage() {
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
         <h2 className="section-title">Que disent nos clients ?</h2>
-        <div className="card mt-6 px-6 py-8 text-center">
-          <Star className="mx-auto size-8 text-signal" aria-hidden="true" />
-          <p className="mt-4 font-display text-lg font-semibold text-asphalte">
-            Avis clients vérifiés bientôt disponibles
-          </p>
-          <p className="mt-2 text-sm text-beton">
-            Après votre intervention, laissez-nous un avis sur Google ou consultez la page dédiée.
-          </p>
-          <Link href="/avis/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
-            Page avis →
-          </Link>
-        </div>
+        <GoogleReviewsSummary />
+        <Link href="/avis/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
+          Page avis →
+        </Link>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">

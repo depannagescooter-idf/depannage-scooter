@@ -1,11 +1,19 @@
+"use client";
+
 import { MessageCircle } from "lucide-react";
+import { usePathname } from "next/navigation";
 import { company } from "@/data/company";
 import type { CallOrigin } from "./CallButton";
 
 export type WhatsAppOrigin = CallOrigin;
 
-const defaultMessage =
-  "Bonjour, je suis en panne avec mon deux-roues en Île-de-France. Pouvez-vous m'aider ?";
+const CAR_BATTERY_PATH = "/depannage-sur-place/batterie-voiture";
+
+function getWhatsAppMessage(pathname: string): string {
+  const isCarPage = pathname.includes(CAR_BATTERY_PATH);
+  const vehicle = isCarPage ? "ma voiture" : "mon deux-roues";
+  return `Bonjour, je suis en panne avec ${vehicle} en Île-de-France. Pouvez-vous m'aider ?`;
+}
 
 export interface WhatsAppButtonProps {
   origin: WhatsAppOrigin;
@@ -15,10 +23,12 @@ export interface WhatsAppButtonProps {
 
 export function WhatsAppButton({
   origin,
-  message = defaultMessage,
+  message,
   className = "",
 }: WhatsAppButtonProps) {
-  const href = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(message)}`;
+  const pathname = usePathname();
+  const text = message ?? getWhatsAppMessage(pathname);
+  const href = `https://wa.me/${company.whatsapp}?text=${encodeURIComponent(text)}`;
 
   return (
     <a

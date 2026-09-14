@@ -82,13 +82,27 @@ export const pricing: PricingConfig = {
     label: "Supplément pénibilité (sous-sol, selle Neiman, accidenté)",
     amount: 30,
   },
-  /** TODO-TARIF : renseigner les montants voiture avant campagne Ads. */
   carBattery: {
-    boost: null,
-    replacementLabor: null,
-    batteryFrom: null,
+    boost: 50,
+    replacementLabor: 70,
+    batteryFrom: 95,
+    travelFees: {
+      PARIS: 20,
+      PETITE_COURONNE: 30,
+      GRANDE_COURONNE: 50,
+    },
   },
 };
+
+/** Total démarrage booster voiture = forfait + déplacement zone. */
+export function getCarBatteryBoostTotal(zone: TravelZoneKey): number {
+  return pricing.carBattery.boost + pricing.carBattery.travelFees[zone];
+}
+
+/** Total main-d'œuvre remplacement batterie voiture = forfait + déplacement zone. */
+export function getCarBatteryReplacementTotal(zone: TravelZoneKey): number {
+  return pricing.carBattery.replacementLabor + pricing.carBattery.travelFees[zone];
+}
 
 /** Total dépannage sur place = forfait prestation + déplacement zone. */
 export function getDspTotal(zone: TravelZoneKey): number {

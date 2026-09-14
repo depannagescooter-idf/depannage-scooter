@@ -58,9 +58,7 @@ export const carBatteryPage = {
     "Reprise et recyclage de l'ancienne batterie (selon disponibilité)",
   ],
   batteryTypes:
-    "Toutes les voitures ne prennent pas la même batterie. Sur un véhicule start-stop, une batterie classique au plomb s'use en quelques mois : il faut une EFB ou une AGM selon le constructeur. Sur de nombreux modèles récents, la batterie neuve doit être déclarée au calculateur (BSI, BMS) pour que le système de charge adapte son cycle.",
-  ecuCoding:
-    "TODO-CONFIRMER : précisez marque, modèle et année à l'appel. Le codage batterie au calculateur (BSI/BMS) est réalisé selon équipement disponible — nous vous indiquons clairement si votre modèle nécessite un passage en garage partenaire.",
+    "Toutes les voitures ne prennent pas la même batterie. Sur un véhicule start-stop, une batterie classique au plomb s'use en quelques mois : il faut une EFB ou une AGM selon le constructeur. Sur de nombreux modèles récents, la batterie neuve doit être déclarée au calculateur (BSI, BMS) pour que le système de charge adapte son cycle. Indiquez marque, modèle et année lors de l'appel.",
   durationMinutes: "30 à 45",
   topZones: [
     { slug: "paris-11e", name: "Paris 11e" },

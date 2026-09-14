@@ -1,24 +1,43 @@
-import { formatPrice, pricing } from "@/data/pricing";
+import { formatPrice, getCarBatteryBoostTotal, getCarBatteryReplacementTotal, pricing } from "@/data/pricing";
 
 export function CarBatteryPriceTable() {
-  const { carBattery, travelFees, surcharges } = pricing;
+  const { carBattery, surcharges } = pricing;
   const holidayLabel = `${surcharges.weekendSunday.percent} % (dimanche et jours fériés)`;
+  const boostParis = getCarBatteryBoostTotal("PARIS");
+  const replacementParis = getCarBatteryReplacementTotal("PARIS");
 
   const rows: { label: string; value: string }[] = [
-    { label: "Démarrage sur place (booster)", value: formatPrice(carBattery.boost) },
-    { label: "Remplacement de batterie, main-d'œuvre", value: formatPrice(carBattery.replacementLabor) },
+    {
+      label: "Démarrage sur place (booster)",
+      value: `${formatPrice(carBattery.boost)} (forfait, hors déplacement)`,
+    },
+    {
+      label: "Remplacement de batterie, main-d'œuvre",
+      value: `${formatPrice(carBattery.replacementLabor)} (forfait, hors déplacement)`,
+    },
     {
       label: "Batterie voiture",
-      value: carBattery.batteryFrom !== null ? `à partir de ${formatPrice(carBattery.batteryFrom)}` : "Sur devis",
+      value: `à partir de ${formatPrice(carBattery.batteryFrom)} selon modèle (standard, EFB, AGM)`,
     },
-    { label: "Déplacement Paris", value: formatPrice(travelFees.PARIS.amount) },
+    {
+      label: "Déplacement Paris",
+      value: formatPrice(carBattery.travelFees.PARIS),
+    },
     {
       label: "Déplacement petite couronne (92, 93, 94)",
-      value: formatPrice(travelFees.PETITE_COURONNE.amount),
+      value: formatPrice(carBattery.travelFees.PETITE_COURONNE),
     },
     {
       label: "Déplacement grande couronne (77, 78, 91, 95)",
-      value: formatPrice(travelFees.GRANDE_COURONNE.amount),
+      value: formatPrice(carBattery.travelFees.GRANDE_COURONNE),
+    },
+    {
+      label: "Total Paris — démarrage booster",
+      value: formatPrice(boostParis),
+    },
+    {
+      label: "Total Paris — remplacement (main-d'œuvre, hors batterie)",
+      value: formatPrice(replacementParis),
     },
     { label: "Majoration nuit, dimanche et jours fériés", value: holidayLabel },
   ];
@@ -45,11 +64,6 @@ export function CarBatteryPriceTable() {
           ))}
         </tbody>
       </table>
-      <p className="mt-3 text-sm text-beton">
-        TODO-TARIF : complétez les montants voiture dans{" "}
-        <code className="font-data text-xs">src/data/pricing.ts</code>. Le tarif exact vous est
-        confirmé par téléphone avant tout déplacement.
-      </p>
     </div>
   );
 }

@@ -82,6 +82,11 @@ export interface Company {
   serviceAreas: string[];
   /** Délai moyen par défaut affiché avant géolocalisation [min, max] en minutes */
   defaultEtaMinutes: [number, number];
+  googleReviews: {
+    rating: number;
+    reviewCount: number;
+    profileUrl: string;
+  };
 }
 
 export type DspPriceKey =
@@ -124,10 +129,11 @@ export interface PricingConfig {
     label: string;
     amount: number;
   };
-  /** Tarifs batterie voiture — distincts du 2-roues. null = TODO-TARIF (affiché « Sur devis »). */
+  /** Tarifs batterie voiture — distincts du 2-roues. */
   carBattery: {
-    boost: number | null;
-    replacementLabor: number | null;
-    batteryFrom: number | null;
+    boost: number;
+    replacementLabor: number;
+    batteryFrom: number;
+    travelFees: Record<TravelZoneKey, number>;
   };
 }

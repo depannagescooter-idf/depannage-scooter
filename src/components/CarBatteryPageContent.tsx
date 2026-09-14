@@ -109,9 +109,6 @@ export function CarBatteryPageContent() {
               Batteries standard, EFB et AGM start-stop
             </h3>
             <p className="mt-2 text-beton">{page.batteryTypes}</p>
-            <p className="mt-3 rounded-sm border border-border bg-surface-muted px-4 py-3 text-sm text-beton">
-              {page.ecuCoding}
-            </p>
           </section>
 
           <section className="mt-10">

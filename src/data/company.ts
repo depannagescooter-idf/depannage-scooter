@@ -34,4 +34,10 @@ export const company: Company = {
     "Val-d'Oise (95)",
   ],
   defaultEtaMinutes: [25, 40],
+  googleReviews: {
+    rating: 4.7,
+    reviewCount: 168,
+    profileUrl:
+      "https://www.google.com/maps/search/?api=1&query=D%C3%A9pannageScooter&query=33772125311",
+  },
 };

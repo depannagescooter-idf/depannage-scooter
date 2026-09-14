@@ -6,7 +6,7 @@ import { mainNavItems } from "@/data/navigation";
 export function Header() {
   return (
     <header className="sticky top-0 z-40 glass-header border-b border-border-soft shadow-[0_1px_0_rgb(0_0_0/0.03)]">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3.5 sm:px-6">
+      <div className="mx-auto flex h-[60px] max-w-6xl items-center justify-between gap-4 px-4 sm:px-6 lg:h-[72px]">
         <Logo />
 
         <nav aria-label="Navigation principale" className="hidden lg:block">
@@ -24,13 +24,8 @@ export function Header() {
           </ul>
         </nav>
 
-        <div className="shrink-0">
-          <CallButton origin="header" className="hidden px-4 py-2.5 text-sm sm:inline-flex" />
-          <CallButton
-            origin="header"
-            showNumber={false}
-            className="inline-flex px-3.5 py-2.5 text-sm sm:hidden"
-          />
+        <div className="hidden shrink-0 lg:block">
+          <CallButton origin="header" className="px-4 py-2.5 text-sm" />
         </div>
       </div>
 

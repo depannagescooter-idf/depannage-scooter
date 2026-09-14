@@ -4,6 +4,7 @@ import { PageShell } from "@/components/PageShell";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
+import { GoogleReviewsSummary } from "@/components/GoogleReviewsSummary";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { getVerifiedReviews } from "@/data/reviews";
 import { createPageMetadata } from "@/lib/metadata";
@@ -41,10 +42,11 @@ export default function AvisPage() {
             publication.
           </ShortAnswer>
         </div>
+        <GoogleReviewsSummary />
         {verified.length === 0 ? (
           <p className="mt-6 text-beton">
-            Les avis vérifiés seront publiés ici prochainement. En attendant, contactez-nous ou
-            laissez un avis sur Google après votre intervention.
+            Les témoignages détaillés seront publiés ici au fil des interventions. Consultez nos
+            avis Google ci-dessus ou contactez-nous après votre dépannage.
           </p>
         ) : (
           <ul className="mt-8 space-y-4">
