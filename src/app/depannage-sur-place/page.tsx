@@ -41,13 +41,13 @@ export default function DepannageHubPage() {
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Dépannage sur place" }]} />
         <h1 className="mt-6 font-display text-3xl font-extrabold text-asphalte sm:text-4xl">
-          Dépannage de scooter et moto sur place en Île-de-France
+          Dépannage scooter, moto et batterie voiture sur place en Île-de-France
         </h1>
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
-            Dépannage sur place de deux-roues et batterie voiture là où le véhicule est
-            immobilisé. Crevaison, batterie scooter/moto, booster, panne d&apos;essence, selle
-            bloquée et batterie voiture à domicile. Tarif deux-roues :{" "}
+            Dépannage sur place de scooters, motos, trois-roues et batterie voiture là où le
+            véhicule est immobilisé. Crevaison, batterie deux-roues, booster, panne d&apos;essence,
+            selle bloquée et batterie voiture à domicile. Tarif deux-roues :{" "}
             {formatPrice(pricing.dsp.baseFee)} + déplacement. Disponible 24h/24.
           </ShortAnswer>
         </div>

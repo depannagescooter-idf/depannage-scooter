@@ -1,20 +1,27 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { PageShell } from "@/components/PageShell";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CallButton } from "@/components/CallButton";
+import { CarBatteryPriceTable } from "@/components/CarBatteryPriceTable";
 import { JsonLd } from "@/components/JsonLd";
 import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { company } from "@/data/company";
-import { formatPrice, getTowingPriceRangeLabel, pricing } from "@/data/pricing";
+import {
+  formatPrice,
+  getCarBatteryBoostTotal,
+  getTowingPriceRangeLabel,
+  pricing,
+} from "@/data/pricing";
 import { createPageMetadata } from "@/lib/metadata";
 import { offerCatalogSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Tarifs dépannage & remorquage moto IDF",
+  title: "Tarifs dépannage, remorquage & batterie voiture",
   description:
-    `Tarifs dépannage et remorquage scooter moto en Île-de-France : 50 € + déplacement, paliers km remorquage. Devis ferme au ${company.phoneDisplay}.`,
+    `Tarifs dépannage scooter, moto et batterie voiture en Île-de-France : 50 € + déplacement, remorquage par paliers km, booster voiture dès ${formatPrice(getCarBatteryBoostTotal("PARIS"))}. Devis ferme au ${company.phoneDisplay}.`,
   path: "/tarifs/",
   useRouteOg: true,
 });
@@ -26,17 +33,16 @@ export default function TarifsPage() {
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Tarifs" }]} />
         <h1 className="mt-6 font-display text-3xl font-extrabold text-asphalte sm:text-4xl">
-          Tarifs de dépannage et de remorquage 2-roues
+          Tarifs dépannage, remorquage et batterie voiture
         </h1>
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
-            {company.name} applique des tarifs jour TTC : dépannage sur place à{" "}
-            {formatPrice(pricing.dsp.baseFee)} + déplacement (Paris{" "}
-            {formatPrice(pricing.travelFees.PARIS.amount)}, petite couronne{" "}
-            {formatPrice(pricing.travelFees.PETITE_COURONNE.amount)}, grande couronne{" "}
-            {formatPrice(pricing.travelFees.GRANDE_COURONNE.amount)}), remorquage de{" "}
-            {getTowingPriceRangeLabel()}. Majorations nuit, week-end et jours fériés. Devis ferme
-            au {company.phoneDisplay} avant toute intervention.
+            {company.name} applique des tarifs jour TTC en Île-de-France : dépannage deux-roues à{" "}
+            {formatPrice(pricing.dsp.baseFee)} + déplacement, remorquage de{" "}
+            {getTowingPriceRangeLabel()}, batterie voiture dès{" "}
+            {formatPrice(getCarBatteryBoostTotal("PARIS"))} (booster, Paris, déplacement inclus).
+            Majorations nuit, week-end et jours fériés. Devis ferme au {company.phoneDisplay}{" "}
+            avant toute intervention.
           </ShortAnswer>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
@@ -46,11 +52,30 @@ export default function TarifsPage() {
         <div className="mt-10">
           <PriceTable />
         </div>
+        <section className="mt-10">
+          <h2 className="section-title">Tarifs batterie voiture</h2>
+          <p className="mt-2 max-w-2xl text-sm text-beton">
+            Démarrage au booster ou remplacement de batterie à domicile. Détail sur la{" "}
+            <Link
+              href="/depannage-sur-place/batterie-voiture/"
+              className="font-medium text-gyro hover:underline"
+            >
+              page batterie voiture
+            </Link>
+            .
+          </p>
+          <div className="mt-4">
+            <CarBatteryPriceTable />
+          </div>
+        </section>
         <section className="mt-10 card px-5 py-4 text-sm text-beton">
           <h2 className="font-display font-semibold text-asphalte">Mentions tarifaires</h2>
           <ul className="mt-2 list-inside list-disc space-y-1">
             <li>Tarifs TTC, jour (8h–20h) sauf majorations indiquées.</li>
-            <li>Supplément pénibilité (+{pricing.difficultySurcharge.amount} €) : sous-sol, Neiman bloqué, véhicule accidenté.</li>
+            <li>
+              Supplément pénibilité (+{pricing.difficultySurcharge.amount} €) : sous-sol, Neiman
+              bloqué, véhicule accidenté.
+            </li>
             <li>Distance = lieu de panne → destination (remorquage).</li>
             <li>Aucune intervention sans accord préalable sur le montant.</li>
           </ul>

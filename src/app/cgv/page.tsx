@@ -55,8 +55,12 @@ export default function CgvPage() {
             </h2>
             <ul className="list-inside list-disc space-y-1">
               <li>
-                <strong>Dépannage sur place</strong> : crevaison, batterie, démarrage/booster,
+                <strong>Dépannage sur place deux-roues</strong> : crevaison, batterie, démarrage/booster,
                 panne d&apos;essence, ouverture de selle bloquée.
+              </li>
+              <li>
+                <strong>Batterie voiture</strong> : démarrage au booster ou remplacement de batterie à
+                domicile (citadines, berlines, SUV, utilitaires légers).
               </li>
               <li>
                 <strong>Remorquage sur plateau</strong> : transport sécurisé vers domicile, garage,
@@ -64,8 +68,9 @@ export default function CgvPage() {
               </li>
             </ul>
             <p className="mt-3">
-              Véhicules pris en charge : scooters 50 à 125 cm³, maxi-scooters, motos et la plupart
-              des trois-roues, sous réserve de faisabilité technique annoncée au téléphone.
+              Véhicules pris en charge : scooters 50 à 125 cm³, maxi-scooters, motos, la plupart des
+              trois-roues et batterie voiture (démarrage ou remplacement sur place), sous réserve de
+              faisabilité technique annoncée au téléphone.
             </p>
             <p className="mt-3">
               <strong>Limites d&apos;intervention</strong> (pratique sectorielle dépannage deux-roues)

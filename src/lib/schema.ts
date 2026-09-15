@@ -9,7 +9,7 @@ function postalAddressSchema() {
     addressLocality: address.city,
     postalCode: address.postalCode,
     addressCountry: address.country,
-    ...(address.street !== "TODO-adresse" ? { streetAddress: address.street } : {}),
+    streetAddress: address.street,
   };
 }
 
@@ -49,7 +49,7 @@ export function organizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: company.name,
-    legalName: company.legalName !== "TODO-RAISON-SOCIALE" ? company.legalName : company.name,
+    legalName: company.legalName,
     url: getSiteUrl(),
     logo: absoluteUrl(company.logoPath),
     telephone: company.phone,

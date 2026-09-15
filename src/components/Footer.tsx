@@ -52,10 +52,9 @@ export function Footer() {
                 </a>
               </p>
               <p>
-                {address.street !== "TODO-adresse"
-                  ? `${address.street}, ${address.postalCode} ${address.city}`
-                  : `${address.postalCode} ${address.city}`}
+                {address.street}, {address.postalCode} {address.city}
               </p>
+              <p className="font-data tabular-nums text-stone-400">SIREN {company.siren}</p>
               <p className="font-data tabular-nums text-alerte">{company.openingHours}</p>
             </address>
           </section>
@@ -134,8 +133,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-xs text-stone-400 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
-            © {new Date().getFullYear()} {company.name}
-            {company.siren !== "TODO-SIREN" ? ` · SIREN ${company.siren}` : ""}
+            © {new Date().getFullYear()} {company.name} · SIREN {company.siren}
           </p>
           <ul className="flex flex-wrap gap-4">
             {legalLinks.map((link) => (

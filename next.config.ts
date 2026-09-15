@@ -24,6 +24,16 @@ const nextConfig: NextConfig = {
         destination: "https://www.depannagescooter.com/:path*",
         permanent: true,
       },
+      {
+        source: "/zones-intervention/garges-les-gonneuse/",
+        destination: "/zones-intervention/garges-les-gonesse/",
+        permanent: true,
+      },
+      {
+        source: "/zones-intervention/garges-les-gonneuse",
+        destination: "/zones-intervention/garges-les-gonesse/",
+        permanent: true,
+      },
     ];
   },
   async headers() {

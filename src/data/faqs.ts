@@ -31,7 +31,7 @@ export const globalFaqs: Faq[] = [
   {
     question: "Mon assurance peut-elle prendre en charge le dépannage ?",
     answer:
-      "De nombreux contrats moto incluent une assistance 0 km ou un remorquage. Consultez votre attestation ou appelez l'assistance de votre assureur avant de payer. Nous fournissons une facture détaillée pour votre dossier.",
+      "De nombreux contrats moto incluent une assistance 0 km ou un remorquage ; les contrats auto proposent souvent la même garantie (dépannage sur place, batterie, remorquage). Consultez votre attestation ou appelez l'assistance de votre assureur avant de payer. Nous fournissons une facture détaillée pour votre dossier.",
   },
   {
     question: "Intervenez-vous sur autoroute ou périphérique ?",
@@ -66,7 +66,7 @@ export const globalFaqs: Faq[] = [
   {
     question: "Enlèvez-vous les épaves ou scooters abandonnés ?",
     answer:
-      "Nous assurons le remorquage de deux-roues en panne immobilisés. Pour un véhicule abandonné sur voie publique, les démarches passent souvent par la mairie ou la fourrière. Contactez-nous pour orienter votre situation.",
+      "Nous assurons le remorquage de deux-roues et de voitures en panne immobilisés. Pour un véhicule abandonné sur voie publique, les démarches passent souvent par la mairie ou la fourrière. Contactez-nous pour orienter votre situation.",
   },
   {
     question: "Quelle est la zone couverte exactement ?",

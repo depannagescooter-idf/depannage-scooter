@@ -11,9 +11,9 @@ import { createPageMetadata } from "@/lib/metadata";
 import { localBusinessSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "À propos – dépanneur scooter moto IDF",
+  title: "À propos – dépanneur scooter moto voiture",
   description:
-    "DépannageScooter : dépanneur scooter et moto en Île-de-France, 24h/24. Équipe mobile, matériel pro et intervention rapide sur place ou en remorquage.",
+    "DépannageScooter : dépannage et remorquage scooters, motos, trois-roues et batterie voiture en Île-de-France, 24h/24. Équipe mobile et devis ferme.",
   path: "/a-propos/",
 });
 
@@ -35,18 +35,18 @@ export default function AProposPage() {
         <h1 className="mt-6 font-display text-3xl font-extrabold text-asphalte">Qui sommes-nous</h1>
         <div className="mt-4">
           <ShortAnswer>
-            {company.name} est un service mobile de dépannage et remorquage dédié aux scooters et
-            motos en Île-de-France. Nous intervenons 24h/24 avec un devis ferme annoncé au
-            téléphone avant le départ du dépanneur.
+            {company.name} est un service mobile de dépannage et remorquage dédié aux scooters,
+            motos, trois-roues et batterie voiture en Île-de-France. Nous intervenons 24h/24 avec
+            un devis ferme annoncé au téléphone avant le départ du dépanneur.
           </ShortAnswer>
         </div>
         <div className="prose prose-stone mt-8 max-w-none space-y-4 text-beton">
           <p>
             <strong className="text-asphalte">{company.name}</strong> a été conçu pour répondre à
-            un besoin précis : remettre en route rapidement les deux-roués immobilisés en panne,
-            sans frais cachés ni mauvaise surprise à l&apos;arrivée. Que vous soyez coursier,
-            livreur, motard du week-end ou utilisateur quotidien d&apos;un scooter 50 cm³, notre
-            équipe se déplace avec l&apos;outillage adapté.
+            un besoin précis : remettre en route rapidement les deux-roués et les voitures
+            immobilisés en panne, sans frais cachés ni mauvaise surprise à l&apos;arrivée. Que
+            vous soyez coursier, livreur, motard du week-end, automobiliste ou utilisateur
+            quotidien d&apos;un scooter 50 cm³, notre équipe se déplace avec l&apos;outillage adapté.
           </p>
           <h2 className="font-display text-xl font-bold text-asphalte">Nos interventions sur place</h2>
           <p>

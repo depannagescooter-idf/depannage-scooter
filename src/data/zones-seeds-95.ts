@@ -47,7 +47,7 @@ export const seeds95: ZoneSeed[] = [
     accessNote: "Relié à Gonesse et Garges ; nord-est IDF.",
   },
   {
-    slug: "garges-les-gonneuse",
+    slug: "garges-les-gonesse",
     name: "Garges-lès-Gonesse",
     departement: "95",
     postalCodes: ["95140"],

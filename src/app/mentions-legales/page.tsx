@@ -60,8 +60,8 @@ export default function MentionsLegalesPage() {
               SIREN : {getSirenDisplay()}
             </p>
             <p className="mt-2">
-              Activité : dépannage sur place et remorquage de scooters, motos et deux-roues
-              motorisés en Île-de-France, disponible 24h/24 et 7j/7.
+              Activité : dépannage sur place et remorquage de scooters, motos, trois-roues et
+              batterie voiture en Île-de-France, disponible 24h/24 et 7j/7.
             </p>
           </section>
 

@@ -25,9 +25,9 @@ import {
 } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Dépannage scooter & moto Île-de-France 24/7",
+  title: "Dépannage scooter, moto & batterie voiture",
   description:
-    `Dépannage et remorquage scooter et moto en Île-de-France, 24h/24. Intervention en 25–40 min. Appelez le ${company.phoneDisplay} — devis ferme avant déplacement.`,
+    `Dépannage scooter, moto et batterie voiture en Île-de-France, 24h/24. Intervention en 25–40 min. Appelez le ${company.phoneDisplay} — devis ferme avant déplacement.`,
   path: "/",
 });
 
@@ -53,8 +53,8 @@ export default function HomePage() {
             ● Équipes disponibles — {company.openingHours}
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight text-asphalte sm:text-5xl lg:text-6xl">
-            Dépannage scooter
-            <span className="block text-signal"> & moto en Île-de-France</span>
+            Dépannage scooter, moto
+            <span className="block text-signal"> et batterie voiture en Île-de-France</span>
           </h1>
           <div className="mt-6 max-w-2xl">
             <ShortAnswer>

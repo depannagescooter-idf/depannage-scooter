@@ -1,6 +1,5 @@
 import type { MetadataRoute } from "next";
 import { guides } from "@/data/guides";
-import { getVerifiedReviews } from "@/data/reviews";
 import { depannageServices, remorquageServices } from "@/data/services";
 import { getPublishedZoneSlugs } from "@/data/zones";
 import { getSiteUrl } from "@/lib/metadata";
@@ -8,7 +7,6 @@ import { getSiteUrl } from "@/lib/metadata";
 export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
   const now = new Date();
-  const hasReviews = getVerifiedReviews().length > 0;
 
   const staticPages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] }[] = [
     { path: "", priority: 1, changeFrequency: "weekly" },
@@ -21,11 +19,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/faq/", priority: 0.8, changeFrequency: "monthly" },
     { path: "/a-propos/", priority: 0.6, changeFrequency: "monthly" },
     { path: "/contact/", priority: 0.85, changeFrequency: "monthly" },
+    { path: "/avis/", priority: 0.65, changeFrequency: "monthly" },
   ];
-
-  if (hasReviews) {
-    staticPages.push({ path: "/avis/", priority: 0.65, changeFrequency: "monthly" });
-  }
 
   const entries: MetadataRoute.Sitemap = staticPages.map(({ path, priority, changeFrequency }) => ({
     url: `${base}${path || "/"}`,

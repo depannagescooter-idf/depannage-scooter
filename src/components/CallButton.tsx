@@ -11,11 +11,12 @@ export type CallOrigin =
 
 export interface CallButtonProps {
   origin: CallOrigin;
-  showNumber?: boolean;
+  /** Force le libellé « Appeler » sans numéro (toutes tailles d'écran). */
+  labelOnly?: boolean;
   className?: string;
 }
 
-export function CallButton({ origin, showNumber = true, className = "" }: CallButtonProps) {
+export function CallButton({ origin, labelOnly = false, className = "" }: CallButtonProps) {
   return (
     <a
       href={`tel:${company.phone}`}
@@ -25,10 +26,13 @@ export function CallButton({ origin, showNumber = true, className = "" }: CallBu
       aria-label={`Appeler ${company.name} au ${company.phoneDisplay}`}
     >
       <IconPhone className="size-4 shrink-0" />
-      {showNumber ? (
-        <span className="font-data tabular-nums">{company.phoneDisplay}</span>
-      ) : (
+      {labelOnly ? (
         <span>Appeler</span>
+      ) : (
+        <>
+          <span className="hidden font-data tabular-nums sm:inline">{company.phoneDisplay}</span>
+          <span className="sm:hidden">Appeler</span>
+        </>
       )}
     </a>
   );

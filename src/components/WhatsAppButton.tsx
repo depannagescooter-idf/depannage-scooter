@@ -9,10 +9,25 @@ export type WhatsAppOrigin = CallOrigin;
 
 const CAR_BATTERY_PATH = "/depannage-sur-place/batterie-voiture";
 
+/** Pages mixtes 2-roues + voiture : message neutre. */
+const NEUTRAL_PATHS = new Set(["/", "/contact", "/tarifs"]);
+
+function normalizePath(pathname: string): string {
+  return pathname.replace(/\/$/, "") || "/";
+}
+
 function getWhatsAppMessage(pathname: string): string {
-  const isCarPage = pathname.includes(CAR_BATTERY_PATH);
-  const vehicle = isCarPage ? "ma voiture" : "mon deux-roues";
-  return `Bonjour, je suis en panne avec ${vehicle} en Île-de-France. Pouvez-vous m'aider ?`;
+  const path = normalizePath(pathname);
+
+  if (NEUTRAL_PATHS.has(path)) {
+    return "Bonjour, je suis en panne en Île-de-France. Pouvez-vous m'aider ?";
+  }
+
+  if (path.includes(CAR_BATTERY_PATH)) {
+    return "Bonjour, je suis en panne avec ma voiture en Île-de-France. Pouvez-vous m'aider ?";
+  }
+
+  return "Bonjour, je suis en panne avec mon deux-roues en Île-de-France. Pouvez-vous m'aider ?";
 }
 
 export interface WhatsAppButtonProps {

@@ -5,17 +5,17 @@ import type { Company } from "./types";
  */
 export const company: Company = {
   name: "DépannageScooter",
-  legalName: "TODO-RAISON-SOCIALE",
-  legalForm: "TODO-FORME-JURIDIQUE",
-  siren: "TODO-SIREN",
+  legalName: "DEPANNAGE SCOOTER",
+  legalForm: "SAS",
+  siren: "951940964",
   phone: "+33772125311",
   phoneDisplay: "07 72 12 53 11",
   whatsapp: "33772125311",
   email: "scooterdepannage@gmail.com",
   address: {
-    street: "TODO-adresse",
+    street: "4 boulevard de la Bastille",
     city: "Paris",
-    postalCode: "75000",
+    postalCode: "75012",
     country: "FR",
   },
   openingHours: "24h/24, 7j/7",

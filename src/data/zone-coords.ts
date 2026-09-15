@@ -939,7 +939,7 @@ export const zoneCoords: ZoneCoord[] = [
     ]
   },
   {
-    "slug": "garges-les-gonneuse",
+    "slug": "garges-les-gonesse",
     "name": "Garges-lès-Gonesse",
     "lat": 49.032,
     "lng": 2.346,

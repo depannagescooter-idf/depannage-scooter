@@ -10,14 +10,11 @@ import { getVerifiedReviews } from "@/data/reviews";
 import { createPageMetadata } from "@/lib/metadata";
 import { webPageSchema } from "@/lib/schema";
 
-const hasReviews = getVerifiedReviews().length > 0;
-
 export const metadata: Metadata = createPageMetadata({
-  title: "Avis clients dépannage scooter IDF",
+  title: "Avis clients dépannage scooter Île-de-France",
   description:
-    "Avis clients sur le dépannage et remorquage scooter et moto DépannageScooter en Île-de-France.",
+    "Avis clients DépannageScooter : dépannage, remorquage scooter moto et batterie voiture en Île-de-France. Note Google 4,7/5 sur 168 avis.",
   path: "/avis/",
-  index: hasReviews,
 });
 
 export default function AvisPage() {
@@ -28,7 +25,8 @@ export default function AvisPage() {
       <JsonLd
         data={webPageSchema({
           name: "Avis clients DépannageScooter",
-          description: "Avis vérifiés sur le dépannage et remorquage deux-roues en Île-de-France.",
+          description:
+            "Avis clients sur le dépannage, remorquage deux-roues et batterie voiture en Île-de-France.",
           path: "/avis/",
         })}
       />
@@ -37,18 +35,13 @@ export default function AvisPage() {
         <h1 className="mt-6 font-display text-3xl font-extrabold text-asphalte">Avis de nos clients</h1>
         <div className="mt-4">
           <ShortAnswer>
-            Les avis publiés ici proviennent de clients ayant utilisé notre service de dépannage ou
-            remorquage scooter et moto en Île-de-France. Chaque témoignage est vérifié avant
-            publication.
+            DépannageScooter est noté 4,7/5 sur Google pour le dépannage et remorquage scooter, moto
+            et batterie voiture en Île-de-France. Consultez les avis Google ci-dessous ou laissez
+            le vôtre après une intervention.
           </ShortAnswer>
         </div>
         <GoogleReviewsSummary />
-        {verified.length === 0 ? (
-          <p className="mt-6 text-beton">
-            Les témoignages détaillés seront publiés ici au fil des interventions. Consultez nos
-            avis Google ci-dessus ou contactez-nous après votre dépannage.
-          </p>
-        ) : (
+        {verified.length > 0 && (
           <ul className="mt-8 space-y-4">
             {verified.map((r) => (
               <li key={r.id} className="card px-5 py-4">
