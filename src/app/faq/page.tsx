@@ -12,9 +12,9 @@ import { createPageMetadata } from "@/lib/metadata";
 import { faqPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "FAQ dépannage et remorquage scooter moto",
+  title: "FAQ dépannage scooter moto voiture",
   description:
-    "Questions fréquentes sur le dépannage et remorquage scooter et moto en Île-de-France : tarifs, délais, assurance, zones.",
+    "Questions fréquentes sur le dépannage et remorquage scooter, moto et batterie voiture en Île-de-France : tarifs, délais, assurance, zones.",
   path: "/faq/",
   useRouteOg: true,
 });
@@ -28,8 +28,9 @@ export default function FaqPage() {
         <h1 className="mt-6 font-display text-3xl font-extrabold text-asphalte">Questions fréquentes</h1>
         <div className="mt-4">
           <ShortAnswer>
-            Retrouvez ici les réponses sur les tarifs, délais, zones couvertes, assurance et
-            fonctionnement d&apos;une intervention DépannageScooter en Île-de-France, 24h/24.
+            Retrouvez ici les réponses sur le dépannage scooter, moto et batterie voiture : tarifs,
+            délais, zones couvertes, assurance et fonctionnement d&apos;une intervention
+            DépannageScooter en Île-de-France, 24h/24.
           </ShortAnswer>
         </div>
         <div className="mt-8">

@@ -11,35 +11,31 @@ const LOGO_ALT =
 
 export function Logo({ variant = "default" }: LogoProps) {
   const isLight = variant === "light";
+  const nameColor = isLight ? "text-stone-100" : "text-asphalte";
+  const taglineColor = isLight ? "text-stone-400" : "text-beton";
 
   return (
     <Link
       href="/"
-      className={`group flex shrink-0 items-center focus-visible:outline-offset-4 ${
-        isLight ? "rounded-sm bg-marquage px-2 py-1" : ""
-      }`}
+      className="group flex shrink-0 items-center gap-2.5 focus-visible:outline-offset-4 lg:gap-3"
       aria-label={`${company.name} — accueil`}
     >
-      {/* Mobile : symbole seul (partie gauche du logo) */}
-      <span className="relative block h-[52px] w-[52px] overflow-hidden lg:hidden">
-        <Image
-          src="/images/logo.png"
-          alt={LOGO_ALT}
-          width={280}
-          height={80}
-          priority
-          className="h-[52px] w-auto max-w-none"
-        />
-      </span>
-      {/* Desktop : symbole + texte */}
       <Image
-        src="/images/logo.png"
+        src={company.logoPath}
         alt={LOGO_ALT}
-        width={280}
-        height={80}
+        width={720}
+        height={720}
         priority
-        className="hidden h-[64px] w-auto lg:block"
+        className="h-[52px] w-[52px] shrink-0 rounded-sm object-cover lg:h-16 lg:w-16"
       />
+      <span className={`hidden min-w-0 flex-col lg:flex ${nameColor}`}>
+        <span className="font-display text-lg font-bold leading-tight tracking-tight">
+          Dépannage<span className="text-signal">Scooter</span>
+        </span>
+        <span className={`mt-0.5 text-[10px] font-medium tracking-wide ${taglineColor}`}>
+          24h/24 · 7j/7 · Île-de-France
+        </span>
+      </span>
     </Link>
   );
 }

@@ -604,7 +604,7 @@ const servicesData: Service[] = [
     h1: "Remorquage de moto accidentée en Île-de-France",
     metaTitle: "Moto accidentée remorquage IDF",
     metaDescription:
-      "Moto accidentée en IDF ? Enlèvement sécurisé sur plateau, véhicule endommagé ou non roulant. Transport vers garage, expert ou fourrière 24h/24.",
+      "Moto accidentée en IDF ? Remorquage sécurisé sur plateau, véhicule endommagé ou non roulant. Transport vers garage, expert ou fourrière 24h/24.",
     shortAnswer:
       "DépannageScooter prend en charge le remorquage de motos accidentées en Île-de-France lorsque le véhicule est non roulant ou dangereux à conduire. Le chargement tient compte des dommages visibles — fourche tordue, carénage arraché, fuite — pour immobiliser la moto sans aggraver la casse avant transport vers garage, expert ou lieu de stockage.",
     intro:
@@ -777,7 +777,7 @@ const servicesData: Service[] = [
     metaDescription:
       "Transfert planifié de scooter ou moto vers garage, concession ou expert en Île-de-France. Remorquage sur rendez-vous, véhicule roulant ou non.",
     shortAnswer:
-      "DépannageScooter organise le transfert de scooters et motos vers un garage réparateur, une concession ou un expert en Île-de-France, sur rendez-vous ou en urgence. Le service couvre les véhicules roulants sans immatriculation temporaire utilisable, les épaves légères et les livraisons après achat ou réparation chez un tiers.",
+      "DépannageScooter organise le transfert de scooters et motos vers un garage réparateur, une concession ou un expert en Île-de-France, sur rendez-vous ou en urgence. Le service couvre les véhicules roulants sans immatriculation temporaire utilisable et les livraisons après achat ou réparation chez un tiers.",
     intro:
       "Le transfert vers un garage ou une concession ne répond pas toujours à une panne immédiate : reprise après achat d'occasion, envoi chez un carrossier, déplacement vers un expert d'assurance ou simple changement de lieu de stockage. Nous planifions l'intervention à l'avance quand c'est possible, avec créneau horaire coordonné entre vous et le destinataire. Le véhicule peut être roulant ou non ; précisez l'état mécanique pour adapter le chargement. Les longues distances intra-IDF sont calculées selon le trajet réel.",
     symptoms: [

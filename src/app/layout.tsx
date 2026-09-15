@@ -1,7 +1,10 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans } from "next/font/google";
 import { DeferredClientShell } from "@/components/DeferredClientShell";
+import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header";
 import { InterventionBar } from "@/components/InterventionBar";
+import { SkipLink } from "@/components/SkipLink";
 import { company } from "@/data/company";
 import { criticalCss } from "@/lib/critical-css";
 import { isProduction } from "@/lib/metadata";
@@ -40,7 +43,10 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{ __html: criticalCss }} />
       </head>
       <body className="has-intervention-bar">
+        <SkipLink />
+        <Header />
         {children}
+        <Footer />
         <InterventionBar />
         <DeferredClientShell />
       </body>

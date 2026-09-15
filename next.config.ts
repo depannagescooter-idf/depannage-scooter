@@ -44,6 +44,9 @@ const nextConfig: NextConfig = {
       { key: "X-Content-Type-Options", value: "nosniff" },
       { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
       { key: "Permissions-Policy", value: "camera=(), microphone=(), geolocation=(self)" },
+      // HTML : pas de cache CDN longue durée — footer/NAP toujours à jour après déploiement
+      { key: "Cache-Control", value: "public, max-age=0, must-revalidate" },
+      { key: "CDN-Cache-Control", value: "public, max-age=0, must-revalidate" },
     ];
 
     return [
@@ -54,6 +57,14 @@ const nextConfig: NextConfig = {
       {
         source: "/llms.txt",
         headers: [{ key: "Content-Type", value: "text/plain; charset=utf-8" }],
+      },
+      {
+        source: "/images/logo-carre-orange.png",
+        headers: [{ key: "Cache-Control", value: "public, max-age=0, must-revalidate" }],
+      },
+      {
+        source: "/images/logo.png",
+        headers: [{ key: "Cache-Control", value: "public, max-age=0, must-revalidate" }],
       },
     ];
   },

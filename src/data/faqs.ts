@@ -64,11 +64,6 @@ export const globalFaqs: Faq[] = [
       `Appelez le ${company.phoneDisplay} ou contactez-nous via WhatsApp. Nous établissons un devis ferme en fonction du type de panne, de votre adresse et de l'horaire. Aucune intervention sans accord préalable.`,
   },
   {
-    question: "Enlèvez-vous les épaves ou scooters abandonnés ?",
-    answer:
-      "Nous assurons le remorquage de deux-roues et de voitures en panne immobilisés. Pour un véhicule abandonné sur voie publique, les démarches passent souvent par la mairie ou la fourrière. Contactez-nous pour orienter votre situation.",
-  },
-  {
     question: "Quelle est la zone couverte exactement ?",
     answer:
       `Paris intra-muros et l'ensemble de l'Île-de-France (77, 78, 91, 92, 93, 94, 95) : ${publishedZones.length} communes couvertes. Consultez la page zones d'intervention pour la liste complète. Hors zone : devis sur demande.`,

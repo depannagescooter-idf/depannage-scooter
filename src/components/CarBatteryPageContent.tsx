@@ -119,7 +119,7 @@ export function CarBatteryPageContent() {
             <p className="mt-3 text-sm text-beton">
               Le tarif exact vous est confirmé par téléphone avant tout déplacement. Aucune surprise
               à l&apos;arrivée.{" "}
-              <Link href="/tarifs/" className="font-medium text-gyro hover:underline">
+              <Link href="/tarifs/#tarifs-voiture" className="font-medium text-gyro hover:underline">
                 Grille complète →
               </Link>
             </p>

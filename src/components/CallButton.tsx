@@ -25,13 +25,13 @@ export function CallButton({ origin, labelOnly = false, className = "" }: CallBu
       className={`btn-primary inline-flex min-h-11 items-center justify-center gap-2 rounded-full px-5 py-2.5 font-display text-sm font-semibold text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gyro ${className}`}
       aria-label={`Appeler ${company.name} au ${company.phoneDisplay}`}
     >
-      <IconPhone className="size-4 shrink-0" />
+      <IconPhone className="size-4 shrink-0" aria-hidden="true" />
       {labelOnly ? (
         <span>Appeler</span>
       ) : (
         <>
-          <span className="hidden font-data tabular-nums sm:inline">{company.phoneDisplay}</span>
-          <span className="sm:hidden">Appeler</span>
+          <span className="hidden font-data tabular-nums lg:inline">{company.phoneDisplay}</span>
+          <span className="lg:hidden">Appeler</span>
         </>
       )}
     </a>

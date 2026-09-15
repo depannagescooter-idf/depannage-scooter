@@ -22,7 +22,7 @@ export const company: Company = {
   description:
     "DépannageScooter — dépannage et remorquage scooters, motos et batterie voiture en Île-de-France, disponible 24h/24 et 7j/7.",
   url: "https://www.depannagescooter.com",
-  logoPath: "/images/logo.png",
+  logoPath: "/images/logo-carre-orange.png",
   serviceAreas: [
     "Paris",
     "Hauts-de-Seine (92)",

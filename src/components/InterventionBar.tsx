@@ -37,8 +37,8 @@ export function InterventionBar() {
           aria-label={`Appeler ${company.name}`}
         >
           <IconPhone className="size-4" />
-          <span className="hidden font-data tabular-nums sm:inline">{company.phoneDisplay}</span>
-          <span className="sm:hidden">Appeler</span>
+          <span className="hidden font-data tabular-nums lg:inline">{company.phoneDisplay}</span>
+          <span className="lg:hidden">Appeler</span>
         </a>
       </div>
     </aside>

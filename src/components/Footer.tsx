@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CallButton } from "@/components/CallButton";
 import { Logo } from "@/components/Logo";
 import { company } from "@/data/company";
+import { getCompanySiren, getCompanyStreetLine } from "@/lib/company-nap";
 
 const majorZones = [
   { slug: "paris-11e", name: "Paris 11e" },
@@ -19,7 +20,8 @@ const legalLinks = [
 ] as const;
 
 export function Footer() {
-  const { address } = company;
+  const streetLine = getCompanyStreetLine();
+  const siren = getCompanySiren();
 
   return (
     <footer className="mt-16 bg-asphalte text-marquage">
@@ -51,10 +53,8 @@ export function Footer() {
                   {company.email}
                 </a>
               </p>
-              <p>
-                {address.street}, {address.postalCode} {address.city}
-              </p>
-              <p className="font-data tabular-nums text-stone-400">SIREN {company.siren}</p>
+              <p>{streetLine}</p>
+              <p className="font-data tabular-nums text-stone-400">SIREN {siren}</p>
               <p className="font-data tabular-nums text-alerte">{company.openingHours}</p>
             </address>
           </section>
@@ -133,7 +133,7 @@ export function Footer() {
       <div className="border-t border-white/10">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-xs text-stone-400 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
-            © {new Date().getFullYear()} {company.name} · SIREN {company.siren}
+            © {new Date().getFullYear()} {company.name} · SIREN {siren}
           </p>
           <ul className="flex flex-wrap gap-4">
             {legalLinks.map((link) => (

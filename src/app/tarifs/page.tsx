@@ -30,32 +30,30 @@ export default function TarifsPage() {
   return (
     <PageShell>
       <JsonLd data={offerCatalogSchema()} />
-      <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
+      <div className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Tarifs" }]} />
         <h1 className="mt-6 font-display text-3xl font-extrabold text-asphalte sm:text-4xl">
           Tarifs dépannage, remorquage et batterie voiture
         </h1>
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
-            {company.name} applique des tarifs jour TTC en Île-de-France : dépannage deux-roues à{" "}
-            {formatPrice(pricing.dsp.baseFee)} + déplacement, remorquage de{" "}
-            {getTowingPriceRangeLabel()}, batterie voiture dès{" "}
-            {formatPrice(getCarBatteryBoostTotal("PARIS"))} (booster, Paris, déplacement inclus).
-            Majorations nuit, week-end et jours fériés. Devis ferme au {company.phoneDisplay}{" "}
-            avant toute intervention.
+            {company.name} applique des tarifs jour TTC en Île-de-France : batterie voiture dès{" "}
+            {formatPrice(getCarBatteryBoostTotal("PARIS"))} (booster, Paris, déplacement inclus),
+            dépannage deux-roues à {formatPrice(pricing.dsp.baseFee)} + déplacement, remorquage de{" "}
+            {getTowingPriceRangeLabel()}. Majorations nuit, week-end et jours fériés. Devis ferme au{" "}
+            {company.phoneDisplay} avant toute intervention.
           </ShortAnswer>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <CallButton origin="inline" />
           <WhatsAppButton origin="inline" />
         </div>
-        <div className="mt-10">
-          <PriceTable />
-        </div>
-        <section className="mt-10">
+
+        <section id="tarifs-voiture" className="mt-10 scroll-mt-24">
           <h2 className="section-title">Tarifs batterie voiture</h2>
           <p className="mt-2 max-w-2xl text-sm text-beton">
-            Démarrage au booster ou remplacement de batterie à domicile. Détail sur la{" "}
+            Démarrage au booster ou remplacement de batterie à domicile — citadines, berlines, SUV.
+            Détail sur la{" "}
             <Link
               href="/depannage-sur-place/batterie-voiture/"
               className="font-medium text-gyro hover:underline"
@@ -68,6 +66,18 @@ export default function TarifsPage() {
             <CarBatteryPriceTable />
           </div>
         </section>
+
+        <section id="tarifs-deux-roues" className="mt-10 scroll-mt-24">
+          <h2 className="section-title">Tarifs dépannage et remorquage deux-roues</h2>
+          <p className="mt-2 max-w-2xl text-sm text-beton">
+            Scooters, motos et trois-roues — forfait dépannage sur place, paliers remorquage et
+            majorations horaires.
+          </p>
+          <div className="mt-4">
+            <PriceTable />
+          </div>
+        </section>
+
         <section className="mt-10 card px-5 py-4 text-sm text-beton">
           <h2 className="font-display font-semibold text-asphalte">Mentions tarifaires</h2>
           <ul className="mt-2 list-inside list-disc space-y-1">
@@ -80,7 +90,7 @@ export default function TarifsPage() {
             <li>Aucune intervention sans accord préalable sur le montant.</li>
           </ul>
         </section>
-      </main>
+      </div>
     </PageShell>
   );
 }

@@ -1,14 +1,4 @@
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SkipLink } from "@/components/SkipLink";
-
+/** Enveloppe sémantique principale — header/footer sont dans le layout racine. */
 export function PageShell({ children }: { children: React.ReactNode }) {
-  return (
-    <>
-      <SkipLink />
-      <Header />
-      <main id="main-content">{children}</main>
-      <Footer />
-    </>
-  );
+  return <main id="main-content">{children}</main>;
 }
