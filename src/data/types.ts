@@ -73,13 +73,22 @@ export interface Company {
     street: string;
     city: string;
     postalCode: string;
+    addressRegion: string;
     country: string;
+  };
+  geo: {
+    latitude: number;
+    longitude: number;
   };
   openingHours: string;
   description: string;
   url: string;
   logoPath: string;
   serviceAreas: string[];
+  paymentAccepted: string;
+  currenciesAccepted: string;
+  /** Profils publics (Google Business Profile, etc.) */
+  sameAs: string[];
   /** Délai moyen par défaut affiché avant géolocalisation [min, max] en minutes */
   defaultEtaMinutes: [number, number];
   googleReviews: {

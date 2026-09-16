@@ -1,15 +1,39 @@
 import { company } from "@/data/company";
-import { formatPrice, getDspTotal, getStartingPrice, pricing } from "@/data/pricing";
+import {
+  formatPrice,
+  getCarBatteryBoostTotal,
+  getCarBatteryReplacementTotal,
+  getDspTotal,
+  getStartingPrice,
+  pricing,
+} from "@/data/pricing";
+import type { TravelZoneKey } from "@/data/types";
 import { absoluteUrl, getSiteUrl } from "@/lib/metadata";
+
+const DEPARTMENT_NAMES: Record<string, string> = {
+  "75": "Paris",
+  "77": "Seine-et-Marne",
+  "78": "Yvelines",
+  "91": "Essonne",
+  "92": "Hauts-de-Seine",
+  "93": "Seine-Saint-Denis",
+  "94": "Val-de-Marne",
+  "95": "Val-d'Oise",
+};
+
+export function businessId(): string {
+  return `${getSiteUrl()}/#business`;
+}
 
 function postalAddressSchema() {
   const { address } = company;
   return {
     "@type": "PostalAddress" as const,
-    addressLocality: address.city,
-    postalCode: address.postalCode,
-    addressCountry: address.country,
     streetAddress: address.street,
+    postalCode: address.postalCode,
+    addressLocality: address.city,
+    addressRegion: address.addressRegion,
+    addressCountry: address.country,
   };
 }
 
@@ -38,10 +62,59 @@ function openingHoursSchema() {
   };
 }
 
+function areaServedRegionsSchema() {
+  return company.serviceAreas.map((area) => ({
+    "@type": "AdministrativeArea" as const,
+    name: area.replace(/\s*\(\d+\)\s*$/, "").trim(),
+  }));
+}
+
 function priceFromKey(priceKey?: string): number | undefined {
   if (!priceKey) return undefined;
   const starting = getStartingPrice(priceKey);
   return starting ?? undefined;
+}
+
+function businessProviderRef() {
+  return { "@id": businessId() };
+}
+
+/** Schéma LocalBusiness global — injecté dans le layout sur toutes les pages. */
+export function globalBusinessSchema() {
+  return {
+    "@context": "https://schema.org",
+    "@type": ["LocalBusiness", "AutoRepair"],
+    "@id": businessId(),
+    name: company.name,
+    url: getSiteUrl(),
+    logo: absoluteUrl(company.logoPath),
+    image: absoluteUrl("/opengraph-image"),
+    telephone: company.phone,
+    email: company.email,
+    description: company.description,
+    address: postalAddressSchema(),
+    geo: geoCoordinatesSchema(company.geo.latitude, company.geo.longitude),
+    openingHoursSpecification: openingHoursSchema(),
+    areaServed: areaServedRegionsSchema(),
+    priceRange: "€€",
+    currenciesAccepted: company.currenciesAccepted,
+    paymentAccepted: company.paymentAccepted,
+    sameAs: company.sameAs,
+  };
+}
+
+/** Extension aggregateRating — uniquement sur /avis/ où la note Google est affichée avec source. */
+export function businessAggregateRatingSchema() {
+  const { googleReviews } = company;
+  return {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "@id": businessId(),
+    aggregateRating: aggregateRatingSchema({
+      ratingValue: googleReviews.rating,
+      reviewCount: googleReviews.reviewCount,
+    }),
+  };
 }
 
 export function organizationSchema() {
@@ -56,11 +129,7 @@ export function organizationSchema() {
     email: company.email,
     description: company.description,
     address: postalAddressSchema(),
-    areaServed: company.serviceAreas.map((area) => ({
-      "@type": "AdministrativeArea",
-      name: area,
-    })),
-    hasOfferCatalog: offerCatalogSchema(),
+    areaServed: areaServedRegionsSchema(),
   };
 }
 
@@ -76,47 +145,59 @@ export function webSiteSchema() {
   };
 }
 
+/** @deprecated Préférer globalBusinessSchema() dans le layout */
 export function localBusinessSchema(input?: {
   areaServed?: string;
   lat?: number;
   lng?: number;
 }) {
   return {
-    "@context": "https://schema.org",
-    "@type": ["LocalBusiness", "AutoRepair"],
-    name: company.name,
-    url: getSiteUrl(),
-    telephone: company.phone,
-    email: company.email,
-    description: company.description,
-    address: postalAddressSchema(),
-    openingHoursSpecification: openingHoursSchema(),
-    priceRange: "€€",
-    ...(input?.lat !== undefined && input.lng !== undefined
-      ? { geo: geoCoordinatesSchema(input.lat, input.lng) }
-      : { geo: geoCoordinatesSchema(48.8566, 2.3522) }),
+    ...globalBusinessSchema(),
     ...(input?.areaServed
       ? { areaServed: { "@type": "City", name: input.areaServed } }
-      : {
-          areaServed: company.serviceAreas.map((a) => ({
-            "@type": "AdministrativeArea",
-            name: a,
-          })),
-        }),
+      : {}),
+    ...(input?.lat !== undefined && input.lng !== undefined
+      ? { geo: geoCoordinatesSchema(input.lat, input.lng) }
+      : {}),
   };
 }
 
-/** @deprecated Prefer localBusinessSchema — kept for backward compatibility */
-export function autoRepairSchema(areaServed?: string) {
-  return localBusinessSchema(areaServed ? { areaServed } : undefined);
+/** @deprecated Prefer zoneServiceSchema */
+export function zoneLocalBusinessSchema(zone: {
+  slug: string;
+  name: string;
+  departement: string;
+  lat: number;
+  lng: number;
+}) {
+  return zoneServiceSchema(zone);
 }
 
-export function zoneLocalBusinessSchema(zone: { name: string; lat: number; lng: number }) {
-  return localBusinessSchema({
-    areaServed: zone.name,
-    lat: zone.lat,
-    lng: zone.lng,
-  });
+export function zoneServiceSchema(zone: {
+  slug: string;
+  name: string;
+  departement: string;
+  lat: number;
+  lng: number;
+}) {
+  const departmentName = DEPARTMENT_NAMES[zone.departement] ?? "Île-de-France";
+
+  return {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    name: `Dépannage et remorquage scooter et moto à ${zone.name}`,
+    serviceType: "Dépannage et remorquage de deux-roues",
+    url: absoluteUrl(`/zones-intervention/${zone.slug}/`),
+    provider: businessProviderRef(),
+    areaServed: {
+      "@type": "City",
+      name: zone.name,
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: departmentName,
+      },
+    },
+  };
 }
 
 export function serviceSchema(input: {
@@ -124,20 +205,19 @@ export function serviceSchema(input: {
   description: string;
   url: string;
   priceKey?: string;
+  serviceType?: string;
 }) {
   const price = priceFromKey(input.priceKey);
+  const catalog = input.priceKey ? serviceOfferCatalogSchema(input.priceKey) : undefined;
+
   return {
     "@context": "https://schema.org",
     "@type": "Service",
     name: input.name,
+    serviceType: input.serviceType ?? input.name,
     description: input.description,
     url: absoluteUrl(input.url),
-    provider: {
-      "@type": "LocalBusiness",
-      name: company.name,
-      telephone: company.phone,
-      url: getSiteUrl(),
-    },
+    provider: businessProviderRef(),
     areaServed: { "@type": "AdministrativeArea", name: "Île-de-France" },
     ...(price !== undefined
       ? {
@@ -150,6 +230,29 @@ export function serviceSchema(input: {
           },
         }
       : {}),
+    ...(catalog ? { hasOfferCatalog: catalog } : {}),
+  };
+}
+
+/** Grille tarifaire d'une prestation DSP (forfait + déplacements par zone). */
+export function serviceOfferCatalogSchema(priceKey: string): Record<string, unknown> | undefined {
+  if (!(priceKey in pricing.dsp.services)) {
+    return undefined;
+  }
+
+  const service = pricing.dsp.services[priceKey as keyof typeof pricing.dsp.services];
+  const zoneKeys: TravelZoneKey[] = ["PARIS", "PETITE_COURONNE", "GRANDE_COURONNE"];
+
+  return {
+    "@type": "OfferCatalog",
+    name: `Tarifs ${service.label}`,
+    itemListElement: zoneKeys.map((zoneKey) => ({
+      "@type": "Offer",
+      name: `${service.label} — ${pricing.travelFees[zoneKey].label}`,
+      price: getDspTotal(zoneKey),
+      priceCurrency: pricing.currency,
+      description: `${formatPrice(pricing.dsp.baseFee)} prestation + ${formatPrice(pricing.travelFees[zoneKey].amount)} déplacement`,
+    })),
   };
 }
 
@@ -182,13 +285,13 @@ export function offerCatalogSchema() {
   const towingOffers = Object.entries(pricing.towing)
     .filter(([, tier]) => tier.amount !== null)
     .map(([key, tier]) => ({
-    "@type": "Offer",
-    name: `Remorquage — ${tier.label}`,
-    price: tier.amount,
-    priceCurrency: pricing.currency,
-    offeredBy: { "@type": "Organization", name: company.name },
-    identifier: key,
-  }));
+      "@type": "Offer",
+      name: `Remorquage — ${tier.label}`,
+      price: tier.amount,
+      priceCurrency: pricing.currency,
+      offeredBy: businessProviderRef(),
+      identifier: key,
+    }));
 
   const dspOffers = Object.entries(pricing.dsp.services).map(([key, service]) => ({
     "@type": "Offer",
@@ -196,15 +299,32 @@ export function offerCatalogSchema() {
     price: getDspTotal("PARIS"),
     priceCurrency: pricing.currency,
     description: `${formatPrice(pricing.dsp.baseFee)} prestation + déplacement selon zone`,
-    offeredBy: { "@type": "Organization", name: company.name },
+    offeredBy: businessProviderRef(),
     identifier: key,
   }));
+
+  const carBatteryOffers = [
+    {
+      "@type": "Offer",
+      name: "Démarrage batterie voiture (booster) — Paris",
+      price: getCarBatteryBoostTotal("PARIS"),
+      priceCurrency: pricing.currency,
+      offeredBy: businessProviderRef(),
+    },
+    {
+      "@type": "Offer",
+      name: "Remplacement batterie voiture (main-d'œuvre) — Paris",
+      price: getCarBatteryReplacementTotal("PARIS"),
+      priceCurrency: pricing.currency,
+      offeredBy: businessProviderRef(),
+    },
+  ];
 
   return {
     "@context": "https://schema.org",
     "@type": "OfferCatalog",
     name: `Tarifs ${company.name}`,
-    itemListElement: [...towingOffers, ...dspOffers],
+    itemListElement: [...towingOffers, ...dspOffers, ...carBatteryOffers],
   };
 }
 
@@ -262,9 +382,8 @@ export function articleSchema(input: {
     datePublished: input.publishedAt,
     dateModified: input.updatedAt ?? input.publishedAt,
     author: {
-      "@type": "Person",
-      name: input.authorName,
-      jobTitle: input.authorRole,
+      "@type": "Organization",
+      name: company.name,
     },
     publisher: {
       "@type": "Organization",
@@ -280,19 +399,7 @@ export function carBatteryServiceSchema() {
     "@type": "Service",
     serviceType: "Dépannage et remplacement de batterie automobile",
     name: "Dépannage batterie voiture à domicile",
-    provider: {
-      "@type": "AutoRepair",
-      name: company.name,
-      telephone: company.phone,
-      email: company.email,
-      url: getSiteUrl(),
-      priceRange: "€€",
-      areaServed: {
-        "@type": "AdministrativeArea",
-        name: "Île-de-France",
-      },
-      openingHoursSpecification: openingHoursSchema(),
-    },
+    provider: businessProviderRef(),
     availableChannel: {
       "@type": "ServiceChannel",
       servicePhone: company.phone,
@@ -313,4 +420,9 @@ export function aggregateRatingSchema(input: {
     bestRating: 5,
     worstRating: 1,
   };
+}
+
+/** @deprecated Prefer globalBusinessSchema — kept for backward compatibility */
+export function autoRepairSchema(areaServed?: string) {
+  return localBusinessSchema(areaServed ? { areaServed } : undefined);
 }

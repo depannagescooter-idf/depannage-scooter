@@ -8,7 +8,7 @@ import { GoogleReviewsSummary } from "@/components/GoogleReviewsSummary";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { getVerifiedReviews } from "@/data/reviews";
 import { createPageMetadata } from "@/lib/metadata";
-import { webPageSchema } from "@/lib/schema";
+import { businessAggregateRatingSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Avis clients dépannage scooter Île-de-France",
@@ -23,12 +23,15 @@ export default function AvisPage() {
   return (
     <PageShell>
       <JsonLd
-        data={webPageSchema({
-          name: "Avis clients DépannageScooter",
-          description:
-            "Avis clients sur le dépannage, remorquage deux-roues et batterie voiture en Île-de-France.",
-          path: "/avis/",
-        })}
+        data={[
+          webPageSchema({
+            name: "Avis clients DépannageScooter",
+            description:
+              "Avis clients sur le dépannage, remorquage deux-roues et batterie voiture en Île-de-France.",
+            path: "/avis/",
+          }),
+          businessAggregateRatingSchema(),
+        ]}
       />
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Avis" }]} />

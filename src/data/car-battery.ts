@@ -1,11 +1,12 @@
 import type { Faq } from "./types";
+import { company } from "./company";
 
 export const carBatteryPage = {
   slug: "batterie-voiture",
   path: "/depannage-sur-place/batterie-voiture/",
   metaTitle: "Dépannage batterie voiture à domicile — Paris & IDF 24h/24",
   metaDescription:
-    "Batterie de voiture à plat ? Démarrage sur place ou remplacement à domicile en Île-de-France, 24h/24. Devis ferme avant déplacement. Appelez le 07 72 12 53 11.",
+    `Batterie de voiture à plat ? Démarrage sur place ou remplacement à domicile en Île-de-France, 24h/24. Devis ferme avant déplacement. Appelez le ${company.phoneDisplay}.`,
   h1: "Dépannage et remplacement de batterie voiture à domicile, Paris et Île-de-France",
   shortAnswer:
     "Votre voiture ne démarre plus : batterie à plat, démarreur qui claque ou tableau de bord éteint. DépannageScooter intervient sur place 24h/24 en Île-de-France — rue, parking ou devant chez vous. Démarrage au booster ou remplacement de batterie après test. Devis ferme confirmé par téléphone avant départ.",

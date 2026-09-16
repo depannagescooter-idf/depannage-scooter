@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const base = getSiteUrl();
   const now = new Date();
 
+  // Mentions légales / CGV / confidentialité / merci : volontairement exclus (noindex).
   const staticPages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] }[] = [
     { path: "", priority: 1, changeFrequency: "weekly" },
     { path: "/depannage-sur-place/", priority: 0.9, changeFrequency: "weekly" },

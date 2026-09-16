@@ -8,7 +8,7 @@ import { ShortAnswer } from "@/components/ShortAnswer";
 import { company } from "@/data/company";
 import { publishedZones } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
-import { localBusinessSchema, webPageSchema } from "@/lib/schema";
+import { webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "À propos – dépanneur scooter moto voiture",
@@ -21,14 +21,11 @@ export default function AProposPage() {
   return (
     <PageShell>
       <JsonLd
-        data={[
-          localBusinessSchema(),
-          webPageSchema({
-            name: "À propos de DépannageScooter",
-            description: company.description,
-            path: "/a-propos/",
-          }),
-        ]}
+        data={webPageSchema({
+          name: "À propos de DépannageScooter",
+          description: company.description,
+          path: "/a-propos/",
+        })}
       />
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "À propos" }]} />

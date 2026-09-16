@@ -8,6 +8,7 @@
     "validate:data": "npx tsx scripts/validate-data.ts",
     "check:nojs": "npx tsx scripts/check-nojs.ts",
     "check:duplicates": "npx tsx scripts/check-duplicates.ts",
+    "check:sitemap": "npx tsx scripts/check-sitemap.ts",
     "prebuild": "npm run validate:data && npm run check:nojs && npm run generate:llms",
     "build": "next build",
     "start": "next start",

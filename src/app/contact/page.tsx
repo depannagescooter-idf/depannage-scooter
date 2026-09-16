@@ -3,12 +3,10 @@ import { PageShell } from "@/components/PageShell";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CallButton } from "@/components/CallButton";
 import { ContactForm } from "@/components/ContactForm";
-import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { company } from "@/data/company";
 import { createPageMetadata } from "@/lib/metadata";
-import { localBusinessSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Contact dépannage scooter 24h/24 IDF",
@@ -21,7 +19,6 @@ export const metadata: Metadata = createPageMetadata({
 export default function ContactPage() {
   return (
     <PageShell>
-      <JsonLd data={localBusinessSchema()} />
       <main className="mx-auto max-w-6xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Contact" }]} />
         <h1 className="mt-6 font-display text-3xl font-extrabold text-asphalte">Nous contacter</h1>

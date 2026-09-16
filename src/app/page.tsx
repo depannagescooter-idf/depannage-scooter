@@ -17,17 +17,12 @@ import { formatPrice, getDspTotal, pricing } from "@/data/pricing";
 import { depannageServices, remorquageServices } from "@/data/services";
 import { publishedZones } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
-import {
-  faqPageSchema,
-  localBusinessSchema,
-  organizationSchema,
-  webSiteSchema,
-} from "@/lib/schema";
+import { faqPageSchema, organizationSchema, webSiteSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Dépannage scooter, moto & batterie voiture",
+  title: "Dépannage scooter & moto 24h/24 Paris et Île-de-France",
   description:
-    `Dépannage scooter, moto et batterie voiture en Île-de-France, 24h/24. Intervention en 25–40 min. Appelez le ${company.phoneDisplay} — devis ferme avant déplacement.`,
+    `Dépannage et remorquage scooter et moto en Île-de-France, 24h/24. Intervention en ${company.defaultEtaMinutes[0]}–${company.defaultEtaMinutes[1]} min. Devis ferme au ${company.phoneDisplay} avant départ.`,
   path: "/",
 });
 
@@ -38,12 +33,7 @@ export default function HomePage() {
   return (
     <PageShell>
       <JsonLd
-        data={[
-          organizationSchema(),
-          webSiteSchema(),
-          localBusinessSchema(),
-          faqPageSchema(globalFaqs),
-        ]}
+        data={[organizationSchema(), webSiteSchema(), faqPageSchema(globalFaqs)]}
       />
 
       <section className="relative overflow-hidden px-4 pb-16 pt-10 sm:px-6 sm:pt-14">
@@ -53,18 +43,20 @@ export default function HomePage() {
             ● Équipes disponibles — {company.openingHours}
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight text-asphalte sm:text-5xl lg:text-6xl">
-            Dépannage scooter, moto
-            <span className="block text-signal"> et batterie voiture en Île-de-France</span>
+            Dépannage et remorquage scooter &amp; moto 24h/24 en Île-de-France
           </h1>
           <div className="mt-6 max-w-2xl">
             <ShortAnswer>
-              {company.name} dépanne et remorque scooters et motos, et intervient pour la
-              batterie voiture à plat, 24h/24 en Île-de-France. Crevaison, batterie, panne sèche
-              ou remorquage : appelez le{" "}
+              {company.name} dépanne et remorque scooters et motos 24h/24 en Île-de-France.
+              Crevaison, batterie, panne sèche ou remorquage plateau : intervention en{" "}
+              <span className="font-data font-semibold tabular-nums">
+                {company.defaultEtaMinutes[0]}–{company.defaultEtaMinutes[1]} min
+              </span>
+              , devis ferme au{" "}
               <span className="font-data font-semibold tabular-nums text-signal">
                 {company.phoneDisplay}
-              </span>
-              . Un dépanneur confirme délai et tarif avant de partir.
+              </span>{" "}
+              avant départ.
             </ShortAnswer>
           </div>
           <div className="mt-6 flex flex-wrap gap-3">
@@ -126,6 +118,20 @@ export default function HomePage() {
             ))}
           </ul>
         </div>
+      </section>
+
+      <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+        <h2 className="section-title">Batterie voiture à plat en Île-de-France ?</h2>
+        <p className="mt-2 max-w-2xl text-beton">
+          Démarrage au booster ou remplacement de batterie à domicile — service distinct des
+          deux-roues, disponible 24h/24.
+        </p>
+        <Link
+          href="/depannage-sur-place/batterie-voiture/"
+          className="mt-4 inline-block text-sm font-medium text-gyro hover:underline"
+        >
+          Dépannage batterie voiture →
+        </Link>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
