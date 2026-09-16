@@ -7,7 +7,7 @@ import type { CallOrigin } from "./CallButton";
 
 export type WhatsAppOrigin = CallOrigin;
 
-const CAR_BATTERY_PATH = "/depannage-sur-place/batterie-voiture";
+const CAR_BATTERY_PATH = "/depannage-voiture/batterie";
 
 /** Pages mixtes 2-roues + voiture : message neutre. */
 const NEUTRAL_PATHS = new Set(["/", "/contact", "/tarifs"]);

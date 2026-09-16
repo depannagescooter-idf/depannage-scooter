@@ -23,7 +23,7 @@ export default function GuidesIndexPage() {
         data={[
           webPageSchema({
             name: "Guides dépannage scooter et moto",
-            description: "Conseils pratiques pour deux-roués en panne en Île-de-France.",
+            description: "Conseils pratiques pour deux-roues en panne en Île-de-France.",
             path: "/guides/",
           }),
           itemListSchema({

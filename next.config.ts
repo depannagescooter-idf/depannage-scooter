@@ -34,6 +34,16 @@ const nextConfig: NextConfig = {
         destination: "/zones-intervention/garges-les-gonesse/",
         permanent: true,
       },
+      {
+        source: "/depannage-sur-place/batterie-voiture",
+        destination: "/depannage-voiture/batterie/",
+        permanent: true,
+      },
+      {
+        source: "/depannage-sur-place/batterie-voiture/",
+        destination: "/depannage-voiture/batterie/",
+        permanent: true,
+      },
     ];
   },
   async headers() {

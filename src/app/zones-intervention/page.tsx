@@ -10,7 +10,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { itemListSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Zones d'intervention dépannage moto IDF",
+  title: "Zones dépannage scooter moto Île-de-France",
   description:
     "Zones d'intervention DépannageScooter en Île-de-France : Paris, 77, 78, 91, 92, 93, 94, 95. Dépannage et remorquage scooter moto 24h/24.",
   path: "/zones-intervention/",

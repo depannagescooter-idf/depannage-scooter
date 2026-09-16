@@ -405,7 +405,7 @@ export function carBatteryServiceSchema() {
       servicePhone: company.phone,
       availableLanguage: "fr",
     },
-    url: absoluteUrl("/depannage-sur-place/batterie-voiture/"),
+    url: absoluteUrl("/depannage-voiture/batterie/"),
   };
 }
 

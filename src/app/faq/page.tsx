@@ -6,7 +6,7 @@ import { CallButton } from "@/components/CallButton";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
-import { depannageServices } from "@/data/services";
+import { depannageServices, remorquageServices } from "@/data/services";
 import { globalFaqs } from "@/data/faqs";
 import { createPageMetadata } from "@/lib/metadata";
 import { faqPageSchema } from "@/lib/schema";
@@ -38,15 +38,39 @@ export default function FaqPage() {
         </div>
         <section className="mt-10">
           <h2 className="section-title">Pages utiles</h2>
-          <ul className="mt-4 flex flex-wrap gap-2">
+          <h3 className="mt-4 font-display text-sm font-semibold text-asphalte">Dépannage sur place</h3>
+          <ul className="mt-2 flex flex-wrap gap-2">
+            {depannageServices.map((s) => (
+              <li key={s.slug}>
+                <Link
+                  href={`/depannage-sur-place/${s.slug}/`}
+                  className="rounded-sm border border-border px-3 py-1.5 text-sm font-medium text-asphalte hover:border-signal hover:text-signal"
+                >
+                  {s.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <h3 className="mt-6 font-display text-sm font-semibold text-asphalte">Remorquage</h3>
+          <ul className="mt-2 flex flex-wrap gap-2">
+            {remorquageServices.map((s) => (
+              <li key={s.slug}>
+                <Link
+                  href={`/remorquage/${s.slug}/`}
+                  className="rounded-sm border border-border px-3 py-1.5 text-sm font-medium text-asphalte hover:border-signal hover:text-signal"
+                >
+                  {s.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <ul className="mt-6 flex flex-wrap gap-2">
             {[
               { href: "/tarifs/", label: "Tarifs" },
               { href: "/zones-intervention/", label: "Zones" },
+              { href: "/depannage-moto/", label: "Dépannage moto" },
+              { href: "/depannage-voiture/batterie/", label: "Batterie voiture" },
               { href: "/contact/", label: "Contact" },
-              ...depannageServices.slice(0, 3).map((s) => ({
-                href: `/depannage-sur-place/${s.slug}/`,
-                label: s.name,
-              })),
             ].map((link) => (
               <li key={link.href}>
                 <Link

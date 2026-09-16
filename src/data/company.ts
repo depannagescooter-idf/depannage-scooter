@@ -11,7 +11,7 @@ export const company: Company = {
   phone: "+33772125311",
   phoneDisplay: "07 72 12 53 11",
   whatsapp: "33772125311",
-  email: "scooterdepannage@gmail.com",
+  email: "contact@depannagescooter.com",
   address: {
     street: "4 boulevard de la Bastille",
     city: "Paris",

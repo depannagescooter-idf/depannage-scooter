@@ -3,8 +3,8 @@ import { company } from "./company";
 
 export const carBatteryPage = {
   slug: "batterie-voiture",
-  path: "/depannage-sur-place/batterie-voiture/",
-  metaTitle: "Dépannage batterie voiture à domicile — Paris & IDF 24h/24",
+  path: "/depannage-voiture/batterie/",
+  metaTitle: "Dépannage batterie voiture à domicile — Paris et Île-de-France",
   metaDescription:
     `Batterie de voiture à plat ? Démarrage sur place ou remplacement à domicile en Île-de-France, 24h/24. Devis ferme avant déplacement. Appelez le ${company.phoneDisplay}.`,
   h1: "Dépannage et remplacement de batterie voiture à domicile, Paris et Île-de-France",

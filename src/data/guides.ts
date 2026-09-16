@@ -55,7 +55,7 @@ export const guides: Guide[] = [
           "Si le démarreur ne répond pas après vérification batterie et kill switch, ou si vous entendez un grincement anormal. En Île-de-France, un dépanneur peut tester sur place et remorquer si nécessaire.",
       },
     ],
-    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
     publishedAt: "2026-03-01",
   },
   {
@@ -90,7 +90,7 @@ export const guides: Guide[] = [
           "Beaucoup de contrats moto incluent une assistance. Vérifiez le numéro sur votre attestation avant de payer. Sinon, conservez la facture pour un éventuel remboursement partiel.",
       },
     ],
-    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
     publishedAt: "2026-03-05",
   },
   {
@@ -98,7 +98,7 @@ export const guides: Guide[] = [
     title: "Batterie de scooter : durée de vie, symptômes, remplacement",
     metaTitle: "Batterie scooter : durée de vie et remplacement",
     metaDescription:
-      "Durée de vie d'une batterie de scooter, signes de faiblesse et remplacement sur place en IDF. Conseils entretien et quand appeler un dépanneur.",
+      "Durée de vie d'une batterie de scooter, signes de faiblesse et remplacement sur place en Île-de-France. Conseils entretien et quand appeler un dépanneur.",
     shortAnswer:
       "Une batterie de scooter dure en moyenne 2 à 4 ans selon l'usage. Signes de fin de vie : démarrage lent, feux faibles, batterie qui se décharge en quelques jours d'immobilisation. Un test sur place confirme si booster ou remplacement est nécessaire.",
     intro:
@@ -120,7 +120,7 @@ export const guides: Guide[] = [
           "Un booster suffit si la batterie est jeune et juste déchargée. Si elle a plus de trois ans ou gonfle, le remplacement est préférable. Nous installons la référence adaptée sur place.",
       },
     ],
-    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
     publishedAt: "2026-03-10",
   },
   {
@@ -150,7 +150,7 @@ export const guides: Guide[] = [
           "Feux de détresse, gilet si disponible, scooter sur le trottoir si possible. Sur chaussée, restez visible et éloigné du trafic en attendant le dépanneur.",
       },
     ],
-    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
     publishedAt: "2026-03-12",
   },
   {
@@ -180,8 +180,128 @@ export const guides: Guide[] = [
           "Photos des dégâts, constat amiable ou procès-verbal police, facture de remorquage, certificat médical si blessure. Déclarez sous 5 jours ouvrés en général.",
       },
     ],
-    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues IDF", experienceYears: 8 },
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
     publishedAt: "2026-03-15",
+  },
+  {
+    slug: "demarreur-tourne-pas-scooter",
+    title: "Scooter : le démarreur ne tourne pas — que vérifier ?",
+    metaTitle: "Scooter démarreur ne tourne pas : diagnostic",
+    metaDescription:
+      "Le démarreur de votre scooter ne tourne pas du tout ? Causes (batterie, kill switch, fusible) et quand appeler un dépanneur en Île-de-France.",
+    shortAnswer:
+      "Si le démarreur ne tourne pas, vérifiez le kill switch, la batterie et le fusible principal. Un clic sec sans rotation indique souvent une batterie à plat ou un mauvais contact. Ne forcez pas : un booster ou un remplacement batterie sur place peut suffire.",
+    intro:
+      "Aucun bruit au démarrage, ou seulement un clic : la panne est électrique dans la majorité des cas. Voici comment trier les causes avant d'appeler un dépanneur.",
+    sections: [
+      {
+        question: "Le kill switch ou la béquille bloquent-ils le contact ?",
+        answer:
+          "Vérifiez l'interrupteur d'arrêt d'urgence et la béquille latérale. Sur de nombreux scooters, le contact est coupé sans message visible au tableau de bord.",
+      },
+      {
+        question: "Comment tester une batterie faible ?",
+        answer:
+          "Tableau de bord faible, clignotants lents ou démarreur qui clique une fois : la batterie est probablement à plat. Un booster professionnel ou un remplacement sur place règle le problème dans la plupart des cas.",
+      },
+      {
+        question: "Quand suspecter le démarreur ou le fusible ?",
+        answer:
+          "Batterie chargée mais aucun bruit : fusible principal ou relais de démarreur. Ne répétez pas les tentatives — vous risquez de griller le relais. Un dépanneur teste sur place.",
+      },
+    ],
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
+    publishedAt: "2026-04-01",
+  },
+  {
+    slug: "demarreur-tourne-scooter-ne-demarre-pas",
+    title: "Scooter : le démarreur tourne mais le moteur ne prend pas",
+    metaTitle: "Scooter démarreur tourne sans prise : causes",
+    metaDescription:
+      "Le démarreur tourne mais le scooter ne démarre pas ? Essence, bougie, injection : diagnostic et dépannage en Île-de-France.",
+    shortAnswer:
+      "Le démarreur qui tourne sans que le moteur ne prenne indique souvent une panne d'allumage, d'essence ou d'injection. Vérifiez le niveau de carburant et évitez les démarrages répétés qui noient le moteur.",
+    intro:
+      "Le moteur crache ou tourne sans démarrer : la batterie n'est pas en cause. Il faut identifier si le problème vient du carburant, de la bougie ou de l'injection.",
+    sections: [
+      {
+        question: "Une panne d'essence est-elle probable ?",
+        answer:
+          "Réservoir vide, robinet fermé ou essence stale (immobilisation prolongée) : le moteur tourne à vide. Sur 2 temps, vérifiez aussi le mélange huile/essence.",
+      },
+      {
+        question: "Bougie ou injection : que suspecter ?",
+        answer:
+          "Bougie encrassée ou bougie de préchauffage défaillante sur diesel-like 125. Sur injection, un voyant moteur peut clignoter. Ne forcez pas plus de trois tentatives consécutives.",
+      },
+      {
+        question: "Faut-il remorquer ?",
+        answer:
+          "Si le moteur ne prend pas après vérifications simples, un remorquage vers un garage évite d'aggraver la panne. En Île-de-France, un plateau sécurise le véhicule.",
+      },
+    ],
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
+    publishedAt: "2026-04-02",
+  },
+  {
+    slug: "assurance-remorquage-moto-rembourse",
+    title: "L'assurance rembourse-t-elle le remorquage moto ?",
+    metaTitle: "Assurance remorquage moto : assistance 0 km",
+    metaDescription:
+      "Le remorquage moto est-il pris en charge par l'assurance ? Assistance 0 km, franchise, facture détaillée — guide pratique.",
+    shortAnswer:
+      "De nombreux contrats moto et auto incluent une assistance 0 km (dépannage sur place ou remorquage). Consultez votre attestation, appelez l'assistance de l'assureur, puis conservez la facture détaillée pour remboursement.",
+    intro:
+      "Après une panne ou un accident, la question du remboursement arrive vite. Voici comment vérifier votre garantie et constituer le dossier.",
+    sections: [
+      {
+        question: "L'assistance 0 km couvre-t-elle le remorquage moto ?",
+        answer:
+          "Oui sur de nombreux contrats moto et sur certains contrats auto. La garantie précise souvent une distance maximale et les types d'intervention (sur place, remorquage vers garage agréé).",
+      },
+      {
+        question: "Faut-il payer d'abord sur place ?",
+        answer:
+          "Souvent oui, puis remboursement sur facture. DépannageScooter fournit une facture détaillée avec kilométrage, prestation et montant TTC pour votre dossier.",
+      },
+      {
+        question: "La franchise s'applique-t-elle au remorquage ?",
+        answer:
+          "Selon le contrat, une franchise peut s'appliquer ou l'assistance est intégrale. Vérifiez les plafonds annuels avant de refuser une intervention.",
+      },
+    ],
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
+    publishedAt: "2026-04-03",
+  },
+  {
+    slug: "batterie-moto-hiver-redemarrer",
+    title: "Batterie moto à plat en hiver : prévenir et redémarrer",
+    metaTitle: "Batterie moto hiver : prévention et dépannage",
+    metaDescription:
+      "Batterie moto qui lâche en hiver ? Causes du froid, entretien, booster et remplacement en Île-de-France.",
+    shortAnswer:
+      "Le froid réduit la capacité des batteries plomb et AGM. Un scooter ou une moto peu utilisés en hiver démarrent mal ou plus du tout. Un booster ou un remplacement sur place suffit souvent ; un chargeur maintien prévient la panne.",
+    intro:
+      "Les baisses de température accentuent la décharge des batteries deux-roues. Voici comment réagir et limiter la récidive.",
+    sections: [
+      {
+        question: "Pourquoi la batterie lâche-t-elle en hiver ?",
+        answer:
+          "Le froid augmente la viscosité interne de la batterie et réduit son courant disponible. Les trajets courts n'rechargent pas suffisamment l'alternateur.",
+      },
+      {
+        question: "Booster ou remplacement ?",
+        answer:
+          "Un booster permet parfois de repartir si la batterie est jeune. Au-delà de 3–4 ans ou si la batterie ne tient plus la charge, le remplacement est plus fiable.",
+      },
+      {
+        question: "Comment prévenir la panne ?",
+        answer:
+          "Chargeur maintien connecté en hiver, trajet long une fois par semaine, ou déconnexion de la borne si immobilisation prolongée. Évitez les démarrages répétés à froid.",
+      },
+    ],
+    author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
+    publishedAt: "2026-04-04",
   },
 ];
 

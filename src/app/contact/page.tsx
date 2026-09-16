@@ -9,9 +9,9 @@ import { company } from "@/data/company";
 import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Contact dépannage scooter 24h/24 IDF",
+  title: "Contact dépannage scooter 24h/24 Île-de-France",
   description:
-    "Contactez DépannageScooter pour un dépannage ou remorquage scooter moto en IDF. Téléphone, WhatsApp ou formulaire de rappel — réponse rapide 24h/24.",
+    "Contactez DépannageScooter pour un dépannage ou remorquage scooter moto en Île-de-France. Téléphone, WhatsApp ou formulaire de rappel — réponse rapide 24h/24.",
   path: "/contact/",
   useRouteOg: true,
 });

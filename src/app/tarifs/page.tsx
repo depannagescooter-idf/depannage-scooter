@@ -9,6 +9,7 @@ import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { company } from "@/data/company";
+import { depannageServices, remorquageServices } from "@/data/services";
 import {
   formatPrice,
   getCarBatteryBoostTotal,
@@ -55,7 +56,7 @@ export default function TarifsPage() {
             Démarrage au booster ou remplacement de batterie à domicile — citadines, berlines, SUV.
             Détail sur la{" "}
             <Link
-              href="/depannage-sur-place/batterie-voiture/"
+              href="/depannage-voiture/batterie/"
               className="font-medium text-gyro hover:underline"
             >
               page batterie voiture
@@ -76,6 +77,36 @@ export default function TarifsPage() {
           <div className="mt-4">
             <PriceTable />
           </div>
+        </section>
+
+        <section className="mt-10">
+          <h2 className="section-title">Pages prestations</h2>
+          <h3 className="mt-4 font-display text-sm font-semibold text-asphalte">Dépannage sur place</h3>
+          <ul className="mt-2 flex flex-wrap gap-2">
+            {depannageServices.map((s) => (
+              <li key={s.slug}>
+                <Link
+                  href={`/depannage-sur-place/${s.slug}/`}
+                  className="rounded-sm border border-border px-3 py-1.5 text-sm font-medium text-asphalte hover:border-signal hover:text-signal"
+                >
+                  {s.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <h3 className="mt-4 font-display text-sm font-semibold text-asphalte">Remorquage</h3>
+          <ul className="mt-2 flex flex-wrap gap-2">
+            {remorquageServices.map((s) => (
+              <li key={s.slug}>
+                <Link
+                  href={`/remorquage/${s.slug}/`}
+                  className="rounded-sm border border-border px-3 py-1.5 text-sm font-medium text-asphalte hover:border-signal hover:text-signal"
+                >
+                  {s.name}
+                </Link>
+              </li>
+            ))}
+          </ul>
         </section>
 
         <section className="mt-10 card px-5 py-4 text-sm text-beton">

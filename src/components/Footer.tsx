@@ -5,12 +5,12 @@ import { company } from "@/data/company";
 import { getCompanySiren, getCompanyStreetLine } from "@/lib/company-nap";
 
 const majorZones = [
-  { slug: "paris-11e", name: "Paris 11e" },
-  { slug: "paris-20e", name: "Paris 20e" },
-  { slug: "boulogne-billancourt", name: "Boulogne-Billancourt" },
-  { slug: "montreuil", name: "Montreuil" },
-  { slug: "nanterre", name: "Nanterre" },
-  { slug: "vincennes", name: "Vincennes" },
+  { slug: "paris", name: "Paris", href: "/zones-intervention/paris/" },
+  { slug: "hauts-de-seine", name: "Hauts-de-Seine (92)", href: "/zones-intervention/hauts-de-seine/" },
+  { slug: "seine-saint-denis", name: "Seine-Saint-Denis (93)", href: "/zones-intervention/seine-saint-denis/" },
+  { slug: "val-de-marne", name: "Val-de-Marne (94)", href: "/zones-intervention/val-de-marne/" },
+  { slug: "nanterre", name: "Nanterre", href: "/zones-intervention/nanterre/" },
+  { slug: "montreuil", name: "Montreuil", href: "/zones-intervention/montreuil/" },
 ] as const;
 
 const legalLinks = [
@@ -67,7 +67,7 @@ export function Footer() {
               {majorZones.map((zone) => (
                 <li key={zone.slug}>
                   <Link
-                    href={`/zones-intervention/${zone.slug}/`}
+                    href={zone.href}
                     className="text-stone-400 transition-colors hover:text-white"
                   >
                     {zone.name}
@@ -77,7 +77,7 @@ export function Footer() {
             </ul>
             <Link
               href="/zones-intervention/"
-              className="mt-4 inline-block text-sm font-medium text-orange-400 hover:underline"
+              className="mt-4 inline-block text-sm font-medium text-gyro hover:underline"
             >
               Toutes les zones →
             </Link>
@@ -90,7 +90,8 @@ export function Footer() {
             <ul className="mt-4 space-y-2 text-sm">
               {[
                 { href: "/depannage-sur-place/", label: "Dépannage sur place" },
-                { href: "/depannage-sur-place/batterie-voiture/", label: "Batterie voiture" },
+                { href: "/depannage-voiture/batterie/", label: "Batterie voiture" },
+                { href: "/depannage-moto/", label: "Dépannage moto" },
                 { href: "/depannage-sur-place/batterie/", label: "Batterie scooter et moto" },
                 { href: "/remorquage/", label: "Remorquage" },
                 { href: "/tarifs/", label: "Tarifs" },
@@ -115,9 +116,9 @@ export function Footer() {
               {[
                 { href: "/contact/", label: "Contact" },
                 { href: "/avis/", label: "Avis clients" },
-                { href: "/zones-intervention/paris-11e/", label: "Dépannage Paris 11e" },
-                { href: "/depannage-sur-place/crevaison/", label: "Crevaison scooter" },
-                { href: "/remorquage/remorquage-scooter/", label: "Remorquage scooter" },
+                { href: "/depannage-moto/", label: "Dépannage moto" },
+                { href: "/depannage-voiture/", label: "Dépannage voiture" },
+                { href: "/guides/", label: "Guides pratiques" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link href={link.href} className="text-stone-400 transition-colors hover:text-white">

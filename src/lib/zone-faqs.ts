@@ -9,7 +9,7 @@ export function getTravelZoneForZone(zone: Zone): TravelZoneKey {
 
 export function getZoneFaqs(zone: Zone) {
   const dspTotal = getDspTotal(getTravelZoneForZone(zone));
-  return [
+  const base = [
     {
       question: `Quel délai pour un dépannage scooter ou moto à ${zone.name} ?`,
       answer: `En journée, comptez ${zone.etaMinutes[0]} à ${zone.etaMinutes[1]} minutes selon le trafic et le point exact de panne. Le délai vous est confirmé par téléphone avant le départ du dépanneur.`,
@@ -23,4 +23,14 @@ export function getZoneFaqs(zone: Zone) {
       answer: `Oui, ${zone.name} est couvert 24h/24 et 7j/7. Les majorations applicables vous sont annoncées par téléphone avant toute intervention.`,
     },
   ];
+  if (zone.faq?.length) {
+    return [...base, ...zone.faq];
+  }
+  if (zone.landmarks[0]) {
+    base.push({
+      question: `Intervenez-vous près de ${zone.landmarks[0]} à ${zone.name} ?`,
+      answer: `Oui. Nous intervenons sur l'ensemble de ${zone.name}, y compris autour de ${zone.landmarks.slice(0, 2).join(" et ")}. Indiquez le point exact lors de l'appel pour un délai précis.`,
+    });
+  }
+  return base;
 }

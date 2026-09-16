@@ -6,6 +6,7 @@ import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { company } from "@/data/company";
+import { getCompanySiren } from "@/lib/company-nap";
 import { publishedZones } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
 import { webPageSchema } from "@/lib/schema";
@@ -40,7 +41,7 @@ export default function AProposPage() {
         <div className="prose prose-stone mt-8 max-w-none space-y-4 text-beton">
           <p>
             <strong className="text-asphalte">{company.name}</strong> a été conçu pour répondre à
-            un besoin précis : remettre en route rapidement les deux-roués et les voitures
+            un besoin précis : remettre en route rapidement les deux-roues et les voitures
             immobilisés en panne, sans frais cachés ni mauvaise surprise à l&apos;arrivée. Que
             vous soyez coursier, livreur, motard du week-end, automobiliste ou utilisateur
             quotidien d&apos;un scooter 50 cm³, notre équipe se déplace avec l&apos;outillage adapté.
@@ -83,6 +84,14 @@ export default function AProposPage() {
               grille tarifaire
             </Link>
             .
+          </p>
+          <h2 className="font-display text-xl font-bold text-asphalte">Identité et garanties</h2>
+          <p>
+            {company.legalName} ({company.legalForm}) — SIREN{" "}
+            <span className="font-data tabular-nums">{getCompanySiren()}</span>. Siège :{" "}
+            {company.address.street}, {company.address.postalCode} {company.address.city}.
+            Assurance responsabilité civile professionnelle souscrite pour les interventions sur
+            voie publique et en parking. {/* TODO-ASSUREUR-RC : nom de l'assureur RC pro */}
           </p>
           <h2 className="font-display text-xl font-bold text-asphalte">Zone d&apos;intervention</h2>
           <p>

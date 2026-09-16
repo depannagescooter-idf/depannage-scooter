@@ -4,12 +4,13 @@ import { company } from "@/data/company";
 
 interface LogoProps {
   variant?: "default" | "light";
+  /** Priority LCP — header uniquement. */
+  priority?: boolean;
 }
 
-const LOGO_ALT =
-  "DépannageScooter — dépannage batterie et remorquage 24h/24 en Île-de-France";
+const LOGO_ALT = "DépannageScooter";
 
-export function Logo({ variant = "default" }: LogoProps) {
+export function Logo({ variant = "default", priority = false }: LogoProps) {
   const isLight = variant === "light";
   const nameColor = isLight ? "text-stone-100" : "text-asphalte";
   const taglineColor = isLight ? "text-stone-400" : "text-beton";
@@ -25,7 +26,8 @@ export function Logo({ variant = "default" }: LogoProps) {
         alt={LOGO_ALT}
         width={720}
         height={720}
-        priority
+        priority={priority}
+        sizes="(min-width: 1024px) 64px, 52px"
         className="h-[52px] w-[52px] shrink-0 rounded-sm object-cover lg:h-16 lg:w-16"
       />
       <span className={`hidden min-w-0 flex-col lg:flex ${nameColor}`}>

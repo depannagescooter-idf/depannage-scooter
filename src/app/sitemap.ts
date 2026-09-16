@@ -1,5 +1,7 @@
 import type { MetadataRoute } from "next";
+import { departments } from "@/data/departments";
 import { guides } from "@/data/guides";
+import { majorCitySlugs } from "@/data/major-cities";
 import { depannageServices, remorquageServices } from "@/data/services";
 import { getPublishedZoneSlugs } from "@/data/zones";
 import { getSiteUrl } from "@/lib/metadata";
@@ -12,7 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: { path: string; priority: number; changeFrequency: MetadataRoute.Sitemap[0]["changeFrequency"] }[] = [
     { path: "", priority: 1, changeFrequency: "weekly" },
     { path: "/depannage-sur-place/", priority: 0.9, changeFrequency: "weekly" },
-    { path: "/depannage-sur-place/batterie-voiture/", priority: 0.88, changeFrequency: "monthly" },
+    { path: "/depannage-moto/", priority: 0.88, changeFrequency: "monthly" },
+    { path: "/depannage-voiture/", priority: 0.85, changeFrequency: "monthly" },
+    { path: "/depannage-voiture/batterie/", priority: 0.88, changeFrequency: "monthly" },
     { path: "/remorquage/", priority: 0.9, changeFrequency: "weekly" },
     { path: "/tarifs/", priority: 0.95, changeFrequency: "monthly" },
     { path: "/zones-intervention/", priority: 0.9, changeFrequency: "weekly" },
@@ -55,6 +59,37 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.8,
     });
+  }
+
+  for (const dept of departments) {
+    entries.push({
+      url: `${base}/zones-intervention/${dept.slug}/`,
+      lastModified: now,
+      changeFrequency: "monthly",
+      priority: 0.82,
+    });
+  }
+
+  for (const s of depannageServices) {
+    for (const city of majorCitySlugs) {
+      entries.push({
+        url: `${base}/depannage-sur-place/${s.slug}/${city}/`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.72,
+      });
+    }
+  }
+
+  for (const s of remorquageServices) {
+    for (const city of majorCitySlugs) {
+      entries.push({
+        url: `${base}/remorquage/${s.slug}/${city}/`,
+        lastModified: now,
+        changeFrequency: "monthly",
+        priority: 0.72,
+      });
+    }
   }
 
   for (const g of guides) {

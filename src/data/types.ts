@@ -39,6 +39,10 @@ export interface Zone {
   landmarks: string[];
   commonInterventions: string[];
   neighbours: string[];
+  /** FAQ propres à la commune (complète les FAQ génériques). */
+  faq?: Faq[];
+  quartiers?: string[];
+  garagesPartenaires?: string[];
   /** Zone non publiée tant que le contenu unique n'est pas prêt. */
   draft?: boolean;
 }

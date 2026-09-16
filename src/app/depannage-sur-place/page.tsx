@@ -13,7 +13,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { itemListSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Dépannage scooter et moto sur place – IDF",
+  title: "Dépannage scooter et moto sur place – Île-de-France",
   description:
     "Dépannage sur place scooter, moto et batterie voiture en Île-de-France : crevaison, batterie, booster, essence, selle. 24h/24, devis avant intervention.",
   path: "/depannage-sur-place/",
@@ -71,7 +71,7 @@ export default function DepannageHubPage() {
           ))}
           <li>
             <Link
-              href="/depannage-sur-place/batterie-voiture/"
+              href="/depannage-voiture/batterie/"
               className="card block border-signal/30 px-5 py-4 hover:shadow-card"
             >
               <h2 className="font-display font-semibold text-asphalte">Batterie voiture à domicile</h2>

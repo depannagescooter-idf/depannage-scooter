@@ -7,10 +7,13 @@ export interface FaqAccordionProps {
 
 export function FaqAccordion({ items, id = "faq" }: FaqAccordionProps) {
   return (
-    <div className="space-y-2">
-      {items.map((item, index) => (
+    <section aria-labelledby={`${id}-heading`} className="space-y-2">
+      <h2 id={`${id}-heading`} className="sr-only">
+        Questions fréquentes
+      </h2>
+      {items.map((item) => (
         <details
-          key={index}
+          key={item.question}
           className="group card overflow-hidden transition-shadow duration-150 open:shadow-card"
           name={id}
         >
@@ -19,7 +22,7 @@ export function FaqAccordion({ items, id = "faq" }: FaqAccordionProps) {
               {item.question}
               <span
                 aria-hidden="true"
-                className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-surface-muted text-gyro transition-all duration-200 group-open:rotate-45 group-open:bg-signal/10 group-open:text-signal"
+                className="mt-0.5 flex size-6 shrink-0 items-center justify-center rounded-full bg-surface-muted text-gyro motion-safe:transition-all motion-safe:duration-200 group-open:rotate-45 group-open:bg-signal/10 group-open:text-signal"
               >
                 +
               </span>
@@ -30,6 +33,6 @@ export function FaqAccordion({ items, id = "faq" }: FaqAccordionProps) {
           </div>
         </details>
       ))}
-    </div>
+    </section>
   );
 }

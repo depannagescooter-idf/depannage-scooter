@@ -6,5 +6,5 @@ export const size = ogSize;
 export const contentType = "image/png";
 
 export default function OpenGraphImage() {
-  return createOgImage("Batterie voiture à domicile", "Démarrage et remplacement — Paris & IDF 24h/24");
+  return createOgImage("Batterie voiture à domicile", "Démarrage et remplacement — Paris et Île-de-France 24h/24");
 }

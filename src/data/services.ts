@@ -6,7 +6,7 @@ const servicesData: Service[] = [
     category: "depannage",
     name: "Réparation de crevaison",
     h1: "Dépannage crevaison scooter et moto en Île-de-France",
-    metaTitle: "Crevaison scooter moto IDF",
+    metaTitle: "Crevaison scooter & moto sur place 24h/24 Île-de-France",
     metaDescription:
       "Crevaison sur route en Île-de-France ? Réparation sur place de pneu scooter ou moto, déplacement rapide 24h/24. Intervention en 25 à 40 minutes selon zone.",
     shortAnswer:
@@ -89,9 +89,9 @@ const servicesData: Service[] = [
     category: "depannage",
     name: "Remplacement de batterie",
     h1: "Dépannage batterie scooter et moto à domicile en Île-de-France",
-    metaTitle: "Batterie scooter à plat Paris — remplacement IDF",
+    metaTitle: "Batterie scooter à plat Paris et Île-de-France",
     metaDescription:
-      "Batterie scooter ou moto à plat en IDF ? Remplacement à domicile, test YTX/gel/lithium, changement sur place 24h/24. Devis ferme avant déplacement.",
+      "Batterie scooter ou moto à plat en Île-de-France ? Remplacement à domicile, test YTX/gel/lithium, changement sur place 24h/24. Devis ferme avant déplacement.",
     shortAnswer:
       "Batterie scooter ou moto à plat en Île-de-France : DépannageScooter teste l'accumulateur et le circuit de charge sur place, remplace la batterie si nécessaire (références YTX, gel ou plomb courantes) et vérifie le démarrage avant votre départ. Devis ferme par téléphone. Intervention 24h/24 et 7j/7.",
     intro:
@@ -177,9 +177,9 @@ const servicesData: Service[] = [
     category: "depannage",
     name: "Démarrage et booster",
     h1: "Scooter ne démarre plus ? Démarrage booster en Île-de-France",
-    metaTitle: "Scooter ne démarre plus — booster Paris IDF",
+    metaTitle: "Scooter ne démarre plus — booster Paris et Île-de-France",
     metaDescription:
-      "Scooter ou moto qui ne démarre plus en IDF ? Booster batterie moto sur place, démarreur qui tourne sans prise. Intervention 24h/24, devis ferme.",
+      "Scooter ou moto qui ne démarre plus en Île-de-France ? Booster batterie moto sur place, démarreur qui tourne sans prise. Intervention 24h/24, devis ferme.",
     shortAnswer:
       "Scooter ou moto qui ne démarre plus en Île-de-France : démarrage au booster professionnel sur place, diagnostic batterie déchargée, carburant ou démarreur. Le technicien relance le moteur ou oriente vers remplacement batterie ou remorquage. Devis ferme avant départ. Disponible 24h/24 et 7j/7.",
     intro:
@@ -260,9 +260,9 @@ const servicesData: Service[] = [
     category: "depannage",
     name: "Panne d'essence",
     h1: "Panne d'essence scooter et moto en Île-de-France",
-    metaTitle: "Panne essence scooter moto IDF",
+    metaTitle: "Panne essence scooter et moto — livraison Île-de-France",
     metaDescription:
-      "Réservoir vide ou panne d'essence en IDF ? Livraison de carburant sur place pour scooter et moto, remise en route rapide. Disponible 24h/24.",
+      "Réservoir vide ou panne d'essence en Île-de-France ? Livraison de carburant sur place pour scooter et moto, remise en route rapide. Disponible 24h/24.",
     shortAnswer:
       "DépannageScooter livre du carburant sur le lieu de panne lorsque votre scooter ou moto est immobilisé pour réservoir vide en Île-de-France. Le technicien apporte le volume nécessaire au redémarrage, contrôle l'absence de fuite au système d'alimentation et vérifie que le moteur repart correctement avant votre départ.",
     intro:
@@ -347,10 +347,10 @@ const servicesData: Service[] = [
     slug: "ouverture-de-selle",
     category: "depannage",
     name: "Ouverture de selle bloquée",
-    h1: "Ouverture de selle bloquée scooter et moto en IDF",
-    metaTitle: "Selle bloquée scooter moto IDF",
+    h1: "Ouverture de selle bloquée scooter et moto en Île-de-France",
+    metaTitle: "Selle bloquée scooter et moto — ouverture Île-de-France",
     metaDescription:
-      "Selle ou trappe bloquée sur votre scooter ou moto en IDF ? Ouverture sans casse, accès au réservoir et au coffre. Technicien sur place 24h/24.",
+      "Selle ou trappe bloquée sur votre scooter ou moto en Île-de-France ? Ouverture sans casse, accès au réservoir et au coffre. Technicien sur place 24h/24.",
     shortAnswer:
       "DépannageScooter ouvre les selles et trappes de coffre bloquées sur scooters et motos en Île-de-France. Le technicien diagnostique si le blocage vient de la serrure, du câble, de la clé ou du contacteur, puis ouvre le compartiment avec des outils adaptés pour limiter les dommages sur le carénage.",
     intro:
@@ -431,7 +431,7 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Remorquage de scooter",
     h1: "Remorquage de scooter en Île-de-France",
-    metaTitle: "Remorquage scooter IDF",
+    metaTitle: "Remorquage scooter Paris et Île-de-France 24h/24",
     metaDescription:
       "Remorquage de scooter en panne en Île-de-France : chargement sécurisé, transport vers garage ou domicile. Disponible 24h/24, plateau adapté 2-roues.",
     shortAnswer:
@@ -519,7 +519,7 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Remorquage de moto",
     h1: "Remorquage de moto en Île-de-France",
-    metaTitle: "Remorquage moto IDF",
+    metaTitle: "Remorquage moto Paris et Île-de-France 24h/24",
     metaDescription:
       "Remorquage de moto en panne en Île-de-France : plateau sécurisé, transport vers garage ou concession. Toutes cylindrées, service disponible 24h/24.",
     shortAnswer:
@@ -602,9 +602,9 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Remorquage moto accidentée",
     h1: "Remorquage de moto accidentée en Île-de-France",
-    metaTitle: "Moto accidentée remorquage IDF",
+    metaTitle: "Remorquage moto accidentée — Paris et Île-de-France",
     metaDescription:
-      "Moto accidentée en IDF ? Remorquage sécurisé sur plateau, véhicule endommagé ou non roulant. Transport vers garage, expert ou fourrière 24h/24.",
+      "Moto accidentée en Île-de-France ? Remorquage sécurisé sur plateau, véhicule endommagé ou non roulant. Transport vers garage, expert ou fourrière 24h/24.",
     shortAnswer:
       "DépannageScooter prend en charge le remorquage de motos accidentées en Île-de-France lorsque le véhicule est non roulant ou dangereux à conduire. Le chargement tient compte des dommages visibles — fourche tordue, carénage arraché, fuite — pour immobiliser la moto sans aggraver la casse avant transport vers garage, expert ou lieu de stockage.",
     intro:
@@ -690,7 +690,7 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Remorquage 3 roues",
     h1: "Remorquage scooter et moto 3 roues en Île-de-France",
-    metaTitle: "Remorquage 3 roues IDF",
+    metaTitle: "Remorquage 3 roues — Paris et Île-de-France 24h/24",
     metaDescription:
       "Remorquage de scooters et motos 3 roues en IDF : Piaggio MP3, Can-Am, Yamaha Tricity. Plateau adapté, calage renforcé. Service disponible 24h/24.",
     shortAnswer:
@@ -773,7 +773,7 @@ const servicesData: Service[] = [
     category: "remorquage",
     name: "Transfert garage et concession",
     h1: "Transfert de deux-roues vers garage ou concession en IDF",
-    metaTitle: "Transfert garage moto IDF",
+    metaTitle: "Transfert garage moto — Paris et Île-de-France",
     metaDescription:
       "Transfert planifié de scooter ou moto vers garage, concession ou expert en Île-de-France. Remorquage sur rendez-vous, véhicule roulant ou non.",
     shortAnswer:

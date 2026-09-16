@@ -127,7 +127,7 @@ export default function HomePage() {
           deux-roues, disponible 24h/24.
         </p>
         <Link
-          href="/depannage-sur-place/batterie-voiture/"
+          href="/depannage-voiture/batterie/"
           className="mt-4 inline-block text-sm font-medium text-gyro hover:underline"
         >
           Dépannage batterie voiture →

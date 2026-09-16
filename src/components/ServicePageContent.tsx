@@ -10,7 +10,7 @@ import { ServicePriceTable } from "@/components/ServicePriceTable";
 import type { Service } from "@/data/types";
 import { getServiceBySlug } from "@/data/services";
 import { RemorquageGallery } from "@/components/RemorquageGallery";
-import { ZonesByDepartment } from "@/components/ZonesByDepartment";
+import { ServiceZonesCompact } from "@/components/ServiceZonesCompact";
 import { faqPageSchema, serviceSchema } from "@/lib/schema";
 
 export function ServicePageContent({
@@ -89,7 +89,7 @@ export function ServicePageContent({
             <ol className="mt-4 space-y-4">
               {service.interventionSteps.map((step, i) => (
                 <li key={step.title} className="card px-5 py-4">
-                  <span className="font-data text-sm font-semibold text-signal">
+                  <span className="font-data text-sm font-semibold text-signal" aria-hidden="true">
                     {String(i + 1).padStart(2, "0")}
                   </span>
                   <h3 className="mt-1 font-display font-semibold text-asphalte">{step.title}</h3>
@@ -161,7 +161,7 @@ export function ServicePageContent({
               <p className="mt-2 text-beton">
                 Pour une voiture qui ne démarre plus, consultez notre page dédiée :{" "}
                 <Link
-                  href="/depannage-sur-place/batterie-voiture/"
+                  href="/depannage-voiture/batterie/"
                   className="font-medium text-gyro hover:underline"
                 >
                   dépannage batterie voiture à domicile
@@ -177,10 +177,10 @@ export function ServicePageContent({
               <p className="mt-2 text-beton">
                 Cette page concerne les deux-roues. Pour une batterie de voiture à plat :{" "}
                 <Link
-                  href="/depannage-sur-place/batterie-voiture/"
+                  href="/depannage-voiture/batterie/"
                   className="font-medium text-gyro hover:underline"
                 >
-                  dépannage batterie voiture Paris et IDF
+                  dépannage batterie voiture Paris et Île-de-France
                 </Link>
                 .
               </p>
@@ -192,7 +192,7 @@ export function ServicePageContent({
             <p className="mt-2 text-sm text-beton">
               Intervention en Île-de-France — délais et tarifs selon la commune.
             </p>
-            <ZonesByDepartment />
+            <ServiceZonesCompact />
             <p className="mt-3">
               <Link href="/zones-intervention/" className="text-sm font-medium text-gyro hover:underline">
                 Toutes les zones →
