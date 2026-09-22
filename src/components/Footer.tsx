@@ -135,9 +135,6 @@ export function Footer() {
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-5 text-xs text-stone-400 sm:flex-row sm:items-center sm:justify-between sm:px-6">
           <p>
             © {new Date().getFullYear()} {company.name} · SIREN {siren}
-            <span className="ml-2 font-data text-alerte" data-cache-test="2026-09-22">
-              CACHE-TEST-7F3A
-            </span>
           </p>
           <ul className="flex flex-wrap gap-4">
             {legalLinks.map((link) => (
