@@ -37,9 +37,17 @@ for (const path of REQUIRED_PATHS) {
   }
 }
 
+const isServiceCityPath = (path: string) =>
+  /^\/depannage-sur-place\/[^/]+\/[^/]+\/$/.test(path) ||
+  /^\/remorquage\/[^/]+\/[^/]+\/$/.test(path);
+
 for (const url of urls) {
   if (FORBIDDEN_PATTERNS.some((p) => url.includes(p))) {
     console.error(`✗ URL interdite dans le sitemap : ${url}`);
+    errors++;
+  }
+  if (isServiceCityPath(url)) {
+    console.error(`✗ Page prestation×ville (noindex) dans le sitemap : ${url}`);
     errors++;
   }
 }

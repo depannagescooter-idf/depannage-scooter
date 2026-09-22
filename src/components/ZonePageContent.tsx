@@ -92,7 +92,7 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
               {depannageServices.map((s) => (
                 <li key={s.slug}>
                   <Link
-                    href={`/depannage-sur-place/${s.slug}/${zone.slug}/`}
+                    href={`/depannage-sur-place/${s.slug}/`}
                     className="card block px-4 py-3 text-sm font-medium text-asphalte hover:shadow-card"
                   >
                     {s.name}
@@ -108,7 +108,7 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
               Batterie scooter ou moto à plat : test sur place, booster ou remplacement selon le
               modèle.{" "}
               <Link
-                href={`/depannage-sur-place/batterie/${zone.slug}/`}
+                href="/depannage-sur-place/batterie/"
                 className="font-medium text-gyro hover:underline"
               >
                 Dépannage batterie à {zone.name}
@@ -123,7 +123,7 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
               {remorquageServices.map((s) => (
                 <li key={s.slug}>
                   <Link
-                    href={`/remorquage/${s.slug}/${zone.slug}/`}
+                    href={`/remorquage/${s.slug}/`}
                     className="card block px-4 py-3 text-sm font-medium text-asphalte hover:shadow-card"
                   >
                     {s.name}
