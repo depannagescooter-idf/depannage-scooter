@@ -131,12 +131,26 @@ export function ServicePageContent({
             <section className="mt-10">
               <h2 className="section-title">Quand faut-il un remorquage plutôt ?</h2>
               <p className="mt-2 text-beton">
-                Si la réparation sur place n&apos;est pas possible (pneu irrécupérable, panne
-                mécanique lourde, jante voilée), nous organisons un{" "}
-                <Link href={`/remorquage/${remorquageSlug}/`} className="text-gyro hover:underline">
-                  remorquage vers un professionnel
-                </Link>
-                .
+                {service.slug === "batterie" ? (
+                  <>
+                    Si la référence de batterie n&apos;est pas disponible sur place, si le circuit de
+                    charge (alternateur, régulateur) est en cause ou si le faisceau électrique est
+                    endommagé, nous organisons un{" "}
+                    <Link href={`/remorquage/${remorquageSlug}/`} className="text-gyro hover:underline">
+                      remorquage vers un professionnel
+                    </Link>
+                    .
+                  </>
+                ) : (
+                  <>
+                    Si la réparation sur place n&apos;est pas possible (pneu irrécupérable, panne
+                    mécanique lourde, jante voilée), nous organisons un{" "}
+                    <Link href={`/remorquage/${remorquageSlug}/`} className="text-gyro hover:underline">
+                      remorquage vers un professionnel
+                    </Link>
+                    .
+                  </>
+                )}
               </p>
             </section>
           )}

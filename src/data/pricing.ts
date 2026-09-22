@@ -79,7 +79,7 @@ export const pricing: PricingConfig = {
     lng: 2.3522,
   },
   difficultySurcharge: {
-    label: "Supplément pénibilité (sous-sol, selle Neiman, accidenté)",
+    label: "sous-sol, Neiman bloqué, véhicule accidenté",
     amount: 30,
   },
   carBattery: {

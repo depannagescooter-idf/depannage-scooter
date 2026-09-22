@@ -5,6 +5,13 @@ export interface GuideSection {
   answer: string;
 }
 
+export interface GuideImage {
+  src: string;
+  alt: string;
+  width: number;
+  height: number;
+}
+
 export interface Guide {
   slug: string;
   title: string;
@@ -13,6 +20,7 @@ export interface Guide {
   shortAnswer: string;
   intro: string;
   sections: GuideSection[];
+  images?: GuideImage[];
   author: GuideAuthor;
   publishedAt: string;
 }
@@ -128,26 +136,71 @@ export const guides: Guide[] = [
     title: "Crevaison en scooter : réparer sur place ou remorquer ?",
     metaTitle: "Crevaison scooter : réparer ou remorquer ?",
     metaDescription:
-      "Crevaison scooter en route : réparation sur place ou remorquage ? Critères de décision, sécurité et tarification en Île-de-France.",
+      "Crevaison scooter ou maxi-scooter en route : réparation par mèche sur place ou remorquage ? Critères, sécurité et tarifs en Île-de-France.",
     shortAnswer:
-      "Une crevaison réparable sur place concerne les pneus tubeless avec objet retirable et talon intact. Roue à rayons, pneu déchiré ou sans kit : remorquage vers un professionnel. Ne roulez jamais sur un pneu à plat.",
+      "Une crevaison réparable sur place concerne les pneus tubeless avec perforation centrale et carcasse intacte. Pneu déchiré, jante voilée ou double crevaison : remorquage. Ne roulez jamais sur un pneu à plat.",
     intro:
-      "Clac, direction qui tire, roue molle. La crevaison est la panne la plus fréquente en ville. Voici comment trancher entre réparation rapide et remorquage.",
+      "Clac, direction qui tire, roue molle : la crevaison reste la panne la plus fréquente en ville, que vous rouliez en scooter 125, en maxi-scooter ou en moto légère. En bord de route, la bonne décision dépend du type de pneu, de l'emplacement de la perforation et de l'état de la jante. Sur un Honda X-ADV, une BMW GS ou tout deux-roues en jante à rayons équipé de pneus tubeless, une mèche posée à froid suffit souvent à repartir — contrairement à l'idée reçue qui associe systématiquement les rayons au remorquage. Ce guide détaille quand réparer sur place, quand appeler un plateau, et comment sécuriser l'attente du dépanneur en Île-de-France.",
+    images: [
+      {
+        src: "/images/crevaison/reparation-crevaison-honda-x-adv-meche-sur-place.jpg",
+        alt: "Pneu arrière d'un maxi-scooter Honda X-ADV réparé par mèche sur place, test d'étanchéité à l'eau savonneuse et gonfleur électrique en main",
+        width: 1200,
+        height: 1600,
+      },
+      {
+        src: "/images/crevaison/reparation-crevaison-honda-x-adv-gonflage-pression.jpg",
+        alt: "Réparation de crevaison d'un Honda X-ADV sur place : kit de mèches ouvert et regonflage du pneu avec contrôle de la pression",
+        width: 1200,
+        height: 1600,
+      },
+      {
+        src: "/images/crevaison/pose-meche-pneu-honda-x-adv.jpg",
+        alt: "Pose d'une mèche dans le pneu arrière crevé d'un Honda X-ADV, kit de réparation et compresseur posés à côté de la roue",
+        width: 1200,
+        height: 1600,
+      },
+    ],
     sections: [
       {
-        question: "Quand réparer sur place ?",
+        question: "Quand réparer sur place par mèche ?",
         answer:
-          "Pneu tubeless, perforation centrale par clou ou vis, pas de déchirure latérale. Nous gonflons, réparons à froid ou chaud selon la norme, et testons l'étanchéité.",
+          "La réparation sur place convient aux pneus tubeless (sans chambre à air) lorsque la perforation est au centre de la bande de roulement, causée par un clou, une vis ou un petit objet. Le technicien retire l'objet, perce légèrement le trou si nécessaire, insère une mèche à froid (rustine enrobée), coupe l'excédent et gonfle à la pression constructeur. Un test à l'eau savonneuse confirme l'étanchéité avant remise en route. Cette méthode est standard en bord de route : pas de poste à chaud, pas de démontage complet de la roue si l'accès le permet. Les maxi-scooters comme le Honda X-ADV, de nombreuses motos routières et la majorité des scooters récents sont en tubeless, y compris sur jantes à rayons.",
       },
       {
-        question: "Quand remorquer ?",
+        question: "Les jantes à rayons imposent-elles un remorquage ?",
         answer:
-          "Jante voilée, pneu HS, deux crevaisons, ou scooter sans roue de secours utilisable. Le garage posera un pneu neuf ou une chambre à air.",
+          "Non, pas automatiquement. L'ancienne règle « rayons = chambre à air = garage » ne vaut plus pour la plupart des deux-roues récents. Un Honda X-ADV, une BMW R 1250 GS ou un Tracer 9 sont livrés en pneus tubeless sur jantes à rayons : la mèche fonctionne comme sur une jante coulée. En revanche, si votre pneu utilise une chambre à air (certaines motos anciennes, quelques scooters d'entrée de gamme), la réparation sur place se limite souvent à un gonflage temporaire ou au remplacement de chambre — le remorquage vers un garage reste alors la solution la plus sûre.",
       },
       {
-        question: "Comment sécuriser le lieu de panne ?",
+        question: "Quand faut-il remorquer plutôt que réparer ?",
         answer:
-          "Feux de détresse, gilet si disponible, scooter sur le trottoir si possible. Sur chaussée, restez visible et éloigné du trafic en attendant le dépanneur.",
+          "Remorquez si le pneu présente une déchirure sur le flanc, une perforation multiple, une carcasse visiblement endommagée ou si la jante est voilée après un choc. Deux crevaisons sur le même pneu, un pneu usé jusqu'aux témoins d'usure ou une référence indisponible imposent aussi le remorquage vers un professionnel. Enfin, si le véhicule est immobilisé sur autoroute, périphérique ou voie rapide, les dépanneurs agréés doivent d'abord sécuriser la zone : composez le 112, puis organisez le remorquage une fois le deux-roues accessible hors du trafic rapide.",
+      },
+      {
+        question: "Comment se déroule l'intervention sur place ?",
+        answer:
+          "Le dépanneur localise la perforation, démonte la roue si l'accès est difficile (selle, carénage, chaîne), pose la mèche avec le kit professionnel, regonfle au compresseur portable et contrôle la pression au manomètre. L'opération dure en moyenne 30 à 60 minutes selon le modèle. Sur un maxi-scooter comme le X-ADV, la roue arrière est accessible après dépose de la protection plastique et du silencieux — un outillage adapté évite d'endommager la jante. Après réparation, un trajet prudent vers un garage dans les 48 heures permet de vérifier la tenue de la mèche sur la durée.",
+      },
+      {
+        question: "Que faire immédiatement après la crevaison ?",
+        answer:
+          "Ne roulez pas sur le pneu à plat : vous risquez d'abîmer la jante et le pneu définitivement. Coupez le moteur, activez les feux de détresse, enfilez un gilet haute visibilité et poussez le deux-roues hors du flux si possible. Sur trottoir ou parking, restez visible. Notez votre adresse exacte ou partagez votre position GPS. Si vous êtes sur une voie rapide, restez derrière la glissière de sécurité et appelez le 112 avant tout déplacement du véhicule.",
+      },
+      {
+        question: "Combien coûte une réparation de crevaison en Île-de-France ?",
+        answer:
+          "Le forfait dépannage sur place s'ajoute au déplacement selon la zone (Paris, petite ou grande couronne). Une crevaison réparable par mèche entre dans ce forfait, sans surprise si le devis est confirmé au téléphone. Un remorquage est facturé au palier kilométrique (0–5 km, 5–10 km, etc.) jusqu'à la destination choisie — garage, domicile ou concession. Les majorations nuit, week-end et jours fériés s'appliquent selon la grille tarifaire. Consultez la page tarifs ou appelez pour un devis ferme avant départ.",
+      },
+      {
+        question: "Une mèche est-elle fiable pour repartir ?",
+        answer:
+          "Oui, pour une perforation petite et centrale sur pneu tubeless en bon état. La mèche scelle la carcasse de l'intérieur ; correctement posée, elle permet de repartir immédiatement et de rouler normalement en attendant un contrôle en garage. En revanche, une perforation sur le flanc, une déchirure longue ou un pneu déjà très usé ne se réparent pas durablement à froid : le technicien vous le signale avant toute intervention et propose le remorquage si nécessaire.",
+      },
+      {
+        question: "Scooter ou maxi-scooter : la réponse change-t-elle ?",
+        answer:
+          "Le principe reste le même : tubeless réparable par mèche, chambre à air plutôt orientée garage. Sur un scooter 50 cm³ urbain, la roue arrière se démonte souvent rapidement. Sur un maxi-scooter (X-ADV, TMAX, Forza), le poids et le carénage demandent un outillage plus complet, ce qui allonge légèrement l'intervention sans changer la décision réparer/remorquer. En cas de doute, décrivez votre modèle au téléphone : le dépanneur confirme la faisabilité sur place avant de partir.",
       },
     ],
     author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },
@@ -202,7 +255,7 @@ export const guides: Guide[] = [
       {
         question: "Comment tester une batterie faible ?",
         answer:
-          "Tableau de bord faible, clignotants lents ou démarreur qui clique une fois : la batterie est probablement à plat. Un booster professionnel ou un remplacement sur place règle le problème dans la plupart des cas.",
+          "Tableau de bord faible, clignotants lents ou démarreur qui fait clic sans lancer le moteur : la batterie est probablement à plat. Un booster professionnel ou un remplacement sur place règle le problème dans la plupart des cas.",
       },
       {
         question: "Quand suspecter le démarreur ou le fusible ?",

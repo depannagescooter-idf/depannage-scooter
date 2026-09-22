@@ -34,17 +34,20 @@ export default function AProposPage() {
         <div className="mt-4">
           <ShortAnswer>
             {company.name} est un service mobile de dépannage et remorquage dédié aux scooters,
-            motos, trois-roues et batterie voiture en Île-de-France. Nous intervenons 24h/24 avec
-            un devis ferme annoncé au téléphone avant le départ du dépanneur.
+            motos et trois-roues en Île-de-France. Pour les voitures, seule la batterie est prise en
+            charge (booster ou remplacement). Nous intervenons 24h/24 avec un devis ferme annoncé au
+            téléphone avant le départ du dépanneur.
           </ShortAnswer>
         </div>
         <div className="prose prose-stone mt-8 max-w-none space-y-4 text-beton">
           <p>
             <strong className="text-asphalte">{company.name}</strong> a été conçu pour répondre à
-            un besoin précis : remettre en route rapidement les deux-roues et les voitures
-            immobilisés en panne, sans frais cachés ni mauvaise surprise à l&apos;arrivée. Que
-            vous soyez coursier, livreur, motard du week-end, automobiliste ou utilisateur
-            quotidien d&apos;un scooter 50 cm³, notre équipe se déplace avec l&apos;outillage adapté.
+            un besoin précis : remettre en route rapidement les deux-roues immobilisés en panne,
+            sans frais cachés ni mauvaise surprise à l&apos;arrivée. Pour les voitures, nous
+            intervenons uniquement sur panne de batterie (démarrage au booster ou remplacement sur
+            place) — pas de remorquage automobile. Que vous soyez coursier, livreur, motard du
+            week-end ou automobiliste en panne de batterie, notre équipe se déplace avec
+            l&apos;outillage adapté.
           </p>
           <h2 className="font-display text-xl font-bold text-asphalte">Nos interventions sur place</h2>
           <p>

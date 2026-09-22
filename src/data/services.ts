@@ -63,7 +63,7 @@ const servicesData: Service[] = [
       {
         question: "Intervenez-vous sur autoroute ou voie rapide ?",
         answer:
-          "Oui, en respectant les consignes de sécurité : gilet haute visibilité, stationnement hors du flux, balisage si nécessaire. Restez derrière la glissière de sécurité et appelez-nous en précisant votre position kilométrique.",
+          "Non. Le périphérique, les autoroutes, voies express et voies rapides urbaines sont réservés aux dépanneurs agréés. Composez le 112 ou utilisez une borne d'appel d'urgence. Nous intervenons dès que le véhicule est sorti de la voie rapide et accessible en sécurité.",
       },
       {
         question: "Une rustine est-elle fiable pour repartir ?",
@@ -95,10 +95,10 @@ const servicesData: Service[] = [
     shortAnswer:
       "Batterie scooter ou moto à plat en Île-de-France : DépannageScooter teste l'accumulateur et le circuit de charge sur place, remplace la batterie si nécessaire (références YTX, gel ou plomb courantes) et vérifie le démarrage avant votre départ. Devis ferme par téléphone. Intervention 24h/24 et 7j/7.",
     intro:
-      "Une batterie faible ou déchargée est la première cause de panne sur scooter et moto — surtout après immobilisation, trajets courts ou fin de vie de l'accumulateur (plomb, gel ou lithium selon modèle). Symptômes : tableau de bord éteint, démarreur qui cliquote, phares faibles. Nous nous déplaçons avec des batteries adaptées (YTX et références courantes). Le technicien contrôle cosses, fusible et charge alternateur avant de conclure au remplacement. Pour une voiture, voir notre page dépannage batterie voiture.",
+      "Une batterie faible ou déchargée est la première cause de panne sur scooter et moto — surtout après immobilisation, trajets courts ou fin de vie de l'accumulateur (plomb, gel ou lithium selon modèle). Symptômes : tableau de bord éteint, démarreur qui fait clic sans lancer le moteur, phares faibles. Nous nous déplaçons avec des batteries adaptées (YTX et références courantes). Le technicien contrôle cosses, fusible et charge alternateur avant de conclure au remplacement. Pour une voiture, voir notre page dépannage batterie voiture.",
     symptoms: [
       "Aucun voyant au contact ou tableau de bord éteint",
-      "Démarreur qui cliquote sans lancer le moteur",
+      "Démarreur qui fait clic sans lancer le moteur",
       "Démarrage aléatoire, surtout par temps froid",
       "Phares faibles ou clignotants qui peinent au ralenti",
       "Batterie de plus de trois ans ou véhicule immobilisé plusieurs semaines",
