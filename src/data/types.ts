@@ -49,10 +49,12 @@ export interface Zone {
 
 export interface Review {
   id: string;
+  /** Prénom ou initiale affichée */
   author: string;
   rating: number;
   text: string;
   date: string;
+  source: "Avis Google";
   zoneSlug?: string;
   /** true = avis réel vérifié, false = placeholder en attente */
   verified: boolean;

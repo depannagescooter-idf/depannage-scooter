@@ -1,19 +1,11 @@
 import type { Review } from "./types";
 
 /**
- * Avis clients — n'afficher que verified: true en production.
- * Remplacer les placeholders par de vrais avis collectés post-intervention.
+ * Avis clients affichés sur /avis/ — alimenté manuellement (verified: true uniquement).
+ * Format : prénom, date ISO, note 1–5, texte, source « Avis Google ».
  */
 export const reviews: Review[] = [
-  {
-    id: "placeholder-1",
-    author: "Client vérifié",
-    rating: 5,
-    text: "Emplacement réservé pour un avis client réel.",
-    date: "2026-01-01",
-    zoneSlug: "paris-11e",
-    verified: false,
-  },
+  // TODO: ajouter les 10 avis Google fournis (verified: true)
 ];
 
 export function getVerifiedReviews(): Review[] {
