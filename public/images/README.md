@@ -12,3 +12,11 @@ Déposer ici les visuels client (pas de banque d'images).
 Format recommandé : WebP ou AVIF, largeur max 1600 px.
 
 Les fichiers manquants restent des placeholders `TODO-PHOTO-REELLE` dans les composants.
+
+## Crevaison (`crevaison/`)
+
+Photos réelles pour `/depannage-sur-place/crevaison/` — alt textes dans `src/data/crevaison-gallery.ts`.
+
+## Google Business (`google/`)
+
+Visuels pour la fiche Google (non exposés sur le site). Ex. : `fiche-google-crevaison-moto-carre.jpg`.

@@ -11,7 +11,7 @@ Tarifs jour TTC : dépannage sur place 50 € + déplacement (Paris 20 €, pe
 - [Zones d'intervention](https://www.depannagescooter.com/zones-intervention/): 127 communes : Paris, 77, 78, 91, 92, 93, 94, 95.
 - [FAQ](https://www.depannagescooter.com/faq/): Tarifs, délais, zones, assurance et types de véhicules pris en charge.
 - [Contact](https://www.depannagescooter.com/contact/): Demande de rappel et coordonnées pour une intervention urgente.
-- [Batterie voiture à domicile](https://www.depannagescooter.com/depannage-sur-place/batterie-voiture/): Démarrage ou remplacement batterie voiture à plat en Île-de-France, 24h/24.
+- [Batterie voiture à domicile](https://www.depannagescooter.com/depannage-voiture/batterie/): Démarrage ou remplacement batterie voiture à plat en Île-de-France, 24h/24.
 
 ## Dépannage sur place
 - [Hub dépannage](https://www.depannagescooter.com/depannage-sur-place/): Vue d'ensemble des interventions sur place sans remorquage.

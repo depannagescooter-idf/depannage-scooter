@@ -9,6 +9,7 @@ import { company } from "@/data/company";
 import { ServicePriceTable } from "@/components/ServicePriceTable";
 import type { Service } from "@/data/types";
 import { getServiceBySlug } from "@/data/services";
+import { CrevaisonGallery } from "@/components/CrevaisonGallery";
 import { RemorquageGallery } from "@/components/RemorquageGallery";
 import { ServiceZonesCompact } from "@/components/ServiceZonesCompact";
 import { faqPageSchema, serviceSchema } from "@/lib/schema";
@@ -137,6 +138,12 @@ export function ServicePageContent({
                 </Link>
                 .
               </p>
+            </section>
+          )}
+
+          {service.slug === "crevaison" && (
+            <section className="mt-10">
+              <CrevaisonGallery />
             </section>
           )}
 

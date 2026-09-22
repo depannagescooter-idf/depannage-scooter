@@ -9,8 +9,10 @@
     "check:nojs": "npx tsx scripts/check-nojs.ts",
     "check:duplicates": "npx tsx scripts/check-duplicates.ts",
     "check:sitemap": "npx tsx scripts/check-sitemap.ts",
+    "check:shell": "npx tsx scripts/check-shell-consistency.ts",
     "prebuild": "npm run validate:data && npm run check:nojs && npm run generate:llms",
     "build": "next build",
+    "postbuild": "npm run check:shell && npm run check:sitemap",
     "start": "next start",
     "lint": "eslint"
   },

@@ -69,7 +69,7 @@ const lines: string[] = [
   llmsLink("/faq/", "FAQ", "Tarifs, délais, zones, assurance et types de véhicules pris en charge."),
   llmsLink("/contact/", "Contact", "Demande de rappel et coordonnées pour une intervention urgente."),
   llmsLink(
-    "/depannage-sur-place/batterie-voiture/",
+    "/depannage-voiture/batterie/",
     "Batterie voiture à domicile",
     "Démarrage ou remplacement batterie voiture à plat en Île-de-France, 24h/24.",
   ),
