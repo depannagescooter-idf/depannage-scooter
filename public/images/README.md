@@ -15,7 +15,7 @@ Les fichiers manquants restent des placeholders `TODO-PHOTO-REELLE` dans les com
 
 ## Crevaison (`crevaison/`)
 
-Photos réelles pour `/depannage-sur-place/crevaison/` — alt textes dans `src/data/crevaison-gallery.ts`.
+Photos réelles Honda X-ADV pour `/depannage-sur-place/crevaison/` — alt textes dans `src/data/crevaison-gallery.ts`.
 
 ## Google Business (`google/`)
 
