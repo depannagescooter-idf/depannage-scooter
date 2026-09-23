@@ -26,9 +26,7 @@ export const company: Company = {
   openingHours: "24h/24, 7j/7",
   paymentAccepted: "Carte bancaire, Espèces",
   currenciesAccepted: "EUR",
-  sameAs: [
-    "https://www.google.com/maps/search/?api=1&query=D%C3%A9pannageScooter&query=33772125311",
-  ],
+  sameAs: ["https://maps.app.goo.gl/4CnLYiEUFJzzbtb48"],
   description:
     "DépannageScooter — dépannage et remorquage scooters, motos et batterie voiture en Île-de-France, disponible 24h/24 et 7j/7.",
   url: "https://www.depannagescooter.com",
@@ -47,7 +45,6 @@ export const company: Company = {
   googleReviews: {
     rating: 4.7,
     reviewCount: 168,
-    profileUrl:
-      "https://www.google.com/maps/search/?api=1&query=D%C3%A9pannageScooter&query=33772125311",
+    profileUrl: "https://maps.app.goo.gl/4CnLYiEUFJzzbtb48",
   },
 };

@@ -4,11 +4,12 @@ import { PageShell } from "@/components/PageShell";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
+import { CustomerReviewsList } from "@/components/CustomerReviewsList";
 import { GoogleReviewsSummary } from "@/components/GoogleReviewsSummary";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { getVerifiedReviews } from "@/data/reviews";
 import { createPageMetadata } from "@/lib/metadata";
-import { businessAggregateRatingSchema, webPageSchema } from "@/lib/schema";
+import { webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
   title: "Avis clients dépannage scooter Île-de-France",
@@ -23,15 +24,12 @@ export default function AvisPage() {
   return (
     <PageShell>
       <JsonLd
-        data={[
-          webPageSchema({
-            name: "Avis clients DépannageScooter",
-            description:
-              "Avis clients sur le dépannage, remorquage deux-roues et batterie voiture en Île-de-France.",
-            path: "/avis/",
-          }),
-          businessAggregateRatingSchema(),
-        ]}
+        data={webPageSchema({
+          name: "Avis clients DépannageScooter",
+          description:
+            "Avis clients sur le dépannage, remorquage deux-roues et batterie voiture en Île-de-France.",
+          path: "/avis/",
+        })}
       />
       <main className="mx-auto max-w-3xl px-4 py-8 sm:px-6">
         <Breadcrumb items={[{ label: "Accueil", href: "/" }, { label: "Avis" }]} />
@@ -39,21 +37,12 @@ export default function AvisPage() {
         <div className="mt-4">
           <ShortAnswer>
             DépannageScooter est noté 4,7/5 sur Google pour le dépannage et remorquage scooter, moto
-            et batterie voiture en Île-de-France. Consultez les avis Google ci-dessous ou laissez
-            le vôtre après une intervention.
+            et batterie voiture en Île-de-France. Laissez votre avis sur Google après une
+            intervention.
           </ShortAnswer>
         </div>
         <GoogleReviewsSummary />
-        {verified.length > 0 && (
-          <ul className="mt-8 space-y-4">
-            {verified.map((r) => (
-              <li key={r.id} className="card px-5 py-4">
-                <p className="font-display font-semibold text-asphalte">{r.author}</p>
-                <p className="mt-2 text-beton">{r.text}</p>
-              </li>
-            ))}
-          </ul>
-        )}
+        <CustomerReviewsList reviews={verified} />
         <div className="mt-10">
           <CallButton origin="inline" />
         </div>
