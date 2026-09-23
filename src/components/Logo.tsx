@@ -27,7 +27,7 @@ export function Logo({ variant = "default", priority = false }: LogoProps) {
         width={720}
         height={720}
         priority={priority}
-        sizes="(min-width: 1024px) 64px, 52px"
+        sizes="64px"
         className="h-[52px] w-[52px] shrink-0 rounded-sm object-cover lg:h-16 lg:w-16"
       />
       <span className={`hidden min-w-0 flex-col lg:flex ${nameColor}`}>

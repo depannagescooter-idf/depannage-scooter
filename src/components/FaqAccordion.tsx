@@ -7,10 +7,7 @@ export interface FaqAccordionProps {
 
 export function FaqAccordion({ items, id = "faq" }: FaqAccordionProps) {
   return (
-    <section aria-labelledby={`${id}-heading`} className="space-y-2">
-      <h2 id={`${id}-heading`} className="sr-only">
-        Questions fréquentes
-      </h2>
+    <div className="space-y-2" role="group" aria-label="Liste de questions fréquentes">
       {items.map((item) => (
         <details
           key={item.question}
@@ -33,6 +30,6 @@ export function FaqAccordion({ items, id = "faq" }: FaqAccordionProps) {
           </div>
         </details>
       ))}
-    </section>
+    </div>
   );
 }

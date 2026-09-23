@@ -22,7 +22,7 @@ import { offerCatalogSchema } from "@/lib/schema";
 export const metadata: Metadata = createPageMetadata({
   title: "Tarifs dépannage, remorquage & batterie voiture",
   description:
-    `Tarifs dépannage scooter, moto et batterie voiture en Île-de-France : 50 € + déplacement, remorquage par paliers km, booster voiture dès ${formatPrice(getCarBatteryBoostTotal("PARIS"))}. Devis ferme au ${company.phoneDisplay}.`,
+    `Tarifs dépannage scooter, moto et batterie voiture en IDF : 50 € + déplacement, remorquage par paliers km. Devis ferme au ${company.phoneDisplay}.`,
   path: "/tarifs/",
   useRouteOg: true,
 });

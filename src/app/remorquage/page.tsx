@@ -7,9 +7,8 @@ import { JsonLd } from "@/components/JsonLd";
 import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { RemorquageGallery } from "@/components/RemorquageGallery";
-import { ZonesByDepartment } from "@/components/ZonesByDepartment";
+import { ServiceZonesCompact } from "@/components/ServiceZonesCompact";
 import { remorquageServices } from "@/data/services";
-import { publishedZones } from "@/data/zones";
 import { createPageMetadata } from "@/lib/metadata";
 import { itemListSchema, webPageSchema } from "@/lib/schema";
 
@@ -80,11 +79,16 @@ export default function RemorquageHubPage() {
           </Link>
         </section>
         <section className="mt-12">
-          <h2 className="section-title">Zones couvertes en Île-de-France</h2>
+          <h2 className="section-title">Où intervenez-vous ?</h2>
           <p className="mt-2 text-sm text-beton">
-            {publishedZones.length} communes couvertes — Paris, petite et grande couronne.
+            Intervention en Île-de-France — délais et tarifs selon la commune.
           </p>
-          <ZonesByDepartment />
+          <ServiceZonesCompact />
+          <p className="mt-3">
+            <Link href="/zones-intervention/" className="text-sm font-medium text-gyro hover:underline">
+              Toutes les zones →
+            </Link>
+          </p>
         </section>
       </main>
     </PageShell>

@@ -20,6 +20,7 @@ export function CrevaisonGallery() {
               width={photo.width}
               height={photo.height}
               sizes="(max-width: 640px) 100vw, 33vw"
+              loading="lazy"
               className="h-auto w-full object-cover"
             />
           </li>
