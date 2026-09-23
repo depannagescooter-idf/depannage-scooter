@@ -16,7 +16,7 @@ export const globalFaqs: Faq[] = [
   {
     question: "Quels véhicules prenez-vous en charge ?",
     answer:
-      "Scooters 50 à 125 cm³, maxi-scooters, motos, trois-roues et voitures (citadines, berlines, SUV, utilitaires légers). Pour une batterie voiture à plat, consultez la page dépannage batterie voiture. Indiquez marque et modèle lors de l'appel.",
+      "Scooters 50 à 125 cm³, maxi-scooters, motos et trois-roues. Pour les voitures, seule la batterie est prise en charge (démarrage au booster ou remplacement sur place) — pas de remorquage automobile. Indiquez marque et modèle lors de l'appel.",
   },
   {
     question: "Intervenez-vous pour une batterie de voiture à plat ?",
@@ -36,7 +36,7 @@ export const globalFaqs: Faq[] = [
   {
     question: "Intervenez-vous sur autoroute ou périphérique ?",
     answer:
-      "Sur voie rapide, la sécurité impose parfois l'intervention des services autoroutiers ou du 112 selon l'emplacement. Appelez-nous : nous vous indiquons la procédure adaptée et organisons la prise en charge dès que l'accès est possible.",
+      "Non. Nous n'intervenons pas sur le périphérique parisien, les autoroutes, voies express ni voies rapides urbaines — réservées aux dépanneurs agréés. En cas de panne sur ces axes, composez le 112 ou utilisez une borne d'appel d'urgence. Nous prenons le relais dès que le véhicule est sorti de la voie rapide et accessible en sécurité.",
   },
   {
     question: "Puis-je choisir la destination en cas de remorquage ?",

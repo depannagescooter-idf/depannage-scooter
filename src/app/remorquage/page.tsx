@@ -47,8 +47,9 @@ export default function RemorquageHubPage() {
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
             Nous remorquons scooters, motos et trois-roues sur plateau en Île-de-France. Forfait
-            Paris intra-muros, puis paliers 0–15 km, 15–30 km et au-delà. Destination au choix :
-            domicile, garage ou concession. Disponible 24h/24.
+            Paris intra-muros, puis paliers 0–5 km, 5–10 km, 10–15 km, 15–20 km et sur devis
+            au-delà de 20 km. Destination au choix : domicile, garage ou concession. Disponible
+            24h/24.
           </ShortAnswer>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">

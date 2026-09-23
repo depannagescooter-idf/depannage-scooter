@@ -6,6 +6,7 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
+import { GuideImages } from "@/components/GuideImages";
 import { guides, getGuideBySlug } from "@/data/guides";
 import { guideRelatedLinks } from "@/lib/guide-links";
 import { createPageMetadata } from "@/lib/metadata";
@@ -65,6 +66,7 @@ export default async function GuidePage({ params }: Props) {
             d&apos;expérience
           </p>
           <p className="mt-6 leading-relaxed text-beton">{guide.intro}</p>
+          {guide.images && guide.images.length > 0 && <GuideImages images={guide.images} />}
           {guide.sections.map((section) => (
             <section key={section.question} className="mt-10">
               <h2 className="section-title">{section.question}</h2>
