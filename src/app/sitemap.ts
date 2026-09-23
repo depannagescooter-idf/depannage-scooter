@@ -1,7 +1,6 @@
 import type { MetadataRoute } from "next";
 import { departments } from "@/data/departments";
 import { guides } from "@/data/guides";
-import { majorCitySlugs } from "@/data/major-cities";
 import { depannageServices, remorquageServices } from "@/data/services";
 import { getPublishedZoneSlugs } from "@/data/zones";
 import { getSiteUrl } from "@/lib/metadata";
@@ -70,27 +69,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
-  for (const s of depannageServices) {
-    for (const city of majorCitySlugs) {
-      entries.push({
-        url: `${base}/depannage-sur-place/${s.slug}/${city}/`,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.72,
-      });
-    }
-  }
-
-  for (const s of remorquageServices) {
-    for (const city of majorCitySlugs) {
-      entries.push({
-        url: `${base}/remorquage/${s.slug}/${city}/`,
-        lastModified: now,
-        changeFrequency: "monthly",
-        priority: 0.72,
-      });
-    }
-  }
+  // Pages prestation × ville : noindex — volontairement exclues du sitemap.
 
   for (const g of guides) {
     entries.push({

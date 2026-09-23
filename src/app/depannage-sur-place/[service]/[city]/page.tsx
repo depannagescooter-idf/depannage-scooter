@@ -29,6 +29,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: title.length <= 60 ? title : `${service.name} ${zone.name}`,
     description: `${service.name} à ${zone.name} en ${zone.etaMinutes[0]}–${zone.etaMinutes[1]} min, 24h/24. Devis ferme avant départ.`,
     path: `/depannage-sur-place/${service.slug}/${zone.slug}/`,
+    index: false,
+    follow: true,
     useRouteOg: true,
   });
 }
