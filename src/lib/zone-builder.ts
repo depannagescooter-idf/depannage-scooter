@@ -1,4 +1,5 @@
 import type { Zone } from "@/data/types";
+import { cleanupProse, stripTransport } from "@/lib/geo-cleanup";
 
 const PARIS_LAT = 48.8566;
 const PARIS_LNG = 2.3522;
@@ -59,7 +60,7 @@ export function buildZoneIntro(seed: ZoneSeed): string {
   const [l1, l2, l3, l4] = seed.landmarks;
   const [i1, i2, i3, i4] = seed.commonInterventions;
 
-  return [
+  const parts = [
     `${seed.name}, commune du ${dept}, se distingue comme ${seed.profile}.`,
     `Les scooters et motos circulent sur ${a1}, ${a2} et ${a3}, avec des arrêts répétés près de ${l1} et ${l2} où le stationnement est surveillé en journée.`,
     seed.trafficNote,
@@ -68,7 +69,8 @@ export function buildZoneIntro(seed: ZoneSeed): string {
     `${seed.accessNote} Les remorquages depuis ${seed.name} empruntent ${a4} ou les bretelles autoroutières les plus proches pour rejoindre un garage en sécurité.`,
     `Le secteur ${l4} concentre aussi des demandes de ${i4.toLowerCase()} lors des pics de livraison ou des événements locaux.`,
     `Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre ${seed.name} et votre point de panne exact.`,
-  ].join(" ");
+  ];
+  return cleanupProse(parts.map((p) => stripTransport(p)).join(" "));
 }
 
 export function seedToZone(seed: ZoneSeed): Zone {

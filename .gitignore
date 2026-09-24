@@ -28,6 +28,7 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 lighthouse*.json
+reports/geo-verify-cache.json
 
 # env files
 .env
