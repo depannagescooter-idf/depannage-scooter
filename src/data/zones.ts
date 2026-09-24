@@ -1,4 +1,5 @@
 import type { Zone } from "./types";
+import { applyGeoToZone } from "./zones-geo-applied";
 import { buildExtendedZones } from "./zones-extended";
 
 /**
@@ -956,7 +957,8 @@ const coreZones: Zone[] = [
   },
 ];
 
-export const zones: Zone[] = [...coreZones, ...buildExtendedZones(coreZones)];
+export const rawZones: Zone[] = [...coreZones, ...buildExtendedZones(coreZones)];
+export const zones: Zone[] = rawZones.map(applyGeoToZone);
 
 /** Zones publiées (identique à zones — aucune en draft). */
 export const publishedZones: Zone[] = zones;

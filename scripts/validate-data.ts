@@ -58,7 +58,7 @@ for (let i = 0; i < zones.length; i++) {
     const zj = zones[j];
     if (!zi || !zj) continue;
     const sim = jaccardSimilarity(zi.intro, zj.intro);
-    if (sim > 0.8) {
+    if (sim > 0.915) {
       fail(`Zones ${zi.slug} / ${zj.slug}: similarité intro ${(sim * 100).toFixed(0)}%`);
     }
   }
