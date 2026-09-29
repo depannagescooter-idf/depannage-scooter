@@ -8,14 +8,18 @@ export type ZoneGeoPatch = Pick<
 
 export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
   "paris-1er": {
-    "intro": "À Paris 1er, nos dépanneurs empruntent le plus souvent Rue de Rivoli ou Boulevard Sébastopol pour rejoindre votre panne. Le boulevard Sébastopol et la rue de Rivoli restent les axes principaux pour rejoindre une panne sans bloquer la circulation des bus. Paris 1er (75, 75001) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 22 et 35 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 2e, Paris 4e, Paris 6e, Paris 7e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie faible sur trajets courts coursier. Les équipes traitent aussi : crevaison sur pavés Palais-Royal.",
+    "intro": "À Paris 1er, nos dépanneurs empruntent le plus souvent Rue de Rivoli ou Boulevard Sébastopol pour rejoindre votre panne. Le 1er arrondissement concentre une forte densité de deux-roues professionnels : coursiers sur le forum des Halles, agents de sécurité entre le Louvre et la Comédie-Française, livreurs attirés par la rue de Rivoli et les rues piétonnes du Palais-Royal. Les interventions y sont souvent dictées par le stationnement : places PMR rares, zones de livraison limitées à trente minutes sur le quai du Louvre, et voie Georges-Pompidou soumise à des fermetures ponctuelles. Nos équipes connaissent les accès de secours côté Place du Châtelet et le parking Saemes Louvre-Rivoli pour les remorquages vers les garages du Marais ou du 3e. Les crevaisons surviennent sur les pavés du Palais-Royal et sur les rails du. Le boulevard Sébastopol et la rue de Rivoli restent les axes principaux pour rejoindre une panne sans bloquer la circulation des bus. Paris 1er (75, 75001) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 22 et 35 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 2e, Paris 4e, Paris 6e, Paris 7e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie faible sur trajets courts coursier. Les équipes traitent aussi : crevaison sur pavés Palais-Royal.",
     "axes": [
       "Rue de Rivoli",
       "Boulevard Sébastopol",
       "Quai du Louvre",
       "Rue Saint-Honoré"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Louvre",
+      "Palais-Royal",
+      "Place Vendôme"
+    ],
     "commonInterventions": [
       "Batterie faible sur trajets courts coursier",
       "Crevaison sur pavés Palais-Royal",
@@ -24,14 +28,18 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-2e": {
-    "intro": "À Paris 2e, nos dépanneurs empruntent le plus souvent Rue Montmartre ou Rue Réaumur pour rejoindre votre panne. La rue Montmartre et la rue Réaumur accueillent de nombreux coursiers et livreurs en deux-roues qui s'arrêtent sur des emplacements minutes sur trottoir. Les pannes les plus fréquentes concernent les batteries usées par les allers-retours répétés entre Grands Boulevards et Opéra, et les crevaisons causées par les grilles métalliques des bouches de. Le quartier Drouot concentre les interventions de remorquage après stationnement gênant devant les maisons de vente. La circulation sur le boulevard des Capucines, en liaison avec l'Opéra, reste l'axe le plus fluide pour une intervention rapide en soirée. Paris 2e (75, 75002) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 22 et 36 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 1er, Paris 3e, Paris 8e, Paris 9e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison grilles. Les équipes traitent aussi : batterie HS trajets livraison Réaumur.",
+    "intro": "À Paris 2e, nos dépanneurs empruntent le plus souvent Rue Montmartre ou Rue Réaumur pour rejoindre votre panne. Le 2e arrondissement, entre Bourse et Sentier, mélange artères commerciales étroites et couloirs de livraison serrés. La rue Montmartre et la rue Réaumur accueillent de nombreux coursiers et livreurs en deux-roues qui s'arrêtent sur des emplacements minutes sur trottoir. Les pannes les plus fréquentes concernent les batteries usées par les allers-retours répétés entre Grands Boulevards et Opéra, et les crevaisons causées par les grilles métalliques des bouches de. Le quartier Drouot concentre les interventions de remorquage après stationnement gênant devant les maisons de vente. Nos dépanneurs utilisent les accès par boulevard Montmartre ou rue du Quatre-Septembre pour éviter les rues piétonnes du Sentier en heure de pointe. Les parkings souterrains Place des Victoires et Bourse imposent des contraintes de hauteur pour les maxi-scooters lors d'un remorquage. La circulation sur le boulevard des Capucines, en liaison avec l'Opéra, reste l'axe le plus fluide pour une intervention rapide en soirée. Paris 2e (75, 75002) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 22 et 36 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 1er, Paris 3e, Paris 8e, Paris 9e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison grilles. Les équipes traitent aussi : batterie HS trajets livraison Réaumur.",
     "axes": [
       "Rue Montmartre",
       "Rue Réaumur",
       "Boulevard des Capucines",
       "Rue du Quatre-Septembre"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Bourse",
+      "Sentier",
+      "Place des Victoires"
+    ],
     "commonInterventions": [
       "Crevaison grilles",
       "Batterie HS trajets livraison Réaumur",
@@ -40,14 +48,16 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-3e": {
-    "intro": "À Paris 3e, nos dépanneurs empruntent le plus souvent Rue de Turbigo ou Boulevard Beaumarchais pour rejoindre votre panne. Le Marais nord, dans le 3e arrondissement, combine rues pavées, zones piétonnes et artères en sens unique autour de République et du Temple. Les deux-roues y circulent entre boutiques, ateliers et restaurants; les livraisons se concentrent rue de Turbigo et rue du Temple, où le stationnement sur voie est surveillé en continu. Nous intervenons régulièrement rue des Archives et rue Vieille-du-Temple pour des selles bloquées sur scooters de livraison surchargés, ou des crevaisons sur les pavés irréguliers du quartier Saint-Gervais. Les remorquages partent souvent vers le 11e ou le 20e quand le garage habituel du client est en dehors du centre. Paris 3e (75, 75003) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 24 et 38 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 2e, Paris 4e, Paris 10e, Paris 11e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison pavés Marais. Les équipes traitent aussi : selle bloquée livraison restaurant.",
+    "intro": "À Paris 3e, nos dépanneurs empruntent le plus souvent Rue de Turbigo ou Boulevard Beaumarchais pour rejoindre votre panne. Le Marais nord, dans le 3e arrondissement, combine rues pavées, zones piétonnes et artères en sens unique autour de République et du Temple. Les deux-roues y circulent entre boutiques, ateliers et restaurants; les livraisons se concentrent rue de Turbigo et rue du Temple, où le stationnement sur voie est surveillé en continu. Nous intervenons régulièrement rue des Archives et rue Vieille-du-Temple pour des selles bloquées sur scooters de livraison surchargés, ou des crevaisons sur les pavés irréguliers du quartier Saint-Gervais. Les remorquages partent souvent vers le 11e ou le 20e quand le garage habituel du client est en dehors du centre. En période de marché, les créneaux de livraison du matin compliquent le stationnement du plateau; nos équipes anticipent un point de rendez-vous sur place de la République ou sur le boulevard du Temple. Paris 3e (75, 75003) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 24 et 38 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 2e, Paris 4e, Paris 10e, Paris 11e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison pavés Marais. Les équipes traitent aussi : selle bloquée livraison restaurant.",
     "axes": [
       "Rue de Turbigo",
       "Boulevard Beaumarchais",
       "Rue du Temple",
       "Rue des Archives"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Place de la République"
+    ],
     "commonInterventions": [
       "Crevaison pavés Marais",
       "Selle bloquée livraison restaurant",
@@ -56,14 +66,19 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-4e": {
-    "intro": "À Paris 4e, nos dépanneurs empruntent le plus souvent Rue de Rivoli ou Boulevard Beaumarchais pour rejoindre votre panne. Les crevaisons sont fréquentes sur les joints de pont du Pont Louis-Philippe et sur les pavés de la rue François-Miron. Les interventions batterie touchent les motos garées sous les porches du Marais, où l'humidité accélère la sulfatation. Les remorquages depuis l'île de la Cité nécessitent parfois une autorisation de stationnement du plateau sur voie; nos conducteurs connaissent les créneaux les moins chargés côté Quai de l'Hôtel-de-Ville. Paris 4e (75, 75004) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 40 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 1er, Paris 3e, Paris 11e, Paris 12e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison pavés île Saint-Louis. Les équipes traitent aussi : remorquage Marais rue piétonne.",
+    "intro": "À Paris 4e, nos dépanneurs empruntent le plus souvent Rue de Rivoli ou Boulevard Beaumarchais pour rejoindre votre panne. Le 4e arrondissement, cœur historique de Paris, s'étire de l'Hôtel de Ville à Bastille en passant par l'île de la Cité et le Marais sud. Les deux-roues y subissent des contraintes uniques : ponts étroits, pavés de l'île Saint-Louis, et rues piétonnes autour de Notre-Dame où seuls les résidents et livraisons accèdent. Les crevaisons sont fréquentes sur les joints de pont du Pont Louis-Philippe et sur les pavés de la rue François-Miron. Les interventions batterie touchent les motos garées sous les porches du Marais, où l'humidité accélère la sulfatation. Pour Bastille, le boulevard Beaumarchais et la rue de Rivoli restent les axes d'accès; en cas de manifestation sur Place de la Bastille, le détour passe par le boulevard Morland ou Quai des Célestins. Les remorquages depuis l'île de la Cité nécessitent parfois une autorisation de stationnement du plateau sur voie; nos conducteurs connaissent les créneaux les moins chargés côté Quai de l'Hôtel-de-Ville. Interventions courantes : crevaison pavés île Saint-Louis. Les équipes traitent aussi : remorquage Marais rue piétonne.",
     "axes": [
       "Rue de Rivoli",
       "Boulevard Beaumarchais",
       "Quai de l'Hôtel-de-Ville",
       "Rue Saint-Antoine"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Notre-Dame",
+      "Hôtel de Ville",
+      "Place des Vosges",
+      "Bastille"
+    ],
     "commonInterventions": [
       "Crevaison pavés île Saint-Louis",
       "Remorquage Marais rue piétonne",
@@ -72,14 +87,18 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-5e": {
-    "intro": "À Paris 5e, nos dépanneurs empruntent le plus souvent Boulevard Saint-Michel ou Boulevard Saint-Germain pour rejoindre votre panne. Nous dépannons souvent des scooters 125 cm³ garés rue Gay-Lussac ou rue d'Ulm, avec des batteries fatiguées par les trajets quotidiens depuis le 13e ou Ivry. Les remorquages vers les garages du 14e passent par le boulevard de Port-Royal ou l'Avenue des Gobelins selon le sens de circulation du moment. La montée vers Pantheon complique l'accès des plateaux lourds; nos équipes privilégient les créneaux hors rush étudiant, entre midi et quatorze heures ou après vingt heures. Paris 5e (75, 75005) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 42 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 4e, Paris 6e, Paris 13e, Paris 14e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie étudiant trajet quotidien. Les équipes traitent aussi : crevaison rails T3a.",
+    "intro": "À Paris 5e, nos dépanneurs empruntent le plus souvent Boulevard Saint-Michel ou Boulevard Saint-Germain pour rejoindre votre panne. Le boulevard Saint-Michel et le boulevard Saint-Germain concentrent le trafic; les rues adjacentes comme rue Mouffetard ou rue de la Montagne-Sainte-Geneviève imposent des virages serrés où les chutes de moto sont fréquentes. Nous dépannons souvent des scooters 125 cm³ garés rue Gay-Lussac ou rue d'Ulm, avec des batteries fatiguées par les trajets quotidiens depuis le 13e ou Ivry. Les remorquages vers les garages du 14e passent par le boulevard de Port-Royal ou l'Avenue des Gobelins selon le sens de circulation du moment. La montée vers Pantheon complique l'accès des plateaux lourds; nos équipes privilégient les créneaux hors rush étudiant, entre midi et quatorze heures ou après vingt heures. Paris 5e (75, 75005) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 42 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 4e, Paris 6e, Paris 13e, Paris 14e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie étudiant trajet quotidien. Les équipes traitent aussi : crevaison rails T3a.",
     "axes": [
       "Boulevard Saint-Michel",
       "Boulevard Saint-Germain",
       "Rue Monge",
       "Avenue des Gobelins"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Panthéon",
+      "Rue Mouffetard",
+      "Sorbonne"
+    ],
     "commonInterventions": [
       "Batterie étudiant trajet quotidien",
       "Crevaison rails T3a",
@@ -88,14 +107,18 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-6e": {
-    "intro": "À Paris 6e, nos dépanneurs empruntent le plus souvent Boulevard Saint-Germain ou Rue de Rennes pour rejoindre votre panne. Les deux-roues de livraison affrontent des créneaux courts rue de Rennes et rue de Sèvres, tandis que les motos de collection garées rue Bonaparte subissent parfois des pannes de batterie après longue immobilisation. Le boulevard Saint-Germain et la rue de Vaugirard structurent nos accès; les rues perpendiculaires comme rue de Buci ou rue de Seine restent sensibles aux flux piétons en soirée. Les remorquages vers le 15e ou Boulogne empruntent le pont de Sèvres ou le boulevard du Montparnasse selon l'heure. Paris 6e (75, 75006) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 24 et 38 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 1er, Paris 5e, Paris 7e, Paris 14e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie moto longue immobilisation. Les équipes traitent aussi : crevaison pavés Odéon.",
+    "intro": "À Paris 6e, nos dépanneurs empruntent le plus souvent Boulevard Saint-Germain ou Rue de Rennes pour rejoindre votre panne. Le 6e arrondissement, entre Saint-Germain-des-Prés et le Luxembourg, mélange artères chic, rues pavées et zones de livraison très réglementées. Les deux-roues de livraison affrontent des créneaux courts rue de Rennes et rue de Sèvres, tandis que les motos de collection garées rue Bonaparte subissent parfois des pannes de batterie après longue immobilisation. Le boulevard Saint-Germain et la rue de Vaugirard structurent nos accès; les rues perpendiculaires comme rue de Buci ou rue de Seine restent sensibles aux flux piétons en soirée. Les crevaisons sont courantes sur les pavés de la place Furstenberg et autour de l'église Saint-Sulpice. Les remorquages vers le 15e ou Boulogne empruntent le pont de Sèvres ou le boulevard du Montparnasse selon l'heure. Paris 6e (75, 75006) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 24 et 38 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 1er, Paris 5e, Paris 7e, Paris 14e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie moto longue immobilisation. Les équipes traitent aussi : crevaison pavés Odéon.",
     "axes": [
       "Boulevard Saint-Germain",
       "Rue de Rennes",
       "Rue de Vaugirard",
       "Rue de Sèvres"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Saint-Germain-des-Prés",
+      "Saint-Sulpice",
+      "Odéon"
+    ],
     "commonInterventions": [
       "Batterie moto longue immobilisation",
       "Crevaison pavés Odéon",
@@ -104,14 +127,16 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-7e": {
-    "intro": "À Paris 7e, nos dépanneurs empruntent le plus souvent Avenue de la Bourdonnais ou Boulevard des Invalides pour rejoindre votre panne. Les crevaisons apparaissent sur les quais bas du port de la Bourdonnais, où les joints de dalle et les nids-de-poule s'accumulent. En période touristique, la circulation sur le Champ-de-Mars et le quai Branly ralentit fortement; nos équipes anticipent des délais supplémentaires entre juin et septembre. Le stationnement deux-roues reste limité avenue Rapp et rue Saint-Dominique; les interventions se font le plus souvent sur trottoir élargi ou emplacement livraison. Paris 7e (75, 75007) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 40 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 1er, Paris 6e, Paris 15e, Paris 16e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie scooter trajet ministère. Les équipes traitent aussi : crevaison quai Bourdonnais.",
+    "intro": "À Paris 7e, nos dépanneurs empruntent le plus souvent Avenue de la Bourdonnais ou Boulevard des Invalides pour rejoindre votre panne. Les pannes batterie touchent les scooters de fonctionnaires effectuant des trajets répétés entre Invalides et Solferino. Les crevaisons apparaissent sur les quais bas du port de la Bourdonnais, où les joints de dalle et les nids-de-poule s'accumulent. Les remorquages vers le 15e ou Issy passent par le pont de l'Alma ou le boulevard des Invalides. En période touristique, la circulation sur le Champ-de-Mars et le quai Branly ralentit fortement; nos équipes anticipent des délais supplémentaires entre juin et septembre. Le stationnement deux-roues reste limité avenue Rapp et rue Saint-Dominique; les interventions se font le plus souvent sur trottoir élargi ou emplacement livraison. Paris 7e (75, 75007) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 40 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 1er, Paris 6e, Paris 15e, Paris 16e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie scooter trajet ministère. Les équipes traitent aussi : crevaison quai Bourdonnais.",
     "axes": [
       "Avenue de la Bourdonnais",
       "Boulevard des Invalides",
       "Rue de Grenelle",
       "Quai d'Orsay"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Invalides"
+    ],
     "commonInterventions": [
       "Batterie scooter trajet ministère",
       "Crevaison quai Bourdonnais",
@@ -120,14 +145,17 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-8e": {
-    "intro": "À Paris 8e, nos dépanneurs empruntent le plus souvent Avenue des Champs-Élysées ou Boulevard Haussmann pour rejoindre votre panne. Les pannes concernent autant les batteries des 125 cm³ de livraison sur les Champs-Élysées que les motos garées avenue Montaigne ou rue du Faubourg-Saint-Honoré. Nos dépanneurs accèdent par le boulevard Malesherbes, l'avenue de Friedland ou la rue de Miromesnil selon les fermetures ponctuelles liées aux événements sur l'Élysée. Les remorquages vers Neuilly ou Levallois empruntent le boulevard Pereire ou l'avenue de la Grande-Armée. La circulation sur le boulevard Haussmann, en direction de l'Opéra, reste l'axe principal pour rejoindre une panne en moins de trente minutes en heure creuse. Paris 8e (75, 75008) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 23 et 37 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 1er, Paris 2e, Paris 9e, Paris 16e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie maxi-scooter avenue Montaigne. Les équipes traitent aussi : remorquage après mise en fourrière.",
+    "intro": "À Paris 8e, nos dépanneurs empruntent le plus souvent Avenue des Champs-Élysées ou Boulevard Haussmann pour rejoindre votre panne. Les pannes concernent autant les batteries des 125 cm³ de livraison sur les Champs-Élysées que les motos garées avenue Montaigne ou rue du Faubourg-Saint-Honoré. Le stationnement est strictement contrôlé : zones livraison de quinze minutes, fourrières actives autour de la Madeleine. Nos dépanneurs accèdent par le boulevard Malesherbes, l'avenue de Friedland ou la rue de Miromesnil selon les fermetures ponctuelles liées aux événements sur l'Élysée. Les crevaisons surviennent sur les plates-bandes du rond-point des Champs-Élysées et sur les pavés autour de la Madeleine. Les remorquages vers Neuilly ou Levallois empruntent le boulevard Pereire ou l'avenue de la Grande-Armée. La circulation sur le boulevard Haussmann, en direction de l'Opéra, reste l'axe principal pour rejoindre une panne en moins de trente minutes en heure creuse. Paris 8e (75, 75008) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 23 et 37 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 1er, Paris 2e, Paris 9e, Paris 16e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie maxi-scooter avenue Montaigne. Les équipes traitent aussi : remorquage après mise en fourrière.",
     "axes": [
       "Avenue des Champs-Élysées",
       "Boulevard Haussmann",
       "Rue du Faubourg-Saint-Honoré",
       "Boulevard Malesherbes"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Arc de Triomphe",
+      "Madeleine"
+    ],
     "commonInterventions": [
       "Batterie maxi-scooter avenue Montaigne",
       "Remorquage après mise en fourrière",
@@ -136,14 +164,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-9e": {
-    "intro": "À Paris 9e, nos dépanneurs empruntent le plus souvent Boulevard Haussmann ou Rue de Provence pour rejoindre votre panne. Les livreurs empruntent rue de Provence, rue Lafayette et boulevard Haussmann où le stationnement minute est saturé entre dix-huit et vingt-deux heures. Les remorquages vers le 18e ou Saint-Ouen passent par le boulevard de Clichy ou la rue de la Chapelle selon le sens de circulation. La rue Scribe et l'avenue de l'Opéra concentrent les interventions de selles bloquées sur scooters de livraison surchargés. Paris 9e (75, 75009) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 24 et 38 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 2e, Paris 8e, Paris 10e, Paris 17e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie scooter sortie de nuit Pigalle. Les équipes traitent aussi : crevaison rails.",
+    "intro": "À Paris 9e, nos dépanneurs empruntent le plus souvent Boulevard Haussmann ou Rue de Provence pour rejoindre votre panne. Les pannes batterie frappent les scooters de nuit quittant Pigalle ou la rue des Martyrs après des shifts prolongés. Les remorquages vers le 18e ou Saint-Ouen passent par le boulevard de Clichy ou la rue de la Chapelle selon le sens de circulation. La rue Scribe et l'avenue de l'Opéra concentrent les interventions de selles bloquées sur scooters de livraison surchargés. Paris 9e (75, 75009) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 24 et 38 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 2e, Paris 8e, Paris 10e, Paris 17e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie scooter sortie de nuit Pigalle. Les équipes traitent aussi : crevaison rails.",
     "axes": [
       "Boulevard Haussmann",
       "Rue de Provence",
-      "Boulevard de Clichy",
-      "Rue Lafayette"
+      "Boulevard de Clichy"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Pigalle"
+    ],
     "commonInterventions": [
       "Batterie scooter sortie de nuit Pigalle",
       "Crevaison rails",
@@ -159,7 +188,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "Quai de Valmy",
       "Boulevard de Strasbourg"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Place de la République"
+    ],
     "commonInterventions": [
       "Crevaison quai canal Saint-Martin",
       "Batterie coursier gare du Nord",
@@ -168,14 +199,19 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-11e": {
-    "intro": "À Paris 11e, nos dépanneurs empruntent le plus souvent Avenue de la République ou Boulevard Voltaire pour rejoindre votre panne. Les remorquages vers Montreuil ou le 20e passent par le boulevard de Charonne ou la rue de Montreuil. Paris 11e (75, 75011) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 40 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 3e, Paris 4e, Paris 10e, Paris 12e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison rails. Les équipes traitent aussi : batterie livraison nocturne Oberkampf.",
+    "intro": "À Paris 11e, nos dépanneurs empruntent le plus souvent Avenue de la République ou Boulevard Voltaire pour rejoindre votre panne. Le 11e arrondissement, entre Bastille, Nation et Oberkampf, concentre bars, ateliers et commerces où les deux-roues circulent jusqu'à tard dans la nuit. La rue de Charonne, l'avenue de la République et le boulevard Voltaire structurent nos interventions; les rues adjacentes comme rue Oberkampf ou rue de la Roquette accueillent des livreurs en stationnement minute très surveillé. Les batteries cèdent sur les scooters effectuant des navettes entre Roquette et Père-Lachaise pour les services de livraison. Les remorquages vers Montreuil ou le 20e passent par le boulevard de Charonne ou la rue de Montreuil. La place de la Nation et le boulevard Diderot concentrent les embouteillages aux heures de sortie des bureaux; nos dépanneurs anticipent un point de rendez-vous côté rue de Reuilly ou avenue Philippe-Auguste pour charger un scooter sans gêner le. Paris 11e (75, 75011) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 40 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 3e, Paris 4e, Paris 10e, Paris 12e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison rails. Les équipes traitent aussi : batterie livraison nocturne Oberkampf.",
     "axes": [
       "Avenue de la République",
       "Boulevard Voltaire",
       "Rue de Charonne",
       "Boulevard de Belleville"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Place de la Bastille",
+      "Place de la Nation",
+      "Père-Lachaise",
+      "Oberkampf"
+    ],
     "commonInterventions": [
       "Crevaison rails",
       "Batterie livraison nocturne Oberkampf",
@@ -184,14 +220,16 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-12e": {
-    "intro": "À Paris 12e, nos dépanneurs empruntent le plus souvent Cours de Vincennes ou Avenue Daumesnil pour rejoindre votre panne. Les crevaisons surviennent sur les pavés de la coulée verte René-Dumont et sur les joints du. Les remorquages vers Vincennes ou Charenton empruntent le boulevard périphérique intérieur porte de Vincennes ou la rue de Charenton. Le stationnement deux-roues est dense autour de l'Opéra Bastille côté 12e; nos équipes utilisent les emplacements livraison rue de Lyon et avenue Ledru-Rollin. La montée vers Bel-Air et Picpus impose des délais supplémentaires pour les plateaux en heure de pointe. Paris 12e (75, 75012) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 42 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 4e, Paris 11e, Paris 13e, Vincennes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison coulée verte. Les équipes traitent aussi : remorquage événement Accor Arena.",
+    "intro": "À Paris 12e, nos dépanneurs empruntent le plus souvent Cours de Vincennes ou Avenue Daumesnil pour rejoindre votre panne. Les deux-roues y circulent sur le cours de Vincennes, le boulevard Diderot et l'avenue Daumesnil, avec des livraisons vers Bercy Village et Accor Arena. Les crevaisons surviennent sur les pavés de la coulée verte René-Dumont et sur les joints du. Les remorquages vers Vincennes ou Charenton empruntent le boulevard périphérique intérieur porte de Vincennes ou la rue de Charenton. Le stationnement deux-roues est dense autour de l'Opéra Bastille côté 12e; nos équipes utilisent les emplacements livraison rue de Lyon et avenue Ledru-Rollin. La montée vers Bel-Air et Picpus impose des délais supplémentaires pour les plateaux en heure de pointe. Paris 12e (75, 75012) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 42 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 4e, Paris 11e, Paris 13e, Vincennes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison coulée verte. Les équipes traitent aussi : remorquage événement Accor Arena.",
     "axes": [
       "Cours de Vincennes",
       "Avenue Daumesnil",
       "Boulevard Diderot",
       "Rue de Charenton"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Bercy"
+    ],
     "commonInterventions": [
       "Crevaison coulée verte",
       "Remorquage événement Accor Arena",
@@ -200,14 +238,18 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-13e": {
-    "intro": "À Paris 13e, nos dépanneurs empruntent le plus souvent Avenue d'Italie ou Boulevard Vincent-Auriol pour rejoindre votre panne. Les deux-roues y circulent sur l'avenue d'Italie, le boulevard Vincent-Auriol et l'avenue de France vers Bibliothèque François-Mitterrand. Les batteries faiblissent sur les trajets quotidiens depuis Ivry ou Kremlin-Bicêtre vers les universités. Les remorquages vers Ivry ou Vitry passent par le boulevard périphérique porte d'Ivry ou l'avenue de Choisy. La circulation sur le boulevard Masséna reste l'axe principal pour une intervention depuis le centre de Paris. Paris 13e (75, 75013) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 27 et 43 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 5e, Paris 12e, Paris 14e, Ivry-sur-Seine) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie étudiant Tolbiac.",
+    "intro": "À Paris 13e, nos dépanneurs empruntent le plus souvent Avenue d'Italie ou Boulevard Vincent-Auriol pour rejoindre votre panne. Le 13e arrondissement, entre Gobelins, Butte-aux-Cailles et Tolbiac, mélange quartiers résidentiels, campus universitaires et zone d'activité de la porte de Choisy. Les deux-roues y circulent sur l'avenue d'Italie, le boulevard Vincent-Auriol et l'avenue de France vers Bibliothèque François-Mitterrand. Les batteries faiblissent sur les trajets quotidiens depuis Ivry ou Kremlin-Bicêtre vers les universités. Les remorquages vers Ivry ou Vitry passent par le boulevard périphérique porte d'Ivry ou l'avenue de Choisy. Le stationnement est surveillé autour de la place d'Italie; nos dépanneurs repèrent les emplacements autorisés rue Bobillot et rue de la Butte-aux-Cailles. La circulation sur le boulevard Masséna reste l'axe principal pour une intervention depuis le centre de Paris. Paris 13e (75, 75013) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 27 et 43 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 5e, Paris 12e, Paris 14e, Ivry-sur-Seine) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie étudiant Tolbiac.",
     "axes": [
       "Avenue d'Italie",
       "Boulevard Vincent-Auriol",
       "Avenue de France",
       "Boulevard Masséna"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Place d'Italie",
+      "Butte-aux-Cailles",
+      "Gobelins"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie étudiant Tolbiac",
@@ -216,14 +258,17 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-14e": {
-    "intro": "À Paris 14e, nos dépanneurs empruntent le plus souvent Boulevard du Montparnasse ou Avenue du Général-Leclerc pour rejoindre votre panne. Les pannes batterie touchent les scooters 50 cm³ des lycéens et étudiants entre Denfert et Mouton-Duvernet. Paris 14e (75, 75014) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 41 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 5e, Paris 6e, Paris 13e, Paris 15e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie scooter étudiant. Les équipes traitent aussi : crevaison.",
+    "intro": "À Paris 14e, nos dépanneurs empruntent le plus souvent Boulevard du Montparnasse ou Avenue du Général-Leclerc pour rejoindre votre panne. Le 14e arrondissement, entre Montparnasse, Denfert-Rochereau et Pernety, accueille étudiants, commerçants et livreurs sur deux-roues dans un tissu urbain en pente. Le boulevard du Montparnasse, l'avenue du Général-Leclerc et la rue d'Alésia structurent nos accès; les rues calmes autour de la cité universitaire internationale concentrent les motos garées longue durée. Les pannes batterie touchent les scooters 50 cm³ des lycéens et étudiants entre Denfert et Mouton-Duvernet. Le stationnement autour de la tour Montparnasse est réglementé en permanence; nos équipes utilisent les créneaux livraison rue de Rennes côté 14e et l'avenue Reille pour charger un véhicule en panne. Paris 14e (75, 75014) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 41 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 5e, Paris 6e, Paris 13e, Paris 15e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie scooter étudiant. Les équipes traitent aussi : crevaison.",
     "axes": [
       "Boulevard du Montparnasse",
       "Avenue du Général-Leclerc",
       "Rue d'Alésia",
       "Boulevard Brune"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Montparnasse",
+      "Denfert-Rochereau"
+    ],
     "commonInterventions": [
       "Batterie scooter étudiant",
       "Crevaison",
@@ -239,7 +284,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "Boulevard Victor",
       "Avenue Émile-Zola"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Beaugrenelle"
+    ],
     "commonInterventions": [
       "Crevaison front de Seine",
       "Batterie trajet Issy-Défense",
@@ -248,14 +295,19 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-16e": {
-    "intro": "À Paris 16e, nos dépanneurs empruntent le plus souvent Avenue Foch ou Rue de Passy pour rejoindre votre panne. Les motos et maxi-scooters y sont nombreux; les pannes batterie touchent les véhicules garés avenue Foch, rue de Passy ou boulevard Suchet entre deux utilisations espacées. Les remorquages vers Boulogne ou Neuilly empruntent le pont de Sèvres, l'avenue de Versailles ou le boulevard périphérique porte d'Auteuil. Le stationnement est strictement contrôlé avenue Kléber et place Victor-Hugo; nos dépanneurs utilisent les emplacements livraison rue de la Pompe et rue d'Auteuil. Paris 16e (75, 75016) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 42 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 7e, Paris 8e, Paris 15e, Paris 17e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie moto longue immobilisation Passy. Les équipes traitent aussi : remorquage événement Roland-Garros.",
+    "intro": "À Paris 16e, nos dépanneurs empruntent le plus souvent Avenue Foch ou Rue de Passy pour rejoindre votre panne. Le 16e arrondissement, entre Trocadéro, Passy et Auteuil, concentre résidences haut standing, ambassades et équipements sportifs comme Roland-Garros et Parc des Princes. Les motos et maxi-scooters y sont nombreux; les pannes batterie touchent les véhicules garés avenue Foch, rue de Passy ou boulevard Suchet entre deux utilisations espacées. Les crevaisons apparaissent sur les pavés autour du Trocadéro et sur les voies cyclables du bois de Boulogne côté porte de la Muette. Les remorquages vers Boulogne ou Neuilly empruntent le pont de Sèvres, l'avenue de Versailles ou le boulevard périphérique porte d'Auteuil. Le stationnement est strictement contrôlé avenue Kléber et place Victor-Hugo; nos dépanneurs utilisent les emplacements livraison rue de la Pompe et rue d'Auteuil. Lors des événements Roland-Garros ou Parc des Princes, la circulation sur le boulevard Murat et l'avenue du Général-Sarrail impose des délais supplémentaires que nous anticipons avec le client. Paris 16e (75, 75016) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 42 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 7e, Paris 8e, Paris 15e, Paris 17e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie moto longue immobilisation Passy. Les équipes traitent aussi : remorquage événement Roland-Garros.",
     "axes": [
       "Avenue Foch",
       "Rue de Passy",
       "Boulevard Murat",
       "Avenue du Général-Sarrail"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Trocadéro",
+      "Roland-Garros",
+      "Parc des Princes",
+      "Bois de Boulogne"
+    ],
     "commonInterventions": [
       "Batterie moto longue immobilisation Passy",
       "Remorquage événement Roland-Garros",
@@ -264,14 +316,18 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-17e": {
-    "intro": "À Paris 17e, nos dépanneurs empruntent le plus souvent Boulevard Pereire ou Avenue de Clichy pour rejoindre votre panne. Les batteries faiblissent sur les trajets quotidiens depuis Levallois ou Clichy vers les bureaux des Ternes. Paris 17e (75, 75017) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 41 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 8e, Paris 9e, Paris 16e, Paris 18e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison avenue de Clichy. Les équipes traitent aussi : batterie trajet Levallois-Ternes.",
+    "intro": "À Paris 17e, nos dépanneurs empruntent le plus souvent Boulevard Pereire ou Avenue de Clichy pour rejoindre votre panne. Le 17e arrondissement, entre Étoile, Batignolles et Porte de Clichy, forme un couloir dense entre Paris centre et la petite couronne ouest. Les deux-roues circulent sur le boulevard Pereire, l'avenue de Clichy et le boulevard des Batignolles, avec des livraisons vers les tours de la Défense via Pont de Neuilly. Les batteries faiblissent sur les trajets quotidiens depuis Levallois ou Clichy vers les bureaux des Ternes. Le stationnement autour du marché des Batignolles est saturé le samedi matin; nos dépanneurs privilégient les créneaux en semaine ou l'après-midi. Les remorquages vers Levallois ou Clichy passent par le boulevard Berthier ou la porte de Clichy selon le sens de circulation. Paris 17e (75, 75017) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 41 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 8e, Paris 9e, Paris 16e, Paris 18e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison avenue de Clichy. Les équipes traitent aussi : batterie trajet Levallois-Ternes.",
     "axes": [
       "Boulevard Pereire",
       "Avenue de Clichy",
       "Boulevard des Batignolles",
       "Boulevard Berthier"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Place de l'Étoile",
+      "Batignolles",
+      "Porte de Clichy"
+    ],
     "commonInterventions": [
       "Crevaison avenue de Clichy",
       "Batterie trajet Levallois-Ternes",
@@ -280,13 +336,16 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-18e": {
-    "intro": "À Paris 18e, nos dépanneurs empruntent le plus souvent Boulevard de Clichy ou Boulevard de la Chapelle pour rejoindre votre panne. Les deux-roues grimpent rue Lepic, rue Custine et boulevard de la Chapelle; les crevaisons fréquentent les rails du. Les batteries cèdent sur les scooters de livraison entre Barbès et Château-Rouge, où les arrêts répétés épuisent les petites batteries. Les remorquages vers Saint-Ouen ou Aubervilliers passent par le boulevard Ney ou la porte de la Chapelle. La circulation sur le boulevard périphérique porte de Clignancourt reste l'accès le plus fiable pour un plateau en heure de pointe. Paris 18e (75, 75018) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 42 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 9e, Paris 10e, Paris 17e, Paris 19e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison pavés Montmartre. Les équipes traitent aussi : batterie livraison Barbès.",
+    "intro": "À Paris 18e, nos dépanneurs empruntent le plus souvent Boulevard de Clichy ou Boulevard de la Chapelle pour rejoindre votre panne. Le 18e arrondissement, de Montmartre à La Chapelle en passant par Goutte-d'Or et Clignancourt, cumule pentes, pavés et circulation dense de livraison. Les deux-roues grimpent rue Lepic, rue Custine et boulevard de la Chapelle; les crevaisons fréquentent les rails du. Les batteries cèdent sur les scooters de livraison entre Barbès et Château-Rouge, où les arrêts répétés épuisent les petites batteries. Les remorquages vers Saint-Ouen ou Aubervilliers passent par le boulevard Ney ou la porte de la Chapelle. La circulation sur le boulevard périphérique porte de Clignancourt reste l'accès le plus fiable pour un plateau en heure de pointe. Paris 18e (75, 75018) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 26 et 42 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 9e, Paris 10e, Paris 17e, Paris 19e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison pavés Montmartre. Les équipes traitent aussi : batterie livraison Barbès.",
     "axes": [
       "Boulevard de Clichy",
       "Boulevard de la Chapelle",
       "Rue Custine"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Sacré-Cœur",
+      "Montmartre"
+    ],
     "commonInterventions": [
       "Crevaison pavés Montmartre",
       "Batterie livraison Barbès",
@@ -295,14 +354,17 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-19e": {
-    "intro": "À Paris 19e, nos dépanneurs empruntent le plus souvent Avenue de Flandre ou Boulevard de la Villette pour rejoindre votre panne. Le stationnement est dense autour de la halle aux cuirs; nos dépanneurs utilisent les emplacements livraison rue de Crimée et rue Manin. Les manœuvres de plateau sur le boulevard Sérurier, fréquemment en travaux, exigent un créneau confirmé par téléphone pour éviter le blocage des bus ligne 60. Paris 19e (75, 75019) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 27 et 43 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 10e, Paris 11e, Paris 18e, Paris 20e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison quai Ourcq. Les équipes traitent aussi : batterie livraison entrepôt.",
+    "intro": "À Paris 19e, nos dépanneurs empruntent le plus souvent Avenue de Flandre ou Boulevard de la Villette pour rejoindre votre panne. Le 19e arrondissement, entre Buttes-Chaumont, Villette et La Villette, mélange quartiers populaires, canaux et grands équipements culturels. Les remorquages vers Pantin ou Aubervilliers empruntent l'avenue de Flandre ou le boulevard périphérique porte de la Villette. Le stationnement est dense autour de la halle aux cuirs; nos dépanneurs utilisent les emplacements livraison rue de Crimée et rue Manin. Les manœuvres de plateau sur le boulevard Sérurier, fréquemment en travaux, exigent un créneau confirmé par téléphone pour éviter le blocage des bus ligne 60. Paris 19e (75, 75019) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 27 et 43 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 10e, Paris 11e, Paris 18e, Paris 20e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison quai Ourcq. Les équipes traitent aussi : batterie livraison entrepôt.",
     "axes": [
       "Avenue de Flandre",
       "Boulevard de la Villette",
       "Avenue Jean-Jaurès",
       "Rue de Crimée"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Parc des Buttes-Chaumont",
+      "La Villette"
+    ],
     "commonInterventions": [
       "Crevaison quai Ourcq",
       "Batterie livraison entrepôt",
@@ -311,14 +373,19 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "paris-20e": {
-    "intro": "À Paris 20e, nos dépanneurs empruntent le plus souvent Boulevard de Belleville ou Boulevard de Ménilmontant pour rejoindre votre panne. Les crevaisons fréquentent les pavés de la rue Denoyez et les rails du. Les batteries cèdent sur les scooters de livraison entre Gambetta et Alexandre-Dumas, secteur très demandé en soirée. Les remorquages vers Montreuil passent par la rue de Bagnolet ou le boulevard périphérique porte de Bagnolet. La circulation sur la rue de la Réunion reste l'axe principal pour rejoindre une panne depuis le centre. Paris 20e (75, 75020) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 27 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 11e, Paris 12e, Paris 19e, Montreuil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison pavés Belleville. Les équipes traitent aussi : batterie livraison nocturne.",
+    "intro": "À Paris 20e, nos dépanneurs empruntent le plus souvent Boulevard de Belleville ou Boulevard de Ménilmontant pour rejoindre votre panne. Le 20e arrondissement, entre Belleville, Ménilmontant et Père-Lachaise, forme la limite est de Paris intra-muros vers Montreuil. Les deux-roues circulent sur le boulevard de Belleville, le boulevard de Ménilmontant et la rue de Bagnolet, avec des livraisons vers les ateliers et commerces de Belleville. Les crevaisons fréquentent les pavés de la rue Denoyez et les rails du. Les batteries cèdent sur les scooters de livraison entre Gambetta et Alexandre-Dumas, secteur très demandé en soirée. Les remorquages vers Montreuil passent par la rue de Bagnolet ou le boulevard périphérique porte de Bagnolet. Le stationnement autour du cimetière du Père-Lachaise est réglementé lors des commémorations; nos dépanneurs anticipent des points de rendez-vous sur le boulevard de Ménilmontant. La circulation sur la rue de la Réunion reste l'axe principal pour rejoindre une panne depuis le centre. Paris 20e (75, 75020) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 27 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 11e, Paris 12e, Paris 19e, Montreuil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison pavés Belleville. Les équipes traitent aussi : batterie livraison nocturne.",
     "axes": [
       "Boulevard de Belleville",
       "Boulevard de Ménilmontant",
       "Rue de Bagnolet",
       "Rue de la Réunion"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Père-Lachaise",
+      "Belleville",
+      "Parc de Belleville",
+      "Ménilmontant"
+    ],
     "commonInterventions": [
       "Crevaison pavés Belleville",
       "Batterie livraison nocturne",
@@ -327,13 +394,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "boulogne-billancourt": {
-    "intro": "À Boulogne-Billancourt, nos dépanneurs empruntent le plus souvent Route de la Reine ou Boulevard Jean-Jaurès pour rejoindre votre panne. Boulogne-Billancourt, première commune des Hauts-de-Seine, s'étend du pont de Sèvres à Billancourt le long de la Seine. Les crevaisons surviennent sur les pavés du quartier du Point-du-Jour et sur les joints du. Les batteries faiblissent sur les trajets quotidiens vers la Défense via le pont de Sèvres. Le; le pont de Sèvres concentre les embouteillages aux heures de pointe. Les remorquages vers le 15e ou Issy passent par le boulevard périphérique porte de Sèvres ou l'avenue Émile-Zola. La ZFE du grand Paris n'empêche pas nos plateaux Euro 6 d'intervenir sur l'ensemble de la commune. Boulogne-Billancourt (92, 92100) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 30 et 48 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 15e, Paris 16e, Issy-les-Moulineaux, Levallois-Perret) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie trajet Défense.",
+    "intro": "À Boulogne-Billancourt, nos dépanneurs empruntent le plus souvent Route de la Reine ou Boulevard Jean-Jaurès pour rejoindre votre panne. Boulogne-Billancourt, première commune des Hauts-de-Seine, s'étend du pont de Sèvres à Billancourt le long de la Seine. Les crevaisons surviennent sur les pavés du quartier du Point-du-Jour et sur les joints du. Les batteries faiblissent sur les trajets quotidiens vers la Défense via le pont de Sèvres. Le; le pont de Sèvres concentre les embouteillages aux heures de pointe. Les remorquages vers le 15e ou Issy passent par le boulevard périphérique porte de Sèvres ou l'avenue Émile-Zola. Le stationnement est dense autour du Parc des Princes côté Boulogne; nos dépanneurs utilisent les emplacements livraison avenue André-Morizet et rue du Point-du-Jour. La ZFE du grand Paris n'empêche pas nos plateaux Euro 6 d'intervenir sur l'ensemble de la commune. Boulogne-Billancourt (92, 92100) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 30 et 48 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 15e, Paris 16e, Issy-les-Moulineaux, Levallois-Perret) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie trajet Défense.",
     "axes": [
       "Route de la Reine",
       "Boulevard Jean-Jaurès",
       "Quai de Stalingrad"
     ],
     "landmarks": [
+      "Parc des Princes",
+      "Île Seguin",
       "Pont de Sèvres"
     ],
     "commonInterventions": [
@@ -344,12 +413,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "nanterre": {
-    "intro": "À Nanterre, nos dépanneurs empruntent le plus souvent Avenue Georges-Clemenceau ou Rue de l'Université pour rejoindre votre panne. Les batteries cèdent sur les scooters de livraison entre les tours et les entrepôts de la rue de l'Université. Le boulevard périphérique porte de Champerret et l'A14 restent les axes pour rejoindre une panne depuis Paris. Le stationnement deux-roues est quasi nul sur le parvis; les interventions se font le plus souvent sur voie de desserte ou parking visiteurs. Nanterre (92, 92000) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Courbevoie, Paris 17e, Paris 16e, Levallois-Perret) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie livraison La Défense. Les équipes traitent aussi : remorquage parking souterrain tour.",
+    "intro": "À Nanterre, nos dépanneurs empruntent le plus souvent Avenue Georges-Clemenceau ou Esplanade de La Défense pour rejoindre votre panne. Les batteries cèdent sur les scooters de livraison entre les tours et les entrepôts de la rue de l'Université. Les remorquages depuis La Défense imposent des autorisations d'accès plateau; nos conducteurs connaissent les créneaux autorisés côté parvis. Le boulevard périphérique porte de Champerret et l'A14 restent les axes pour rejoindre une panne depuis Paris. Le stationnement deux-roues est quasi nul sur le parvis; les interventions se font le plus souvent sur voie de desserte ou parking visiteurs. Nanterre (92, 92000) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Courbevoie, Paris 17e, Paris 16e, Levallois-Perret) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie livraison La Défense. Les équipes traitent aussi : remorquage parking souterrain tour.",
     "axes": [
       "Avenue Georges-Clemenceau",
+      "Esplanade de La Défense",
       "Rue de l'Université"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "La Défense"
+    ],
     "commonInterventions": [
       "Batterie livraison La Défense",
       "Remorquage parking souterrain tour",
@@ -358,13 +430,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "levallois-perret": {
-    "intro": "À Levallois-Perret, nos dépanneurs empruntent le plus souvent Avenue Victor-Hugo ou Boulevard Bineau pour rejoindre votre panne. Les batteries faiblissent sur les trajets quotidiens entre Levallois et les bureaux des Ternes ou de La Défense. Le stationnement est saturé en journée autour des sièges sociaux; nos dépanneurs utilisent les emplacements livraison rue Carnot et rue Danton. La circulation sur l'avenue de la Grande-Armée côté Levallois reste l'axe principal pour une intervention rapide. Levallois-Perret (92, 92300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 45 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 17e, Paris 8e, Neuilly-sur-Seine, Courbevoie) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie trajet Levallois-Défense. Les équipes traitent aussi : crevaison.",
+    "intro": "À Levallois-Perret, nos dépanneurs empruntent le plus souvent Avenue Victor-Hugo ou Boulevard Bineau pour rejoindre votre panne. Les batteries faiblissent sur les trajets quotidiens entre Levallois et les bureaux des Ternes ou de La Défense. Le stationnement est saturé en journée autour des sièges sociaux; nos dépanneurs utilisent les emplacements livraison rue Carnot et rue Danton. Les remorquages vers Neuilly ou Clichy passent par le boulevard Bineau ou le pont de Neuilly. La circulation sur l'avenue de la Grande-Armée côté Levallois reste l'axe principal pour une intervention rapide. Levallois-Perret (92, 92300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 45 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 17e, Paris 8e, Neuilly-sur-Seine, Courbevoie) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie trajet Levallois-Défense. Les équipes traitent aussi : crevaison.",
     "axes": [
       "Avenue Victor-Hugo",
       "Boulevard Bineau",
       "Rue Anatole-France"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Pont de Neuilly"
+    ],
     "commonInterventions": [
       "Batterie trajet Levallois-Défense",
       "Crevaison",
@@ -373,14 +447,17 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "neuilly-sur-seine": {
-    "intro": "À Neuilly-sur-Seine, nos dépanneurs empruntent le plus souvent Avenue Charles-de-Gaulle ou Boulevard du Château pour rejoindre votre panne. Les motos et maxi-scooters y sont nombreux; les pannes batterie touchent les véhicules garés avenue du Roule ou rue de Longchamp entre deux utilisations. Les remorquages vers le 16e ou Levallois empruntent l'avenue de la Grande-Armée ou le boulevard Bineau. Le stationnement est strictement contrôlé avenue Charles-de-Gaulle; nos dépanneurs utilisent les emplacements livraison rue de Chézy et rue de Villiers. Les interventions de selles bloquées concernent souvent les scooters de livraison vers les restaurants de l'avenue de Madrid. Neuilly-sur-Seine (92, 92200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 16e, Paris 17e, Levallois-Perret, Courbevoie) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie moto avenue du Roule. Les équipes traitent aussi : crevaison bois de Boulogne.",
+    "intro": "À Neuilly-sur-Seine, nos dépanneurs empruntent le plus souvent Avenue Charles-de-Gaulle ou Boulevard du Château pour rejoindre votre panne. Neuilly-sur-Seine, entre la porte Maillot et Levallois, accueille résidences haut standing, cinémas et commerces de l'avenue Charles-de-Gaulle et du boulevard du Château. Les motos et maxi-scooters y sont nombreux; les pannes batterie touchent les véhicules garés avenue du Roule ou rue de Longchamp entre deux utilisations. Les crevaisons apparaissent sur les pavés autour du bois de Boulogne côté Neuilly et sur l'avenue de Madrid. Les remorquages vers le 16e ou Levallois empruntent l'avenue de la Grande-Armée ou le boulevard Bineau. Le stationnement est strictement contrôlé avenue Charles-de-Gaulle; nos dépanneurs utilisent les emplacements livraison rue de Chézy et rue de Villiers. La circulation sur le boulevard périphérique porte Maillot concentre les embouteillages; nos équipes anticipent des délais supplémentaires en heure de pointe. Les interventions de selles bloquées concernent souvent les scooters de livraison vers les restaurants de l'avenue de Madrid. Neuilly-sur-Seine (92, 92200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 16e, Paris 17e, Levallois-Perret, Courbevoie) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie moto avenue du Roule. Les équipes traitent aussi : crevaison bois de Boulogne.",
     "axes": [
       "Avenue Charles-de-Gaulle",
       "Boulevard du Château",
       "Avenue de Madrid",
       "Rue de Longchamp"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Porte Maillot",
+      "Bois de Boulogne"
+    ],
     "commonInterventions": [
       "Batterie moto avenue du Roule",
       "Crevaison bois de Boulogne",
@@ -405,14 +482,17 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "courbevoie": {
-    "intro": "À Courbevoie, nos dépanneurs empruntent le plus souvent Avenue de la République ou Boulevard de la Mission-Marchand pour rejoindre votre panne. Les deux-roues circulent sur l'avenue de la République, le boulevard de la Mission-Marchand et la rue de Bezons, avec des livraisons vers les tours du faubourg de l'Arche. Les remorquages depuis les parkings souterrains des tours imposent des contraintes de hauteur pour les maxi-scooters. Le boulevard périphérique porte de Champerret et l'avenue de l'Arche restent les axes d'accès. Le stationnement deux-roues est limité autour de la gare; nos dépanneurs se positionnent rue de l'Est et avenue de la République pour intervenir sans bloquer le flux des bus. Courbevoie (92, 92400) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 30 et 48 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Levallois-Perret, Nanterre, Asnières-sur-Seine, Paris 17e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie livraison Défense. Les équipes traitent aussi : remorquage parking tour.",
+    "intro": "À Courbevoie, nos dépanneurs empruntent le plus souvent Avenue de la République ou Boulevard de la Mission-Marchand pour rejoindre votre panne. Les deux-roues circulent sur l'avenue de la République, le boulevard de la Mission-Marchand et la rue de Bezons, avec des livraisons vers les tours du faubourg de l'Arche. Les crevaisons surviennent sur les plates-bandes des espaces piétonniers côté Défense et sur les nids-de-poule autour de la gare de Courbevoie. Les batteries faiblissent sur les trajets quotidiens entre Courbevoie et La Défense à pied ou en deux-roues. Les remorquages depuis les parkings souterrains des tours imposent des contraintes de hauteur pour les maxi-scooters. Le boulevard périphérique porte de Champerret et l'avenue de l'Arche restent les axes d'accès. Le stationnement deux-roues est limité autour de la gare; nos dépanneurs se positionnent rue de l'Est et avenue de la République pour intervenir sans bloquer le flux des bus. Courbevoie (92, 92400) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 30 et 48 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Levallois-Perret, Nanterre, Asnières-sur-Seine, Paris 17e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie livraison Défense. Les équipes traitent aussi : remorquage parking tour.",
     "axes": [
       "Avenue de la République",
       "Boulevard de la Mission-Marchand",
       "Rue de Bezons",
       "Avenue de l'Arche"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "La Défense",
+      "Gare de Courbevoie"
+    ],
     "commonInterventions": [
       "Batterie livraison Défense",
       "Remorquage parking tour",
@@ -421,13 +501,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "clichy": {
-    "intro": "À Clichy, nos dépanneurs empruntent le plus souvent Boulevard Jean-Jaurès ou Rue Martre pour rejoindre votre panne. Les remorquages vers Saint-Ouen ou Levallois passent par le boulevard Victor-Hugo ou la rue de Paris. Clichy (92, 92110) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 27 et 43 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 17e, Paris 18e, Saint-Ouen, Levallois-Perret) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie livraison Halles.",
+    "intro": "À Clichy, nos dépanneurs empruntent le plus souvent Boulevard Jean-Jaurès ou Rue Martre pour rejoindre votre panne. Clichy, collée au 17e et au 18e parisien, forme un couloir de transit entre Porte de Clichy et Saint-Ouen. Les batteries cèdent sur les scooters de livraison entre Clichy et les Halles via la porte de Clichy. Les remorquages vers Saint-Ouen ou Levallois passent par le boulevard Victor-Hugo ou la rue de Paris. Clichy (92, 92110) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 27 et 43 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 17e, Paris 18e, Saint-Ouen, Levallois-Perret) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie livraison Halles.",
     "axes": [
       "Boulevard Jean-Jaurès",
       "Rue Martre",
       "Boulevard Victor-Hugo"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Porte de Clichy"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie livraison Halles",
@@ -451,13 +533,16 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "montrouge": {
-    "intro": "À Montrouge, nos dépanneurs empruntent le plus souvent Avenue Henri-Ginoux ou Rue Gabriel-Péri pour rejoindre votre panne. Montrouge, enclavée entre Paris 14e, Malakoff et Bagneux, forme un passage obligé pour les deux-roues entre Montparnasse et le sud de la petite couronne. Le stationnement est réglementé autour de la mairie; nos dépanneurs utilisent les emplacements livraison rue Sadi-Carnot et avenue Henri-Ginoux. La proximité du 14e permet des interventions en moins de trente minutes en heure creuse. Montrouge (92, 92120) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 14e, Paris 13e, Villejuif, Paris 15e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie trajet Denfert.",
+    "intro": "À Montrouge, nos dépanneurs empruntent le plus souvent Avenue Henri-Ginoux ou Rue Gabriel-Péri pour rejoindre votre panne. Montrouge, enclavée entre Paris 14e, Malakoff et Bagneux, forme un passage obligé pour les deux-roues entre Montparnasse et le sud de la petite couronne. Le stationnement est réglementé autour de la mairie; nos dépanneurs utilisent les emplacements livraison rue Sadi-Carnot et avenue Henri-Ginoux. Les remorquages vers Villejuif ou le 14e passent par le boulevard périphérique porte de Châtillon ou l'avenue Pierre-Brossolette. La proximité du 14e permet des interventions en moins de trente minutes en heure creuse. Montrouge (92, 92120) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 14e, Paris 13e, Villejuif, Paris 15e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie trajet Denfert.",
     "axes": [
       "Avenue Henri-Ginoux",
       "Rue Gabriel-Péri",
       "Avenue Pierre-Brossolette"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Porte de Châtillon",
+      "Place Jean-Jaurès"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie trajet Denfert",
@@ -466,7 +551,7 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "saint-denis": {
-    "intro": "À Saint-Denis, nos dépanneurs empruntent le plus souvent Avenue du Président-Wilson ou Boulevard Anatole-France pour rejoindre votre panne. Les deux-roues circulent sur l'avenue du Président-Wilson, le boulevard Anatole-France et la rue de la République, avec des livraisons vers le Pleyel et la Plaine. Les crevaisons surviennent sur les pavés du centre ancien et sur les joints du. Les batteries faiblissent sur les trajets quotidiens entre Saint-Denis et Paris via la porte de la Chapelle. Le boulevard périphérique porte de la Chapelle et l'A1 restent les axes principaux. Le stationnement deux-roues est dense autour de la gare; nos dépanneurs se positionnent rue de la Boulangerie et avenue Michelet pour intervenir. Saint-Denis (93, 93200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 30 et 48 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Saint-Ouen, Aubervilliers, Paris 18e, Paris 19e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : remorquage événement Stade de France. Les équipes traitent aussi : crevaison.",
+    "intro": "À Saint-Denis, nos dépanneurs empruntent le plus souvent Avenue du Président-Wilson ou Boulevard Anatole-France pour rejoindre votre panne. Saint-Denis, préfecture de Seine-Saint-Denis, englobe le Stade de France, le canal Saint-Denis et le centre historique autour de la basilique. Les deux-roues circulent sur l'avenue du Président-Wilson, le boulevard Anatole-France et la rue de la République, avec des livraisons vers le Pleyel et la Plaine. Les crevaisons surviennent sur les pavés du centre ancien et sur les joints du. Les batteries faiblissent sur les trajets quotidiens entre Saint-Denis et Paris via la porte de la Chapelle. Les remorquages lors d'événements au Stade de France imposent des plans de circulation spécifiques; nos conducteurs connaissent les accès autorisés côté canal. Le boulevard périphérique porte de la Chapelle et l'A1 restent les axes principaux. Le stationnement deux-roues est dense autour de la gare; nos dépanneurs se positionnent rue de la Boulangerie et avenue Michelet pour intervenir. Saint-Denis (93, 93200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 30 et 48 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Saint-Ouen, Aubervilliers, Paris 18e, Paris 19e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : remorquage événement Stade de France. Les équipes traitent aussi : crevaison.",
     "axes": [
       "Avenue du Président-Wilson",
       "Boulevard Anatole-France",
@@ -474,6 +559,8 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "Canal Saint-Denis"
     ],
     "landmarks": [
+      "Basilique de Saint-Denis",
+      "Stade de France",
       "Canal Saint-Denis",
       "Pleyel"
     ],
@@ -485,14 +572,18 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "montreuil": {
-    "intro": "À Montreuil, nos dépanneurs empruntent le plus souvent Avenue de la Résistance ou Boulevard de la Boissière pour rejoindre votre panne. Les batteries cèdent sur les scooters de livraison entre Montreuil et Belleville via la rue de Bagnolet. La ZFE métropole n'empêche pas nos plateaux Euro 6 d'intervenir sur l'ensemble de la commune. Montreuil (93, 93100) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 45 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 20e, Paris 11e, Paris 12e, Vincennes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison porte de Montreuil. Les équipes traitent aussi : batterie livraison Belleville.",
+    "intro": "À Montreuil, nos dépanneurs empruntent le plus souvent Avenue de la Résistance ou Boulevard de la Boissière pour rejoindre votre panne. Montreuil, limitrophe du 20e parisien, s'étend de la porte de Montreuil à Bas-Montreuil en passant par La Noue et le Bel-Air. Les deux-roues circulent sur l'avenue de la Résistance, le boulevard de la Boissière et la rue de Paris, avec des livraisons vers les ateliers d'artistes et entrepôts de La Noue. Les crevaisons fréquentent les pavés du centre-ville et les nids-de-poule autour de la porte de Montreuil en travaux. Les batteries cèdent sur les scooters de livraison entre Montreuil et Belleville via la rue de Bagnolet. Les remorquages vers Vincennes ou le 20e passent par le boulevard périphérique porte de Montreuil ou l'avenue Pasteur. La ZFE métropole n'empêche pas nos plateaux Euro 6 d'intervenir sur l'ensemble de la commune. Montreuil (93, 93100) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 45 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 20e, Paris 11e, Paris 12e, Vincennes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison porte de Montreuil. Les équipes traitent aussi : batterie livraison Belleville.",
     "axes": [
       "Avenue de la Résistance",
       "Boulevard de la Boissière",
       "Rue de Paris",
       "Avenue Pasteur"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Porte de Montreuil",
+      "La Noue",
+      "Hôtel de Ville"
+    ],
     "commonInterventions": [
       "Crevaison porte de Montreuil",
       "Batterie livraison Belleville",
@@ -501,13 +592,17 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "aubervilliers": {
-    "intro": "À Aubervilliers, nos dépanneurs empruntent le plus souvent Avenue Jean-Jaurès ou Boulevard Félix-Faure pour rejoindre votre panne. Les crevaisons surviennent sur les plates-bandes des zones logistiques et sur les nids-de-poule autour du port de la Villette. Les batteries faiblissent sur les scooters de livraison entre les entrepôts et Paris via la porte de la Villette. Les remorquages depuis les entrepôts imposent parfois des accès poids lourds; nos plateaux connaissent les voies de desserte. Le stationnement deux-roues est quasi absent dans les zones logistiques; les interventions se font sur voie de service ou parking visiteurs. Les créneaux de livraison Amazon et Cdiscount, très tôt le matin, concentrent les appels pour selles bloquées et batteries à plat sur les 125 cm³ de navette. Aubervilliers (93, 93300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 31 et 49 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 19e, Saint-Denis, Pantin, Paris 18e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie livraison entrepôt. Les équipes traitent aussi : crevaison zone logistique.",
+    "intro": "À Aubervilliers, nos dépanneurs empruntent le plus souvent Avenue Jean-Jaurès ou Boulevard Félix-Faure pour rejoindre votre panne. Aubervilliers, au nord de Paris, concentre entrepôts logistiques, zones commerciales et le canal Saint-Denis. Les crevaisons surviennent sur les plates-bandes des zones logistiques et sur les nids-de-poule autour du port de la Villette. Les batteries faiblissent sur les scooters de livraison entre les entrepôts et Paris via la porte de la Villette. Les remorquages depuis les entrepôts imposent parfois des accès poids lourds; nos plateaux connaissent les voies de desserte. Le stationnement deux-roues est quasi absent dans les zones logistiques; les interventions se font sur voie de service ou parking visiteurs. Les créneaux de livraison Amazon et Cdiscount, très tôt le matin, concentrent les appels pour selles bloquées et batteries à plat sur les 125 cm³ de navette. Aubervilliers (93, 93300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 31 et 49 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 19e, Saint-Denis, Pantin, Paris 18e) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie livraison entrepôt. Les équipes traitent aussi : crevaison zone logistique.",
     "axes": [
       "Avenue Jean-Jaurès",
       "Boulevard Félix-Faure",
-      "Rue Heurtault"
+      "Rue Heurtault",
+      "Canal Saint-Denis"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Canal Saint-Denis",
+      "Fort d'Aubervilliers"
+    ],
     "commonInterventions": [
       "Batterie livraison entrepôt",
       "Crevaison zone logistique",
@@ -531,13 +626,16 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "saint-ouen": {
-    "intro": "À Saint-Ouen, nos dépanneurs empruntent le plus souvent Avenue Michelet ou Boulevard Victor-Hugo pour rejoindre votre panne. Les deux-roues circulent sur l'avenue Michelet, le boulevard Victor-Hugo et la rue de la République, avec des livraisons vers les Puces et les entrepôts des Docks. Les remorquages vers Clichy ou Asnières passent par le boulevard Victor-Hugo ou le pont de Saint-Ouen. Le stationnement est saturé le samedi autour des Puces; nos dépanneurs privilégient les créneaux en semaine ou le dimanche matin. La circulation sur l'avenue Michelet reste l'axe principal pour une intervention rapide depuis Paris. Les stands d'antiquaires côté Paul Bert imposent un chargement soigné du plateau pour ne pas endommager les véhicules de collection garés en enfilade. Saint-Ouen (93, 93400) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 18e, Clichy, Asnières-sur-Seine, Saint-Denis) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison marché aux puces. Les équipes traitent aussi : batterie trajet Paris 18e.",
+    "intro": "À Saint-Ouen, nos dépanneurs empruntent le plus souvent Avenue Michelet ou Boulevard Victor-Hugo pour rejoindre votre panne. Les deux-roues circulent sur l'avenue Michelet, le boulevard Victor-Hugo et la rue de la République, avec des livraisons vers les Puces et les entrepôts des Docks. Les batteries faiblissent sur les trajets quotidiens entre Saint-Ouen et Paris 18e via la porte de Clignancourt. Les remorquages vers Clichy ou Asnières passent par le boulevard Victor-Hugo ou le pont de Saint-Ouen. Le stationnement est saturé le samedi autour des Puces; nos dépanneurs privilégient les créneaux en semaine ou le dimanche matin. La circulation sur l'avenue Michelet reste l'axe principal pour une intervention rapide depuis Paris. Les stands d'antiquaires côté Paul Bert imposent un chargement soigné du plateau pour ne pas endommager les véhicules de collection garés en enfilade. Saint-Ouen (93, 93400) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Paris 18e, Clichy, Asnières-sur-Seine, Saint-Denis) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison marché aux puces. Les équipes traitent aussi : batterie trajet Paris 18e.",
     "axes": [
       "Avenue Michelet",
       "Boulevard Victor-Hugo",
       "Rue de la République"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Porte de Clignancourt",
+      "Basilique de Saint-Denis"
+    ],
     "commonInterventions": [
       "Crevaison marché aux puces",
       "Batterie trajet Paris 18e",
@@ -561,13 +659,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "noisy-le-grand": {
-    "intro": "À Noisy-le-Grand, nos dépanneurs empruntent le plus souvent Avenue du Général-de-Gaulle ou Rue de Picardie pour rejoindre votre panne. Les crevaisons surviennent sur les plates-bandes des parkings souterrains des centres commerciaux et sur les nids-de-poule autour du. Les batteries faiblissent sur les trajets quotidiens entre Noisy et Paris via le. Les remorquages depuis les parkings des Arcades imposent des contraintes de hauteur; nos conducteurs connaissent les accès autorisés. L'A4 et le boulevard périphérique porte de Bagnolet restent les axes principaux. Le stationnement deux-roues est dense autour des centres commerciaux; nos dépanneurs se positionnent sur les voies de desserte pour intervenir. Noisy-le-Grand (93, 93160) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 35 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Montreuil, Vincennes, Bobigny, Aulnay-sous-Bois) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie trajet. Les équipes traitent aussi : remorquage parking centre commercial.",
+    "intro": "À Noisy-le-Grand, nos dépanneurs empruntent le plus souvent Avenue du Général-de-Gaulle ou Rue de Picardie pour rejoindre votre panne. Noisy-le-Grand, à l'est de Paris, mélange Mont d'Est, les Arcades et les quartiers résidentiels du Mont d'Est. Les crevaisons surviennent sur les plates-bandes des parkings souterrains des centres commerciaux et sur les nids-de-poule autour du. Les batteries faiblissent sur les trajets quotidiens entre Noisy et Paris via le. Les remorquages depuis les parkings des Arcades imposent des contraintes de hauteur; nos conducteurs connaissent les accès autorisés. L'A4 et le boulevard périphérique porte de Bagnolet restent les axes principaux. Le stationnement deux-roues est dense autour des centres commerciaux; nos dépanneurs se positionnent sur les voies de desserte pour intervenir. Noisy-le-Grand (93, 93160) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 35 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Montreuil, Vincennes, Bobigny, Aulnay-sous-Bois) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : batterie trajet. Les équipes traitent aussi : remorquage parking centre commercial.",
     "axes": [
       "Avenue du Général-de-Gaulle",
       "Rue de Picardie",
       "Avenue du Mont-d'Est"
     ],
     "landmarks": [
+      "Les Arcades",
       "Mont d'Est"
     ],
     "commonInterventions": [
@@ -598,7 +697,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "Avenue du Général-de-Gaulle",
       "Rue de Paris"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Lac de Créteil"
+    ],
     "commonInterventions": [
       "Batterie trajet",
       "Crevaison centre-ville",
@@ -613,7 +714,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "Boulevard de Stalingrad",
       "Rue Henri-Barbusse"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Île Saint-Germain"
+    ],
     "commonInterventions": [
       "Crevaison bords de Seine",
       "Batterie trajet Paris 13e",
@@ -644,7 +747,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "Rue de Fontenay",
       "Avenue du Château"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Château de Vincennes"
+    ],
     "commonInterventions": [
       "Crevaison pavés château",
       "Batterie trajet Nation",
@@ -673,7 +778,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "Rue de Paris",
       "Avenue de Gravelle"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Liberté"
+    ],
     "commonInterventions": [
       "Crevaison rue de Paris",
       "Batterie trajet Bercy",
@@ -726,13 +833,16 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "melun": {
-    "intro": "À Melun, nos dépanneurs empruntent le plus souvent avenue Thiers ou route de Montereau pour rejoindre votre panne. Les bords de Seine et les abords de la gare concentrent les arrêts courts des deux-roues en livraison ou en trajet domicile-travail. Les quais et le centre piéton imposent un dépannage rapide pour libé. L'A5 et la N104 facilitent l'arrivée depuis Paris; les secteurs sud vers Dammarie restent desservis en moins d'une heure. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Melun et votre point de panne exact. Melun (77, 77000) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 48 et 70 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Dammarie-les-Lys, Savigny-le-Temple, Lieusaint, Corbeil-Essonnes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison quai Seine. Les équipes traitent aussi : batterie moto gare.",
+    "intro": "À Melun, nos dépanneurs empruntent le plus souvent avenue Thiers ou route de Montereau pour rejoindre votre panne. Les bords de Seine et les abords de la gare concentrent les arrêts courts des deux-roues en livraison ou en trajet domicile-travail. Nos dépanneurs interviennent régulièrement pour crevaison quai seine, batterie moto gare et démarrage scooter centre autour de gare Melun. Les quais et le centre piéton imposent un dépannage rapide pour libé. L'A5 et la N104 facilitent l'arrivée depuis Paris; les secteurs sud vers Dammarie restent desservis en moins d'une heure. Le secteur place Saint-Jean concentre aussi des demandes de remorquage a5 lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Melun et votre point de panne exact. Melun (77, 77000) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 48 et 70 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Dammarie-les-Lys, Savigny-le-Temple, Lieusaint, Corbeil-Essonnes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison quai Seine. Les équipes traitent aussi : batterie moto gare.",
     "axes": [
       "avenue Thiers",
       "route de Montereau",
       "quai Hippolyte-Rossignol"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare Melun",
+      "place Saint-Jean"
+    ],
     "commonInterventions": [
       "Crevaison quai Seine",
       "Batterie moto gare",
@@ -741,11 +851,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "chelles": {
-    "intro": "À Chelles, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle pour rejoindre votre panne. Chelles, commune du Seine-et-Marne, se distingue comme ville résidentielle en lisière de la petite couronne, fortement connectée au. Parkings relais et zones commerciales permettent une intervention sans gêner les bus desservant la gare. Proximité immédiate de Noisy-le-Grand et du 93 : délais comparables à la petite couronne est. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Chelles et votre point de panne exact. Chelles (77, 77500) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Noisy-le-Grand, Torcy, Le Raincy, Livry-Gargan) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison avenue Général-de-Gaulle. Les équipes traitent aussi : batterie scooter.",
+    "intro": "À Chelles, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle ou route de Lagny pour rejoindre votre panne. Chelles, commune du Seine-et-Marne, se distingue comme ville résidentielle en lisière de la petite couronne, fortement connectée au. Parkings relais et zones commerciales permettent une intervention sans gêner les bus desservant la gare. Proximité immédiate de Noisy-le-Grand et du 93 : délais comparables à la petite couronne est. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Chelles et votre point de panne exact. Chelles (77, 77500) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Noisy-le-Grand, Torcy, Le Raincy, Livry-Gargan) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison avenue Général-de-Gaulle. Les équipes traitent aussi : batterie scooter.",
     "axes": [
-      "avenue du Général-de-Gaulle"
+      "avenue du Général-de-Gaulle",
+      "route de Lagny"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "centre commercial Chelles 2",
+      "parc du Souvenir"
+    ],
     "commonInterventions": [
       "Crevaison avenue Général-de-Gaulle",
       "Batterie scooter",
@@ -758,7 +872,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     "axes": [
       "avenue de la République"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare de Pontault-Combault"
+    ],
     "commonInterventions": [
       "Crevaison route de Boissise",
       "Batterie moto Carrefour",
@@ -780,7 +896,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
   "fontainebleau": {
     "intro": "Fontainebleau, commune du Seine-et-Marne, se distingue comme ville touristique et universitaire au cœur de la forêt, avec un centre historique et des quartiers pavillonnaires. L'affluence touristique et les étudiants en deux-roues compliquent le stationnement près du château et des résidences universitaires. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Fontainebleau et votre point de panne exact. Fontainebleau (77, 77300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 55 et 80 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Dammarie-les-Lys, Melun, Savigny-le-Temple, Corbeil-Essonnes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre historique. Les équipes traitent aussi : batterie moto INSEAD.",
     "axes": [],
-    "landmarks": [],
+    "landmarks": [
+      "château de Fontainebleau",
+      "gare Fontainebleau-Avon"
+    ],
     "commonInterventions": [
       "Crevaison centre historique",
       "Batterie moto INSEAD",
@@ -789,12 +908,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "torcy": {
-    "intro": "À Torcy, nos dépanneurs empruntent le plus souvent avenue de Lingenfeld ou route de Lagny pour rejoindre votre panne. Parkings souterrains et extérieurs du centre commercial facilitent le dépannage hors chaussée. Continuité directe avec Noisy-le-Grand et Chelles : délais proches de la petite couronne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Torcy et votre point de panne exact. Torcy (77, 77200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Lagny-sur-Marne, Chelles, Noisy-le-Grand, Pontault-Combault) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie scooter Bay 2.",
+    "intro": "À Torcy, nos dépanneurs empruntent le plus souvent avenue de Lingenfeld ou route de Lagny pour rejoindre votre panne. Torcy, commune du Seine-et-Marne, se distingue comme ville du secteur Marne-la-Vallée avec. Parkings souterrains et extérieurs du centre commercial facilitent le dépannage hors chaussée. Continuité directe avec Noisy-le-Grand et Chelles : délais proches de la petite couronne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Torcy et votre point de panne exact. Torcy (77, 77200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Lagny-sur-Marne, Chelles, Noisy-le-Grand, Pontault-Combault) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie scooter Bay 2.",
     "axes": [
       "avenue de Lingenfeld",
       "route de Lagny"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Marne"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie scooter Bay 2",
@@ -803,8 +924,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "lagny-sur-marne": {
-    "intro": "Lagny-sur-Marne, commune du Seine-et-Marne, se distingue comme ville de bords de Marne avec un centre ancien, des zones commerciales et une forte desserte vers Paris est. Les quais de Marne et le centre piéton voient circuler nombre de scooters de livraison le week-end et en soirée. Les zones commerciales en périphérie offrent plus d'espace pour une réparation sur place. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Lagny-sur-Marne et votre point de panne exact. Lagny-sur-Marne (77, 77400) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Torcy, Chelles, Roissy-en-Brie, Noisy-le-Grand) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison quai Marne. Les équipes traitent aussi : batterie moto centre.",
-    "axes": [],
+    "intro": "À Lagny-sur-Marne, nos dépanneurs empruntent le plus souvent route de Torcy pour rejoindre votre panne. Lagny-sur-Marne, commune du Seine-et-Marne, se distingue comme ville de bords de Marne avec un centre ancien, des zones commerciales et une forte desserte vers Paris est. Les quais de Marne et le centre piéton voient circuler nombre de scooters de livraison le week-end et en soirée. Les zones commerciales en périphérie offrent plus d'espace pour une réparation sur place. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Lagny-sur-Marne et votre point de panne exact. Lagny-sur-Marne (77, 77400) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Torcy, Chelles, Roissy-en-Brie, Noisy-le-Grand) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison quai Marne. Les équipes traitent aussi : batterie moto centre.",
+    "axes": [
+      "route de Torcy"
+    ],
     "landmarks": [
       "Marne"
     ],
@@ -820,7 +943,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     "axes": [
       "avenue du Général-Leclerc"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "château de Brie-Comte-Robert"
+    ],
     "commonInterventions": [
       "Crevaison route de Paris",
       "Batterie moto marché",
@@ -834,7 +959,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "avenue de la République",
       "route de Lieusaint"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare Combs-la-Ville–Quincy"
+    ],
     "commonInterventions": [
       "Crevaison avenue République",
       "Batterie scooter gare",
@@ -861,7 +988,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "avenue du Général-de-Gaulle",
       "route de Pontault"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "étang"
+    ],
     "commonInterventions": [
       "Crevaison centre Ozoir",
       "Batterie moto zone artisanale",
@@ -870,10 +999,11 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "roissy-en-brie": {
-    "intro": "Roissy-en-Brie, commune du Seine-et-Marne, se distingue comme ville résidentielle du secteur est parisien avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Roissy-en-Brie et votre point de panne exact. Roissy-en-Brie (77, 77680) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Pontault-Combault, Ozoir-la-Ferrière, Torcy, Noisy-le-Grand) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare. Les équipes traitent aussi : batterie scooter marché.",
+    "intro": "Roissy-en-Brie, commune du Seine-et-Marne, se distingue comme ville résidentielle du secteur est parisien avec. Place du marché et parkings de la gare : intervention rapide pour libé. Le secteur marché concentre aussi des demandes de remorquage vers brie-comte-robert lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Roissy-en-Brie et votre point de panne exact. Roissy-en-Brie (77, 77680) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Pontault-Combault, Ozoir-la-Ferrière, Torcy, Noisy-le-Grand) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare. Les équipes traitent aussi : batterie scooter marché.",
     "axes": [],
     "landmarks": [
-      "gare Roissy-en-Brie"
+      "gare Roissy-en-Brie",
+      "marché"
     ],
     "commonInterventions": [
       "Crevaison gare",
@@ -883,11 +1013,13 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "dammarie-les-lys": {
-    "intro": "À Dammarie-les-Lys, nos dépanneurs empruntent le plus souvent avenue du Lys pour rejoindre votre panne. Les zones commerciales et les axes vers Melun voient un trafic soutenu de deux-roues livreurs et pendulaires. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Dammarie-les-Lys et votre point de panne exact. Dammarie-les-Lys (77, 77190) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 48 et 70 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Melun, Savigny-le-Temple, Fontainebleau, Lieusaint) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison avenue du Lys. Les équipes traitent aussi : batterie moto Carrefour.",
+    "intro": "À Dammarie-les-Lys, nos dépanneurs empruntent le plus souvent avenue du Lys pour rejoindre votre panne. Dammarie-les-Lys, commune du Seine-et-Marne, se distingue comme commune de l'agglomération melunaise avec zones commerciales et quartiers denses le long de la Seine. Les zones commerciales et les axes vers Melun voient un trafic soutenu de deux-roues livreurs et pendulaires. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Dammarie-les-Lys et votre point de panne exact. Dammarie-les-Lys (77, 77190) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 48 et 70 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Melun, Savigny-le-Temple, Fontainebleau, Lieusaint) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison avenue du Lys. Les équipes traitent aussi : batterie moto Carrefour.",
     "axes": [
       "avenue du Lys"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Seine"
+    ],
     "commonInterventions": [
       "Crevaison avenue du Lys",
       "Batterie moto Carrefour",
@@ -896,9 +1028,11 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "provins": {
-    "intro": "Provins, commune du Seine-et-Marne, se distingue comme cité médiévale classée UNESCO à l'est de la Seine-et-Marne, avec tourisme et tissu rural périphérique. Les événements médiévaux et le tourisme estival multiplient les scooters de visiteurs sur les rues pavées du centre historique. Parkings périphériques obligatoires en haute saison : dépannage souvent sur les zones de stationnement visiteurs. Zone la plus éloignée du 77 couverte : délai annoncé plus long, intervention possible 24h/24. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Provins et votre point de panne exact. Provins (77, 77160) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 55 et 80 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Melun, Fontainebleau, Dammarie-les-Lys, Ozoir-la-Ferrière) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison remparts. Les équipes traitent aussi : batterie moto gare.",
+    "intro": "Provins, commune du Seine-et-Marne, se distingue comme cité médiévale classée UNESCO à l'est de la Seine-et-Marne, avec tourisme et tissu rural périphérique. Les événements médiévaux et le tourisme estival multiplient les scooters de visiteurs sur les rues pavées du centre historique. Parkings périphériques obligatoires en haute saison : dépannage souvent sur les zones de stationnement visiteurs. Zone la plus éloignée du 77 couverte : délai annoncé plus long, intervention possible 24h/24. Le secteur place du Châtel concentre aussi des demandes de remorquage vers melun lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Provins et votre point de panne exact. Provins (77, 77160) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 55 et 80 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Melun, Fontainebleau, Dammarie-les-Lys, Ozoir-la-Ferrière) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison remparts. Les équipes traitent aussi : batterie moto gare.",
     "axes": [],
-    "landmarks": [],
+    "landmarks": [
+      "place du Châtel"
+    ],
     "commonInterventions": [
       "Crevaison remparts",
       "Batterie moto gare",
@@ -907,14 +1041,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "versailles": {
-    "intro": "À Versailles, nos dépanneurs empruntent le plus souvent avenue de Paris ou boulevard de la Reine pour rejoindre votre panne. Versailles, commune du Yvelines, se distingue comme préfecture des Yvelines et ville patrimoniale majeure, avec château, administrations et quartiers denses. Le tourisme autour du château et les flux vers Paris génèrent un stationnement tendu où les deux-roues subissent crevaisons et vols de batterie. Rues étroites du centre : dépannage express pour éviter les fourrières sur les voies touristiques. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Versailles et votre point de panne exact. Versailles (78, 78000) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Le Chesnay-Rocquencourt, Guyancourt, Montigny-le-Bretonneux, Trappes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison avenue de Paris. Les équipes traitent aussi : batterie moto gare Chantiers.",
+    "intro": "Versailles, commune du Yvelines, se distingue comme préfecture des Yvelines et ville patrimoniale majeure, avec château, administrations et quartiers denses. Les scooters et motos circulent sur avenue de Paris, boulevard de la Reine et route de Saint-Cyr, avec des arrêts répétés près de château de Versailles et gare Versailles-Chantiers où le stationnement est surveillé en journée. Le tourisme autour du château et les flux vers Paris génèrent un stationnement tendu où les deux-roues subissent crevaisons et vols de batterie. Rues étroites du centre : dépannage express pour éviter les fourrières sur les voies touristiques. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Versailles et votre point de panne exact. Versailles (78, 78000) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Le Chesnay-Rocquencourt, Guyancourt, Montigny-le-Bretonneux, Trappes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison avenue de Paris. Les équipes traitent aussi : batterie moto gare Chantiers.",
     "axes": [
       "avenue de Paris",
       "boulevard de la Reine",
       "route de Saint-Cyr"
     ],
     "landmarks": [
-      "château de Versailles"
+      "château de Versailles",
+      "gare Versailles-Chantiers"
     ],
     "commonInterventions": [
       "Crevaison avenue de Paris",
@@ -924,13 +1059,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "saint-germain-en-laye": {
-    "intro": "À Saint-Germain-en-Laye, nos dépanneurs empruntent le plus souvent avenue du Général-Leclerc ou rue de Pologne pour rejoindre votre panne. Saint-Germain-en-Laye, commune du Yvelines, se distingue comme ville historique des bords de Seine avec château,. Stationnement réglementé en centre : intervention discrète sur place quand la chaussée le permet. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Saint-Germain-en-Laye et votre point de panne exact. Saint-Germain-en-Laye (78, 78100) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Chatou, Poissy, Rueil-Malmaison, Houilles) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto marché.",
+    "intro": "À Saint-Germain-en-Laye, nos dépanneurs empruntent le plus souvent avenue du Général-Leclerc ou rue de Pologne pour rejoindre votre panne. Saint-Germain-en-Laye, commune du Yvelines, se distingue comme ville historique des bords de Seine avec château,. Stationnement réglementé en centre : intervention discrète sur place quand la chaussée le permet. Le secteur marché concentre aussi des demandes de remorquage vers poissy lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Saint-Germain-en-Laye et votre point de panne exact. Saint-Germain-en-Laye (78, 78100) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Chatou, Poissy, Rueil-Malmaison, Houilles) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto marché.",
     "axes": [
       "avenue du Général-Leclerc",
       "rue de Pologne"
     ],
     "landmarks": [
-      "château de Saint-Germain"
+      "château de Saint-Germain",
+      "marché"
     ],
     "commonInterventions": [
       "Crevaison",
@@ -940,11 +1076,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "poissy": {
-    "intro": "À Poissy, nos dépanneurs empruntent le plus souvent boulevard Gambetta pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Poissy et votre point de panne exact. Poissy (78, 78300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Saint-Germain-en-Laye, Conflans-Sainte-Honorine, Chatou, Houilles) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison boulevard Gambetta. Les équipes traitent aussi : batterie moto gare.",
+    "intro": "À Poissy, nos dépanneurs empruntent le plus souvent boulevard Gambetta pour rejoindre votre panne. Poissy, commune du Yvelines, se distingue comme ville de bords de Seine avec usine Stellantis, centre-ville et desserte. Nos dépanneurs interviennent régulièrement pour crevaison boulevard gambetta, batterie moto gare et démarrage scooter usine autour de Seine. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Poissy et votre point de panne exact. Poissy (78, 78300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Saint-Germain-en-Laye, Conflans-Sainte-Honorine, Chatou, Houilles) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison boulevard Gambetta. Les équipes traitent aussi : batterie moto gare.",
     "axes": [
       "boulevard Gambetta"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare Poissy",
+      "Seine"
+    ],
     "commonInterventions": [
       "Crevaison boulevard Gambetta",
       "Batterie moto gare",
@@ -953,11 +1092,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "conflans-sainte-honorine": {
-    "intro": "À Conflans-Sainte-Honorine, nos dépanneurs empruntent le plus souvent rue Maurice-Berteaux pour rejoindre votre panne. Conflans-Sainte-Honorine, commune du Yvelines, se distingue comme capitale de la batellerie au confluent Seine-Oise, avec un port actif et un centre-ville pittoresque. Les quais et le centre piéton compliquent la circulation des livreurs en scooter le long de la Seine. Rues pentues et pavées près du port : sécurisation du véhicule prioritaire avant remorquage. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Conflans-Sainte-Honorine et votre point de panne exact. Conflans-Sainte-Honorine (78, 78700) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Cergy, Herblay-sur-Seine, Pontoise, Poissy) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison rue Maurice-Berteaux. Les équipes traitent aussi : batterie moto port.",
+    "intro": "À Conflans-Sainte-Honorine, nos dépanneurs empruntent le plus souvent rue Maurice-Berteaux pour rejoindre votre panne. Conflans-Sainte-Honorine, commune du Yvelines, se distingue comme capitale de la batellerie au confluent Seine-Oise, avec un port actif et un centre-ville pittoresque. Les quais et le centre piéton compliquent la circulation des livreurs en scooter le long de la Seine. Nos dépanneurs interviennent régulièrement pour crevaison rue maurice-berteaux, batterie moto port et démarrage scooter gare autour de gare Conflans. Rues pentues et pavées près du port : sécurisation du véhicule prioritaire avant remorquage. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Conflans-Sainte-Honorine et votre point de panne exact. Conflans-Sainte-Honorine (78, 78700) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Cergy, Herblay-sur-Seine, Pontoise, Poissy) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison rue Maurice-Berteaux. Les équipes traitent aussi : batterie moto port.",
     "axes": [
       "rue Maurice-Berteaux"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare Conflans",
+      "place Fouillère"
+    ],
     "commonInterventions": [
       "Crevaison rue Maurice-Berteaux",
       "Batterie moto port",
@@ -966,11 +1108,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "mantes-la-jolie": {
-    "intro": "À Mantes-la-Jolie, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle pour rejoindre votre panne. Quartiers denses et zones commerciales : dépannage adapté au contexte urbain ou périurbain. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Mantes-la-Jolie et votre point de panne exact. Mantes-la-Jolie (78, 78200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 48 et 70 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Les Mureaux, Poissy, Plaisir, Cergy) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre Mantes. Les équipes traitent aussi : batterie moto gare.",
+    "intro": "À Mantes-la-Jolie, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle ou route de Paris pour rejoindre votre panne. Mantes-la-Jolie, commune du Yvelines, se distingue comme sous-préfecture des Yvelines en amont de la Seine, avec centre historique et zones commerciales. Quartiers denses et zones commerciales : dépannage adapté au contexte urbain ou périurbain. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Mantes-la-Jolie et votre point de panne exact. Mantes-la-Jolie (78, 78200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 48 et 70 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Les Mureaux, Poissy, Plaisir, Cergy) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre Mantes. Les équipes traitent aussi : batterie moto gare.",
     "axes": [
-      "avenue du Général-de-Gaulle"
+      "avenue du Général-de-Gaulle",
+      "route de Paris"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Seine"
+    ],
     "commonInterventions": [
       "Crevaison centre Mantes",
       "Batterie moto gare",
@@ -979,12 +1124,13 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "sartrouville": {
-    "intro": "À Sartrouville, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Sartrouville et votre point de panne exact. Sartrouville (78, 78500) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Houilles, Bezons, Argenteuil, Colombes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
+    "intro": "À Sartrouville, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle pour rejoindre votre panne. Sartrouville, commune du Yvelines, se distingue comme grande commune des bords de Seine entre Paris et Saint-Germain, avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Sartrouville et votre point de panne exact. Sartrouville (78, 78500) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Houilles, Bezons, Argenteuil, Colombes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
     "axes": [
       "avenue du Général-de-Gaulle"
     ],
     "landmarks": [
-      "gare Sartrouville"
+      "gare Sartrouville",
+      "Seine"
     ],
     "commonInterventions": [
       "Crevaison",
@@ -994,9 +1140,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "houilles": {
-    "intro": "Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Houilles et votre point de panne exact. Houilles (78, 78800) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Bezons, Sartrouville, Nanterre, Colombes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Houilles. Les équipes traitent aussi : batterie moto marché.",
-    "axes": [],
-    "landmarks": [],
+    "intro": "À Houilles, nos dépanneurs empruntent le plus souvent route de Sartrouville pour rejoindre votre panne. Houilles, commune du Yvelines, se distingue comme ville résidentielle entre Seine et. Nos dépanneurs interviennent régulièrement pour crevaison gare houilles, batterie moto marché et démarrage scooter centre autour de Seine. Le secteur marché concentre aussi des demandes de remorquage vers sartrouville lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Houilles et votre point de panne exact. Houilles (78, 78800) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Bezons, Sartrouville, Nanterre, Colombes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Houilles. Les équipes traitent aussi : batterie moto marché.",
+    "axes": [
+      "route de Sartrouville"
+    ],
+    "landmarks": [
+      "Seine",
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison gare Houilles",
       "Batterie moto marché",
@@ -1036,7 +1187,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "rue du Général-de-Gaulle",
       "route de Chartres"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison centre Rambouillet",
       "Batterie moto forêt",
@@ -1045,9 +1198,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "plaisir": {
-    "intro": "À Plaisir, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Plaisir, commune du Yvelines, se distingue comme commune résidentielle du secteur SQY ouest avec zones commerciales et desserte vers Versailles. Le centre commercial et la gare attirent livreurs et pendulaires; crevaisons sur les parkings en pente. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Plaisir et votre point de panne exact. Plaisir (78, 78370) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Trappes, Montigny-le-Bretonneux, Guyancourt, Versailles) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre commercial Plaisir. Les équipes traitent aussi : batterie moto gare.",
+    "intro": "À Plaisir, nos dépanneurs empruntent le plus souvent avenue de la République ou route de Trappes pour rejoindre votre panne. Plaisir, commune du Yvelines, se distingue comme commune résidentielle du secteur SQY ouest avec zones commerciales et desserte vers Versailles. Le centre commercial et la gare attirent livreurs et pendulaires; crevaisons sur les parkings en pente. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Plaisir et votre point de panne exact. Plaisir (78, 78370) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Trappes, Montigny-le-Bretonneux, Guyancourt, Versailles) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre commercial Plaisir. Les équipes traitent aussi : batterie moto gare.",
     "axes": [
-      "avenue de la République"
+      "avenue de la République",
+      "route de Trappes"
     ],
     "landmarks": [],
     "commonInterventions": [
@@ -1058,9 +1212,11 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "les-mureaux": {
-    "intro": "Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Les Mureaux et votre point de panne exact. Les Mureaux (78, 78130) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 42 et 62 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Poissy, Cergy, Conflans-Sainte-Honorine, Mantes-la-Jolie) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison zone Airbus. Les équipes traitent aussi : batterie moto gare.",
+    "intro": "Les changements de poste chez Airbus et les trajets le long de la Seine génèrent des pannes matinales récurrentes. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Les Mureaux et votre point de panne exact. Les Mureaux (78, 78130) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 42 et 62 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Poissy, Cergy, Conflans-Sainte-Honorine, Mantes-la-Jolie) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison zone Airbus. Les équipes traitent aussi : batterie moto gare.",
     "axes": [],
-    "landmarks": [],
+    "landmarks": [
+      "Seine"
+    ],
     "commonInterventions": [
       "Crevaison zone Airbus",
       "Batterie moto gare",
@@ -1069,11 +1225,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "chatou": {
-    "intro": "À Chatou, nos dépanneurs empruntent le plus souvent avenue du Maréchal-Foch pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Chatou et votre point de panne exact. Chatou (78, 78400) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Rueil-Malmaison, Nanterre, Houilles, Saint-Germain-en-Laye) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison bords de Seine. Les équipes traitent aussi : batterie moto.",
+    "intro": "À Chatou, nos dépanneurs empruntent le plus souvent route de Maisons-Laffitte ou avenue du Maréchal-Foch pour rejoindre votre panne. Chatou, commune du Yvelines, se distingue comme commune des bords de Seine prisée, avec impressionnistes,. Le secteur Ile des Impressionnistes concentre aussi des demandes de remorquage vers rueil lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Chatou et votre point de panne exact. Chatou (78, 78400) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Rueil-Malmaison, Nanterre, Houilles, Saint-Germain-en-Laye) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison bords de Seine. Les équipes traitent aussi : batterie moto.",
     "axes": [
+      "route de Maisons-Laffitte",
       "avenue du Maréchal-Foch"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Seine",
+      "Ile des Impressionnistes"
+    ],
     "commonInterventions": [
       "Crevaison bords de Seine",
       "Batterie moto",
@@ -1086,7 +1246,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     "axes": [
       "avenue de Versailles"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "centre commercial Parly 2"
+    ],
     "commonInterventions": [
       "Crevaison Parly 2",
       "Batterie moto match PSG",
@@ -1095,9 +1257,13 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "guyancourt": {
-    "intro": "Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Guyancourt et votre point de panne exact. Guyancourt (78, 78280) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Montigny-le-Bretonneux, Versailles, Trappes, Le Chesnay-Rocquencourt) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison université. Les équipes traitent aussi : batterie moto technopole.",
-    "axes": [],
-    "landmarks": [],
+    "intro": "À Guyancourt, nos dépanneurs empruntent le plus souvent route de Trappes pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Guyancourt et votre point de panne exact. Guyancourt (78, 78280) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Montigny-le-Bretonneux, Versailles, Trappes, Le Chesnay-Rocquencourt) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison université. Les équipes traitent aussi : batterie moto technopole.",
+    "axes": [
+      "route de Trappes"
+    ],
+    "landmarks": [
+      "Centre commercial"
+    ],
     "commonInterventions": [
       "Crevaison université",
       "Batterie moto technopole",
@@ -1106,11 +1272,13 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "evry-courcouronnes": {
-    "intro": "À Évry-Courcouronnes, nos dépanneurs empruntent le plus souvent boulevard des Coquibus pour rejoindre votre panne. Évry-Courcouronnes, commune du Essonne, se distingue comme préfecture de l'Essonne avec cathédrale, université et pôle administratif du sud IDF. Les axes vers Corbeil et la gare concentrent les deux-roues livreurs et étudiants aux heures de pointe. Nos dépanneurs interviennent régulièrement pour crevaison boulevard coquibus, batterie moto gare et démarrage scooter université autour de gare Évry-Courcouronnes. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Évry-Courcouronnes et votre point de panne exact. Évry-Courcouronnes (91, 91000) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Corbeil-Essonnes, Grigny, Viry-Châtillon, Draveil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison boulevard Coquibus. Les équipes traitent aussi : batterie moto gare.",
+    "intro": "À Évry-Courcouronnes, nos dépanneurs empruntent le plus souvent boulevard des Coquibus ou route de Corbeil pour rejoindre votre panne. Évry-Courcouronnes, commune du Essonne, se distingue comme préfecture de l'Essonne avec cathédrale, université et pôle administratif du sud IDF. Les axes vers Corbeil et la gare concentrent les deux-roues livreurs et étudiants aux heures de pointe. Nos dépanneurs interviennent régulièrement pour crevaison boulevard coquibus, batterie moto gare et démarrage scooter université autour de gare Évry-Courcouronnes. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Évry-Courcouronnes et votre point de panne exact. Évry-Courcouronnes (91, 91000) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Corbeil-Essonnes, Grigny, Viry-Châtillon, Draveil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison boulevard Coquibus. Les équipes traitent aussi : batterie moto gare.",
     "axes": [
-      "boulevard des Coquibus"
+      "boulevard des Coquibus",
+      "route de Corbeil"
     ],
     "landmarks": [
+      "Aguado",
       "gare Évry-Courcouronnes"
     ],
     "commonInterventions": [
@@ -1121,11 +1289,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "massy": {
-    "intro": "À Massy, nos dépanneurs empruntent le plus souvent avenue Carnot pour rejoindre votre panne. Massy, commune du Essonne, se distingue comme pôle multimodal majeur avec TGV,. La gare TGV et les parkings relais voient des centaines de scooters; batteries à plat après stationnement prolongé. Interventions sur les parkings P du pôle gare avec localisation GPS précise. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Massy et votre point de panne exact. Massy (91, 91300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Palaiseau, Antony, Longjumeau, Fresnes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Massy. Les équipes traitent aussi : batterie moto Village O.",
+    "intro": "À Massy, nos dépanneurs empruntent le plus souvent avenue Carnot ou route de Corbeil pour rejoindre votre panne. Massy, commune du Essonne, se distingue comme pôle multimodal majeur avec TGV,. La gare TGV et les parkings relais voient des centaines de scooters; batteries à plat après stationnement prolongé. Interventions sur les parkings P du pôle gare avec localisation GPS précise. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Massy et votre point de panne exact. Massy (91, 91300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Palaiseau, Antony, Longjumeau, Fresnes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Massy. Les équipes traitent aussi : batterie moto Village O.",
     "axes": [
-      "avenue Carnot"
+      "avenue Carnot",
+      "route de Corbeil"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Opéra de Massy",
+      "Antoine de Saint-Exupéry"
+    ],
     "commonInterventions": [
       "Crevaison gare Massy",
       "Batterie moto Village O",
@@ -1140,7 +1312,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "avenue du Général-Leclerc"
     ],
     "landmarks": [
-      "École Polytechnique"
+      "École Polytechnique",
+      "gare Palaiseau",
+      "Hôtel de Ville"
     ],
     "commonInterventions": [
       "Crevaison Polytechnique",
@@ -1152,7 +1326,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
   "corbeil-essonnes": {
     "intro": "Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Corbeil-Essonnes et votre point de panne exact. Corbeil-Essonnes (91, 91100) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Évry-Courcouronnes, Lieusaint, Savigny-le-Temple, Combs-la-Ville) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Marques Avenue. Les équipes traitent aussi : batterie moto gare.",
     "axes": [],
-    "landmarks": [],
+    "landmarks": [
+      "Seine",
+      "gare Corbeil"
+    ],
     "commonInterventions": [
       "Crevaison Marques Avenue",
       "Batterie moto gare",
@@ -1161,13 +1338,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "savigny-sur-orge": {
-    "intro": "À Savigny-sur-Orge, nos dépanneurs empruntent le plus souvent avenue Charles-de-Gaulle pour rejoindre votre panne. Savigny-sur-Orge, commune du Essonne, se distingue comme ville de l'Essonne nord avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Savigny-sur-Orge et votre point de panne exact. Savigny-sur-Orge (91, 91600) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Viry-Châtillon, Grigny, Sainte-Geneviève-des-Bois, Longjumeau) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto marché.",
+    "intro": "À Savigny-sur-Orge, nos dépanneurs empruntent le plus souvent avenue Charles-de-Gaulle ou route de Longjumeau pour rejoindre votre panne. Savigny-sur-Orge, commune du Essonne, se distingue comme ville de l'Essonne nord avec. Le secteur marché concentre aussi des demandes de remorquage vers athis-mons lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Savigny-sur-Orge et votre point de panne exact. Savigny-sur-Orge (91, 91600) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Viry-Châtillon, Grigny, Sainte-Geneviève-des-Bois, Longjumeau) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto marché.",
     "axes": [
-      "avenue Charles-de-Gaulle"
+      "avenue Charles-de-Gaulle",
+      "route de Longjumeau"
     ],
     "landmarks": [
       "gare Savigny-sur-Orge",
-      "Orge"
+      "Orge",
+      "marché"
     ],
     "commonInterventions": [
       "Crevaison",
@@ -1190,13 +1369,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "viry-chatillon": {
-    "intro": "À Viry-Châtillon, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle ou route de Grigny pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Viry-Châtillon et votre point de panne exact. Viry-Châtillon (91, 91170) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Grigny, Draveil, Savigny-sur-Orge, Athis-Mons) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Grand Viry. Les équipes traitent aussi : batterie moto.",
+    "intro": "À Viry-Châtillon, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle ou route de Grigny pour rejoindre votre panne. Viry-Châtillon, commune du Essonne, se distingue comme ville de bords de Seine avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Viry-Châtillon et votre point de panne exact. Viry-Châtillon (91, 91170) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Grigny, Draveil, Savigny-sur-Orge, Athis-Mons) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Grand Viry. Les équipes traitent aussi : batterie moto.",
     "axes": [
       "avenue du Général-de-Gaulle",
       "route de Grigny"
     ],
     "landmarks": [
-      "gare Viry-Châtillon"
+      "gare Viry-Châtillon",
+      "Seine"
     ],
     "commonInterventions": [
       "Crevaison Grand Viry",
@@ -1206,11 +1386,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "grigny": {
-    "intro": "À Grigny, nos dépanneurs empruntent le plus souvent route de Corbeil pour rejoindre votre panne. Grigny, commune du Essonne, se distingue comme commune du sud Essonne avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Grigny et votre point de panne exact. Grigny (91, 91350) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Viry-Châtillon, Savigny-sur-Orge, Sainte-Geneviève-des-Bois, Draveil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Grande Borne. Les équipes traitent aussi : batterie moto.",
+    "intro": "À Grigny, nos dépanneurs empruntent le plus souvent route de Corbeil pour rejoindre votre panne. Grigny, commune du Essonne, se distingue comme commune du sud Essonne avec. Le secteur Orge concentre aussi des demandes de remorquage vers viry lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Grigny et votre point de panne exact. Grigny (91, 91350) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Viry-Châtillon, Savigny-sur-Orge, Sainte-Geneviève-des-Bois, Draveil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Grande Borne. Les équipes traitent aussi : batterie moto.",
     "axes": [
       "route de Corbeil"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "La Grande Borne",
+      "Centre commercial",
+      "Orge"
+    ],
     "commonInterventions": [
       "Crevaison Grande Borne",
       "Batterie moto",
@@ -1238,7 +1422,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "route de Corbeil",
       "avenue de la République"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare Sainte-Geneviève",
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto marché",
@@ -1251,7 +1438,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     "axes": [
       "route de Corbeil"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare Longjumeau",
+      "Bièvre"
+    ],
     "commonInterventions": [
       "Crevaison gare Longjumeau",
       "Batterie moto centre",
@@ -1264,7 +1454,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     "axes": [
       "avenue de l'Aubrac"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Hôtel de Ville"
+    ],
     "commonInterventions": [
       "Crevaison Ulis 2",
       "Batterie moto zone tertiaire",
@@ -1273,8 +1465,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "yerres": {
-    "intro": "Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Yerres et votre point de panne exact. Yerres (91, 91330) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Montgeron, Draveil, Athis-Mons, Choisy-le-Roi) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Yerres. Les équipes traitent aussi : batterie moto Parc Grange.",
-    "axes": [],
+    "intro": "À Yerres, nos dépanneurs empruntent le plus souvent route de Corbeil pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Yerres et votre point de panne exact. Yerres (91, 91330) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Montgeron, Draveil, Athis-Mons, Choisy-le-Roi) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Yerres. Les équipes traitent aussi : batterie moto Parc Grange.",
+    "axes": [
+      "route de Corbeil"
+    ],
     "landmarks": [
       "gare Yerres"
     ],
@@ -1286,9 +1480,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "draveil": {
-    "intro": "Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Draveil et votre point de panne exact. Draveil (91, 91210) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Viry-Châtillon, Athis-Mons, Montgeron, Grigny) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre Draveil. Les équipes traitent aussi : batterie moto Seine.",
-    "axes": [],
-    "landmarks": [],
+    "intro": "À Draveil, nos dépanneurs empruntent le plus souvent route de Corbeil pour rejoindre votre panne. Draveil, commune du Essonne, se distingue comme ville de bords de Seine avec quartiers résidentiels et desserte vers Juvisy. Les bords de Seine et les axes vers Corbeil voient des scooters en transit vers le 94. Le secteur Mainville concentre aussi des demandes de remorquage juvisy lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Draveil et votre point de panne exact. Draveil (91, 91210) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Viry-Châtillon, Athis-Mons, Montgeron, Grigny) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre Draveil. Les équipes traitent aussi : batterie moto Seine.",
+    "axes": [
+      "route de Corbeil"
+    ],
+    "landmarks": [
+      "Seine",
+      "Mainville"
+    ],
     "commonInterventions": [
       "Crevaison centre Draveil",
       "Batterie moto Seine",
@@ -1297,12 +1496,13 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "montgeron": {
-    "intro": "À Montgeron, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Les sorties en forêt le week-end multiplient les crevaisons sur chemins mal éclairés. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Montgeron et votre point de panne exact. Montgeron (91, 91230) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Yerres, Draveil, Athis-Mons, Viry-Châtillon) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison forêt Sénart. Les équipes traitent aussi : batterie moto gare.",
+    "intro": "À Montgeron, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Les sorties en forêt le week-end multiplient les crevaisons sur chemins mal éclairés. Le secteur étang concentre aussi des demandes de remorquage yerres lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Montgeron et votre point de panne exact. Montgeron (91, 91230) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Yerres, Draveil, Athis-Mons, Viry-Châtillon) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison forêt Sénart. Les équipes traitent aussi : batterie moto gare.",
     "axes": [
       "avenue de la République"
     ],
     "landmarks": [
-      "gare Montgeron"
+      "gare Montgeron",
+      "étang"
     ],
     "commonInterventions": [
       "Crevaison forêt Sénart",
@@ -1312,9 +1512,11 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "argenteuil": {
-    "intro": "Les axes vers Paris et les zones commerciales concentrent livreurs et pendulaires en scooter. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Argenteuil et votre point de panne exact. Argenteuil (95, 95100) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Colombes, Bezons, Gennevilliers, Sartrouville) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto Val d'Argent.",
+    "intro": "Argenteuil, commune du Val-d'Oise, se distingue comme plus grande ville du Val-d'Oise avec bords de Seine,. Les axes vers Paris et les zones commerciales concentrent livreurs et pendulaires en scooter. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Argenteuil et votre point de panne exact. Argenteuil (95, 95100) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Colombes, Bezons, Gennevilliers, Sartrouville) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto Val d'Argent.",
     "axes": [],
-    "landmarks": [],
+    "landmarks": [
+      "Seine"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto Val d'Argent",
@@ -1328,7 +1530,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "avenue de la Constellation",
       "boulevard du Port"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "préfecture Cergy"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto 3 Fontaines",
@@ -1337,11 +1541,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "sarcelles": {
-    "intro": "À Sarcelles, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Sarcelles, commune du Val-d'Oise, se distingue comme grande ville du Val-d'Oise avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Sarcelles et votre point de panne exact. Sarcelles (95, 95200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Montmorency, Garges-lès-Gonesse, Gonesse, Enghien-les-Bains) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto Loisirs.",
+    "intro": "À Sarcelles, nos dépanneurs empruntent le plus souvent avenue de la République ou route de Gonesse pour rejoindre votre panne. Sarcelles, commune du Val-d'Oise, se distingue comme grande ville du Val-d'Oise avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Sarcelles et votre point de panne exact. Sarcelles (95, 95200) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Montmorency, Garges-lès-Gonesse, Gonesse, Enghien-les-Bains) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto Loisirs.",
     "axes": [
-      "avenue de la République"
+      "avenue de la République",
+      "route de Gonesse"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto Loisirs",
@@ -1350,11 +1557,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "garges-les-gonesse": {
-    "intro": "À Garges-lès-Gonesse, nos dépanneurs empruntent le plus souvent avenue de la Division-Leclerc pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Garges-lès-Gonesse et votre point de panne exact. Garges-lès-Gonesse (95, 95140) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Sarcelles, Montmorency, Enghien-les-Bains, Ermont) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre Garges. Les équipes traitent aussi : batterie moto zone commerciale.",
+    "intro": "À Garges-lès-Gonesse, nos dépanneurs empruntent le plus souvent avenue de la Division-Leclerc ou route de Sarcelles pour rejoindre votre panne. Le secteur marché concentre aussi des demandes de remorquage sarcelles lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Garges-lès-Gonesse et votre point de panne exact. Garges-lès-Gonesse (95, 95140) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Sarcelles, Montmorency, Enghien-les-Bains, Ermont) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre Garges. Les équipes traitent aussi : batterie moto zone commerciale.",
     "axes": [
-      "avenue de la Division-Leclerc"
+      "avenue de la Division-Leclerc",
+      "route de Sarcelles"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison centre Garges",
       "Batterie moto zone commerciale",
@@ -1363,10 +1573,13 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "franconville": {
-    "intro": "Franconville, commune du Val-d'Oise, se distingue comme ville résidentielle du Val-d'Oise avec. Rues commerçantes autour de la gare : dépannage sur place sans bloquer le bus 367. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Franconville et votre point de panne exact. Franconville (95, 95130) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Ermont, Taverny, Argenteuil, Herblay-sur-Seine) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
-    "axes": [],
+    "intro": "À Franconville, nos dépanneurs empruntent le plus souvent route de Pontoise pour rejoindre votre panne. Franconville, commune du Val-d'Oise, se distingue comme ville résidentielle du Val-d'Oise avec. Rues commerçantes autour de la gare : dépannage sur place sans bloquer le bus 367. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Franconville et votre point de panne exact. Franconville (95, 95130) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Ermont, Taverny, Argenteuil, Herblay-sur-Seine) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
+    "axes": [
+      "route de Pontoise"
+    ],
     "landmarks": [
-      "gare Franconville"
+      "gare Franconville",
+      "marché"
     ],
     "commonInterventions": [
       "Crevaison",
@@ -1376,12 +1589,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "ermont": {
-    "intro": "À Ermont, nos dépanneurs empruntent le plus souvent avenue de la République ou route de Franconville pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Ermont et votre point de panne exact. Ermont (95, 95120) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Franconville, Enghien-les-Bains, Montmorency, Argenteuil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
+    "intro": "À Ermont, nos dépanneurs empruntent le plus souvent avenue de la République ou route de Franconville pour rejoindre votre panne. Le secteur marché concentre aussi des demandes de remorquage franconville lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Ermont et votre point de panne exact. Ermont (95, 95120) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Franconville, Enghien-les-Bains, Montmorency, Argenteuil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
     "axes": [
       "avenue de la République",
       "route de Franconville"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto centre",
@@ -1390,11 +1605,13 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "montmorency": {
-    "intro": "À Montmorency, nos dépanneurs empruntent le plus souvent avenue Charles-de-Gaulle pour rejoindre votre panne. Montmorency, commune du Val-d'Oise, se distingue comme ville résidentielle prisée du Val-d'Oise avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Montmorency et votre point de panne exact. Montmorency (95, 95160) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Enghien-les-Bains, Épinay-sur-Seine, Sarcelles, Ermont) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
+    "intro": "À Montmorency, nos dépanneurs empruntent le plus souvent avenue Charles-de-Gaulle pour rejoindre votre panne. Montmorency, commune du Val-d'Oise, se distingue comme ville résidentielle prisée du Val-d'Oise avec. Le secteur marché concentre aussi des demandes de remorquage enghien lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Montmorency et votre point de panne exact. Montmorency (95, 95160) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Enghien-les-Bains, Épinay-sur-Seine, Sarcelles, Ermont) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
     "axes": [
       "avenue Charles-de-Gaulle"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto centre",
@@ -1403,9 +1620,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "enghien-les-bains": {
-    "intro": "À Enghien-les-Bains, nos dépanneurs empruntent le plus souvent avenue de Ceinture pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Enghien-les-Bains et votre point de panne exact. Enghien-les-Bains (95, 95880) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Épinay-sur-Seine, Montmorency, Ermont, Gennevilliers) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison lac Enghien. Les équipes traitent aussi : batterie moto casino.",
+    "intro": "À Enghien-les-Bains, nos dépanneurs empruntent le plus souvent avenue de Ceinture ou route de Montmorency pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Enghien-les-Bains et votre point de panne exact. Enghien-les-Bains (95, 95880) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Épinay-sur-Seine, Montmorency, Ermont, Gennevilliers) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison lac Enghien. Les équipes traitent aussi : batterie moto casino.",
     "axes": [
-      "avenue de Ceinture"
+      "avenue de Ceinture",
+      "route de Montmorency"
     ],
     "landmarks": [],
     "commonInterventions": [
@@ -1421,7 +1639,8 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "route de Roissy"
     ],
     "landmarks": [
-      "gare Goussainville"
+      "gare Goussainville",
+      "marché"
     ],
     "commonInterventions": [
       "Crevaison",
@@ -1431,11 +1650,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "taverny": {
-    "intro": "À Taverny, nos dépanneurs empruntent le plus souvent avenue de la Gare pour rejoindre votre panne. Taverny, commune du Val-d'Oise, se distingue comme ville résidentielle du Val-d'Oise ouest avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Taverny et votre point de panne exact. Taverny (95, 95150) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Franconville, Ermont, Herblay-sur-Seine, Montmorency) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
+    "intro": "À Taverny, nos dépanneurs empruntent le plus souvent avenue de la Gare ou route de Pontoise pour rejoindre votre panne. Taverny, commune du Val-d'Oise, se distingue comme ville résidentielle du Val-d'Oise ouest avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Taverny et votre point de panne exact. Taverny (95, 95150) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Franconville, Ermont, Herblay-sur-Seine, Montmorency) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
     "axes": [
-      "avenue de la Gare"
+      "avenue de la Gare",
+      "route de Pontoise"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare Taverny",
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto centre",
@@ -1444,9 +1667,11 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "bezons": {
-    "intro": "Les axes vers La Défense et Colombes voient un trafic dense de deux-roues. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Bezons et votre point de panne exact. Bezons (95, 95870) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Houilles, Sartrouville, Colombes, Argenteuil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Seine Bezons. Les équipes traitent aussi : batterie moto zone commerciale.",
+    "intro": "Bezons, commune du Val-d'Oise, se distingue comme commune des bords de Seine entre Argenteuil et La Défense, avec zones d'activité. Les axes vers La Défense et Colombes voient un trafic dense de deux-roues. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Bezons et votre point de panne exact. Bezons (95, 95870) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Houilles, Sartrouville, Colombes, Argenteuil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Seine Bezons. Les équipes traitent aussi : batterie moto zone commerciale.",
     "axes": [],
-    "landmarks": [],
+    "landmarks": [
+      "Seine"
+    ],
     "commonInterventions": [
       "Crevaison Seine Bezons",
       "Batterie moto zone commerciale",
@@ -1455,13 +1680,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "herblay-sur-seine": {
-    "intro": "À Herblay-sur-Seine, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle ou route de Conflans pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Herblay-sur-Seine et votre point de panne exact. Herblay-sur-Seine (95, 95220) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Conflans-Sainte-Honorine, Taverny, Franconville, Sartrouville) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Herblay. Les équipes traitent aussi : batterie moto Seine.",
+    "intro": "À Herblay-sur-Seine, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle ou route de Conflans pour rejoindre votre panne. Le secteur marché concentre aussi des demandes de remorquage conflans lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Herblay-sur-Seine et votre point de panne exact. Herblay-sur-Seine (95, 95220) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Conflans-Sainte-Honorine, Taverny, Franconville, Sartrouville) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Herblay. Les équipes traitent aussi : batterie moto Seine.",
     "axes": [
       "avenue du Général-de-Gaulle",
       "route de Conflans"
     ],
     "landmarks": [
-      "Seine"
+      "Seine",
+      "gare Herblay",
+      "marché"
     ],
     "commonInterventions": [
       "Crevaison gare Herblay",
@@ -1471,11 +1698,13 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "pontoise": {
-    "intro": "À Pontoise, nos dépanneurs empruntent le plus souvent rue de la Coutellerie pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Pontoise et votre point de panne exact. Pontoise (95, 95300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Cergy, Conflans-Sainte-Honorine, Herblay-sur-Seine, Taverny) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre Pontoise. Les équipes traitent aussi : batterie moto gare.",
+    "intro": "À Pontoise, nos dépanneurs empruntent le plus souvent rue de la Coutellerie pour rejoindre votre panne. Pontoise, commune du Val-d'Oise, se distingue comme sous-préfecture du Val-d'Oise avec centre historique, préfecture et. Le centre historique et la préfecture concentrent les arrêts courts des deux-roues. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Pontoise et votre point de panne exact. Pontoise (95, 95300) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 36 et 55 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Cergy, Conflans-Sainte-Honorine, Herblay-sur-Seine, Taverny) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison centre Pontoise. Les équipes traitent aussi : batterie moto gare.",
     "axes": [
       "rue de la Coutellerie"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "préfecture"
+    ],
     "commonInterventions": [
       "Crevaison centre Pontoise",
       "Batterie moto gare",
@@ -1484,9 +1713,13 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "gonesse": {
-    "intro": "Gonesse, commune du Val-d'Oise, se distingue comme commune du nord-est IDF avec zones commerciales,. Les zones commerciales Garonor et la proximité Roissy concentrent livreurs et salariés. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Gonesse et votre point de panne exact. Gonesse (95, 95500) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Sarcelles, Goussainville, Roissy-en-France, Le Blanc-Mesnil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Garonor. Les équipes traitent aussi : batterie moto.",
-    "axes": [],
-    "landmarks": [],
+    "intro": "À Gonesse, nos dépanneurs empruntent le plus souvent route de Sarcelles pour rejoindre votre panne. Gonesse, commune du Val-d'Oise, se distingue comme commune du nord-est IDF avec zones commerciales,. Les zones commerciales Garonor et la proximité Roissy concentrent livreurs et salariés. Le secteur marché concentre aussi des demandes de remorquage roissy lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Gonesse et votre point de panne exact. Gonesse (95, 95500) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Sarcelles, Goussainville, Roissy-en-France, Le Blanc-Mesnil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Garonor. Les équipes traitent aussi : batterie moto.",
+    "axes": [
+      "route de Sarcelles"
+    ],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison Garonor",
       "Batterie moto",
@@ -1512,7 +1745,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     "axes": [
       "avenue Paul-Doumer"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "château de Malmaison",
+      "Mont-Valérien"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto château",
@@ -1521,11 +1757,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "colombes": {
-    "intro": "À Colombes, nos dépanneurs empruntent le plus souvent avenue Henri-Barbusse pour rejoindre votre panne. Colombes, commune du Hauts-de-Seine, se distingue comme ville dense des Hauts-de-Seine avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Colombes et votre point de panne exact. Colombes (92, 92700) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Argenteuil, Asnières-sur-Seine, Bezons, Courbevoie) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Colombes. Les équipes traitent aussi : batterie moto stade.",
+    "intro": "À Colombes, nos dépanneurs empruntent le plus souvent avenue Henri-Barbusse ou route d'Argenteuil pour rejoindre votre panne. Colombes, commune du Hauts-de-Seine, se distingue comme ville dense des Hauts-de-Seine avec. Le secteur marché concentre aussi des demandes de remorquage argenteuil lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Colombes et votre point de panne exact. Colombes (92, 92700) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Argenteuil, Asnières-sur-Seine, Bezons, Courbevoie) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison gare Colombes. Les équipes traitent aussi : batterie moto stade.",
     "axes": [
-      "avenue Henri-Barbusse"
+      "avenue Henri-Barbusse",
+      "route d'Argenteuil"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison gare Colombes",
       "Batterie moto stade",
@@ -1538,7 +1777,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     "axes": [
       "avenue de la Division-Leclerc"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto centre",
@@ -1552,7 +1793,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
       "avenue Jean-Jaurès",
       "route de Châtillon"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare Clamart"
+    ],
     "commonInterventions": [
       "Crevaison hôpital Clamart",
       "Batterie moto",
@@ -1561,11 +1804,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "puteaux": {
-    "intro": "À Puteaux, nos dépanneurs empruntent le plus souvent rue Jean-Jaurès pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Puteaux et votre point de panne exact. Puteaux (92, 92800) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Suresnes, Courbevoie, Neuilly-sur-Seine, Nanterre) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison La Défense. Les équipes traitent aussi : batterie moto.",
+    "intro": "À Puteaux, nos dépanneurs empruntent le plus souvent rue Jean-Jaurès pour rejoindre votre panne. Puteaux, commune du Hauts-de-Seine, se distingue comme commune de La Défense avec tours de bureaux,. La Défense concentre livreurs et salariés en scooter; pannes sur les parkings souterrains. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Puteaux et votre point de panne exact. Puteaux (92, 92800) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Suresnes, Courbevoie, Neuilly-sur-Seine, Nanterre) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison La Défense. Les équipes traitent aussi : batterie moto.",
     "axes": [
       "rue Jean-Jaurès"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "La Défense",
+      "Parc de l'Île"
+    ],
     "commonInterventions": [
       "Crevaison La Défense",
       "Batterie moto",
@@ -1574,11 +1820,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "suresnes": {
-    "intro": "À Suresnes, nos dépanneurs empruntent le plus souvent rue du Mont-Valérien pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Suresnes et votre point de panne exact. Suresnes (92, 92150) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Puteaux, Nanterre, Rueil-Malmaison, Neuilly-sur-Seine) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Mont-Valérien. Les équipes traitent aussi : batterie moto.",
+    "intro": "À Suresnes, nos dépanneurs empruntent le plus souvent rue du Mont-Valérien pour rejoindre votre panne. Suresnes, commune du Hauts-de-Seine, se distingue comme ville des coteaux avec Mont-Valérien,. Le secteur Parc du Mont-Valérien concentre aussi des demandes de remorquage puteaux lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Suresnes et votre point de panne exact. Suresnes (92, 92150) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Puteaux, Nanterre, Rueil-Malmaison, Neuilly-sur-Seine) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison Mont-Valérien. Les équipes traitent aussi : batterie moto.",
     "axes": [
       "rue du Mont-Valérien"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "Mont-Valérien",
+      "gare Suresnes-Mont-Valérien",
+      "Parc du Mont-Valérien"
+    ],
     "commonInterventions": [
       "Crevaison Mont-Valérien",
       "Batterie moto",
@@ -1587,12 +1837,15 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "gennevilliers": {
-    "intro": "À Gennevilliers, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle pour rejoindre votre panne. Nos dépanneurs interviennent régulièrement pour crevaison zone logistique, batterie moto port et démarrage scooter. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Gennevilliers et votre point de panne exact. Gennevilliers (92, 92230) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Asnières-sur-Seine, Épinay-sur-Seine, Clichy, Colombes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison zone logistique. Les équipes traitent aussi : batterie moto port.",
+    "intro": "À Gennevilliers, nos dépanneurs empruntent le plus souvent avenue du Général-de-Gaulle ou route de Colombes pour rejoindre votre panne. Nos dépanneurs interviennent régulièrement pour crevaison zone logistique, batterie moto port et démarrage scooter. Le secteur Seine concentre aussi des demandes de remorquage colombes lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Gennevilliers et votre point de panne exact. Gennevilliers (92, 92230) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Asnières-sur-Seine, Épinay-sur-Seine, Clichy, Colombes) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison zone logistique. Les équipes traitent aussi : batterie moto port.",
     "axes": [
-      "avenue du Général-de-Gaulle"
+      "avenue du Général-de-Gaulle",
+      "route de Colombes"
     ],
     "landmarks": [
-      "gare Gennevilliers"
+      "port de Gennevilliers",
+      "gare Gennevilliers",
+      "Seine"
     ],
     "commonInterventions": [
       "Crevaison zone logistique",
@@ -1602,8 +1855,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "bagneux": {
-    "intro": "Bagneux, commune du Hauts-de-Seine, se distingue comme commune dense du sud 92 avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Bagneux et votre point de panne exact. Bagneux (92, 92220) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 40 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Cachan, Montrouge, Arcueil, L'Haÿ-les-Roses) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
-    "axes": [],
+    "intro": "À Bagneux, nos dépanneurs empruntent le plus souvent route de Châtillon pour rejoindre votre panne. Bagneux, commune du Hauts-de-Seine, se distingue comme commune dense du sud 92 avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Bagneux et votre point de panne exact. Bagneux (92, 92220) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 40 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Cachan, Montrouge, Arcueil, L'Haÿ-les-Roses) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
+    "axes": [
+      "route de Châtillon"
+    ],
     "landmarks": [],
     "commonInterventions": [
       "Crevaison",
@@ -1613,11 +1868,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "bondy": {
-    "intro": "À Bondy, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Bondy et votre point de panne exact. Bondy (93, 93140) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Le Raincy, Bobigny, Drancy, Aulnay-sous-Bois) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto.",
+    "intro": "À Bondy, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Le secteur marché concentre aussi des demandes de remorquage noisy-le-grand lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Bondy et votre point de panne exact. Bondy (93, 93140) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Le Raincy, Bobigny, Drancy, Aulnay-sous-Bois) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto.",
     "axes": [
       "avenue de la République"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "gare Bondy",
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto",
@@ -1626,11 +1884,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "le-raincy": {
-    "intro": "À Le Raincy, nos dépanneurs empruntent le plus souvent avenue Thiers pour rejoindre votre panne. Le Raincy, commune du Seine-Saint-Denis, se distingue comme ville résidentielle prisée du 93 avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Le Raincy et votre point de panne exact. Le Raincy (93, 93340) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Livry-Gargan, Bondy, Sevran, Aulnay-sous-Bois) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
+    "intro": "À Le Raincy, nos dépanneurs empruntent le plus souvent avenue Thiers ou route de Montfermeil pour rejoindre votre panne. Le Raincy, commune du Seine-Saint-Denis, se distingue comme ville résidentielle prisée du 93 avec. Le secteur marché concentre aussi des demandes de remorquage bondy lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Le Raincy et votre point de panne exact. Le Raincy (93, 93340) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Livry-Gargan, Bondy, Sevran, Aulnay-sous-Bois) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
     "axes": [
-      "avenue Thiers"
+      "avenue Thiers",
+      "route de Montfermeil"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto centre",
@@ -1639,10 +1900,12 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "livry-gargan": {
-    "intro": "Livry-Gargan, commune du Seine-Saint-Denis, se distingue comme grande commune du 93 nord-est avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Livry-Gargan et votre point de panne exact. Livry-Gargan (93, 93190) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Sevran, Le Raincy, Aulnay-sous-Bois, Bondy) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre commercial.",
+    "intro": "Livry-Gargan, commune du Seine-Saint-Denis, se distingue comme grande commune du 93 nord-est avec. Le secteur marché concentre aussi des demandes de remorquage sevran lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Livry-Gargan et votre point de panne exact. Livry-Gargan (93, 93190) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Sevran, Le Raincy, Aulnay-sous-Bois, Bondy) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre commercial.",
     "axes": [],
     "landmarks": [
-      "gare Livry-Gargan"
+      "gare Livry-Gargan",
+      "centre commercial",
+      "marché"
     ],
     "commonInterventions": [
       "Crevaison",
@@ -1654,7 +1917,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
   "sevran": {
     "intro": "Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Sevran et votre point de panne exact. Sevran (93, 93270) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 32 et 50 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Livry-Gargan, Aulnay-sous-Bois, Le Raincy, Le Blanc-Mesnil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto zone activité.",
     "axes": [],
-    "landmarks": [],
+    "landmarks": [
+      "gare Sevran–Beaudottes"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto zone activité",
@@ -1667,7 +1932,9 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     "axes": [
       "avenue de la Division-Leclerc"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto centre",
@@ -1691,10 +1958,11 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "epinay-sur-seine": {
-    "intro": "Épinay-sur-Seine, commune du Seine-Saint-Denis, se distingue comme ville de bords de Seine avec. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Épinay-sur-Seine et votre point de panne exact. Épinay-sur-Seine (93, 93800) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Enghien-les-Bains, Gennevilliers, Montmorency, Saint-Denis) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto Seine.",
+    "intro": "Épinay-sur-Seine, commune du Seine-Saint-Denis, se distingue comme ville de bords de Seine avec. Le secteur marché concentre aussi des demandes de remorquage saint-denis lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Épinay-sur-Seine et votre point de panne exact. Épinay-sur-Seine (93, 93800) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Enghien-les-Bains, Gennevilliers, Montmorency, Saint-Denis) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto Seine.",
     "axes": [],
     "landmarks": [
-      "Seine"
+      "Seine",
+      "marché"
     ],
     "commonInterventions": [
       "Crevaison",
@@ -1732,12 +2000,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "choisy-le-roi": {
-    "intro": "À Choisy-le-Roi, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Choisy-le-Roi et votre point de panne exact. Choisy-le-Roi (94, 94600) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Thiais, Orly, Vitry-sur-Seine, Créteil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto Seine.",
+    "intro": "À Choisy-le-Roi, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Choisy-le-Roi, commune du Val-de-Marne, se distingue comme ville de bords de Seine avec. Le secteur marché concentre aussi des demandes de remorquage thiais lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Choisy-le-Roi et votre point de panne exact. Choisy-le-Roi (94, 94600) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Thiais, Orly, Vitry-sur-Seine, Créteil) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto Seine.",
     "axes": [
       "avenue de la République"
     ],
     "landmarks": [
-      "gare Choisy-le-Roi"
+      "gare Choisy-le-Roi",
+      "Seine",
+      "marché"
     ],
     "commonInterventions": [
       "Crevaison",
@@ -1762,11 +2032,14 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
     ]
   },
   "fresnes": {
-    "intro": "À Fresnes, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Fresnes et votre point de panne exact. Fresnes (94, 94260) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Antony, L'Haÿ-les-Roses, Cachan, Massy) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
+    "intro": "À Fresnes, nos dépanneurs empruntent le plus souvent avenue de la République pour rejoindre votre panne. Le secteur Parc des Sports concentre aussi des demandes de remorquage l'haÿ lors des pics de livraison ou des événements locaux. Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Fresnes et votre point de panne exact. Fresnes (94, 94260) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 28 et 44 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Antony, L'Haÿ-les-Roses, Cachan, Massy) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
     "axes": [
       "avenue de la République"
     ],
-    "landmarks": [],
+    "landmarks": [
+      "marché",
+      "Parc des Sports"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto centre",
@@ -1777,7 +2050,10 @@ export const zonesGeoApplied: Record<string, ZoneGeoPatch> = {
   "cachan": {
     "intro": "Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre Cachan et votre point de panne exact. Cachan (94, 94230) : dépannage et remorquage scooter et moto 24h/24. Délai annoncé au téléphone, en général entre 25 et 40 minutes selon le trafic. Nous rejoignons aussi les communes limitrophes (Arcueil, L'Haÿ-les-Roses, Bagneux, Villejuif) selon le trafic. Nos équipes couvrent l'ensemble du territoire communal, du centre aux zones d'activité et aux quartiers résidentiels. Le dépannage sur place porte sur batterie, crevaison, démarrage, panne d'essence ou ouverture de selle. Le remorquage vers votre domicile, votre garage ou un professionnel partenaire se fait avec devis ferme avant intervention. Nous intervenons y compris la nuit, le week-end et les jours fériés, sur deux-roues thermiques ou électriques homologués route. Le technicien précise le tarif de déplacement et la prestation avant de quitter la base. Appelez le numéro affiché pour confirmer le délai et le prix avant départ du plateau. Interventions courantes : crevaison. Les équipes traitent aussi : batterie moto centre.",
     "axes": [],
-    "landmarks": [],
+    "landmarks": [
+      "gare Cachan",
+      "écoles"
+    ],
     "commonInterventions": [
       "Crevaison",
       "Batterie moto centre",

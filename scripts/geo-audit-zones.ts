@@ -14,6 +14,7 @@ import {
 import {
   collectElements,
   fetchInseeCode,
+  neighborInseeCodes,
   throttle,
   verifyElement,
   type GeoVerdict,
@@ -26,6 +27,7 @@ async function main() {
   const verdicts: GeoVerdict[] = [];
   const inseeCache = new Map<string, string>();
   const verifyCache = loadVerifyCache();
+  const slugToZone = new Map(zones.map((z) => [z.slug, z]));
 
   console.log(`Audit de ${zones.length} zones…`);
 
@@ -36,6 +38,7 @@ async function main() {
       inseeCache.set(zone.slug, insee);
       await throttle();
     }
+    const neighbors = await neighborInseeCodes(zone, slugToZone, inseeCache);
 
     const elements = collectElements(zone);
     for (const el of elements) {
@@ -45,7 +48,7 @@ async function main() {
         result = verifyCache[key];
       } else {
         await throttle(40);
-        const { valid, score } = await verifyElement(el.value, el.type, insee);
+        const { valid, score } = await verifyElement(el.value, el.type, insee, neighbors);
         result = { valid, score };
         verifyCache[key] = result;
         saveVerifyCache(verifyCache);

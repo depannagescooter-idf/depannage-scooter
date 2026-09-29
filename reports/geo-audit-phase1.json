@@ -51,8 +51,9 @@
       "element": "Louvre",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6915263636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-1er",
@@ -62,6 +63,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5209133766233766,
       "action": "supprimer"
     },
     {
@@ -71,8 +73,9 @@
       "element": "Palais-Royal",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6801072727272727,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-1er",
@@ -81,8 +84,9 @@
       "element": "Place Vendôme",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9635936363636363,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-2e",
@@ -135,8 +139,9 @@
       "element": "Bourse",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.691960909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-2e",
@@ -145,8 +150,9 @@
       "element": "Sentier",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6935527272727271,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-2e",
@@ -155,8 +161,9 @@
       "element": "Place des Victoires",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.958530909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-2e",
@@ -219,8 +226,9 @@
       "element": "Place de la République",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9632709090909091,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-3e",
@@ -230,6 +238,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.452107990430622,
       "action": "supprimer"
     },
     {
@@ -303,8 +312,9 @@
       "element": "Notre-Dame",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6904081818181816,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-4e",
@@ -313,8 +323,9 @@
       "element": "Hôtel de Ville",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6950072727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-4e",
@@ -323,8 +334,9 @@
       "element": "Place des Vosges",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9651645454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-4e",
@@ -333,8 +345,9 @@
       "element": "Bastille",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6887054545454544,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-5e",
@@ -387,8 +400,9 @@
       "element": "Panthéon",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6938836363636363,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-5e",
@@ -398,6 +412,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5199054545454546,
       "action": "supprimer"
     },
     {
@@ -407,8 +422,9 @@
       "element": "Rue Mouffetard",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9763227272727272,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-5e",
@@ -417,8 +433,9 @@
       "element": "Sorbonne",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6946218181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-6e",
@@ -481,8 +498,9 @@
       "element": "Saint-Germain-des-Prés",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6890327272727271,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-6e",
@@ -491,8 +509,9 @@
       "element": "Saint-Sulpice",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6966772727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-6e",
@@ -501,8 +520,9 @@
       "element": "Odéon",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6938327272727273,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-7e",
@@ -565,8 +585,9 @@
       "element": "Invalides",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6990527272727272,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-7e",
@@ -586,6 +607,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4190545454545454,
       "action": "supprimer"
     },
     {
@@ -639,8 +661,9 @@
       "element": "Arc de Triomphe",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7006245454545453,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-8e",
@@ -649,8 +672,9 @@
       "element": "Madeleine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.695,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-8e",
@@ -660,6 +684,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4658581818181818,
       "action": "supprimer"
     },
     {
@@ -670,6 +695,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.31052,
       "action": "supprimer"
     },
     {
@@ -712,9 +738,9 @@
       "element": "Rue Lafayette",
       "type": "voie",
       "source": "axes",
-      "verdict": "validé",
-      "score": 0.7081153246753246,
-      "action": "conserver"
+      "verdict": "signalé",
+      "score": 0.32163411483253584,
+      "action": "supprimer"
     },
     {
       "zoneSlug": "paris-9e",
@@ -724,6 +750,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3595752066115702,
       "action": "supprimer"
     },
     {
@@ -734,6 +761,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3666689510489511,
       "action": "supprimer"
     },
     {
@@ -743,8 +771,9 @@
       "element": "Pigalle",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7007318181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-9e",
@@ -754,6 +783,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4053025619834711,
       "action": "supprimer"
     },
     {
@@ -808,6 +838,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3594690909090909,
       "action": "supprimer"
     },
     {
@@ -818,6 +849,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5553563636363635,
       "action": "supprimer"
     },
     {
@@ -827,8 +859,9 @@
       "element": "Place de la République",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9629454545454544,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-10e",
@@ -838,6 +871,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.44788128342245986,
       "action": "supprimer"
     },
     {
@@ -891,8 +925,9 @@
       "element": "Place de la Bastille",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9652136363636363,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-11e",
@@ -901,8 +936,9 @@
       "element": "Place de la Nation",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9698945454545453,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-11e",
@@ -911,8 +947,9 @@
       "element": "Père-Lachaise",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6996390909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-11e",
@@ -921,8 +958,9 @@
       "element": "Oberkampf",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7082118181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-12e",
@@ -976,6 +1014,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.574281958041958,
       "action": "supprimer"
     },
     {
@@ -985,8 +1024,9 @@
       "element": "Bercy",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7104245454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-12e",
@@ -996,6 +1036,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5998663636363636,
       "action": "supprimer"
     },
     {
@@ -1006,6 +1047,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.525190909090909,
       "action": "supprimer"
     },
     {
@@ -1059,8 +1101,9 @@
       "element": "Place d'Italie",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.972970909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-13e",
@@ -1069,8 +1112,9 @@
       "element": "Butte-aux-Cailles",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7045372727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-13e",
@@ -1089,8 +1133,9 @@
       "element": "Gobelins",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7050154545454544,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-14e",
@@ -1143,8 +1188,9 @@
       "element": "Montparnasse",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7037999999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-14e",
@@ -1153,8 +1199,9 @@
       "element": "Denfert-Rochereau",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7027109090909089,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-14e",
@@ -1164,6 +1211,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5410045454545455,
       "action": "supprimer"
     },
     {
@@ -1237,8 +1285,9 @@
       "element": "Beaugrenelle",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7003599999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-15e",
@@ -1248,6 +1297,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4551479623824451,
       "action": "supprimer"
     },
     {
@@ -1258,6 +1308,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4738727272727273,
       "action": "supprimer"
     },
     {
@@ -1311,8 +1362,9 @@
       "element": "Trocadéro",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7008018181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-16e",
@@ -1321,8 +1373,9 @@
       "element": "Roland-Garros",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6933381818181817,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-16e",
@@ -1331,8 +1384,9 @@
       "element": "Parc des Princes",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7014290909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-16e",
@@ -1341,8 +1395,9 @@
       "element": "Bois de Boulogne",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6974790909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-17e",
@@ -1395,8 +1450,9 @@
       "element": "Place de l'Étoile",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6102118181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-17e",
@@ -1405,8 +1461,9 @@
       "element": "Batignolles",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7046481818181817,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-17e",
@@ -1415,8 +1472,9 @@
       "element": "Porte de Clichy",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7035054545454544,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-17e",
@@ -1479,8 +1537,9 @@
       "element": "Sacré-Cœur",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6964390909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-18e",
@@ -1489,8 +1548,9 @@
       "element": "Montmartre",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7026118181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-18e",
@@ -1500,6 +1560,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.37838604278074867,
       "action": "supprimer"
     },
     {
@@ -1510,6 +1571,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.38236619834710744,
       "action": "supprimer"
     },
     {
@@ -1563,8 +1625,9 @@
       "element": "Parc des Buttes-Chaumont",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6177738961038961,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-19e",
@@ -1574,6 +1637,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4529461722488038,
       "action": "supprimer"
     },
     {
@@ -1584,6 +1648,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5277854545454544,
       "action": "supprimer"
     },
     {
@@ -1593,8 +1658,9 @@
       "element": "La Villette",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7079472727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-20e",
@@ -1647,8 +1713,9 @@
       "element": "Père-Lachaise",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6996390909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-20e",
@@ -1657,8 +1724,9 @@
       "element": "Belleville",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7093372727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-20e",
@@ -1667,8 +1735,9 @@
       "element": "Parc de Belleville",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6047918181818182,
+      "action": "conserver"
     },
     {
       "zoneSlug": "paris-20e",
@@ -1677,8 +1746,9 @@
       "element": "Ménilmontant",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7102299999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "boulogne-billancourt",
@@ -1731,8 +1801,9 @@
       "element": "Parc des Princes",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7014290909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "boulogne-billancourt",
@@ -1741,8 +1812,9 @@
       "element": "Île Seguin",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7022745454545453,
+      "action": "conserver"
     },
     {
       "zoneSlug": "boulogne-billancourt",
@@ -1762,7 +1834,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6876436363636362,
+      "score": 0.7068899999999999,
       "action": "conserver"
     },
     {
@@ -1794,9 +1866,9 @@
       "element": "Esplanade de La Défense",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.41965471744471744,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6048181818181818,
+      "action": "conserver"
     },
     {
       "zoneSlug": "nanterre",
@@ -1816,8 +1888,9 @@
       "element": "La Défense",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7022099999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "nanterre",
@@ -1827,6 +1900,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.31018550239234444,
       "action": "supprimer"
     },
     {
@@ -1837,6 +1911,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.47533103896103884,
       "action": "supprimer"
     },
     {
@@ -1847,6 +1922,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5712457024793388,
       "action": "supprimer"
     },
     {
@@ -1910,8 +1986,9 @@
       "element": "Pont de Neuilly",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6844954545454545,
+      "action": "conserver"
     },
     {
       "zoneSlug": "levallois-perret",
@@ -1931,6 +2008,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.37757446640316206,
       "action": "supprimer"
     },
     {
@@ -1984,8 +2062,9 @@
       "element": "Porte Maillot",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6931363636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "neuilly-sur-seine",
@@ -1994,8 +2073,9 @@
       "element": "Bois de Boulogne",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6988454545454544,
+      "action": "conserver"
     },
     {
       "zoneSlug": "neuilly-sur-seine",
@@ -2005,6 +2085,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4575298701298701,
       "action": "supprimer"
     },
     {
@@ -2015,6 +2096,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5572454545454545,
       "action": "supprimer"
     },
     {
@@ -2069,7 +2151,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.36040194805194803,
+      "score": 0.5323142857142856,
       "action": "supprimer"
     },
     {
@@ -2080,7 +2162,6 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.4305318181818182,
       "action": "supprimer"
     },
     {
@@ -2091,6 +2172,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4419123776223776,
       "action": "supprimer"
     },
     {
@@ -2101,7 +2183,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3332986166007905,
+      "score": 0.4738727272727273,
       "action": "supprimer"
     },
     {
@@ -2155,8 +2237,9 @@
       "element": "La Défense",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6957272727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "courbevoie",
@@ -2176,6 +2259,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30067898395721926,
       "action": "supprimer"
     },
     {
@@ -2185,9 +2269,9 @@
       "element": "Gare de Courbevoie",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.47964053475935825,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6701371770334927,
+      "action": "conserver"
     },
     {
       "zoneSlug": "clichy",
@@ -2241,7 +2325,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3180654545454545,
+      "score": 0.5383906951871658,
       "action": "supprimer"
     },
     {
@@ -2261,9 +2345,9 @@
       "element": "Porte de Clichy",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.33754597402597397,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7035054545454544,
+      "action": "conserver"
     },
     {
       "zoneSlug": "clichy",
@@ -2273,7 +2357,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3180654545454545,
+      "score": 0.5723011570247933,
       "action": "supprimer"
     },
     {
@@ -2328,7 +2412,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.30857775119617226,
+      "score": 0.348701871657754,
       "action": "supprimer"
     },
     {
@@ -2349,6 +2433,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5606445454545455,
       "action": "supprimer"
     },
     {
@@ -2359,7 +2444,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.31978090909090906,
+      "score": 0.5343287559808613,
       "action": "supprimer"
     },
     {
@@ -2414,7 +2499,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.35552831168831167,
+      "score": 0.4652409090909091,
       "action": "supprimer"
     },
     {
@@ -2434,8 +2519,9 @@
       "element": "Porte de Châtillon",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6984981818181817,
+      "action": "conserver"
     },
     {
       "zoneSlug": "montrouge",
@@ -2444,8 +2530,9 @@
       "element": "Place Jean-Jaurès",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9633972727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "saint-denis",
@@ -2498,9 +2585,9 @@
       "element": "Basilique de Saint-Denis",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.46139454545454545,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6085699999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "saint-denis",
@@ -2509,8 +2596,9 @@
       "element": "Stade de France",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6968118181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "saint-denis",
@@ -2520,7 +2608,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6886672727272726,
+      "score": 0.6997690909090908,
       "action": "conserver"
     },
     {
@@ -2531,7 +2619,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6886672727272726,
+      "score": 0.7015454545454545,
       "action": "conserver"
     },
     {
@@ -2585,9 +2673,9 @@
       "element": "Porte de Montreuil",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.3540312121212121,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6996390909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "montreuil",
@@ -2596,8 +2684,9 @@
       "element": "La Noue",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6905154545454545,
+      "action": "conserver"
     },
     {
       "zoneSlug": "montreuil",
@@ -2607,6 +2696,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3573027272727272,
       "action": "supprimer"
     },
     {
@@ -2616,8 +2706,9 @@
       "element": "Hôtel de Ville",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6846745454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "aubervilliers",
@@ -2659,9 +2750,9 @@
       "element": "Canal Saint-Denis",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.47364818181818186,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9590172727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "aubervilliers",
@@ -2701,9 +2792,9 @@
       "element": "Fort d'Aubervilliers",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.5013370219435737,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6313039669421487,
+      "action": "conserver"
     },
     {
       "zoneSlug": "pantin",
@@ -2756,6 +2847,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5277854545454544,
       "action": "supprimer"
     },
     {
@@ -2766,6 +2858,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3138559824046921,
       "action": "supprimer"
     },
     {
@@ -2776,6 +2869,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.36563999999999997,
       "action": "supprimer"
     },
     {
@@ -2786,7 +2880,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.38686890282131664,
+      "score": 0.5139115019762844,
       "action": "supprimer"
     },
     {
@@ -2852,6 +2946,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.49505125874125866,
       "action": "supprimer"
     },
     {
@@ -2861,8 +2956,9 @@
       "element": "Porte de Clignancourt",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.703440909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "saint-ouen",
@@ -2871,9 +2967,9 @@
       "element": "Basilique de Saint-Denis",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.3580002821316614,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6085699999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "bobigny",
@@ -2957,6 +3053,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.48866019138755973,
       "action": "supprimer"
     },
     {
@@ -2967,6 +3064,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.39633032258064516,
       "action": "supprimer"
     },
     {
@@ -3009,8 +3107,9 @@
       "element": "Les Arcades",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6854199999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "noisy-le-grand",
@@ -3020,7 +3119,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6854199999999999,
+      "score": 0.6981627272727272,
       "action": "conserver"
     },
     {
@@ -3031,6 +3130,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3091427272727273,
       "action": "supprimer"
     },
     {
@@ -3096,6 +3196,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3804727272727273,
       "action": "supprimer"
     },
     {
@@ -3106,6 +3207,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.48866019138755973,
       "action": "supprimer"
     },
     {
@@ -3116,6 +3218,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3731585714285714,
       "action": "supprimer"
     },
     {
@@ -3126,6 +3229,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5419988770053475,
       "action": "supprimer"
     },
     {
@@ -3158,6 +3262,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.30864272727272724,
       "action": "supprimer"
     },
     {
@@ -3179,7 +3284,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.30192643356643356,
+      "score": 0.42464965034965035,
       "action": "supprimer"
     },
     {
@@ -3189,9 +3294,9 @@
       "element": "Lac de Créteil",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.41381454545454543,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6024690909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "creteil",
@@ -3265,6 +3370,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3220314876033058,
       "action": "supprimer"
     },
     {
@@ -3274,8 +3380,9 @@
       "element": "Île Saint-Germain",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6907345454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "vitry-sur-seine",
@@ -3338,7 +3445,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.4168275324675324,
+      "score": 0.3448895104895105,
       "action": "supprimer"
     },
     {
@@ -3349,6 +3456,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4703981818181818,
       "action": "supprimer"
     },
     {
@@ -3369,6 +3477,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4188354545454545,
       "action": "supprimer"
     },
     {
@@ -3379,6 +3488,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.53858,
       "action": "supprimer"
     },
     {
@@ -3432,9 +3542,9 @@
       "element": "Château de Vincennes",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.33038769230769227,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6074345454545453,
+      "action": "conserver"
     },
     {
       "zoneSlug": "vincennes",
@@ -3444,7 +3554,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3673290118577075,
+      "score": 0.5998663636363636,
       "action": "supprimer"
     },
     {
@@ -3530,6 +3640,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.44395311688311684,
       "action": "supprimer"
     },
     {
@@ -3551,7 +3662,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.45836636363636357,
+      "score": 0.49941962566844916,
       "action": "supprimer"
     },
     {
@@ -3606,6 +3717,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.317375933014354,
       "action": "supprimer"
     },
     {
@@ -3616,6 +3728,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3346851948051948,
       "action": "supprimer"
     },
     {
@@ -3625,8 +3738,9 @@
       "element": "Liberté",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6924945454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "charenton-le-pont",
@@ -3636,7 +3750,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.37210818181818184,
+      "score": 0.5924773205741627,
       "action": "supprimer"
     },
     {
@@ -3701,6 +3815,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.37814545454545456,
       "action": "supprimer"
     },
     {
@@ -3711,6 +3826,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3694127272727273,
       "action": "supprimer"
     },
     {
@@ -3721,6 +3837,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.33069766233766235,
       "action": "supprimer"
     },
     {
@@ -3775,6 +3892,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.34628588932806326,
       "action": "supprimer"
     },
     {
@@ -3785,6 +3903,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3528145989304813,
       "action": "supprimer"
     },
     {
@@ -3795,6 +3914,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4914092885375494,
       "action": "supprimer"
     },
     {
@@ -3858,6 +3978,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5175881818181819,
       "action": "supprimer"
     },
     {
@@ -3888,6 +4009,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.32633818181818186,
       "action": "supprimer"
     },
     {
@@ -3960,9 +4082,9 @@
       "element": "gare Melun",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.4074445454545454,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6883163636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "melun",
@@ -3971,8 +4093,9 @@
       "element": "place Saint-Jean",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9687918181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "chelles",
@@ -3992,9 +4115,9 @@
       "element": "route de Lagny",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.30834090909090905,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9596981818181818,
+      "action": "conserver"
     },
     {
       "zoneSlug": "chelles",
@@ -4004,7 +4127,6 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.32141532150776053,
       "action": "supprimer"
     },
     {
@@ -4025,7 +4147,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.30296229665071767,
+      "score": 0.5483763636363637,
       "action": "supprimer"
     },
     {
@@ -4035,8 +4157,9 @@
       "element": "centre commercial Chelles 2",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.956830909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "chelles",
@@ -4045,8 +4168,9 @@
       "element": "parc du Souvenir",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.8659218181818182,
+      "action": "conserver"
     },
     {
       "zoneSlug": "chelles",
@@ -4056,6 +4180,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3364386013986014,
       "action": "supprimer"
     },
     {
@@ -4066,7 +4191,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.32135966942148764,
+      "score": 0.5325142105263159,
       "action": "supprimer"
     },
     {
@@ -4108,6 +4233,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.36298090909090913,
       "action": "supprimer"
     },
     {
@@ -4118,6 +4244,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.486385652173913,
       "action": "supprimer"
     },
     {
@@ -4127,9 +4254,9 @@
       "element": "gare de Pontault-Combault",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.5885236363636362,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6388246524064172,
+      "action": "conserver"
     },
     {
       "zoneSlug": "pontault-combault",
@@ -4139,7 +4266,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.31579636363636365,
+      "score": 0.3678606553911205,
       "action": "supprimer"
     },
     {
@@ -4161,7 +4288,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.45427818181818175,
+      "score": 0.4553214876033058,
       "action": "supprimer"
     },
     {
@@ -4192,7 +4319,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.5268848484848484,
+      "score": 0.5811538842975206,
       "action": "supprimer"
     },
     {
@@ -4223,6 +4350,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.34709247933884296,
       "action": "supprimer"
     },
     {
@@ -4244,7 +4372,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.4084420779220779,
+      "score": 0.5570863636363635,
       "action": "supprimer"
     },
     {
@@ -4255,7 +4383,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.42799082644628095,
+      "score": 0.4568245454545454,
       "action": "supprimer"
     },
     {
@@ -4275,9 +4403,9 @@
       "element": "château de Fontainebleau",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.4992583422459893,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9611172727272727,
+      "action": "conserver"
     },
     {
       "zoneSlug": "fontainebleau",
@@ -4296,9 +4424,9 @@
       "element": "gare Fontainebleau-Avon",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.46523658307210036,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6042045454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "fontainebleau",
@@ -4308,6 +4436,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4907430769230769,
       "action": "supprimer"
     },
     {
@@ -4360,6 +4489,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3208079220779221,
       "action": "supprimer"
     },
     {
@@ -4370,6 +4500,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5386490909090909,
       "action": "supprimer"
     },
     {
@@ -4379,8 +4510,9 @@
       "element": "Marne",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6931445454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "torcy",
@@ -4390,6 +4522,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5216963636363636,
       "action": "supprimer"
     },
     {
@@ -4400,7 +4533,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.35031181818181817,
+      "score": 0.31157330578512393,
       "action": "supprimer"
     },
     {
@@ -4410,8 +4543,9 @@
       "element": "route de Torcy",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.610415885167464,
+      "action": "conserver"
     },
     {
       "zoneSlug": "lagny-sur-marne",
@@ -4442,6 +4576,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5177418181818182,
       "action": "supprimer"
     },
     {
@@ -4452,7 +4587,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6767072727272727,
+      "score": 0.6993281818181817,
       "action": "conserver"
     },
     {
@@ -4463,6 +4598,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5834885714285715,
       "action": "supprimer"
     },
     {
@@ -4473,6 +4609,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3862979937304075,
       "action": "supprimer"
     },
     {
@@ -4483,7 +4620,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.37336454545454545,
+      "score": 0.5570863636363635,
       "action": "supprimer"
     },
     {
@@ -4524,9 +4661,9 @@
       "element": "château de Brie-Comte-Robert",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.49162126099706743,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7134081818181818,
+      "action": "conserver"
     },
     {
       "zoneSlug": "brie-comte-robert",
@@ -4536,6 +4673,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4885132620320856,
       "action": "supprimer"
     },
     {
@@ -4546,6 +4684,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3478509090909091,
       "action": "supprimer"
     },
     {
@@ -4607,9 +4746,9 @@
       "element": "gare Combs-la-Ville–Quincy",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.4197986486486487,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6020745454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "combs-la-ville",
@@ -4629,6 +4768,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3311481818181818,
       "action": "supprimer"
     },
     {
@@ -4660,6 +4800,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.4378166666666666,
       "action": "supprimer"
     },
     {
@@ -4700,7 +4841,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.34155818181818176,
+      "score": 0.464150909090909,
       "action": "supprimer"
     },
     {
@@ -4721,6 +4862,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.34460083172147,
       "action": "supprimer"
     },
     {
@@ -4773,6 +4915,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3066027272727273,
       "action": "supprimer"
     },
     {
@@ -4782,8 +4925,9 @@
       "element": "étang",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.695970909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "ozoir-la-ferriere",
@@ -4803,6 +4947,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.47660378378378376,
       "action": "supprimer"
     },
     {
@@ -4855,7 +5000,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6316118181818182,
+      "score": 0.6870536363636363,
       "action": "conserver"
     },
     {
@@ -4866,6 +5011,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3336145454545454,
       "action": "supprimer"
     },
     {
@@ -4876,6 +5022,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5419988770053475,
       "action": "supprimer"
     },
     {
@@ -4885,8 +5032,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6886554545454545,
+      "action": "conserver"
     },
     {
       "zoneSlug": "dammarie-les-lys",
@@ -4907,7 +5055,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.36319454545454544,
+      "score": 0.5906072727272728,
       "action": "supprimer"
     },
     {
@@ -4938,6 +5086,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3477040711462451,
       "action": "supprimer"
     },
     {
@@ -4947,8 +5096,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6887899999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "dammarie-les-lys",
@@ -4958,6 +5108,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4297584326018809,
       "action": "supprimer"
     },
     {
@@ -4968,7 +5119,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.32398405594405594,
+      "score": 0.4040281818181818,
       "action": "supprimer"
     },
     {
@@ -4979,7 +5130,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.3098445454545455,
+      "score": 0.4567027272727272,
       "action": "supprimer"
     },
     {
@@ -5021,7 +5172,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3574264516129032,
+      "score": 0.38161999999999996,
       "action": "supprimer"
     },
     {
@@ -5032,6 +5183,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.31476636363636357,
       "action": "supprimer"
     },
     {
@@ -5042,7 +5194,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3046405278592375,
+      "score": 0.36114545454545455,
       "action": "supprimer"
     },
     {
@@ -5052,8 +5204,9 @@
       "element": "place du Châtel",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9600345454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "versailles",
@@ -5116,9 +5269,9 @@
       "element": "gare Versailles-Chantiers",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.48285598930481277,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6398318181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "versailles",
@@ -5128,6 +5281,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4368563636363636,
       "action": "supprimer"
     },
     {
@@ -5138,6 +5292,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3314867832167832,
       "action": "supprimer"
     },
     {
@@ -5201,7 +5356,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.36991832535885166,
+      "score": 0.4528927272727272,
       "action": "supprimer"
     },
     {
@@ -5212,6 +5367,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3231136363636363,
       "action": "supprimer"
     },
     {
@@ -5221,8 +5377,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6964536363636363,
+      "action": "conserver"
     },
     {
       "zoneSlug": "poissy",
@@ -5243,7 +5400,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.3672810389610389,
+      "score": 0.49477200956937795,
       "action": "supprimer"
     },
     {
@@ -5274,6 +5431,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4555254545454545,
       "action": "supprimer"
     },
     {
@@ -5283,9 +5441,9 @@
       "element": "gare Poissy",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.4523745454545454,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6932645454545453,
+      "action": "conserver"
     },
     {
       "zoneSlug": "poissy",
@@ -5294,8 +5452,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6908363636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "poissy",
@@ -5326,6 +5485,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.5762538842975207,
       "action": "supprimer"
     },
     {
@@ -5356,6 +5516,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4064120779220779,
       "action": "supprimer"
     },
     {
@@ -5375,8 +5536,9 @@
       "element": "gare Conflans",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6886290909090907,
+      "action": "conserver"
     },
     {
       "zoneSlug": "conflans-sainte-honorine",
@@ -5385,9 +5547,9 @@
       "element": "place Fouillère",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.36064986013986017,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9607499999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "mantes-la-jolie",
@@ -5407,8 +5569,9 @@
       "element": "route de Paris",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9543736363636364,
+      "action": "conserver"
     },
     {
       "zoneSlug": "mantes-la-jolie",
@@ -5438,6 +5601,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4589490909090909,
       "action": "supprimer"
     },
     {
@@ -5447,8 +5611,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6952263636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "mantes-la-jolie",
@@ -5458,6 +5623,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.34015454545454543,
       "action": "supprimer"
     },
     {
@@ -5489,7 +5655,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.4032127272727272,
+      "score": 0.339264965034965,
       "action": "supprimer"
     },
     {
@@ -5530,8 +5696,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6954263636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "sartrouville",
@@ -5541,6 +5708,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.39554021390374333,
       "action": "supprimer"
     },
     {
@@ -5551,6 +5719,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.56834004784689,
       "action": "supprimer"
     },
     {
@@ -5571,8 +5740,9 @@
       "element": "route de Sartrouville",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6567649586776858,
+      "action": "conserver"
     },
     {
       "zoneSlug": "houilles",
@@ -5602,7 +5772,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3027623966942149,
+      "score": 0.5143181818181818,
       "action": "supprimer"
     },
     {
@@ -5613,7 +5783,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3109389926289926,
+      "score": 0.40022090909090907,
       "action": "supprimer"
     },
     {
@@ -5623,8 +5793,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6954263636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "houilles",
@@ -5633,8 +5804,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.689640909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "montigny-le-bretonneux",
@@ -5655,6 +5827,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.35351999999999995,
       "action": "supprimer"
     },
     {
@@ -5685,7 +5858,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3726481818181818,
+      "score": 0.40400122529644267,
       "action": "supprimer"
     },
     {
@@ -5737,7 +5910,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.44827616600790515,
+      "score": 0.46693636363636365,
       "action": "supprimer"
     },
     {
@@ -5768,7 +5941,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.42749454545454546,
+      "score": 0.48880644628099174,
       "action": "supprimer"
     },
     {
@@ -5779,7 +5952,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.42919909090909086,
+      "score": 0.5183036363636364,
       "action": "supprimer"
     },
     {
@@ -5800,7 +5973,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.305099866962306,
+      "score": 0.41096,
       "action": "supprimer"
     },
     {
@@ -5853,7 +6026,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.4311176623376623,
+      "score": 0.5654736363636363,
       "action": "supprimer"
     },
     {
@@ -5864,7 +6037,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.4721292822966507,
+      "score": 0.5399054545454546,
       "action": "supprimer"
     },
     {
@@ -5884,8 +6057,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6813463636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "plaisir",
@@ -5905,8 +6079,9 @@
       "element": "route de Trappes",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6378410389610389,
+      "action": "conserver"
     },
     {
       "zoneSlug": "plaisir",
@@ -5946,7 +6121,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3274143887147335,
+      "score": 0.4113920779220779,
       "action": "supprimer"
     },
     {
@@ -5957,7 +6132,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.39593207792207785,
+      "score": 0.5810745454545454,
       "action": "supprimer"
     },
     {
@@ -5968,6 +6143,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.45407363636363635,
       "action": "supprimer"
     },
     {
@@ -5988,6 +6164,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.4416925078369906,
       "action": "supprimer"
     },
     {
@@ -6027,8 +6204,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6851836363636363,
+      "action": "conserver"
     },
     {
       "zoneSlug": "les-mureaux",
@@ -6049,6 +6227,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.34125363636363637,
       "action": "supprimer"
     },
     {
@@ -6058,9 +6237,9 @@
       "element": "route de Maisons-Laffitte",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.5755136363636363,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9617372727272727,
+      "action": "conserver"
     },
     {
       "zoneSlug": "chatou",
@@ -6111,7 +6290,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.30809337662337666,
+      "score": 0.38842696969696966,
       "action": "supprimer"
     },
     {
@@ -6121,8 +6300,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7002654545454544,
+      "action": "conserver"
     },
     {
       "zoneSlug": "chatou",
@@ -6131,8 +6311,9 @@
       "element": "Ile des Impressionnistes",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9598909090909089,
+      "action": "conserver"
     },
     {
       "zoneSlug": "le-chesnay-rocquencourt",
@@ -6182,8 +6363,9 @@
       "element": "centre commercial Parly 2",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9761390909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "le-chesnay-rocquencourt",
@@ -6193,6 +6375,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.42748628099173547,
       "action": "supprimer"
     },
     {
@@ -6203,6 +6386,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4969518181818182,
       "action": "supprimer"
     },
     {
@@ -6213,7 +6397,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.4227414685314685,
+      "score": 0.46550545454545456,
       "action": "supprimer"
     },
     {
@@ -6234,9 +6418,9 @@
       "element": "route de Trappes",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.5157527272727273,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.95946,
+      "action": "conserver"
     },
     {
       "zoneSlug": "guyancourt",
@@ -6286,6 +6470,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4547672727272727,
       "action": "supprimer"
     },
     {
@@ -6295,8 +6480,9 @@
       "element": "Centre commercial",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.8770418181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "evry-courcouronnes",
@@ -6316,8 +6502,9 @@
       "element": "route de Corbeil",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9706445454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "evry-courcouronnes",
@@ -6347,6 +6534,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.42739991735537186,
       "action": "supprimer"
     },
     {
@@ -6356,8 +6544,9 @@
       "element": "Aguado",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7007081818181817,
+      "action": "conserver"
     },
     {
       "zoneSlug": "evry-courcouronnes",
@@ -6367,7 +6556,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6777432231404957,
+      "score": 0.6913281818181817,
       "action": "conserver"
     },
     {
@@ -6378,6 +6567,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.31945966942148757,
       "action": "supprimer"
     },
     {
@@ -6398,9 +6588,9 @@
       "element": "route de Corbeil",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.33267818181818176,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9709527272727273,
+      "action": "conserver"
     },
     {
       "zoneSlug": "massy",
@@ -6430,6 +6620,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3418113286713287,
       "action": "supprimer"
     },
     {
@@ -6440,6 +6631,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4670499999999999,
       "action": "supprimer"
     },
     {
@@ -6449,9 +6641,9 @@
       "element": "Opéra de Massy",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.35431090909090907,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6146167942583732,
+      "action": "conserver"
     },
     {
       "zoneSlug": "massy",
@@ -6460,8 +6652,9 @@
       "element": "Antoine de Saint-Exupéry",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6838563636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "palaiseau",
@@ -6523,9 +6716,9 @@
       "element": "gare Palaiseau",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.328158934169279,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6918427272727271,
+      "action": "conserver"
     },
     {
       "zoneSlug": "palaiseau",
@@ -6534,8 +6727,9 @@
       "element": "Hôtel de Ville",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6945699999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "palaiseau",
@@ -6545,6 +6739,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4665981818181818,
       "action": "supprimer"
     },
     {
@@ -6566,6 +6761,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.37918922077922074,
       "action": "supprimer"
     },
     {
@@ -6595,8 +6791,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6955718181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "corbeil-essonnes",
@@ -6605,8 +6802,9 @@
       "element": "gare Corbeil",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6882563636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "corbeil-essonnes",
@@ -6646,9 +6844,9 @@
       "element": "route de Longjumeau",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.5597482608695652,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6282953846153846,
+      "action": "conserver"
     },
     {
       "zoneSlug": "savigny-sur-orge",
@@ -6678,7 +6876,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6565281818181818,
+      "score": 0.6873999999999999,
       "action": "conserver"
     },
     {
@@ -6689,6 +6887,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3197596187683284,
       "action": "supprimer"
     },
     {
@@ -6699,7 +6898,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6824063636363635,
+      "score": 0.7042245454545454,
       "action": "conserver"
     },
     {
@@ -6709,8 +6908,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6914436363636363,
+      "action": "conserver"
     },
     {
       "zoneSlug": "athis-mons",
@@ -6730,7 +6930,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.32639818181818175,
+      "score": 0.5891844919786096,
       "action": "supprimer"
     },
     {
@@ -6761,7 +6961,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6822854545454544,
+      "score": 0.6920127272727271,
       "action": "conserver"
     },
     {
@@ -6782,6 +6982,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.34703666666666666,
       "action": "supprimer"
     },
     {
@@ -6854,8 +7055,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6878063636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "viry-chatillon",
@@ -6875,6 +7077,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.49983489510489504,
       "action": "supprimer"
     },
     {
@@ -6927,6 +7130,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.36603258741258743,
       "action": "supprimer"
     },
     {
@@ -6936,8 +7140,9 @@
       "element": "La Grande Borne",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6908618181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "grigny",
@@ -6946,8 +7151,9 @@
       "element": "Centre commercial",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.8668445454545455,
+      "action": "conserver"
     },
     {
       "zoneSlug": "grigny",
@@ -6956,8 +7162,9 @@
       "element": "Orge",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6864990909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "bretigny-sur-orge",
@@ -6978,7 +7185,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.31961966942148756,
+      "score": 0.5891844919786096,
       "action": "supprimer"
     },
     {
@@ -7020,6 +7227,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3197596187683284,
       "action": "supprimer"
     },
     {
@@ -7030,7 +7238,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6808427272727271,
+      "score": 0.7000563636363635,
       "action": "conserver"
     },
     {
@@ -7092,9 +7300,9 @@
       "element": "gare Sainte-Geneviève",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.39350090909090907,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.687831818181818,
+      "action": "conserver"
     },
     {
       "zoneSlug": "sainte-genevieve-des-bois",
@@ -7104,6 +7312,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3197596187683284,
       "action": "supprimer"
     },
     {
@@ -7113,8 +7322,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6919445454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "sainte-genevieve-des-bois",
@@ -7175,9 +7385,9 @@
       "element": "gare Longjumeau",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.36032099706744863,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6935863636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "longjumeau",
@@ -7187,6 +7397,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3063578512396694,
       "action": "supprimer"
     },
     {
@@ -7196,8 +7407,9 @@
       "element": "Bièvre",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6888499999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "longjumeau",
@@ -7228,7 +7440,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.3342218181818181,
+      "score": 0.5056037190082644,
       "action": "supprimer"
     },
     {
@@ -7259,7 +7471,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.48265805194805195,
+      "score": 0.49434636363636364,
       "action": "supprimer"
     },
     {
@@ -7289,8 +7501,9 @@
       "element": "Hôtel de Ville",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6945699999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "yerres",
@@ -7300,7 +7513,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.44122727272727275,
+      "score": 0.3427125705329154,
       "action": "supprimer"
     },
     {
@@ -7310,9 +7523,9 @@
       "element": "route de Corbeil",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.3076909090909091,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9686327272727272,
+      "action": "conserver"
     },
     {
       "zoneSlug": "yerres",
@@ -7342,7 +7555,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6740579020979021,
+      "score": 0.69478,
       "action": "conserver"
     },
     {
@@ -7353,7 +7566,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.5355963636363636,
+      "score": 0.5754836842105262,
       "action": "supprimer"
     },
     {
@@ -7364,6 +7577,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.31701330578512393,
       "action": "supprimer"
     },
     {
@@ -7374,7 +7588,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3065054545454545,
+      "score": 0.36155666666666664,
       "action": "supprimer"
     },
     {
@@ -7384,8 +7598,9 @@
       "element": "route de Corbeil",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9686327272727272,
+      "action": "conserver"
     },
     {
       "zoneSlug": "draveil",
@@ -7425,8 +7640,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6891436363636362,
+      "action": "conserver"
     },
     {
       "zoneSlug": "draveil",
@@ -7436,6 +7652,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3759281027667984,
       "action": "supprimer"
     },
     {
@@ -7446,7 +7663,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.33535348973607043,
+      "score": 0.42962934169278993,
       "action": "supprimer"
     },
     {
@@ -7456,8 +7673,9 @@
       "element": "Mainville",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6992218181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "montgeron",
@@ -7478,7 +7696,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.4449258288770053,
+      "score": 0.5259706951871658,
       "action": "supprimer"
     },
     {
@@ -7509,6 +7727,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4888741711229947,
       "action": "supprimer"
     },
     {
@@ -7530,6 +7749,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30805411483253586,
       "action": "supprimer"
     },
     {
@@ -7539,8 +7759,9 @@
       "element": "étang",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6876963636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "argenteuil",
@@ -7561,7 +7782,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.4502079841897233,
+      "score": 0.5844102479338842,
       "action": "supprimer"
     },
     {
@@ -7592,7 +7813,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3234863636363636,
+      "score": 0.5735822077922078,
       "action": "supprimer"
     },
     {
@@ -7602,8 +7823,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6989527272727272,
+      "action": "conserver"
     },
     {
       "zoneSlug": "argenteuil",
@@ -7613,6 +7835,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.39554021390374333,
       "action": "supprimer"
     },
     {
@@ -7623,6 +7846,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.34282999999999997,
       "action": "supprimer"
     },
     {
@@ -7674,8 +7898,9 @@
       "element": "préfecture Cergy",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6852890909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "cergy",
@@ -7685,6 +7910,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4324481818181818,
       "action": "supprimer"
     },
     {
@@ -7695,6 +7921,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.33711272727272723,
       "action": "supprimer"
     },
     {
@@ -7705,6 +7932,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4442776470588235,
       "action": "supprimer"
     },
     {
@@ -7725,9 +7953,9 @@
       "element": "route de Gonesse",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.3969671074380165,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6025057851239669,
+      "action": "conserver"
     },
     {
       "zoneSlug": "sarcelles",
@@ -7757,7 +7985,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3067709090909091,
+      "score": 0.36818454545454543,
       "action": "supprimer"
     },
     {
@@ -7779,6 +8007,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30957181818181817,
       "action": "supprimer"
     },
     {
@@ -7788,8 +8017,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6844672727272727,
+      "action": "conserver"
     },
     {
       "zoneSlug": "garges-les-gonesse",
@@ -7809,8 +8039,9 @@
       "element": "route de Sarcelles",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6415945454545455,
+      "action": "conserver"
     },
     {
       "zoneSlug": "garges-les-gonesse",
@@ -7840,6 +8071,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5433325133689839,
       "action": "supprimer"
     },
     {
@@ -7860,7 +8092,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.32777272727272727,
+      "score": 0.4158738871473354,
       "action": "supprimer"
     },
     {
@@ -7870,8 +8102,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6844672727272727,
+      "action": "conserver"
     },
     {
       "zoneSlug": "franconville",
@@ -7891,8 +8124,9 @@
       "element": "route de Pontoise",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9771527272727272,
+      "action": "conserver"
     },
     {
       "zoneSlug": "franconville",
@@ -7922,7 +8156,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.605410909090909,
+      "score": 0.6897399999999999,
       "action": "conserver"
     },
     {
@@ -7942,8 +8176,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6973554545454544,
+      "action": "conserver"
     },
     {
       "zoneSlug": "franconville",
@@ -7953,6 +8188,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.49918181818181817,
       "action": "supprimer"
     },
     {
@@ -8005,6 +8241,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3883690118577075,
       "action": "supprimer"
     },
     {
@@ -8025,6 +8262,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4158738871473354,
       "action": "supprimer"
     },
     {
@@ -8034,8 +8272,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6847445454545453,
+      "action": "conserver"
     },
     {
       "zoneSlug": "montmorency",
@@ -8056,7 +8295,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.5184051948051948,
+      "score": 0.5844102479338842,
       "action": "supprimer"
     },
     {
@@ -8087,7 +8326,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.33901181818181814,
+      "score": 0.585860909090909,
       "action": "supprimer"
     },
     {
@@ -8098,6 +8337,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30957181818181817,
       "action": "supprimer"
     },
     {
@@ -8117,8 +8357,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6912163636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "enghien-les-bains",
@@ -8138,9 +8379,9 @@
       "element": "route de Montmorency",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.31585876033057847,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6401683116883117,
+      "action": "conserver"
     },
     {
       "zoneSlug": "enghien-les-bains",
@@ -8170,7 +8411,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.30533770053475934,
+      "score": 0.4987232620320856,
       "action": "supprimer"
     },
     {
@@ -8191,6 +8432,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4505949197860962,
       "action": "supprimer"
     },
     {
@@ -8201,6 +8443,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30957181818181817,
       "action": "supprimer"
     },
     {
@@ -8253,7 +8496,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6195982887700535,
+      "score": 0.692260909090909,
       "action": "conserver"
     },
     {
@@ -8283,8 +8526,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6924727272727271,
+      "action": "conserver"
     },
     {
       "zoneSlug": "taverny",
@@ -8304,9 +8548,9 @@
       "element": "route de Pontoise",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.34487636363636365,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6085145454545454,
+      "action": "conserver"
     },
     {
       "zoneSlug": "taverny",
@@ -8335,9 +8579,9 @@
       "element": "gare Taverny",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.36479446640316204,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6951518181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "taverny",
@@ -8356,8 +8600,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6912163636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "taverny",
@@ -8367,6 +8612,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4177599999999999,
       "action": "supprimer"
     },
     {
@@ -8388,6 +8634,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.5136727272727272,
       "action": "supprimer"
     },
     {
@@ -8417,8 +8664,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6954263636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "bezons",
@@ -8428,6 +8676,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.4925482991202345,
       "action": "supprimer"
     },
     {
@@ -8448,6 +8697,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.39554021390374333,
       "action": "supprimer"
     },
     {
@@ -8500,7 +8750,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.678490909090909,
+      "score": 0.7009854545454545,
       "action": "conserver"
     },
     {
@@ -8510,8 +8760,9 @@
       "element": "gare Herblay",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.697930909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "herblay-sur-seine",
@@ -8530,8 +8781,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.689640909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "pontoise",
@@ -8552,7 +8804,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.40894181818181813,
+      "score": 0.5534081818181817,
       "action": "supprimer"
     },
     {
@@ -8592,8 +8844,9 @@
       "element": "préfecture",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6852890909090908,
+      "action": "conserver"
     },
     {
       "zoneSlug": "pontoise",
@@ -8603,7 +8856,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3483357575757575,
+      "score": 0.497307807486631,
       "action": "supprimer"
     },
     {
@@ -8614,6 +8867,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3946102097902098,
       "action": "supprimer"
     },
     {
@@ -8624,7 +8878,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.4012747552447552,
+      "score": 0.351970909090909,
       "action": "supprimer"
     },
     {
@@ -8634,9 +8888,9 @@
       "element": "route de Sarcelles",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.5312765289256198,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6415945454545455,
+      "action": "conserver"
     },
     {
       "zoneSlug": "gonesse",
@@ -8666,6 +8920,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3627205882352941,
       "action": "supprimer"
     },
     {
@@ -8676,7 +8931,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3719272727272727,
+      "score": 0.5299697402597402,
       "action": "supprimer"
     },
     {
@@ -8696,8 +8951,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6898636363636362,
+      "action": "conserver"
     },
     {
       "zoneSlug": "roissy-en-france",
@@ -8707,7 +8963,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.35418992094861657,
+      "score": 0.4543,
       "action": "supprimer"
     },
     {
@@ -8759,6 +9015,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3413009090909091,
       "action": "supprimer"
     },
     {
@@ -8800,7 +9057,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.3296772727272727,
+      "score": 0.34873405594405593,
       "action": "supprimer"
     },
     {
@@ -8830,9 +9087,9 @@
       "element": "château de Malmaison",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.35330272727272727,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6948436363636362,
+      "action": "conserver"
     },
     {
       "zoneSlug": "rueil-malmaison",
@@ -8842,6 +9099,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.35557005347593584,
       "action": "supprimer"
     },
     {
@@ -8851,8 +9109,9 @@
       "element": "Mont-Valérien",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.7015336363636363,
+      "action": "conserver"
     },
     {
       "zoneSlug": "rueil-malmaison",
@@ -8862,6 +9121,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3190418181818182,
       "action": "supprimer"
     },
     {
@@ -8882,8 +9142,9 @@
       "element": "route d'Argenteuil",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6219318181818182,
+      "action": "conserver"
     },
     {
       "zoneSlug": "colombes",
@@ -8934,6 +9195,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.39554021390374333,
       "action": "supprimer"
     },
     {
@@ -8943,8 +9205,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6973554545454544,
+      "action": "conserver"
     },
     {
       "zoneSlug": "antony",
@@ -9017,6 +9280,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.416160909090909,
       "action": "supprimer"
     },
     {
@@ -9026,8 +9290,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6921581818181818,
+      "action": "conserver"
     },
     {
       "zoneSlug": "clamart",
@@ -9088,9 +9353,9 @@
       "element": "gare Clamart",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.34805727272727266,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6921699999999998,
+      "action": "conserver"
     },
     {
       "zoneSlug": "clamart",
@@ -9100,7 +9365,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.42252965034965034,
+      "score": 0.4911601976284585,
       "action": "supprimer"
     },
     {
@@ -9111,7 +9376,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3987066233766233,
+      "score": 0.4959159893048128,
       "action": "supprimer"
     },
     {
@@ -9133,7 +9398,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.46084181818181813,
+      "score": 0.34873405594405593,
       "action": "supprimer"
     },
     {
@@ -9163,9 +9428,9 @@
       "element": "La Défense",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.3331209090909091,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.957690909090909,
+      "action": "conserver"
     },
     {
       "zoneSlug": "puteaux",
@@ -9175,7 +9440,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.34819267942583726,
+      "score": 0.4898873553719008,
       "action": "supprimer"
     },
     {
@@ -9185,8 +9450,9 @@
       "element": "Parc de l'Île",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6899009090909091,
+      "action": "conserver"
     },
     {
       "zoneSlug": "puteaux",
@@ -9196,6 +9462,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3190418181818182,
       "action": "supprimer"
     },
     {
@@ -9217,6 +9484,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.49006259740259733,
       "action": "supprimer"
     },
     {
@@ -9246,8 +9514,9 @@
       "element": "Mont-Valérien",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6942936363636363,
+      "action": "conserver"
     },
     {
       "zoneSlug": "suresnes",
@@ -9256,8 +9525,9 @@
       "element": "gare Suresnes-Mont-Valérien",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6204299999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "suresnes",
@@ -9267,6 +9537,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3190418181818182,
       "action": "supprimer"
     },
     {
@@ -9276,8 +9547,9 @@
       "element": "Parc du Mont-Valérien",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6270999604743083,
+      "action": "conserver"
     },
     {
       "zoneSlug": "gennevilliers",
@@ -9297,9 +9569,9 @@
       "element": "route de Colombes",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.33061999999999997,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6150027272727272,
+      "action": "conserver"
     },
     {
       "zoneSlug": "gennevilliers",
@@ -9328,9 +9600,9 @@
       "element": "port de Gennevilliers",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.3328386257928118,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6848527272727272,
+      "action": "conserver"
     },
     {
       "zoneSlug": "gennevilliers",
@@ -9340,7 +9612,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6218155614973263,
+      "score": 0.6952699999999999,
       "action": "conserver"
     },
     {
@@ -9360,8 +9632,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6942563636363636,
+      "action": "conserver"
     },
     {
       "zoneSlug": "bagneux",
@@ -9381,8 +9654,9 @@
       "element": "route de Châtillon",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.624154976076555,
+      "action": "conserver"
     },
     {
       "zoneSlug": "bagneux",
@@ -9443,6 +9717,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5392774380165289,
       "action": "supprimer"
     },
     {
@@ -9464,7 +9739,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.3382081818181818,
+      "score": 0.33197,
       "action": "supprimer"
     },
     {
@@ -9494,9 +9769,9 @@
       "element": "gare Bondy",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.4078772727272727,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6837554545454545,
+      "action": "conserver"
     },
     {
       "zoneSlug": "bondy",
@@ -9516,6 +9791,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30535151515151515,
       "action": "supprimer"
     },
     {
@@ -9525,8 +9801,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6964854545454545,
+      "action": "conserver"
     },
     {
       "zoneSlug": "le-raincy",
@@ -9546,9 +9823,9 @@
       "element": "route de Montfermeil",
       "type": "voie",
       "source": "axes",
-      "verdict": "signalé",
-      "score": 0.5945950197628458,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.9738199999999999,
+      "action": "conserver"
     },
     {
       "zoneSlug": "le-raincy",
@@ -9578,7 +9855,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3004527272727273,
+      "score": 0.5753247933884298,
       "action": "supprimer"
     },
     {
@@ -9589,6 +9866,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3097618577075099,
       "action": "supprimer"
     },
     {
@@ -9599,6 +9877,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5387506951871658,
       "action": "supprimer"
     },
     {
@@ -9608,8 +9887,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6839263636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "livry-gargan",
@@ -9630,6 +9910,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.5714836363636363,
       "action": "supprimer"
     },
     {
@@ -9670,9 +9951,9 @@
       "element": "centre commercial",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.3977284415584415,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.8699118181818182,
+      "action": "conserver"
     },
     {
       "zoneSlug": "livry-gargan",
@@ -9682,7 +9963,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3054522966507177,
+      "score": 0.3097618577075099,
       "action": "supprimer"
     },
     {
@@ -9692,8 +9973,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6839263636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "sevran",
@@ -9744,9 +10026,9 @@
       "element": "gare Sevran–Beaudottes",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.39206033492822967,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6769333566433566,
+      "action": "conserver"
     },
     {
       "zoneSlug": "sevran",
@@ -9766,6 +10048,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30535151515151515,
       "action": "supprimer"
     },
     {
@@ -9776,6 +10059,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5312296650717704,
       "action": "supprimer"
     },
     {
@@ -9797,6 +10081,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.5037127272727272,
       "action": "supprimer"
     },
     {
@@ -9838,6 +10123,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30535151515151515,
       "action": "supprimer"
     },
     {
@@ -9847,8 +10133,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6964854545454545,
+      "action": "conserver"
     },
     {
       "zoneSlug": "drancy",
@@ -9858,6 +10145,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5510309090909091,
       "action": "supprimer"
     },
     {
@@ -9879,6 +10167,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.4539358441558441,
       "action": "supprimer"
     },
     {
@@ -9920,6 +10209,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3731585714285714,
       "action": "supprimer"
     },
     {
@@ -9930,6 +10220,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30535151515151515,
       "action": "supprimer"
     },
     {
@@ -9940,6 +10231,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5448425133689839,
       "action": "supprimer"
     },
     {
@@ -9991,7 +10283,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "validé",
-      "score": 0.6808018181818181,
+      "score": 0.704480909090909,
       "action": "conserver"
     },
     {
@@ -10002,6 +10294,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.35373904306220094,
       "action": "supprimer"
     },
     {
@@ -10012,6 +10305,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.30957181818181817,
       "action": "supprimer"
     },
     {
@@ -10021,8 +10315,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6847445454545453,
+      "action": "conserver"
     },
     {
       "zoneSlug": "l-hay-les-roses",
@@ -10043,6 +10338,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.46701363636363635,
       "action": "supprimer"
     },
     {
@@ -10094,6 +10390,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3164637062937063,
       "action": "supprimer"
     },
     {
@@ -10114,6 +10411,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.5791654545454545,
       "action": "supprimer"
     },
     {
@@ -10155,6 +10453,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.42459560975609756,
       "action": "supprimer"
     },
     {
@@ -10175,6 +10474,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.32838636363636364,
       "action": "supprimer"
     },
     {
@@ -10206,6 +10506,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.4204190909090909,
       "action": "supprimer"
     },
     {
@@ -10246,8 +10547,9 @@
       "element": "Seine",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6890118181818181,
+      "action": "conserver"
     },
     {
       "zoneSlug": "choisy-le-roi",
@@ -10257,6 +10559,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3164637062937063,
       "action": "supprimer"
     },
     {
@@ -10266,8 +10569,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6930972727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "orly",
@@ -10288,6 +10592,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.4204190909090909,
       "action": "supprimer"
     },
     {
@@ -10339,7 +10644,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.35094363636363635,
+      "score": 0.33650041958041954,
       "action": "supprimer"
     },
     {
@@ -10350,6 +10655,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3053381818181818,
       "action": "supprimer"
     },
     {
@@ -10371,6 +10677,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
+      "score": 0.38039,
       "action": "supprimer"
     },
     {
@@ -10401,7 +10708,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
-      "score": 0.3052751239669421,
+      "score": 0.5084463636363636,
       "action": "supprimer"
     },
     {
@@ -10421,8 +10728,9 @@
       "element": "marché",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6921581818181818,
+      "action": "conserver"
     },
     {
       "zoneSlug": "fresnes",
@@ -10431,8 +10739,9 @@
       "element": "Parc des Sports",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6941863636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "cachan",
@@ -10453,7 +10762,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.30985502392344494,
+      "score": 0.3799034710743802,
       "action": "supprimer"
     },
     {
@@ -10483,9 +10792,9 @@
       "element": "gare Cachan",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "score": 0.4511209090909091,
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6942863636363635,
+      "action": "conserver"
     },
     {
       "zoneSlug": "cachan",
@@ -10495,6 +10804,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3164637062937063,
       "action": "supprimer"
     },
     {
@@ -10504,8 +10814,9 @@
       "element": "écoles",
       "type": "quartier",
       "source": "landmarks",
-      "verdict": "signalé",
-      "action": "supprimer"
+      "verdict": "validé",
+      "score": 0.6933872727272726,
+      "action": "conserver"
     },
     {
       "zoneSlug": "cachan",
@@ -10536,7 +10847,7 @@
       "type": "voie",
       "source": "axes",
       "verdict": "signalé",
-      "score": 0.3028318181818182,
+      "score": 0.46701363636363635,
       "action": "supprimer"
     },
     {
@@ -10567,6 +10878,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.5528383216783217,
       "action": "supprimer"
     },
     {
@@ -10587,6 +10899,7 @@
       "type": "quartier",
       "source": "landmarks",
       "verdict": "signalé",
+      "score": 0.3673872248803827,
       "action": "supprimer"
     },
     {
@@ -10602,47 +10915,47 @@
   ],
   "summary": {
     "totalChecked": 1016,
-    "totalRemove": 752,
+    "totalRemove": 566,
     "top10": [
       {
         "commune": "Savigny-le-Temple",
         "count": 8
       },
       {
-        "commune": "Fontainebleau",
-        "count": 8
+        "commune": "Lieusaint",
+        "count": 7
       },
       {
         "commune": "Provins",
-        "count": 8
+        "count": 7
       },
       {
-        "commune": "Houilles",
-        "count": 8
+        "commune": "Montigny-le-Bretonneux",
+        "count": 7
+      },
+      {
+        "commune": "Trappes",
+        "count": 7
       },
       {
         "commune": "Les Mureaux",
-        "count": 8
+        "count": 7
       },
       {
-        "commune": "Guyancourt",
-        "count": 8
-      },
-      {
-        "commune": "Corbeil-Essonnes",
-        "count": 8
-      },
-      {
-        "commune": "Draveil",
-        "count": 8
+        "commune": "Athis-Mons",
+        "count": 7
       },
       {
         "commune": "Argenteuil",
-        "count": 8
+        "count": 7
       },
       {
         "commune": "Bezons",
-        "count": 8
+        "count": 7
+      },
+      {
+        "commune": "Roissy-en-France",
+        "count": 7
       }
     ]
   }

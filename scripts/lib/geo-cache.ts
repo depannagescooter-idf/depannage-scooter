@@ -15,8 +15,9 @@ export function saveVerifyCache(cache: Record<string, CacheEntry>): void {
   writeFileSync(CACHE_PATH, JSON.stringify(cache, null, 2));
 }
 
+/** v2 = BAN sans type + communes limitrophes pour les lieux non-voies. */
 export function cacheKey(insee: string, type: string, element: string): string {
-  return `${insee}|${type}|${element.toLowerCase()}`;
+  return `v2|${insee}|${type}|${element.toLowerCase()}`;
 }
 
 export async function fetchWithRetry(

@@ -20,11 +20,12 @@ export interface GeoVerdict {
   action: "conserver" | "supprimer";
 }
 
-const VOIE_PREFIX =
-  /(?:\b(?:rue|avenue|boulevard|place|esplanade|quai|allée|impasse|passage|square|cours|route|voie|pont|parvis)\s+(?:de\s+(?:la|l'|les)\s+|d'|du|des)?[\p{L}0-9''\-\s]{2,60})/giu;
+const STREET_NAME_HINT =
+  /\b(rue|avenue|boulevard|place|impasse|allée|quai|chemin)\b/i;
 
-const QUARTIER_IN_INTRO =
-  /\b(?:quartier|secteur)\s+(?:de\s+(?:la|l'|les)\s+|d'|du|des)?[\p{L}''\-\s]{2,50}/giu;
+export function isStreetLabel(element: string): boolean {
+  return STREET_NAME_HINT.test(element);
+}
 
 export function parisArrondissementInsee(name: string): string | null {
   const m = name.match(/^Paris\s+(\d+)(?:er|e)$/i);
@@ -32,16 +33,6 @@ export function parisArrondissementInsee(name: string): string | null {
   const n = Number(m[1]);
   if (n < 1 || n > 20) return null;
   return `751${String(n).padStart(2, "0")}`;
-}
-
-export function extractIntroVoies(intro: string): string[] {
-  const found = intro.match(VOIE_PREFIX) ?? [];
-  return [...new Set(found.map((s) => s.trim()))];
-}
-
-export function extractIntroQuartiers(intro: string): string[] {
-  const found = intro.match(QUARTIER_IN_INTRO) ?? [];
-  return [...new Set(found.map((s) => s.trim()))];
 }
 
 export function collectElements(zone: Zone): GeoElement[] {
@@ -55,7 +46,6 @@ export function collectElements(zone: Zone): GeoElement[] {
   for (const q of zone.quartiers ?? []) {
     items.push({ value: q.trim(), type: "quartier", source: "quartiers" });
   }
-  /* Les voies/quartiers cités uniquement dans l'intro sont nettoyés via retrait des éléments signalés des champs structurés. */
   const seen = new Set<string>();
   return items.filter((it) => {
     const key = `${it.type}:${it.value.toLowerCase()}`;
@@ -82,6 +72,24 @@ export async function fetchInseeCode(zone: Zone): Promise<string> {
   return match.code;
 }
 
+export async function neighborInseeCodes(
+  zone: Zone,
+  slugToZone: Map<string, Zone>,
+  inseeCache: Map<string, string>,
+): Promise<string[]> {
+  const codes: string[] = [];
+  for (const ns of zone.neighbours.slice(0, 8)) {
+    const nz = slugToZone.get(ns);
+    if (!nz) continue;
+    if (!inseeCache.has(ns)) {
+      inseeCache.set(ns, await fetchInseeCode(nz));
+      await throttle(15);
+    }
+    codes.push(inseeCache.get(ns)!);
+  }
+  return codes;
+}
+
 export interface AdresseSearchHit {
   score: number;
   citycode?: string;
@@ -90,14 +98,10 @@ export interface AdresseSearchHit {
 export async function searchBan(
   q: string,
   citycode: string,
-  type: "street" | "locality" | "municipality",
+  type?: "street" | "locality" | "municipality",
 ): Promise<AdresseSearchHit | null> {
-  const params = new URLSearchParams({
-    q,
-    citycode,
-    type,
-    limit: "1",
-  });
+  const params = new URLSearchParams({ q, citycode, limit: "1" });
+  if (type) params.set("type", type);
   const url = `https://api-adresse.data.gouv.fr/search/?${params}`;
   const { fetchWithRetry } = await import("./geo-cache");
   let res: Response;
@@ -117,28 +121,34 @@ export async function searchBan(
 
 export async function verifyElement(
   element: string,
-  type: GeoElementType,
+  _type: GeoElementType,
   insee: string,
+  neighborInsees: string[] = [],
 ): Promise<{ valid: boolean; score?: number }> {
-  if (type === "voie") {
+  const allowed = new Set([insee, ...neighborInsees]);
+
+  if (isStreetLabel(element)) {
     const hit = await searchBan(element, insee, "street");
     if (hit && hit.citycode === insee && hit.score > 0.6) {
       return { valid: true, score: hit.score };
     }
     return { valid: false, score: hit?.score };
   }
-  const loc = await searchBan(element, insee, "locality");
-  if (loc && loc.citycode === insee && loc.score > 0.6) {
-    return { valid: true, score: loc.score };
+
+  let best: number | undefined;
+  for (const citycode of allowed) {
+    const hit = await searchBan(element, citycode);
+    if (hit && hit.citycode && allowed.has(hit.citycode) && hit.score > 0.6) {
+      return { valid: true, score: hit.score };
+    }
+    if (hit?.score && (best === undefined || hit.score > best)) {
+      best = hit.score;
+    }
+    await throttle(20);
   }
-  const mun = await searchBan(element, insee, "municipality");
-  if (mun && mun.citycode === insee && mun.score > 0.6) {
-    return { valid: true, score: mun.score };
-  }
-  return { valid: false, score: loc?.score ?? mun?.score };
+  return { valid: false, score: best };
 }
 
-/** Pause entre requêtes BAN (50/s max). */
 export function throttle(ms = 25): Promise<void> {
   return new Promise((r) => setTimeout(r, ms));
 }

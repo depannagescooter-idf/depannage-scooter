@@ -15,6 +15,7 @@ import {
 import {
   collectElements,
   fetchInseeCode,
+  neighborInseeCodes,
   throttle,
   verifyElement,
 } from "./lib/geo-verify";
@@ -34,6 +35,7 @@ async function buildRemoveSets(): Promise<Map<string, Set<string>>> {
   const bySlug = new Map<string, Set<string>>();
   const inseeCache = new Map<string, string>();
   const verifyCache = loadVerifyCache();
+  const slugToZone = new Map(zones.map((z) => [z.slug, z]));
 
   for (const zone of zones) {
     let insee = inseeCache.get(zone.slug);
@@ -42,6 +44,7 @@ async function buildRemoveSets(): Promise<Map<string, Set<string>>> {
       inseeCache.set(zone.slug, insee);
       await throttle();
     }
+    const neighbors = await neighborInseeCodes(zone, slugToZone, inseeCache);
     const remove = new Set<string>();
     for (const el of collectElements(zone)) {
       const key = cacheKey(insee, el.type, el.value);
@@ -50,7 +53,7 @@ async function buildRemoveSets(): Promise<Map<string, Set<string>>> {
         result = verifyCache[key];
       } else {
         await throttle(40);
-        const { valid, score } = await verifyElement(el.value, el.type, insee);
+        const { valid, score } = await verifyElement(el.value, el.type, insee, neighbors);
         result = { valid, score };
         verifyCache[key] = result;
         saveVerifyCache(verifyCache);
