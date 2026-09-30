@@ -26,11 +26,5 @@ export function getZoneFaqs(zone: Zone) {
   if (zone.faq?.length) {
     return [...base, ...zone.faq];
   }
-  if (zone.landmarks[0]) {
-    base.push({
-      question: `Intervenez-vous près de ${zone.landmarks[0]} à ${zone.name} ?`,
-      answer: `Oui. Nous intervenons sur l'ensemble de ${zone.name}, y compris autour de ${zone.landmarks.slice(0, 2).join(" et ")}. Indiquez le point exact lors de l'appel pour un délai précis.`,
-    });
-  }
   return base;
 }

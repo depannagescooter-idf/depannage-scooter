@@ -33,12 +33,9 @@ export interface Zone {
   lat: number;
   lng: number;
   etaMinutes: [number, number];
-  /** Contenu OBLIGATOIREMENT unique. Pas de template à variables. */
-  intro: string;
-  axes: string[];
-  landmarks: string[];
-  commonInterventions: string[];
   neighbours: string[];
+  /** Texte du client (interventions réelles, accès, photos) : affiché en tête de page quand il est rempli. */
+  clientContent?: string;
   /** FAQ propres à la commune (complète les FAQ génériques). */
   faq?: Faq[];
   quartiers?: string[];

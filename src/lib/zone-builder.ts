@@ -10,13 +10,6 @@ export interface ZoneSeed {
   postalCodes: string[];
   lat: number;
   lng: number;
-  profile: string;
-  axes: [string, string, string, string];
-  landmarks: [string, string, string, string];
-  commonInterventions: [string, string, string, string];
-  trafficNote: string;
-  parkingNote: string;
-  accessNote: string;
 }
 
 function distanceKm(lat1: number, lng1: number, lat2: number, lng2: number): number {
@@ -42,35 +35,6 @@ export function etaFromDistance(lat: number, lng: number): [number, number] {
   return [55, 80];
 }
 
-const DEPT_LABELS: Record<string, string> = {
-  "77": "Seine-et-Marne",
-  "78": "Yvelines",
-  "91": "Essonne",
-  "95": "Val-d'Oise",
-  "92": "Hauts-de-Seine",
-  "93": "Seine-Saint-Denis",
-  "94": "Val-de-Marne",
-};
-
-/** Intro unique par commune — contenu local issu des seeds, pas de template global identique. */
-export function buildZoneIntro(seed: ZoneSeed): string {
-  const dept = DEPT_LABELS[seed.departement] ?? seed.departement;
-  const [a1, a2, a3, a4] = seed.axes;
-  const [l1, l2, l3, l4] = seed.landmarks;
-  const [i1, i2, i3, i4] = seed.commonInterventions;
-
-  return [
-    `${seed.name}, commune du ${dept}, se distingue comme ${seed.profile}.`,
-    `Les scooters et motos circulent sur ${a1}, ${a2} et ${a3}, avec des arrêts répétés près de ${l1} et ${l2} où le stationnement est surveillé en journée.`,
-    seed.trafficNote,
-    `Nos dépanneurs interviennent régulièrement pour ${i1.toLowerCase()}, ${i2.toLowerCase()} et ${i3.toLowerCase()} autour de ${l3}.`,
-    seed.parkingNote,
-    `${seed.accessNote} Les remorquages depuis ${seed.name} empruntent ${a4} ou les bretelles autoroutières les plus proches pour rejoindre un garage en sécurité.`,
-    `Le secteur ${l4} concentre aussi des demandes de ${i4.toLowerCase()} lors des pics de livraison ou des événements locaux.`,
-    `Comptez un délai annoncé au téléphone avant départ, adapté au trafic entre ${seed.name} et votre point de panne exact.`,
-  ].join(" ");
-}
-
 export function seedToZone(seed: ZoneSeed): Zone {
   return {
     slug: seed.slug,
@@ -81,10 +45,6 @@ export function seedToZone(seed: ZoneSeed): Zone {
     lat: seed.lat,
     lng: seed.lng,
     etaMinutes: etaFromDistance(seed.lat, seed.lng),
-    intro: buildZoneIntro(seed),
-    axes: [...seed.axes],
-    landmarks: [...seed.landmarks],
-    commonInterventions: [...seed.commonInterventions],
     neighbours: [],
   };
 }

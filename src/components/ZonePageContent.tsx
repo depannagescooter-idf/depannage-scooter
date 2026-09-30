@@ -6,6 +6,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { ZoneFactSheet } from "@/components/ZoneFactSheet";
 import { getDepartmentSlugByCode } from "@/data/departments";
 import { depannageServices, remorquageServices } from "@/data/services";
 import type { Zone } from "@/data/types";
@@ -60,7 +61,15 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
             <WhatsAppButton origin="inline" />
           </div>
 
-          <p className="mt-8 leading-relaxed text-beton">{zone.intro}</p>
+          {zone.clientContent && (
+            <div className="mt-8 space-y-4 leading-relaxed text-asphalte">
+              {zone.clientContent.split(/\n\s*\n/).map((paragraph) => (
+                <p key={paragraph}>{paragraph}</p>
+              ))}
+            </div>
+          )}
+
+          <ZoneFactSheet zone={zone} />
 
           {deptSlug && (
             <p className="mt-4 text-sm text-beton">
@@ -141,18 +150,6 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
             <Link href="/tarifs/" className="mt-4 inline-block text-sm font-medium text-gyro hover:underline">
               Grille complète et majorations →
             </Link>
-          </section>
-
-          <section className="mt-10">
-            <h2 className="section-title">Quelles interventions sont fréquentes ici ?</h2>
-            <ul className="mt-4 list-inside list-disc space-y-1 text-beton">
-              {zone.commonInterventions.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-            <p className="mt-3 text-sm text-beton">
-              Axes desservis : {zone.axes.join(", ")}.
-            </p>
           </section>
 
           <section className="mt-10">

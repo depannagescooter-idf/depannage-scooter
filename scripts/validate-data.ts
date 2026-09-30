@@ -5,6 +5,7 @@
 import { guides } from "../src/data/guides";
 import { services } from "../src/data/services";
 import { zones } from "../src/data/zones";
+import { zoneFactSheetText } from "../src/lib/zone-fact-sheet";
 
 function jaccardSimilarity(a: string, b: string): number {
   const wordsA = new Set(a.toLowerCase().split(/\s+/));
@@ -51,23 +52,29 @@ for (const s of services) {
 
 if (errors === 0) ok("Services: metadata et FAQ OK");
 
-// Zones — similarité intros
+// Zones — similarité du seul champ libre du client (clientContent).
+// Les fiches de données (distance, délai, tarif, population, limitrophes, voies, prestations) ont la même
+// structure par construction : les comparer mesurerait le gabarit, pas le contenu propre à la zone.
+// Une zone dont le champ libre est vide n'est pas comparée.
 for (let i = 0; i < zones.length; i++) {
   for (let j = i + 1; j < zones.length; j++) {
     const zi = zones[i];
     const zj = zones[j];
-    if (!zi || !zj) continue;
-    const sim = jaccardSimilarity(zi.intro, zj.intro);
+    if (!zi?.clientContent || !zj?.clientContent) continue;
+    const sim = jaccardSimilarity(zi.clientContent, zj.clientContent);
     // Seuil fixe à 0,8 : ne jamais le relever pour faire passer un build.
     if (sim > 0.8) {
-      fail(`Zones ${zi.slug} / ${zj.slug}: similarité intro ${(sim * 100).toFixed(0)}%`);
+      fail(`Zones ${zi.slug} / ${zj.slug}: similarité du texte client ${(sim * 100).toFixed(0)}%`);
     }
   }
-  const wordCount = zones[i]!.intro.split(/\s+/).length;
-  if (wordCount < 150) fail(`${zones[i]!.slug}: intro ${wordCount} mots < 150`);
+  // Minimum abaissé de 150 à 50 mots, texte client et fiche de données confondus : une fiche factuelle
+  // honnête fait 60 à 90 mots, et les 150 mots n'étaient atteints qu'avec du texte de remplissage.
+  const zone = zones[i]!;
+  const wordCount = `${zone.clientContent ?? ""} ${zoneFactSheetText(zone)}`.split(/\s+/).filter(Boolean).length;
+  if (wordCount < 50) fail(`${zone.slug}: fiche ${wordCount} mots < 50`);
 }
 
-if (errors === 0) ok("Zones: intros uniques et longueur OK");
+if (errors === 0) ok("Zones: textes clients distincts et fiches d'au moins 50 mots");
 
 console.log(errors === 0 ? "\nvalidate:data PASS" : `\nvalidate:data FAIL (${errors} erreurs)`);
 process.exit(errors === 0 ? 0 : 1);
