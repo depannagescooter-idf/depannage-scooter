@@ -1,3 +1,4 @@
+import { PriceInclusions } from "@/components/PriceInclusions";
 import {
   formatPrice,
   getDspTotal,
@@ -160,6 +161,7 @@ export function PriceTable({
           </table>
         </TableCard>
       )}
+      <PriceInclusions />
     </div>
   );
 }

@@ -1,3 +1,4 @@
+import { PriceInclusions } from "@/components/PriceInclusions";
 import {
   formatPrice,
   getDspTotal,
@@ -78,6 +79,7 @@ export function ServicePriceTable({ priceKey }: ServicePriceTableProps) {
             </tbody>
           </table>
         </div>
+        <PriceInclusions />
       </div>
     );
   }
@@ -85,7 +87,8 @@ export function ServicePriceTable({ priceKey }: ServicePriceTableProps) {
   if (isTowing) {
     const starting = getStartingPrice(priceKey);
     return (
-      <div className="card overflow-hidden">
+      <div className="space-y-4">
+        <div className="card overflow-hidden">
         <table className="w-full text-sm">
           <thead>
             <tr className="border-b border-border-soft bg-surface-muted/60 text-left text-xs uppercase tracking-wide text-beton">
@@ -116,6 +119,8 @@ export function ServicePriceTable({ priceKey }: ServicePriceTableProps) {
             À partir de {formatPrice(starting)} pour les trajets les plus courts.
           </p>
         )}
+        </div>
+        <PriceInclusions />
       </div>
     );
   }

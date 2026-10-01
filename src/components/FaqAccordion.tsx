@@ -11,6 +11,7 @@ export function FaqAccordion({ items, id = "faq" }: FaqAccordionProps) {
       {items.map((item) => (
         <details
           key={item.question}
+          id={item.id}
           className="group card overflow-hidden transition-shadow duration-150 open:shadow-card"
           name={id}
         >

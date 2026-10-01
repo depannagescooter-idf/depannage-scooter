@@ -3,6 +3,8 @@ export type ServiceCategory = "depannage" | "remorquage";
 export interface Faq {
   question: string;
   answer: string;
+  /** Ancre optionnelle, pour un lien direct vers la question. */
+  id?: string;
 }
 
 export interface Service {

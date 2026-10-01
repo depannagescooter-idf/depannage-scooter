@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumb } from "@/components/Breadcrumb";
+import { PriceInclusions } from "@/components/PriceInclusions";
 import { CallButton } from "@/components/CallButton";
 import { FaqAccordion } from "@/components/FaqAccordion";
 import { JsonLd } from "@/components/JsonLd";
@@ -82,6 +83,9 @@ export default function CarTirePage() {
         <section className="mt-10 max-w-3xl">
           <h2 className="section-title">{carTirePage.priceTitle}</h2>
           <p className="mt-4 leading-relaxed text-asphalte">{carTirePage.priceText}</p>
+          <div className="mt-4">
+            <PriceInclusions includeStrapping={false} />
+          </div>
           <p className="mt-3 text-sm">
             <Link href="/depannage-voiture/batterie/" className="font-medium text-gyro hover:underline">
               Dépannage batterie voiture

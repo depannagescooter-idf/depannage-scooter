@@ -29,6 +29,7 @@ export const globalFaqs: Faq[] = [
       "Le règlement s'effectue sur place par carte bancaire ou espèces, une fois l'intervention terminée. Un devis ferme vous est communiqué par téléphone avant le départ du dépanneur. Pas de surprise à l'arrivée.",
   },
   {
+    id: "assistance-0-km",
     question: "Mon assurance peut-elle prendre en charge le dépannage ?",
     answer:
       "De nombreux contrats moto incluent une assistance 0 km ou un remorquage ; les contrats auto proposent souvent la même garantie (dépannage sur place, batterie, remorquage). Consultez votre attestation ou appelez l'assistance de votre assureur avant de payer. Nous fournissons une facture détaillée pour votre dossier.",

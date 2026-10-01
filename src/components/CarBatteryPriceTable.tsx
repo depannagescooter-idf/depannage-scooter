@@ -1,3 +1,4 @@
+import { PriceInclusions } from "@/components/PriceInclusions";
 import {
   formatPrice,
   getCarBatteryBoostTotal,
@@ -122,6 +123,7 @@ export function CarBatteryPriceTable({ showSurcharges = true }: CarBatteryPriceT
           </p>
         </>
       )}
+      <PriceInclusions includeStrapping={false} />
     </div>
   );
 }
