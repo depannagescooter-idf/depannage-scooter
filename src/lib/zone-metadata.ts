@@ -12,8 +12,7 @@ export function getZonePageTitle(zone: Zone): string {
 export function getZonePageDescription(zone: Zone): string {
   const dspTotal = getDspTotal(getTravelZoneForZone(zone));
   const towingMin = formatPrice(pricing.towing.KM_0_5.amount);
-  const desc = `Dépannage scooter et moto à ${zone.name} en ${zone.etaMinutes[0]}–${zone.etaMinutes[1]} min, 24h/24. Dès ${formatPrice(dspTotal)}, remorquage dès ${towingMin}. Devis ferme : ${company.phoneDisplay}.`;
-  return desc.slice(0, 158);
+  return `Dépannage scooter et moto à ${zone.name} en ${zone.etaMinutes[0]}–${zone.etaMinutes[1]} min, 24h/24. Dès ${formatPrice(dspTotal)}, remorquage dès ${towingMin}. Devis ferme : ${company.phoneDisplay}.`;
 }
 
 export function getDepartmentPageTitle(name: string, code: string): string {

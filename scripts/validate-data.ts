@@ -2,10 +2,18 @@
  * Valide l'intégrité des données src/data/
  * Usage: npm run validate:data
  */
+import { departments } from "../src/data/departments";
 import { guides } from "../src/data/guides";
 import { retiredZoneSlugList } from "../src/data/retired-zone-slugs";
 import { services } from "../src/data/services";
 import { retiredZoneSlugs, zones } from "../src/data/zones";
+import {
+  departmentDelayText,
+  departmentFaqs,
+  departmentHubWordCount,
+  departmentParagraphs,
+  departmentDelayStats,
+} from "../src/lib/department-hub";
 import { missingRequiredFacts, zoneFactSheetText } from "../src/lib/zone-fact-sheet";
 
 function jaccardSimilarity(a: string, b: string): number {
@@ -86,6 +94,38 @@ for (let i = 0; i < zones.length; i++) {
 }
 
 if (errors === 0) ok("Zones: textes clients distincts, fiches d'au moins 50 mots avec distance, délai et tarif");
+
+for (const department of departments) {
+  const length = department.metaDescription.length;
+  if (length < 140 || length > 155) {
+    fail(`${department.slug}: meta description ${length} caractères, attendu 140–155`);
+  }
+  const deptZones = zones.filter((zone) => zone.departement === department.code);
+  const stats = departmentDelayStats(deptZones);
+  const prose = [
+    department.where,
+    department.intro,
+    department.metaDescription,
+    departmentDelayText(stats),
+    ...departmentParagraphs(department, stats),
+    ...departmentFaqs(department).flatMap((faq) => [faq.question, faq.answer]),
+    `Dépannage scooter et moto ${department.where}`,
+    `dépannage scooter ${department.where}`,
+  ].join("\n");
+  if (prose.toLowerCase().includes("en paris")) {
+    fail(`${department.slug}: contient « en Paris »`);
+  }
+  const withoutOwnName = prose.split(department.name).join(" ");
+  for (const zone of zones) {
+    if (withoutOwnName.includes(zone.name)) {
+      fail(`${department.slug}: nom de lieu introduit « ${zone.name} »`);
+    }
+  }
+  const words = departmentHubWordCount(department, deptZones);
+  if (words < 400) fail(`${department.slug}: ${words} mots de contenu < 400`);
+}
+
+if (errors === 0) ok("Hubs: metas 140–155, prépositions, 400 mots, aucun nom de commune introduit");
 
 console.log(errors === 0 ? "\nvalidate:data PASS" : `\nvalidate:data FAIL (${errors} erreurs)`);
 process.exit(errors === 0 ? 0 : 1);

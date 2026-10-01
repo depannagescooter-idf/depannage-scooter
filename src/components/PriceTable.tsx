@@ -4,10 +4,13 @@ import {
   offeredTravelZones,
   pricing,
 } from "@/data/pricing";
+import type { TravelZoneKey } from "@/data/types";
 export interface PriceTableProps {
   showDsp?: boolean;
   showTowing?: boolean;
   showSurcharges?: boolean;
+  /** Colonnes de déplacement affichées. Par défaut : Paris et petite couronne. */
+  travelZones?: readonly TravelZoneKey[];
 }
 
 function TableCard({
@@ -35,7 +38,9 @@ export function PriceTable({
   showDsp = true,
   showTowing = true,
   showSurcharges = true,
+  travelZones = offeredTravelZones,
 }: PriceTableProps) {
+  const showZoneColumn = travelZones.length > 1;
   return (
     <div className="space-y-4">
       {showTowing && (
@@ -89,9 +94,11 @@ export function PriceTable({
             <table className="w-full min-w-[320px] text-sm">
               <thead>
                 <tr className="border-b border-border-soft text-left text-xs uppercase tracking-wide text-beton">
-                  <th scope="col" className="px-5 py-3 font-medium">
-                    Zone
-                  </th>
+                  {showZoneColumn && (
+                    <th scope="col" className="px-5 py-3 font-medium">
+                      Zone
+                    </th>
+                  )}
                   <th scope="col" className="px-5 py-3 font-medium">
                     Déplacement
                   </th>
@@ -101,14 +108,14 @@ export function PriceTable({
                 </tr>
               </thead>
               <tbody>
-                {offeredTravelZones.map((zone, i) => {
+                {travelZones.map((zone, i) => {
                   const tier = pricing.travelFees[zone];
                   return (
                     <tr
                       key={zone}
                       className={i % 2 === 0 ? "bg-surface" : "bg-surface-muted/40"}
                     >
-                      <td className="px-5 py-3.5 text-asphalte">{tier.label}</td>
+                      {showZoneColumn && <td className="px-5 py-3.5 text-asphalte">{tier.label}</td>}
                       <td className="px-5 py-3.5 font-data tabular-nums text-beton">
                         +{formatPrice(tier.amount)}
                       </td>

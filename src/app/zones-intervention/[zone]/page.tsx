@@ -23,7 +23,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (department) {
     return createPageMetadata({
       title: getDepartmentPageTitle(department.name, department.code),
-      description: department.intro.slice(0, 158),
+      description: department.metaDescription,
       path: `/zones-intervention/${department.slug}/`,
       useRouteOg: true,
     });

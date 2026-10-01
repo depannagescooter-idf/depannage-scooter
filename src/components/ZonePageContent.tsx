@@ -7,7 +7,7 @@ import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { ZoneFactSheet } from "@/components/ZoneFactSheet";
-import { getDepartmentSlugByCode } from "@/data/departments";
+import { getDepartmentBySlug, getDepartmentSlugByCode } from "@/data/departments";
 import { depannageServices, remorquageServices } from "@/data/services";
 import type { Zone } from "@/data/types";
 import { limitrophesTitle, limitrophesWithPage } from "@/lib/zone-fact-sheet";
@@ -15,24 +15,13 @@ import { buildZoneShortAnswer } from "@/lib/zone-short-answer";
 import { getZoneFaqs } from "@/lib/zone-faqs";
 import { faqPageSchema, zoneServiceSchema } from "@/lib/schema";
 
-const DEPT_LABELS: Record<string, string> = {
-  "75": "Paris",
-  "92": "Hauts-de-Seine",
-  "93": "Seine-Saint-Denis",
-  "94": "Val-de-Marne",
-  "77": "Seine-et-Marne",
-  "78": "Yvelines",
-  "91": "Essonne",
-  "95": "Val-d'Oise",
-};
-
 export function ZonePageContent({ zone }: { zone: Zone }) {
   const limitrophes = limitrophesWithPage(zone);
 
   const shortAnswer = buildZoneShortAnswer(zone);
   const zoneFaqs = getZoneFaqs(zone);
   const deptSlug = getDepartmentSlugByCode(zone.departement);
-  const deptLabel = DEPT_LABELS[zone.departement] ?? "Île-de-France";
+  const department = deptSlug ? getDepartmentBySlug(deptSlug) : undefined;
 
   return (
     <>
@@ -68,14 +57,14 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
 
           <ZoneFactSheet zone={zone} />
 
-          {deptSlug && (
+          {department && (
             <p className="mt-4 text-sm text-beton">
               Voir aussi le{" "}
               <Link
-                href={`/zones-intervention/${deptSlug}/`}
+                href={`/zones-intervention/${department.slug}/`}
                 className="font-medium text-gyro hover:underline"
               >
-                dépannage scooter en {deptLabel} ({zone.departement})
+                dépannage scooter {department.where} ({zone.departement})
               </Link>
               .
             </p>
