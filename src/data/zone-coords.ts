@@ -677,5 +677,755 @@ export const zoneCoords: ZoneCoord[] = [
       25,
       40
     ]
+  },
+  {
+    "slug": "bois-colombes",
+    "name": "Bois-Colombes",
+    "lat": 48.9151,
+    "lng": 2.2688,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "bourg-la-reine",
+    "name": "Bourg-la-Reine",
+    "lat": 48.7801,
+    "lng": 2.3167,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "chatenay-malabry",
+    "name": "Châtenay-Malabry",
+    "lat": 48.7697,
+    "lng": 2.2603,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "chatillon",
+    "name": "Châtillon",
+    "lat": 48.8031,
+    "lng": 2.2887,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "chaville",
+    "name": "Chaville",
+    "lat": 48.8091,
+    "lng": 2.191,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "fontenay-aux-roses",
+    "name": "Fontenay-aux-Roses",
+    "lat": 48.7895,
+    "lng": 2.2876,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "garches",
+    "name": "Garches",
+    "lat": 48.8469,
+    "lng": 2.1861,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "la-garenne-colombes",
+    "name": "La Garenne-Colombes",
+    "lat": 48.9071,
+    "lng": 2.2437,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "malakoff",
+    "name": "Malakoff",
+    "lat": 48.817,
+    "lng": 2.2943,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "marnes-la-coquette",
+    "name": "Marnes-la-Coquette",
+    "lat": 48.8286,
+    "lng": 2.1689,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "meudon",
+    "name": "Meudon",
+    "lat": 48.8028,
+    "lng": 2.2288,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "le-plessis-robinson",
+    "name": "Le Plessis-Robinson",
+    "lat": 48.7815,
+    "lng": 2.2592,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "saint-cloud",
+    "name": "Saint-Cloud",
+    "lat": 48.844,
+    "lng": 2.2032,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "sceaux",
+    "name": "Sceaux",
+    "lat": 48.776,
+    "lng": 2.2963,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "sevres",
+    "name": "Sèvres",
+    "lat": 48.8223,
+    "lng": 2.2056,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "vanves",
+    "name": "Vanves",
+    "lat": 48.8214,
+    "lng": 2.2869,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "vaucresson",
+    "name": "Vaucresson",
+    "lat": 48.8377,
+    "lng": 2.1628,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "ville-d-avray",
+    "name": "Ville-d'Avray",
+    "lat": 48.8215,
+    "lng": 2.1759,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "villeneuve-la-garenne",
+    "name": "Villeneuve-la-Garenne",
+    "lat": 48.9354,
+    "lng": 2.3231,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "bagnolet",
+    "name": "Bagnolet",
+    "lat": 48.8671,
+    "lng": 2.4252,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "le-bourget",
+    "name": "Le Bourget",
+    "lat": 48.9378,
+    "lng": 2.4287,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "clichy-sous-bois",
+    "name": "Clichy-sous-Bois",
+    "lat": 48.9081,
+    "lng": 2.5432,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "coubron",
+    "name": "Coubron",
+    "lat": 48.9173,
+    "lng": 2.5759,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "la-courneuve",
+    "name": "La Courneuve",
+    "lat": 48.9341,
+    "lng": 2.3986,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "dugny",
+    "name": "Dugny",
+    "lat": 48.9494,
+    "lng": 2.4255,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "gagny",
+    "name": "Gagny",
+    "lat": 48.8826,
+    "lng": 2.545,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "gournay-sur-marne",
+    "name": "Gournay-sur-Marne",
+    "lat": 48.8607,
+    "lng": 2.5761,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "l-ile-saint-denis",
+    "name": "L'Île-Saint-Denis",
+    "lat": 48.9465,
+    "lng": 2.3204,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "les-lilas",
+    "name": "Les Lilas",
+    "lat": 48.8821,
+    "lng": 2.4207,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "montfermeil",
+    "name": "Montfermeil",
+    "lat": 48.8976,
+    "lng": 2.5678,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "neuilly-plaisance",
+    "name": "Neuilly-Plaisance",
+    "lat": 48.8641,
+    "lng": 2.5097,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "neuilly-sur-marne",
+    "name": "Neuilly-sur-Marne",
+    "lat": 48.8645,
+    "lng": 2.5419,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "noisy-le-sec",
+    "name": "Noisy-le-Sec",
+    "lat": 48.8917,
+    "lng": 2.4578,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "les-pavillons-sous-bois",
+    "name": "Les Pavillons-sous-Bois",
+    "lat": 48.907,
+    "lng": 2.5057,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "le-pre-saint-gervais",
+    "name": "Le Pré-Saint-Gervais",
+    "lat": 48.884,
+    "lng": 2.4054,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "romainville",
+    "name": "Romainville",
+    "lat": 48.8849,
+    "lng": 2.4391,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "rosny-sous-bois",
+    "name": "Rosny-sous-Bois",
+    "lat": 48.8744,
+    "lng": 2.4872,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "stains",
+    "name": "Stains",
+    "lat": 48.9578,
+    "lng": 2.3868,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "tremblay-en-france",
+    "name": "Tremblay-en-France",
+    "lat": 48.9744,
+    "lng": 2.5481,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "vaujours",
+    "name": "Vaujours",
+    "lat": 48.9338,
+    "lng": 2.5799,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "villemomble",
+    "name": "Villemomble",
+    "lat": 48.8866,
+    "lng": 2.5085,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "villepinte",
+    "name": "Villepinte",
+    "lat": 48.956,
+    "lng": 2.5323,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "villetaneuse",
+    "name": "Villetaneuse",
+    "lat": 48.9574,
+    "lng": 2.3441,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "ablon-sur-seine",
+    "name": "Ablon-sur-Seine",
+    "lat": 48.7236,
+    "lng": 2.4229,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "boissy-saint-leger",
+    "name": "Boissy-Saint-Léger",
+    "lat": 48.7453,
+    "lng": 2.5251,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "bonneuil-sur-marne",
+    "name": "Bonneuil-sur-Marne",
+    "lat": 48.7721,
+    "lng": 2.493,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "bry-sur-marne",
+    "name": "Bry-sur-Marne",
+    "lat": 48.8392,
+    "lng": 2.5224,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "champigny-sur-marne",
+    "name": "Champigny-sur-Marne",
+    "lat": 48.8173,
+    "lng": 2.5206,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "chennevieres-sur-marne",
+    "name": "Chennevières-sur-Marne",
+    "lat": 48.7951,
+    "lng": 2.5443,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "chevilly-larue",
+    "name": "Chevilly-Larue",
+    "lat": 48.7679,
+    "lng": 2.3507,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "fontenay-sous-bois",
+    "name": "Fontenay-sous-Bois",
+    "lat": 48.8503,
+    "lng": 2.4736,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "gentilly",
+    "name": "Gentilly",
+    "lat": 48.812,
+    "lng": 2.3426,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "joinville-le-pont",
+    "name": "Joinville-le-Pont",
+    "lat": 48.8199,
+    "lng": 2.4685,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "le-kremlin-bicetre",
+    "name": "Le Kremlin-Bicêtre",
+    "lat": 48.8087,
+    "lng": 2.356,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "limeil-brevannes",
+    "name": "Limeil-Brévannes",
+    "lat": 48.7463,
+    "lng": 2.4924,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "maisons-alfort",
+    "name": "Maisons-Alfort",
+    "lat": 48.8017,
+    "lng": 2.44,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "mandres-les-roses",
+    "name": "Mandres-les-Roses",
+    "lat": 48.7068,
+    "lng": 2.5477,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "marolles-en-brie",
+    "name": "Marolles-en-Brie",
+    "lat": 48.7385,
+    "lng": 2.5539,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "nogent-sur-marne",
+    "name": "Nogent-sur-Marne",
+    "lat": 48.837,
+    "lng": 2.4811,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "noiseau",
+    "name": "Noiseau",
+    "lat": 48.7757,
+    "lng": 2.556,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "ormesson-sur-marne",
+    "name": "Ormesson-sur-Marne",
+    "lat": 48.7873,
+    "lng": 2.5371,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "perigny",
+    "name": "Périgny",
+    "lat": 48.6974,
+    "lng": 2.562,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "le-perreux-sur-marne",
+    "name": "Le Perreux-sur-Marne",
+    "lat": 48.8433,
+    "lng": 2.5045,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "le-plessis-trevise",
+    "name": "Le Plessis-Trévise",
+    "lat": 48.808,
+    "lng": 2.5763,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "la-queue-en-brie",
+    "name": "La Queue-en-Brie",
+    "lat": 48.7769,
+    "lng": 2.5855,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "rungis",
+    "name": "Rungis",
+    "lat": 48.7493,
+    "lng": 2.3499,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "saint-mande",
+    "name": "Saint-Mandé",
+    "lat": 48.8414,
+    "lng": 2.4195,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "saint-maurice",
+    "name": "Saint-Maurice",
+    "lat": 48.8179,
+    "lng": 2.4423,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "santeny",
+    "name": "Santeny",
+    "lat": 48.7362,
+    "lng": 2.5771,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "sucy-en-brie",
+    "name": "Sucy-en-Brie",
+    "lat": 48.7688,
+    "lng": 2.5374,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "valenton",
+    "name": "Valenton",
+    "lat": 48.7497,
+    "lng": 2.46,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "villecresnes",
+    "name": "Villecresnes",
+    "lat": 48.7221,
+    "lng": 2.5328,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "villeneuve-le-roi",
+    "name": "Villeneuve-le-Roi",
+    "lat": 48.732,
+    "lng": 2.4076,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "villeneuve-saint-georges",
+    "name": "Villeneuve-Saint-Georges",
+    "lat": 48.7389,
+    "lng": 2.4493,
+    "etaMinutes": [
+      25,
+      40
+    ]
+  },
+  {
+    "slug": "villiers-sur-marne",
+    "name": "Villiers-sur-Marne",
+    "lat": 48.8278,
+    "lng": 2.5482,
+    "etaMinutes": [
+      25,
+      40
+    ]
   }
 ];

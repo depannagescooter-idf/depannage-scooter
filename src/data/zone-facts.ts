@@ -87,7 +87,82 @@ export const zoneInsee: Record<string, string> = {
   "orly": "94054",
   "fresnes": "94034",
   "cachan": "94016",
-  "arcueil": "94003"
+  "arcueil": "94003",
+  "bois-colombes": "92009",
+  "bourg-la-reine": "92014",
+  "chatenay-malabry": "92019",
+  "chatillon": "92020",
+  "chaville": "92022",
+  "fontenay-aux-roses": "92032",
+  "garches": "92033",
+  "la-garenne-colombes": "92035",
+  "malakoff": "92046",
+  "marnes-la-coquette": "92047",
+  "meudon": "92048",
+  "le-plessis-robinson": "92060",
+  "saint-cloud": "92064",
+  "sceaux": "92071",
+  "sevres": "92072",
+  "vanves": "92075",
+  "vaucresson": "92076",
+  "ville-d-avray": "92077",
+  "villeneuve-la-garenne": "92078",
+  "bagnolet": "93006",
+  "le-bourget": "93013",
+  "clichy-sous-bois": "93014",
+  "coubron": "93015",
+  "la-courneuve": "93027",
+  "dugny": "93030",
+  "gagny": "93032",
+  "gournay-sur-marne": "93033",
+  "l-ile-saint-denis": "93039",
+  "les-lilas": "93045",
+  "montfermeil": "93047",
+  "neuilly-plaisance": "93049",
+  "neuilly-sur-marne": "93050",
+  "noisy-le-sec": "93053",
+  "les-pavillons-sous-bois": "93057",
+  "le-pre-saint-gervais": "93061",
+  "romainville": "93063",
+  "rosny-sous-bois": "93064",
+  "stains": "93072",
+  "tremblay-en-france": "93073",
+  "vaujours": "93074",
+  "villemomble": "93077",
+  "villepinte": "93078",
+  "villetaneuse": "93079",
+  "ablon-sur-seine": "94001",
+  "boissy-saint-leger": "94004",
+  "bonneuil-sur-marne": "94011",
+  "bry-sur-marne": "94015",
+  "champigny-sur-marne": "94017",
+  "chennevieres-sur-marne": "94019",
+  "chevilly-larue": "94021",
+  "fontenay-sous-bois": "94033",
+  "gentilly": "94037",
+  "joinville-le-pont": "94042",
+  "le-kremlin-bicetre": "94043",
+  "limeil-brevannes": "94044",
+  "maisons-alfort": "94046",
+  "mandres-les-roses": "94047",
+  "marolles-en-brie": "94048",
+  "nogent-sur-marne": "94052",
+  "noiseau": "94053",
+  "ormesson-sur-marne": "94055",
+  "perigny": "94056",
+  "le-perreux-sur-marne": "94058",
+  "le-plessis-trevise": "94059",
+  "la-queue-en-brie": "94060",
+  "rungis": "94065",
+  "saint-mande": "94067",
+  "saint-maurice": "94069",
+  "santeny": "94070",
+  "sucy-en-brie": "94071",
+  "valenton": "94074",
+  "villecresnes": "94075",
+  "villeneuve-le-roi": "94077",
+  "villeneuve-saint-georges": "94078",
+  "villiers-sur-marne": "94079"
 };
 
 export const zoneFacts: Record<string, ZoneFacts> = {
@@ -2866,5 +2941,2837 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "lng": 2.3369,
       "lat": 48.806
     }
+  },
+  "bois-colombes": {
+    "officialName": "Bois-Colombes",
+    "population": 28909,
+    "surfaceHa": 192.51,
+    "limitrophes": [
+      {
+        "code": "92004",
+        "nom": "Asnières-sur-Seine"
+      },
+      {
+        "code": "92025",
+        "nom": "Colombes"
+      },
+      {
+        "code": "92026",
+        "nom": "Courbevoie"
+      },
+      {
+        "code": "92035",
+        "nom": "La Garenne-Colombes"
+      }
+    ],
+    "route": {
+      "distanceKm": 11.9,
+      "durationMin": 28
+    },
+    "mairie": {
+      "lng": 2.2678,
+      "lat": 48.9143
+    },
+    "computedOn": "2026-10-01"
+  },
+  "bourg-la-reine": {
+    "officialName": "Bourg-la-Reine",
+    "population": 21019,
+    "surfaceHa": 185.83,
+    "limitrophes": [
+      {
+        "code": "92002",
+        "nom": "Antony"
+      },
+      {
+        "code": "92007",
+        "nom": "Bagneux"
+      },
+      {
+        "code": "94016",
+        "nom": "Cachan"
+      },
+      {
+        "code": "94038",
+        "nom": "L'Haÿ-les-Roses"
+      },
+      {
+        "code": "92071",
+        "nom": "Sceaux"
+      }
+    ],
+    "route": {
+      "distanceKm": 13.6,
+      "durationMin": 26
+    },
+    "mairie": {
+      "lng": 2.3158,
+      "lat": 48.7789
+    },
+    "computedOn": "2026-10-01"
+  },
+  "chatenay-malabry": {
+    "officialName": "Châtenay-Malabry",
+    "population": 35825,
+    "surfaceHa": 636.5,
+    "limitrophes": [
+      {
+        "code": "92002",
+        "nom": "Antony"
+      },
+      {
+        "code": "91064",
+        "nom": "Bièvres"
+      },
+      {
+        "code": "92023",
+        "nom": "Clamart"
+      },
+      {
+        "code": "92060",
+        "nom": "Le Plessis-Robinson"
+      },
+      {
+        "code": "92071",
+        "nom": "Sceaux"
+      },
+      {
+        "code": "91645",
+        "nom": "Verrières-le-Buisson"
+      }
+    ],
+    "route": {
+      "distanceKm": 20.2,
+      "durationMin": 27
+    },
+    "mairie": {
+      "lng": 2.2777,
+      "lat": 48.7674
+    },
+    "computedOn": "2026-10-01"
+  },
+  "chatillon": {
+    "officialName": "Châtillon",
+    "population": 36705,
+    "surfaceHa": 292.37,
+    "limitrophes": [
+      {
+        "code": "92007",
+        "nom": "Bagneux"
+      },
+      {
+        "code": "92023",
+        "nom": "Clamart"
+      },
+      {
+        "code": "92032",
+        "nom": "Fontenay-aux-Roses"
+      },
+      {
+        "code": "92046",
+        "nom": "Malakoff"
+      },
+      {
+        "code": "92049",
+        "nom": "Montrouge"
+      }
+    ],
+    "route": {
+      "distanceKm": 9,
+      "durationMin": 21
+    },
+    "mairie": {
+      "lng": 2.2898,
+      "lat": 48.7996
+    },
+    "computedOn": "2026-10-01"
+  },
+  "chaville": {
+    "officialName": "Chaville",
+    "population": 20594,
+    "surfaceHa": 357.45,
+    "limitrophes": [
+      {
+        "code": "92048",
+        "nom": "Meudon"
+      },
+      {
+        "code": "92072",
+        "nom": "Sèvres"
+      },
+      {
+        "code": "78640",
+        "nom": "Vélizy-Villacoublay"
+      },
+      {
+        "code": "92077",
+        "nom": "Ville-d'Avray"
+      },
+      {
+        "code": "78686",
+        "nom": "Viroflay"
+      }
+    ],
+    "route": {
+      "distanceKm": 17.7,
+      "durationMin": 34
+    },
+    "mairie": {
+      "lng": 2.1883,
+      "lat": 48.81
+    },
+    "computedOn": "2026-10-01"
+  },
+  "fontenay-aux-roses": {
+    "officialName": "Fontenay-aux-Roses",
+    "population": 24070,
+    "surfaceHa": 253.04,
+    "limitrophes": [
+      {
+        "code": "92007",
+        "nom": "Bagneux"
+      },
+      {
+        "code": "92020",
+        "nom": "Châtillon"
+      },
+      {
+        "code": "92023",
+        "nom": "Clamart"
+      },
+      {
+        "code": "92060",
+        "nom": "Le Plessis-Robinson"
+      },
+      {
+        "code": "92071",
+        "nom": "Sceaux"
+      }
+    ],
+    "route": {
+      "distanceKm": 10.1,
+      "durationMin": 23
+    },
+    "mairie": {
+      "lng": 2.2865,
+      "lat": 48.7912
+    },
+    "computedOn": "2026-10-01"
+  },
+  "garches": {
+    "officialName": "Garches",
+    "population": 17743,
+    "surfaceHa": 272.07,
+    "limitrophes": [
+      {
+        "code": "92047",
+        "nom": "Marnes-la-Coquette"
+      },
+      {
+        "code": "92063",
+        "nom": "Rueil-Malmaison"
+      },
+      {
+        "code": "92064",
+        "nom": "Saint-Cloud"
+      },
+      {
+        "code": "92076",
+        "nom": "Vaucresson"
+      }
+    ],
+    "route": {
+      "distanceKm": 16.6,
+      "durationMin": 34
+    },
+    "mairie": {
+      "lng": 2.1877,
+      "lat": 48.8435
+    },
+    "computedOn": "2026-10-01"
+  },
+  "la-garenne-colombes": {
+    "officialName": "La Garenne-Colombes",
+    "population": 30197,
+    "surfaceHa": 178.12,
+    "limitrophes": [
+      {
+        "code": "92009",
+        "nom": "Bois-Colombes"
+      },
+      {
+        "code": "92025",
+        "nom": "Colombes"
+      },
+      {
+        "code": "92026",
+        "nom": "Courbevoie"
+      },
+      {
+        "code": "92050",
+        "nom": "Nanterre"
+      }
+    ],
+    "route": {
+      "distanceKm": 13.8,
+      "durationMin": 28
+    },
+    "mairie": {
+      "lng": 2.2466,
+      "lat": 48.907
+    },
+    "computedOn": "2026-10-01"
+  },
+  "malakoff": {
+    "officialName": "Malakoff",
+    "population": 30557,
+    "surfaceHa": 207.15,
+    "limitrophes": [
+      {
+        "code": "92020",
+        "nom": "Châtillon"
+      },
+      {
+        "code": "92023",
+        "nom": "Clamart"
+      },
+      {
+        "code": "92049",
+        "nom": "Montrouge"
+      },
+      {
+        "code": "75114",
+        "nom": "Paris 14e Arrondissement"
+      },
+      {
+        "code": "92075",
+        "nom": "Vanves"
+      }
+    ],
+    "route": {
+      "distanceKm": 7,
+      "durationMin": 18
+    },
+    "mairie": {
+      "lng": 2.3016,
+      "lat": 48.8208
+    },
+    "computedOn": "2026-10-01"
+  },
+  "marnes-la-coquette": {
+    "officialName": "Marnes-la-Coquette",
+    "population": 1752,
+    "surfaceHa": 347.42,
+    "limitrophes": [
+      {
+        "code": "92033",
+        "nom": "Garches"
+      },
+      {
+        "code": "92064",
+        "nom": "Saint-Cloud"
+      },
+      {
+        "code": "92076",
+        "nom": "Vaucresson"
+      },
+      {
+        "code": "78646",
+        "nom": "Versailles"
+      },
+      {
+        "code": "92077",
+        "nom": "Ville-d'Avray"
+      }
+    ],
+    "route": {
+      "distanceKm": 17,
+      "durationMin": 35
+    },
+    "mairie": {
+      "lng": 2.1775,
+      "lat": 48.8302
+    },
+    "computedOn": "2026-10-01"
+  },
+  "meudon": {
+    "officialName": "Meudon",
+    "population": 46334,
+    "surfaceHa": 994.19,
+    "limitrophes": [
+      {
+        "code": "92012",
+        "nom": "Boulogne-Billancourt"
+      },
+      {
+        "code": "92022",
+        "nom": "Chaville"
+      },
+      {
+        "code": "92023",
+        "nom": "Clamart"
+      },
+      {
+        "code": "92040",
+        "nom": "Issy-les-Moulineaux"
+      },
+      {
+        "code": "92072",
+        "nom": "Sèvres"
+      },
+      {
+        "code": "78640",
+        "nom": "Vélizy-Villacoublay"
+      }
+    ],
+    "route": {
+      "distanceKm": 13.3,
+      "durationMin": 30
+    },
+    "mairie": {
+      "lng": 2.2386,
+      "lat": 48.813
+    },
+    "computedOn": "2026-10-01"
+  },
+  "le-plessis-robinson": {
+    "officialName": "Le Plessis-Robinson",
+    "population": 28848,
+    "surfaceHa": 340.7,
+    "limitrophes": [
+      {
+        "code": "92019",
+        "nom": "Châtenay-Malabry"
+      },
+      {
+        "code": "92023",
+        "nom": "Clamart"
+      },
+      {
+        "code": "92032",
+        "nom": "Fontenay-aux-Roses"
+      },
+      {
+        "code": "92071",
+        "nom": "Sceaux"
+      }
+    ],
+    "route": {
+      "distanceKm": 12.6,
+      "durationMin": 28
+    },
+    "mairie": {
+      "lng": 2.2622,
+      "lat": 48.7821
+    },
+    "computedOn": "2026-10-01"
+  },
+  "saint-cloud": {
+    "officialName": "Saint-Cloud",
+    "population": 29855,
+    "surfaceHa": 750.91,
+    "limitrophes": [
+      {
+        "code": "92012",
+        "nom": "Boulogne-Billancourt"
+      },
+      {
+        "code": "92033",
+        "nom": "Garches"
+      },
+      {
+        "code": "92047",
+        "nom": "Marnes-la-Coquette"
+      },
+      {
+        "code": "75116",
+        "nom": "Paris 16e Arrondissement"
+      },
+      {
+        "code": "92063",
+        "nom": "Rueil-Malmaison"
+      },
+      {
+        "code": "92072",
+        "nom": "Sèvres"
+      },
+      {
+        "code": "92073",
+        "nom": "Suresnes"
+      },
+      {
+        "code": "92077",
+        "nom": "Ville-d'Avray"
+      }
+    ],
+    "route": {
+      "distanceKm": 14,
+      "durationMin": 30
+    },
+    "mairie": {
+      "lng": 2.2191,
+      "lat": 48.8438
+    },
+    "computedOn": "2026-10-01"
+  },
+  "sceaux": {
+    "officialName": "Sceaux",
+    "population": 20884,
+    "surfaceHa": 359.74,
+    "limitrophes": [
+      {
+        "code": "92002",
+        "nom": "Antony"
+      },
+      {
+        "code": "92007",
+        "nom": "Bagneux"
+      },
+      {
+        "code": "92014",
+        "nom": "Bourg-la-Reine"
+      },
+      {
+        "code": "92019",
+        "nom": "Châtenay-Malabry"
+      },
+      {
+        "code": "92032",
+        "nom": "Fontenay-aux-Roses"
+      },
+      {
+        "code": "92060",
+        "nom": "Le Plessis-Robinson"
+      }
+    ],
+    "route": {
+      "distanceKm": 11.7,
+      "durationMin": 28
+    },
+    "mairie": {
+      "lng": 2.2884,
+      "lat": 48.7796
+    },
+    "computedOn": "2026-10-01"
+  },
+  "sevres": {
+    "officialName": "Sèvres",
+    "population": 22303,
+    "surfaceHa": 392.74,
+    "limitrophes": [
+      {
+        "code": "92012",
+        "nom": "Boulogne-Billancourt"
+      },
+      {
+        "code": "92022",
+        "nom": "Chaville"
+      },
+      {
+        "code": "92048",
+        "nom": "Meudon"
+      },
+      {
+        "code": "92064",
+        "nom": "Saint-Cloud"
+      },
+      {
+        "code": "92077",
+        "nom": "Ville-d'Avray"
+      }
+    ],
+    "route": {
+      "distanceKm": 14.2,
+      "durationMin": 30
+    },
+    "mairie": {
+      "lng": 2.2126,
+      "lat": 48.8247
+    },
+    "computedOn": "2026-10-01"
+  },
+  "vanves": {
+    "officialName": "Vanves",
+    "population": 28622,
+    "surfaceHa": 155.5,
+    "limitrophes": [
+      {
+        "code": "92023",
+        "nom": "Clamart"
+      },
+      {
+        "code": "92040",
+        "nom": "Issy-les-Moulineaux"
+      },
+      {
+        "code": "92046",
+        "nom": "Malakoff"
+      },
+      {
+        "code": "75115",
+        "nom": "Paris 15e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 7.8,
+      "durationMin": 19
+    },
+    "mairie": {
+      "lng": 2.2895,
+      "lat": 48.8214
+    },
+    "computedOn": "2026-10-01"
+  },
+  "vaucresson": {
+    "officialName": "Vaucresson",
+    "population": 8432,
+    "surfaceHa": 309.44,
+    "limitrophes": [
+      {
+        "code": "92033",
+        "nom": "Garches"
+      },
+      {
+        "code": "78126",
+        "nom": "La Celle-Saint-Cloud"
+      },
+      {
+        "code": "78158",
+        "nom": "Le Chesnay-Rocquencourt"
+      },
+      {
+        "code": "92047",
+        "nom": "Marnes-la-Coquette"
+      },
+      {
+        "code": "92063",
+        "nom": "Rueil-Malmaison"
+      },
+      {
+        "code": "78646",
+        "nom": "Versailles"
+      }
+    ],
+    "route": {
+      "distanceKm": 20.6,
+      "durationMin": 34
+    },
+    "mairie": {
+      "lng": 2.158,
+      "lat": 48.8394
+    },
+    "computedOn": "2026-10-01"
+  },
+  "ville-d-avray": {
+    "officialName": "Ville-d'Avray",
+    "population": 11089,
+    "surfaceHa": 369.08,
+    "limitrophes": [
+      {
+        "code": "92022",
+        "nom": "Chaville"
+      },
+      {
+        "code": "92047",
+        "nom": "Marnes-la-Coquette"
+      },
+      {
+        "code": "92064",
+        "nom": "Saint-Cloud"
+      },
+      {
+        "code": "92072",
+        "nom": "Sèvres"
+      },
+      {
+        "code": "78646",
+        "nom": "Versailles"
+      },
+      {
+        "code": "78686",
+        "nom": "Viroflay"
+      }
+    ],
+    "route": {
+      "distanceKm": 16.2,
+      "durationMin": 34
+    },
+    "mairie": {
+      "lng": 2.1895,
+      "lat": 48.8284
+    },
+    "computedOn": "2026-10-01"
+  },
+  "villeneuve-la-garenne": {
+    "officialName": "Villeneuve-la-Garenne",
+    "population": 26021,
+    "surfaceHa": 320.02,
+    "limitrophes": [
+      {
+        "code": "92036",
+        "nom": "Gennevilliers"
+      },
+      {
+        "code": "93039",
+        "nom": "L'Île-Saint-Denis"
+      }
+    ],
+    "route": {
+      "distanceKm": 11.4,
+      "durationMin": 26
+    },
+    "mairie": {
+      "lng": 2.3332,
+      "lat": 48.9359
+    },
+    "computedOn": "2026-10-01"
+  },
+  "bagnolet": {
+    "officialName": "Bagnolet",
+    "population": 43086,
+    "surfaceHa": 256.63,
+    "limitrophes": [
+      {
+        "code": "93045",
+        "nom": "Les Lilas"
+      },
+      {
+        "code": "93048",
+        "nom": "Montreuil"
+      },
+      {
+        "code": "75120",
+        "nom": "Paris 20e Arrondissement"
+      },
+      {
+        "code": "93063",
+        "nom": "Romainville"
+      }
+    ],
+    "route": {
+      "distanceKm": 6.6,
+      "durationMin": 12
+    },
+    "mairie": {
+      "lng": 2.4165,
+      "lat": 48.869
+    },
+    "computedOn": "2026-10-01"
+  },
+  "le-bourget": {
+    "officialName": "Le Bourget",
+    "population": 15925,
+    "surfaceHa": 207.89,
+    "limitrophes": [
+      {
+        "code": "93029",
+        "nom": "Drancy"
+      },
+      {
+        "code": "93030",
+        "nom": "Dugny"
+      },
+      {
+        "code": "93027",
+        "nom": "La Courneuve"
+      },
+      {
+        "code": "93007",
+        "nom": "Le Blanc-Mesnil"
+      }
+    ],
+    "route": {
+      "distanceKm": 19.7,
+      "durationMin": 25
+    },
+    "mairie": {
+      "lng": 2.4249,
+      "lat": 48.9346
+    },
+    "computedOn": "2026-10-01"
+  },
+  "clichy-sous-bois": {
+    "officialName": "Clichy-sous-Bois",
+    "population": 29354,
+    "surfaceHa": 396.04,
+    "limitrophes": [
+      {
+        "code": "93015",
+        "nom": "Coubron"
+      },
+      {
+        "code": "93032",
+        "nom": "Gagny"
+      },
+      {
+        "code": "93062",
+        "nom": "Le Raincy"
+      },
+      {
+        "code": "93046",
+        "nom": "Livry-Gargan"
+      },
+      {
+        "code": "93047",
+        "nom": "Montfermeil"
+      }
+    ],
+    "route": {
+      "distanceKm": 19,
+      "durationMin": 26
+    },
+    "mairie": {
+      "lng": 2.5459,
+      "lat": 48.9109
+    },
+    "computedOn": "2026-10-01"
+  },
+  "coubron": {
+    "officialName": "Coubron",
+    "population": 5175,
+    "surfaceHa": 417.25,
+    "limitrophes": [
+      {
+        "code": "77108",
+        "nom": "Chelles"
+      },
+      {
+        "code": "93014",
+        "nom": "Clichy-sous-Bois"
+      },
+      {
+        "code": "77139",
+        "nom": "Courtry"
+      },
+      {
+        "code": "93046",
+        "nom": "Livry-Gargan"
+      },
+      {
+        "code": "93047",
+        "nom": "Montfermeil"
+      },
+      {
+        "code": "93074",
+        "nom": "Vaujours"
+      }
+    ],
+    "route": {
+      "distanceKm": 21.6,
+      "durationMin": 29
+    },
+    "mairie": {
+      "lng": 2.5768,
+      "lat": 48.9159
+    },
+    "computedOn": "2026-10-01"
+  },
+  "la-courneuve": {
+    "officialName": "La Courneuve",
+    "population": 47167,
+    "surfaceHa": 751.63,
+    "limitrophes": [
+      {
+        "code": "93001",
+        "nom": "Aubervilliers"
+      },
+      {
+        "code": "93008",
+        "nom": "Bobigny"
+      },
+      {
+        "code": "93029",
+        "nom": "Drancy"
+      },
+      {
+        "code": "93030",
+        "nom": "Dugny"
+      },
+      {
+        "code": "93013",
+        "nom": "Le Bourget"
+      },
+      {
+        "code": "93055",
+        "nom": "Pantin"
+      },
+      {
+        "code": "93066",
+        "nom": "Saint-Denis"
+      },
+      {
+        "code": "93072",
+        "nom": "Stains"
+      }
+    ],
+    "route": {
+      "distanceKm": 10.4,
+      "durationMin": 24
+    },
+    "mairie": {
+      "lng": 2.3896,
+      "lat": 48.9267
+    },
+    "computedOn": "2026-10-01"
+  },
+  "dugny": {
+    "officialName": "Dugny",
+    "population": 11700,
+    "surfaceHa": 387.26,
+    "limitrophes": [
+      {
+        "code": "95088",
+        "nom": "Bonneuil-en-France"
+      },
+      {
+        "code": "95268",
+        "nom": "Garges-lès-Gonesse"
+      },
+      {
+        "code": "93027",
+        "nom": "La Courneuve"
+      },
+      {
+        "code": "93007",
+        "nom": "Le Blanc-Mesnil"
+      },
+      {
+        "code": "93013",
+        "nom": "Le Bourget"
+      },
+      {
+        "code": "93072",
+        "nom": "Stains"
+      }
+    ],
+    "route": {
+      "distanceKm": 22.5,
+      "durationMin": 28
+    },
+    "mairie": {
+      "lng": 2.4175,
+      "lat": 48.9554
+    },
+    "computedOn": "2026-10-01"
+  },
+  "gagny": {
+    "officialName": "Gagny",
+    "population": 42313,
+    "surfaceHa": 696.5,
+    "limitrophes": [
+      {
+        "code": "77108",
+        "nom": "Chelles"
+      },
+      {
+        "code": "93014",
+        "nom": "Clichy-sous-Bois"
+      },
+      {
+        "code": "93033",
+        "nom": "Gournay-sur-Marne"
+      },
+      {
+        "code": "93062",
+        "nom": "Le Raincy"
+      },
+      {
+        "code": "93047",
+        "nom": "Montfermeil"
+      },
+      {
+        "code": "93050",
+        "nom": "Neuilly-sur-Marne"
+      },
+      {
+        "code": "93077",
+        "nom": "Villemomble"
+      }
+    ],
+    "route": {
+      "distanceKm": 16.7,
+      "durationMin": 23
+    },
+    "mairie": {
+      "lng": 2.5367,
+      "lat": 48.8848
+    },
+    "computedOn": "2026-10-01"
+  },
+  "gournay-sur-marne": {
+    "officialName": "Gournay-sur-Marne",
+    "population": 7320,
+    "surfaceHa": 168.11,
+    "limitrophes": [
+      {
+        "code": "77083",
+        "nom": "Champs-sur-Marne"
+      },
+      {
+        "code": "77108",
+        "nom": "Chelles"
+      },
+      {
+        "code": "93032",
+        "nom": "Gagny"
+      },
+      {
+        "code": "93050",
+        "nom": "Neuilly-sur-Marne"
+      },
+      {
+        "code": "93051",
+        "nom": "Noisy-le-Grand"
+      }
+    ],
+    "route": {
+      "distanceKm": 23.5,
+      "durationMin": 28
+    },
+    "mairie": {
+      "lng": 2.5728,
+      "lat": 48.8646
+    },
+    "computedOn": "2026-10-01"
+  },
+  "l-ile-saint-denis": {
+    "officialName": "L'Île-Saint-Denis",
+    "population": 8696,
+    "surfaceHa": 174.22,
+    "limitrophes": [
+      {
+        "code": "95018",
+        "nom": "Argenteuil"
+      },
+      {
+        "code": "92004",
+        "nom": "Asnières-sur-Seine"
+      },
+      {
+        "code": "93031",
+        "nom": "Épinay-sur-Seine"
+      },
+      {
+        "code": "92036",
+        "nom": "Gennevilliers"
+      },
+      {
+        "code": "93066",
+        "nom": "Saint-Denis"
+      },
+      {
+        "code": "93070",
+        "nom": "Saint-Ouen-sur-Seine"
+      },
+      {
+        "code": "92078",
+        "nom": "Villeneuve-la-Garenne"
+      }
+    ],
+    "route": {
+      "distanceKm": 10.8,
+      "durationMin": 26
+    },
+    "mairie": {
+      "lng": 2.3405,
+      "lat": 48.9356
+    },
+    "computedOn": "2026-10-01"
+  },
+  "les-lilas": {
+    "officialName": "Les Lilas",
+    "population": 23843,
+    "surfaceHa": 125.58,
+    "limitrophes": [
+      {
+        "code": "93006",
+        "nom": "Bagnolet"
+      },
+      {
+        "code": "93061",
+        "nom": "Le Pré-Saint-Gervais"
+      },
+      {
+        "code": "93055",
+        "nom": "Pantin"
+      },
+      {
+        "code": "75119",
+        "nom": "Paris 19e Arrondissement"
+      },
+      {
+        "code": "75120",
+        "nom": "Paris 20e Arrondissement"
+      },
+      {
+        "code": "93063",
+        "nom": "Romainville"
+      }
+    ],
+    "route": {
+      "distanceKm": 8,
+      "durationMin": 15
+    },
+    "mairie": {
+      "lng": 2.4159,
+      "lat": 48.8793
+    },
+    "computedOn": "2026-10-01"
+  },
+  "montfermeil": {
+    "officialName": "Montfermeil",
+    "population": 28703,
+    "surfaceHa": 543.99,
+    "limitrophes": [
+      {
+        "code": "77108",
+        "nom": "Chelles"
+      },
+      {
+        "code": "93014",
+        "nom": "Clichy-sous-Bois"
+      },
+      {
+        "code": "93015",
+        "nom": "Coubron"
+      },
+      {
+        "code": "93032",
+        "nom": "Gagny"
+      }
+    ],
+    "route": {
+      "distanceKm": 20.1,
+      "durationMin": 29
+    },
+    "mairie": {
+      "lng": 2.5707,
+      "lat": 48.9023
+    },
+    "computedOn": "2026-10-01"
+  },
+  "neuilly-plaisance": {
+    "officialName": "Neuilly-Plaisance",
+    "population": 21941,
+    "surfaceHa": 341.27,
+    "limitrophes": [
+      {
+        "code": "94015",
+        "nom": "Bry-sur-Marne"
+      },
+      {
+        "code": "94033",
+        "nom": "Fontenay-sous-Bois"
+      },
+      {
+        "code": "94058",
+        "nom": "Le Perreux-sur-Marne"
+      },
+      {
+        "code": "93050",
+        "nom": "Neuilly-sur-Marne"
+      },
+      {
+        "code": "93051",
+        "nom": "Noisy-le-Grand"
+      },
+      {
+        "code": "93064",
+        "nom": "Rosny-sous-Bois"
+      },
+      {
+        "code": "93077",
+        "nom": "Villemomble"
+      }
+    ],
+    "route": {
+      "distanceKm": 16.8,
+      "durationMin": 23
+    },
+    "mairie": {
+      "lng": 2.5064,
+      "lat": 48.8608
+    },
+    "computedOn": "2026-10-01"
+  },
+  "neuilly-sur-marne": {
+    "officialName": "Neuilly-sur-Marne",
+    "population": 39800,
+    "surfaceHa": 695.34,
+    "limitrophes": [
+      {
+        "code": "93032",
+        "nom": "Gagny"
+      },
+      {
+        "code": "93033",
+        "nom": "Gournay-sur-Marne"
+      },
+      {
+        "code": "93049",
+        "nom": "Neuilly-Plaisance"
+      },
+      {
+        "code": "93051",
+        "nom": "Noisy-le-Grand"
+      },
+      {
+        "code": "93077",
+        "nom": "Villemomble"
+      }
+    ],
+    "route": {
+      "distanceKm": 19.4,
+      "durationMin": 23
+    },
+    "mairie": {
+      "lng": 2.5285,
+      "lat": 48.8569
+    },
+    "computedOn": "2026-10-01"
+  },
+  "noisy-le-sec": {
+    "officialName": "Noisy-le-Sec",
+    "population": 45510,
+    "surfaceHa": 504.37,
+    "limitrophes": [
+      {
+        "code": "93008",
+        "nom": "Bobigny"
+      },
+      {
+        "code": "93010",
+        "nom": "Bondy"
+      },
+      {
+        "code": "93048",
+        "nom": "Montreuil"
+      },
+      {
+        "code": "93063",
+        "nom": "Romainville"
+      },
+      {
+        "code": "93064",
+        "nom": "Rosny-sous-Bois"
+      }
+    ],
+    "route": {
+      "distanceKm": 11.1,
+      "durationMin": 19
+    },
+    "mairie": {
+      "lng": 2.4519,
+      "lat": 48.8899
+    },
+    "computedOn": "2026-10-01"
+  },
+  "les-pavillons-sous-bois": {
+    "officialName": "Les Pavillons-sous-Bois",
+    "population": 25804,
+    "surfaceHa": 292.2,
+    "limitrophes": [
+      {
+        "code": "93005",
+        "nom": "Aulnay-sous-Bois"
+      },
+      {
+        "code": "93010",
+        "nom": "Bondy"
+      },
+      {
+        "code": "93062",
+        "nom": "Le Raincy"
+      },
+      {
+        "code": "93046",
+        "nom": "Livry-Gargan"
+      },
+      {
+        "code": "93077",
+        "nom": "Villemomble"
+      }
+    ],
+    "route": {
+      "distanceKm": 16,
+      "durationMin": 22
+    },
+    "mairie": {
+      "lng": 2.5071,
+      "lat": 48.9026
+    },
+    "computedOn": "2026-10-01"
+  },
+  "le-pre-saint-gervais": {
+    "officialName": "Le Pré-Saint-Gervais",
+    "population": 16993,
+    "surfaceHa": 70.23,
+    "limitrophes": [
+      {
+        "code": "93045",
+        "nom": "Les Lilas"
+      },
+      {
+        "code": "93055",
+        "nom": "Pantin"
+      },
+      {
+        "code": "75119",
+        "nom": "Paris 19e Arrondissement"
+      },
+      {
+        "code": "75120",
+        "nom": "Paris 20e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 8,
+      "durationMin": 15
+    },
+    "mairie": {
+      "lng": 2.4029,
+      "lat": 48.8829
+    },
+    "computedOn": "2026-10-01"
+  },
+  "romainville": {
+    "officialName": "Romainville",
+    "population": 37152,
+    "surfaceHa": 344.17,
+    "limitrophes": [
+      {
+        "code": "93006",
+        "nom": "Bagnolet"
+      },
+      {
+        "code": "93008",
+        "nom": "Bobigny"
+      },
+      {
+        "code": "93045",
+        "nom": "Les Lilas"
+      },
+      {
+        "code": "93048",
+        "nom": "Montreuil"
+      },
+      {
+        "code": "93053",
+        "nom": "Noisy-le-Sec"
+      },
+      {
+        "code": "93055",
+        "nom": "Pantin"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.3,
+      "durationMin": 17
+    },
+    "mairie": {
+      "lng": 2.4348,
+      "lat": 48.8856
+    },
+    "computedOn": "2026-10-01"
+  },
+  "rosny-sous-bois": {
+    "officialName": "Rosny-sous-Bois",
+    "population": 47180,
+    "surfaceHa": 591.15,
+    "limitrophes": [
+      {
+        "code": "93010",
+        "nom": "Bondy"
+      },
+      {
+        "code": "94033",
+        "nom": "Fontenay-sous-Bois"
+      },
+      {
+        "code": "93048",
+        "nom": "Montreuil"
+      },
+      {
+        "code": "93049",
+        "nom": "Neuilly-Plaisance"
+      },
+      {
+        "code": "93053",
+        "nom": "Noisy-le-Sec"
+      },
+      {
+        "code": "93077",
+        "nom": "Villemomble"
+      }
+    ],
+    "route": {
+      "distanceKm": 12.9,
+      "durationMin": 19
+    },
+    "mairie": {
+      "lng": 2.4881,
+      "lat": 48.872
+    },
+    "computedOn": "2026-10-01"
+  },
+  "stains": {
+    "officialName": "Stains",
+    "population": 41388,
+    "surfaceHa": 540.87,
+    "limitrophes": [
+      {
+        "code": "93030",
+        "nom": "Dugny"
+      },
+      {
+        "code": "95268",
+        "nom": "Garges-lès-Gonesse"
+      },
+      {
+        "code": "93027",
+        "nom": "La Courneuve"
+      },
+      {
+        "code": "93066",
+        "nom": "Saint-Denis"
+      },
+      {
+        "code": "95585",
+        "nom": "Sarcelles"
+      }
+    ],
+    "route": {
+      "distanceKm": 13.4,
+      "durationMin": 28
+    },
+    "mairie": {
+      "lng": 2.3823,
+      "lat": 48.9555
+    },
+    "computedOn": "2026-10-01"
+  },
+  "tremblay-en-france": {
+    "officialName": "Tremblay-en-France",
+    "population": 38348,
+    "surfaceHa": 2266,
+    "limitrophes": [
+      {
+        "code": "95277",
+        "nom": "Gonesse"
+      },
+      {
+        "code": "77291",
+        "nom": "Le Mesnil-Amelot"
+      },
+      {
+        "code": "77282",
+        "nom": "Mauregard"
+      },
+      {
+        "code": "77294",
+        "nom": "Mitry-Mory"
+      },
+      {
+        "code": "95527",
+        "nom": "Roissy-en-France"
+      },
+      {
+        "code": "93074",
+        "nom": "Vaujours"
+      },
+      {
+        "code": "77514",
+        "nom": "Villeparisis"
+      },
+      {
+        "code": "93078",
+        "nom": "Villepinte"
+      }
+    ],
+    "route": {
+      "distanceKm": 24,
+      "durationMin": 32
+    },
+    "mairie": {
+      "lng": 2.5708,
+      "lat": 48.9512
+    },
+    "computedOn": "2026-10-01"
+  },
+  "vaujours": {
+    "officialName": "Vaujours",
+    "population": 8007,
+    "surfaceHa": 371.34,
+    "limitrophes": [
+      {
+        "code": "93015",
+        "nom": "Coubron"
+      },
+      {
+        "code": "77139",
+        "nom": "Courtry"
+      },
+      {
+        "code": "93046",
+        "nom": "Livry-Gargan"
+      },
+      {
+        "code": "93071",
+        "nom": "Sevran"
+      },
+      {
+        "code": "93073",
+        "nom": "Tremblay-en-France"
+      },
+      {
+        "code": "77514",
+        "nom": "Villeparisis"
+      },
+      {
+        "code": "93078",
+        "nom": "Villepinte"
+      }
+    ],
+    "route": {
+      "distanceKm": 21.2,
+      "durationMin": 27
+    },
+    "mairie": {
+      "lng": 2.5672,
+      "lat": 48.9322
+    },
+    "computedOn": "2026-10-01"
+  },
+  "villemomble": {
+    "officialName": "Villemomble",
+    "population": 29795,
+    "surfaceHa": 403.82,
+    "limitrophes": [
+      {
+        "code": "93010",
+        "nom": "Bondy"
+      },
+      {
+        "code": "93032",
+        "nom": "Gagny"
+      },
+      {
+        "code": "93062",
+        "nom": "Le Raincy"
+      },
+      {
+        "code": "93057",
+        "nom": "Les Pavillons-sous-Bois"
+      },
+      {
+        "code": "93049",
+        "nom": "Neuilly-Plaisance"
+      },
+      {
+        "code": "93050",
+        "nom": "Neuilly-sur-Marne"
+      },
+      {
+        "code": "93064",
+        "nom": "Rosny-sous-Bois"
+      }
+    ],
+    "route": {
+      "distanceKm": 14.3,
+      "durationMin": 20
+    },
+    "mairie": {
+      "lng": 2.5079,
+      "lat": 48.8821
+    },
+    "computedOn": "2026-10-01"
+  },
+  "villepinte": {
+    "officialName": "Villepinte",
+    "population": 41470,
+    "surfaceHa": 1038.37,
+    "limitrophes": [
+      {
+        "code": "93005",
+        "nom": "Aulnay-sous-Bois"
+      },
+      {
+        "code": "95277",
+        "nom": "Gonesse"
+      },
+      {
+        "code": "93071",
+        "nom": "Sevran"
+      },
+      {
+        "code": "93073",
+        "nom": "Tremblay-en-France"
+      },
+      {
+        "code": "93074",
+        "nom": "Vaujours"
+      }
+    ],
+    "route": {
+      "distanceKm": 22.3,
+      "durationMin": 31
+    },
+    "mairie": {
+      "lng": 2.5348,
+      "lat": 48.9637
+    },
+    "computedOn": "2026-10-01"
+  },
+  "villetaneuse": {
+    "officialName": "Villetaneuse",
+    "population": 12530,
+    "surfaceHa": 230.39,
+    "limitrophes": [
+      {
+        "code": "93031",
+        "nom": "Épinay-sur-Seine"
+      },
+      {
+        "code": "95427",
+        "nom": "Montmagny"
+      },
+      {
+        "code": "93066",
+        "nom": "Saint-Denis"
+      }
+    ],
+    "route": {
+      "distanceKm": 14.6,
+      "durationMin": 30
+    },
+    "mairie": {
+      "lng": 2.344,
+      "lat": 48.9612
+    },
+    "computedOn": "2026-10-01"
+  },
+  "ablon-sur-seine": {
+    "officialName": "Ablon-sur-Seine",
+    "population": 5988,
+    "surfaceHa": 114.16,
+    "limitrophes": [
+      {
+        "code": "91027",
+        "nom": "Athis-Mons"
+      },
+      {
+        "code": "91657",
+        "nom": "Vigneux-sur-Seine"
+      },
+      {
+        "code": "94077",
+        "nom": "Villeneuve-le-Roi"
+      }
+    ],
+    "route": {
+      "distanceKm": 18.1,
+      "durationMin": 26
+    },
+    "mairie": {
+      "lng": 2.4219,
+      "lat": 48.7249
+    },
+    "computedOn": "2026-10-01"
+  },
+  "boissy-saint-leger": {
+    "officialName": "Boissy-Saint-Léger",
+    "population": 17325,
+    "surfaceHa": 891.55,
+    "limitrophes": [
+      {
+        "code": "94011",
+        "nom": "Bonneuil-sur-Marne"
+      },
+      {
+        "code": "94044",
+        "nom": "Limeil-Brévannes"
+      },
+      {
+        "code": "94048",
+        "nom": "Marolles-en-Brie"
+      },
+      {
+        "code": "94071",
+        "nom": "Sucy-en-Brie"
+      },
+      {
+        "code": "94075",
+        "nom": "Villecresnes"
+      }
+    ],
+    "route": {
+      "distanceKm": 19.9,
+      "durationMin": 25
+    },
+    "mairie": {
+      "lng": 2.5131,
+      "lat": 48.748
+    },
+    "computedOn": "2026-10-01"
+  },
+  "bonneuil-sur-marne": {
+    "officialName": "Bonneuil-sur-Marne",
+    "population": 18270,
+    "surfaceHa": 549.05,
+    "limitrophes": [
+      {
+        "code": "94004",
+        "nom": "Boissy-Saint-Léger"
+      },
+      {
+        "code": "94028",
+        "nom": "Créteil"
+      },
+      {
+        "code": "94044",
+        "nom": "Limeil-Brévannes"
+      },
+      {
+        "code": "94068",
+        "nom": "Saint-Maur-des-Fossés"
+      },
+      {
+        "code": "94071",
+        "nom": "Sucy-en-Brie"
+      }
+    ],
+    "route": {
+      "distanceKm": 15.6,
+      "durationMin": 22
+    },
+    "mairie": {
+      "lng": 2.4875,
+      "lat": 48.7743
+    },
+    "computedOn": "2026-10-01"
+  },
+  "bry-sur-marne": {
+    "officialName": "Bry-sur-Marne",
+    "population": 18503,
+    "surfaceHa": 333.61,
+    "limitrophes": [
+      {
+        "code": "94017",
+        "nom": "Champigny-sur-Marne"
+      },
+      {
+        "code": "94058",
+        "nom": "Le Perreux-sur-Marne"
+      },
+      {
+        "code": "93049",
+        "nom": "Neuilly-Plaisance"
+      },
+      {
+        "code": "93051",
+        "nom": "Noisy-le-Grand"
+      },
+      {
+        "code": "94079",
+        "nom": "Villiers-sur-Marne"
+      }
+    ],
+    "route": {
+      "distanceKm": 15,
+      "durationMin": 19
+    },
+    "mairie": {
+      "lng": 2.5196,
+      "lat": 48.8353
+    },
+    "computedOn": "2026-10-01"
+  },
+  "champigny-sur-marne": {
+    "officialName": "Champigny-sur-Marne",
+    "population": 78072,
+    "surfaceHa": 1130.32,
+    "limitrophes": [
+      {
+        "code": "94015",
+        "nom": "Bry-sur-Marne"
+      },
+      {
+        "code": "94019",
+        "nom": "Chennevières-sur-Marne"
+      },
+      {
+        "code": "94042",
+        "nom": "Joinville-le-Pont"
+      },
+      {
+        "code": "94058",
+        "nom": "Le Perreux-sur-Marne"
+      },
+      {
+        "code": "94059",
+        "nom": "Le Plessis-Trévise"
+      },
+      {
+        "code": "94052",
+        "nom": "Nogent-sur-Marne"
+      },
+      {
+        "code": "94068",
+        "nom": "Saint-Maur-des-Fossés"
+      },
+      {
+        "code": "94079",
+        "nom": "Villiers-sur-Marne"
+      }
+    ],
+    "route": {
+      "distanceKm": 15,
+      "durationMin": 21
+    },
+    "mairie": {
+      "lng": 2.5107,
+      "lat": 48.8132
+    },
+    "computedOn": "2026-10-01"
+  },
+  "chennevieres-sur-marne": {
+    "officialName": "Chennevières-sur-Marne",
+    "population": 18710,
+    "surfaceHa": 521.68,
+    "limitrophes": [
+      {
+        "code": "94017",
+        "nom": "Champigny-sur-Marne"
+      },
+      {
+        "code": "94060",
+        "nom": "La Queue-en-Brie"
+      },
+      {
+        "code": "94059",
+        "nom": "Le Plessis-Trévise"
+      },
+      {
+        "code": "94055",
+        "nom": "Ormesson-sur-Marne"
+      },
+      {
+        "code": "94068",
+        "nom": "Saint-Maur-des-Fossés"
+      },
+      {
+        "code": "94071",
+        "nom": "Sucy-en-Brie"
+      }
+    ],
+    "route": {
+      "distanceKm": 17.8,
+      "durationMin": 26
+    },
+    "mairie": {
+      "lng": 2.5326,
+      "lat": 48.7962
+    },
+    "computedOn": "2026-10-01"
+  },
+  "chevilly-larue": {
+    "officialName": "Chevilly-Larue",
+    "population": 19826,
+    "surfaceHa": 422.39,
+    "limitrophes": [
+      {
+        "code": "94034",
+        "nom": "Fresnes"
+      },
+      {
+        "code": "94038",
+        "nom": "L'Haÿ-les-Roses"
+      },
+      {
+        "code": "94065",
+        "nom": "Rungis"
+      },
+      {
+        "code": "94073",
+        "nom": "Thiais"
+      },
+      {
+        "code": "94081",
+        "nom": "Vitry-sur-Seine"
+      }
+    ],
+    "route": {
+      "distanceKm": 15.4,
+      "durationMin": 22
+    },
+    "mairie": {
+      "lng": 2.3472,
+      "lat": 48.7713
+    },
+    "computedOn": "2026-10-01"
+  },
+  "fontenay-sous-bois": {
+    "officialName": "Fontenay-sous-Bois",
+    "population": 53757,
+    "surfaceHa": 555.99,
+    "limitrophes": [
+      {
+        "code": "94058",
+        "nom": "Le Perreux-sur-Marne"
+      },
+      {
+        "code": "93048",
+        "nom": "Montreuil"
+      },
+      {
+        "code": "93049",
+        "nom": "Neuilly-Plaisance"
+      },
+      {
+        "code": "94052",
+        "nom": "Nogent-sur-Marne"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      },
+      {
+        "code": "93064",
+        "nom": "Rosny-sous-Bois"
+      },
+      {
+        "code": "94080",
+        "nom": "Vincennes"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.9,
+      "durationMin": 19
+    },
+    "mairie": {
+      "lng": 2.4748,
+      "lat": 48.8489
+    },
+    "computedOn": "2026-10-01"
+  },
+  "gentilly": {
+    "officialName": "Gentilly",
+    "population": 19963,
+    "surfaceHa": 118.08,
+    "limitrophes": [
+      {
+        "code": "94003",
+        "nom": "Arcueil"
+      },
+      {
+        "code": "94043",
+        "nom": "Le Kremlin-Bicêtre"
+      },
+      {
+        "code": "92049",
+        "nom": "Montrouge"
+      },
+      {
+        "code": "75113",
+        "nom": "Paris 13e Arrondissement"
+      },
+      {
+        "code": "75114",
+        "nom": "Paris 14e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 4.8,
+      "durationMin": 13
+    },
+    "mairie": {
+      "lng": 2.3481,
+      "lat": 48.8156
+    },
+    "computedOn": "2026-10-01"
+  },
+  "joinville-le-pont": {
+    "officialName": "Joinville-le-Pont",
+    "population": 20525,
+    "surfaceHa": 228.52,
+    "limitrophes": [
+      {
+        "code": "94017",
+        "nom": "Champigny-sur-Marne"
+      },
+      {
+        "code": "94046",
+        "nom": "Maisons-Alfort"
+      },
+      {
+        "code": "94052",
+        "nom": "Nogent-sur-Marne"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      },
+      {
+        "code": "94068",
+        "nom": "Saint-Maur-des-Fossés"
+      },
+      {
+        "code": "94069",
+        "nom": "Saint-Maurice"
+      }
+    ],
+    "route": {
+      "distanceKm": 10,
+      "durationMin": 15
+    },
+    "mairie": {
+      "lng": 2.4669,
+      "lat": 48.8184
+    },
+    "computedOn": "2026-10-01"
+  },
+  "le-kremlin-bicetre": {
+    "officialName": "Le Kremlin-Bicêtre",
+    "population": 24110,
+    "surfaceHa": 154.09,
+    "limitrophes": [
+      {
+        "code": "94003",
+        "nom": "Arcueil"
+      },
+      {
+        "code": "94037",
+        "nom": "Gentilly"
+      },
+      {
+        "code": "94041",
+        "nom": "Ivry-sur-Seine"
+      },
+      {
+        "code": "75113",
+        "nom": "Paris 13e Arrondissement"
+      },
+      {
+        "code": "94076",
+        "nom": "Villejuif"
+      }
+    ],
+    "route": {
+      "distanceKm": 7,
+      "durationMin": 13
+    },
+    "mairie": {
+      "lng": 2.3569,
+      "lat": 48.8123
+    },
+    "computedOn": "2026-10-01"
+  },
+  "limeil-brevannes": {
+    "officialName": "Limeil-Brévannes",
+    "population": 27406,
+    "surfaceHa": 694.62,
+    "limitrophes": [
+      {
+        "code": "94004",
+        "nom": "Boissy-Saint-Léger"
+      },
+      {
+        "code": "94011",
+        "nom": "Bonneuil-sur-Marne"
+      },
+      {
+        "code": "94028",
+        "nom": "Créteil"
+      },
+      {
+        "code": "94074",
+        "nom": "Valenton"
+      },
+      {
+        "code": "94075",
+        "nom": "Villecresnes"
+      },
+      {
+        "code": "91691",
+        "nom": "Yerres"
+      }
+    ],
+    "route": {
+      "distanceKm": 18.2,
+      "durationMin": 23
+    },
+    "mairie": {
+      "lng": 2.4804,
+      "lat": 48.7492
+    },
+    "computedOn": "2026-10-01"
+  },
+  "maisons-alfort": {
+    "officialName": "Maisons-Alfort",
+    "population": 56799,
+    "surfaceHa": 534.8,
+    "limitrophes": [
+      {
+        "code": "94002",
+        "nom": "Alfortville"
+      },
+      {
+        "code": "94018",
+        "nom": "Charenton-le-Pont"
+      },
+      {
+        "code": "94028",
+        "nom": "Créteil"
+      },
+      {
+        "code": "94042",
+        "nom": "Joinville-le-Pont"
+      },
+      {
+        "code": "94068",
+        "nom": "Saint-Maur-des-Fossés"
+      },
+      {
+        "code": "94069",
+        "nom": "Saint-Maurice"
+      }
+    ],
+    "route": {
+      "distanceKm": 8.5,
+      "durationMin": 15
+    },
+    "mairie": {
+      "lng": 2.4306,
+      "lat": 48.801
+    },
+    "computedOn": "2026-10-01"
+  },
+  "mandres-les-roses": {
+    "officialName": "Mandres-les-Roses",
+    "population": 4922,
+    "surfaceHa": 336.5,
+    "limitrophes": [
+      {
+        "code": "91097",
+        "nom": "Boussy-Saint-Antoine"
+      },
+      {
+        "code": "91114",
+        "nom": "Brunoy"
+      },
+      {
+        "code": "91215",
+        "nom": "Épinay-sous-Sénart"
+      },
+      {
+        "code": "94056",
+        "nom": "Périgny"
+      },
+      {
+        "code": "94070",
+        "nom": "Santeny"
+      },
+      {
+        "code": "77450",
+        "nom": "Servon"
+      },
+      {
+        "code": "94075",
+        "nom": "Villecresnes"
+      }
+    ],
+    "route": {
+      "distanceKm": 26,
+      "durationMin": 34
+    },
+    "mairie": {
+      "lng": 2.5434,
+      "lat": 48.7024
+    },
+    "computedOn": "2026-10-01"
+  },
+  "marolles-en-brie": {
+    "officialName": "Marolles-en-Brie",
+    "population": 4781,
+    "surfaceHa": 459.55,
+    "limitrophes": [
+      {
+        "code": "94004",
+        "nom": "Boissy-Saint-Léger"
+      },
+      {
+        "code": "94070",
+        "nom": "Santeny"
+      },
+      {
+        "code": "94071",
+        "nom": "Sucy-en-Brie"
+      },
+      {
+        "code": "94075",
+        "nom": "Villecresnes"
+      }
+    ],
+    "route": {
+      "distanceKm": 25.3,
+      "durationMin": 31
+    },
+    "mairie": {
+      "lng": 2.5499,
+      "lat": 48.7326
+    },
+    "computedOn": "2026-10-01"
+  },
+  "nogent-sur-marne": {
+    "officialName": "Nogent-sur-Marne",
+    "population": 32455,
+    "surfaceHa": 279.86,
+    "limitrophes": [
+      {
+        "code": "94017",
+        "nom": "Champigny-sur-Marne"
+      },
+      {
+        "code": "94033",
+        "nom": "Fontenay-sous-Bois"
+      },
+      {
+        "code": "94042",
+        "nom": "Joinville-le-Pont"
+      },
+      {
+        "code": "94058",
+        "nom": "Le Perreux-sur-Marne"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 13.5,
+      "durationMin": 19
+    },
+    "mairie": {
+      "lng": 2.4915,
+      "lat": 48.8392
+    },
+    "computedOn": "2026-10-01"
+  },
+  "noiseau": {
+    "officialName": "Noiseau",
+    "population": 4628,
+    "surfaceHa": 458.76,
+    "limitrophes": [
+      {
+        "code": "94060",
+        "nom": "La Queue-en-Brie"
+      },
+      {
+        "code": "94055",
+        "nom": "Ormesson-sur-Marne"
+      },
+      {
+        "code": "94071",
+        "nom": "Sucy-en-Brie"
+      }
+    ],
+    "route": {
+      "distanceKm": 21.2,
+      "durationMin": 31
+    },
+    "mairie": {
+      "lng": 2.5486,
+      "lat": 48.7747
+    },
+    "computedOn": "2026-10-01"
+  },
+  "ormesson-sur-marne": {
+    "officialName": "Ormesson-sur-Marne",
+    "population": 10977,
+    "surfaceHa": 343.31,
+    "limitrophes": [
+      {
+        "code": "94019",
+        "nom": "Chennevières-sur-Marne"
+      },
+      {
+        "code": "94060",
+        "nom": "La Queue-en-Brie"
+      },
+      {
+        "code": "94053",
+        "nom": "Noiseau"
+      },
+      {
+        "code": "94071",
+        "nom": "Sucy-en-Brie"
+      }
+    ],
+    "route": {
+      "distanceKm": 19.3,
+      "durationMin": 28
+    },
+    "mairie": {
+      "lng": 2.5405,
+      "lat": 48.7856
+    },
+    "computedOn": "2026-10-01"
+  },
+  "perigny": {
+    "officialName": "Périgny",
+    "population": 2724,
+    "surfaceHa": 276.09,
+    "limitrophes": [
+      {
+        "code": "91097",
+        "nom": "Boussy-Saint-Antoine"
+      },
+      {
+        "code": "77053",
+        "nom": "Brie-Comte-Robert"
+      },
+      {
+        "code": "94047",
+        "nom": "Mandres-les-Roses"
+      },
+      {
+        "code": "77450",
+        "nom": "Servon"
+      },
+      {
+        "code": "91631",
+        "nom": "Varennes-Jarcy"
+      }
+    ],
+    "route": {
+      "distanceKm": 27.2,
+      "durationMin": 37
+    },
+    "mairie": {
+      "lng": 2.5504,
+      "lat": 48.6952
+    },
+    "computedOn": "2026-10-01"
+  },
+  "le-perreux-sur-marne": {
+    "officialName": "Le Perreux-sur-Marne",
+    "population": 35260,
+    "surfaceHa": 396.02,
+    "limitrophes": [
+      {
+        "code": "94015",
+        "nom": "Bry-sur-Marne"
+      },
+      {
+        "code": "94017",
+        "nom": "Champigny-sur-Marne"
+      },
+      {
+        "code": "94033",
+        "nom": "Fontenay-sous-Bois"
+      },
+      {
+        "code": "93049",
+        "nom": "Neuilly-Plaisance"
+      },
+      {
+        "code": "94052",
+        "nom": "Nogent-sur-Marne"
+      }
+    ],
+    "route": {
+      "distanceKm": 14.7,
+      "durationMin": 20
+    },
+    "mairie": {
+      "lng": 2.5082,
+      "lat": 48.8407
+    },
+    "computedOn": "2026-10-01"
+  },
+  "le-plessis-trevise": {
+    "officialName": "Le Plessis-Trévise",
+    "population": 21112,
+    "surfaceHa": 431.92,
+    "limitrophes": [
+      {
+        "code": "94017",
+        "nom": "Champigny-sur-Marne"
+      },
+      {
+        "code": "94019",
+        "nom": "Chennevières-sur-Marne"
+      },
+      {
+        "code": "94060",
+        "nom": "La Queue-en-Brie"
+      },
+      {
+        "code": "93051",
+        "nom": "Noisy-le-Grand"
+      },
+      {
+        "code": "77373",
+        "nom": "Pontault-Combault"
+      },
+      {
+        "code": "94079",
+        "nom": "Villiers-sur-Marne"
+      }
+    ],
+    "route": {
+      "distanceKm": 19.5,
+      "durationMin": 27
+    },
+    "mairie": {
+      "lng": 2.5728,
+      "lat": 48.809
+    },
+    "computedOn": "2026-10-01"
+  },
+  "la-queue-en-brie": {
+    "officialName": "La Queue-en-Brie",
+    "population": 12241,
+    "surfaceHa": 938.55,
+    "limitrophes": [
+      {
+        "code": "94019",
+        "nom": "Chennevières-sur-Marne"
+      },
+      {
+        "code": "94059",
+        "nom": "Le Plessis-Trévise"
+      },
+      {
+        "code": "77249",
+        "nom": "Lésigny"
+      },
+      {
+        "code": "94053",
+        "nom": "Noiseau"
+      },
+      {
+        "code": "94055",
+        "nom": "Ormesson-sur-Marne"
+      },
+      {
+        "code": "77373",
+        "nom": "Pontault-Combault"
+      },
+      {
+        "code": "94070",
+        "nom": "Santeny"
+      },
+      {
+        "code": "94071",
+        "nom": "Sucy-en-Brie"
+      }
+    ],
+    "route": {
+      "distanceKm": 21.5,
+      "durationMin": 31
+    },
+    "mairie": {
+      "lng": 2.5748,
+      "lat": 48.7906
+    },
+    "computedOn": "2026-10-01"
+  },
+  "rungis": {
+    "officialName": "Rungis",
+    "population": 5611,
+    "surfaceHa": 419.72,
+    "limitrophes": [
+      {
+        "code": "94021",
+        "nom": "Chevilly-Larue"
+      },
+      {
+        "code": "94034",
+        "nom": "Fresnes"
+      },
+      {
+        "code": "91479",
+        "nom": "Paray-Vieille-Poste"
+      },
+      {
+        "code": "94073",
+        "nom": "Thiais"
+      },
+      {
+        "code": "91689",
+        "nom": "Wissous"
+      }
+    ],
+    "route": {
+      "distanceKm": 16.2,
+      "durationMin": 22
+    },
+    "mairie": {
+      "lng": 2.3474,
+      "lat": 48.7485
+    },
+    "computedOn": "2026-10-01"
+  },
+  "saint-mande": {
+    "officialName": "Saint-Mandé",
+    "population": 21071,
+    "surfaceHa": 90.5,
+    "limitrophes": [
+      {
+        "code": "93048",
+        "nom": "Montreuil"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      },
+      {
+        "code": "75120",
+        "nom": "Paris 20e Arrondissement"
+      },
+      {
+        "code": "94080",
+        "nom": "Vincennes"
+      }
+    ],
+    "route": {
+      "distanceKm": 4.5,
+      "durationMin": 10
+    },
+    "mairie": {
+      "lng": 2.4191,
+      "lat": 48.8432
+    },
+    "computedOn": "2026-10-01"
+  },
+  "saint-maurice": {
+    "officialName": "Saint-Maurice",
+    "population": 14506,
+    "surfaceHa": 144.79,
+    "limitrophes": [
+      {
+        "code": "94018",
+        "nom": "Charenton-le-Pont"
+      },
+      {
+        "code": "94042",
+        "nom": "Joinville-le-Pont"
+      },
+      {
+        "code": "94046",
+        "nom": "Maisons-Alfort"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 6.8,
+      "durationMin": 11
+    },
+    "mairie": {
+      "lng": 2.4265,
+      "lat": 48.8183
+    },
+    "computedOn": "2026-10-01"
+  },
+  "santeny": {
+    "officialName": "Santeny",
+    "population": 3913,
+    "surfaceHa": 1002.58,
+    "limitrophes": [
+      {
+        "code": "94060",
+        "nom": "La Queue-en-Brie"
+      },
+      {
+        "code": "77249",
+        "nom": "Lésigny"
+      },
+      {
+        "code": "94047",
+        "nom": "Mandres-les-Roses"
+      },
+      {
+        "code": "94048",
+        "nom": "Marolles-en-Brie"
+      },
+      {
+        "code": "77450",
+        "nom": "Servon"
+      },
+      {
+        "code": "94071",
+        "nom": "Sucy-en-Brie"
+      },
+      {
+        "code": "94075",
+        "nom": "Villecresnes"
+      }
+    ],
+    "route": {
+      "distanceKm": 26.5,
+      "durationMin": 31
+    },
+    "mairie": {
+      "lng": 2.5702,
+      "lat": 48.7259
+    },
+    "computedOn": "2026-10-01"
+  },
+  "sucy-en-brie": {
+    "officialName": "Sucy-en-Brie",
+    "population": 27764,
+    "surfaceHa": 1038.89,
+    "limitrophes": [
+      {
+        "code": "94004",
+        "nom": "Boissy-Saint-Léger"
+      },
+      {
+        "code": "94011",
+        "nom": "Bonneuil-sur-Marne"
+      },
+      {
+        "code": "94019",
+        "nom": "Chennevières-sur-Marne"
+      },
+      {
+        "code": "94060",
+        "nom": "La Queue-en-Brie"
+      },
+      {
+        "code": "94048",
+        "nom": "Marolles-en-Brie"
+      },
+      {
+        "code": "94053",
+        "nom": "Noiseau"
+      },
+      {
+        "code": "94055",
+        "nom": "Ormesson-sur-Marne"
+      },
+      {
+        "code": "94068",
+        "nom": "Saint-Maur-des-Fossés"
+      },
+      {
+        "code": "94070",
+        "nom": "Santeny"
+      }
+    ],
+    "route": {
+      "distanceKm": 18.6,
+      "durationMin": 26
+    },
+    "mairie": {
+      "lng": 2.524,
+      "lat": 48.7708
+    },
+    "computedOn": "2026-10-01"
+  },
+  "valenton": {
+    "officialName": "Valenton",
+    "population": 14406,
+    "surfaceHa": 531.37,
+    "limitrophes": [
+      {
+        "code": "94022",
+        "nom": "Choisy-le-Roi"
+      },
+      {
+        "code": "94028",
+        "nom": "Créteil"
+      },
+      {
+        "code": "91191",
+        "nom": "Crosne"
+      },
+      {
+        "code": "94044",
+        "nom": "Limeil-Brévannes"
+      },
+      {
+        "code": "94078",
+        "nom": "Villeneuve-Saint-Georges"
+      },
+      {
+        "code": "91691",
+        "nom": "Yerres"
+      }
+    ],
+    "route": {
+      "distanceKm": 19.1,
+      "durationMin": 24
+    },
+    "mairie": {
+      "lng": 2.4696,
+      "lat": 48.7443
+    },
+    "computedOn": "2026-10-01"
+  },
+  "villecresnes": {
+    "officialName": "Villecresnes",
+    "population": 11647,
+    "surfaceHa": 562.01,
+    "limitrophes": [
+      {
+        "code": "94004",
+        "nom": "Boissy-Saint-Léger"
+      },
+      {
+        "code": "91114",
+        "nom": "Brunoy"
+      },
+      {
+        "code": "94044",
+        "nom": "Limeil-Brévannes"
+      },
+      {
+        "code": "94047",
+        "nom": "Mandres-les-Roses"
+      },
+      {
+        "code": "94048",
+        "nom": "Marolles-en-Brie"
+      },
+      {
+        "code": "94070",
+        "nom": "Santeny"
+      },
+      {
+        "code": "91691",
+        "nom": "Yerres"
+      }
+    ],
+    "route": {
+      "distanceKm": 23.5,
+      "durationMin": 28
+    },
+    "mairie": {
+      "lng": 2.5333,
+      "lat": 48.7219
+    },
+    "computedOn": "2026-10-01"
+  },
+  "villeneuve-le-roi": {
+    "officialName": "Villeneuve-le-Roi",
+    "population": 21000,
+    "surfaceHa": 843.84,
+    "limitrophes": [
+      {
+        "code": "94001",
+        "nom": "Ablon-sur-Seine"
+      },
+      {
+        "code": "91027",
+        "nom": "Athis-Mons"
+      },
+      {
+        "code": "94054",
+        "nom": "Orly"
+      },
+      {
+        "code": "91479",
+        "nom": "Paray-Vieille-Poste"
+      },
+      {
+        "code": "91657",
+        "nom": "Vigneux-sur-Seine"
+      },
+      {
+        "code": "94078",
+        "nom": "Villeneuve-Saint-Georges"
+      }
+    ],
+    "route": {
+      "distanceKm": 16,
+      "durationMin": 23
+    },
+    "mairie": {
+      "lng": 2.4077,
+      "lat": 48.7352
+    },
+    "computedOn": "2026-10-01"
+  },
+  "villeneuve-saint-georges": {
+    "officialName": "Villeneuve-Saint-Georges",
+    "population": 36221,
+    "surfaceHa": 807.3,
+    "limitrophes": [
+      {
+        "code": "94022",
+        "nom": "Choisy-le-Roi"
+      },
+      {
+        "code": "91191",
+        "nom": "Crosne"
+      },
+      {
+        "code": "91421",
+        "nom": "Montgeron"
+      },
+      {
+        "code": "94054",
+        "nom": "Orly"
+      },
+      {
+        "code": "94074",
+        "nom": "Valenton"
+      },
+      {
+        "code": "91657",
+        "nom": "Vigneux-sur-Seine"
+      },
+      {
+        "code": "94077",
+        "nom": "Villeneuve-le-Roi"
+      }
+    ],
+    "route": {
+      "distanceKm": 18.5,
+      "durationMin": 26
+    },
+    "mairie": {
+      "lng": 2.4476,
+      "lat": 48.7307
+    },
+    "computedOn": "2026-10-01"
+  },
+  "villiers-sur-marne": {
+    "officialName": "Villiers-sur-Marne",
+    "population": 33162,
+    "surfaceHa": 431.66,
+    "limitrophes": [
+      {
+        "code": "94015",
+        "nom": "Bry-sur-Marne"
+      },
+      {
+        "code": "94017",
+        "nom": "Champigny-sur-Marne"
+      },
+      {
+        "code": "94059",
+        "nom": "Le Plessis-Trévise"
+      },
+      {
+        "code": "93051",
+        "nom": "Noisy-le-Grand"
+      }
+    ],
+    "route": {
+      "distanceKm": 16.4,
+      "durationMin": 22
+    },
+    "mairie": {
+      "lng": 2.5408,
+      "lat": 48.8261
+    },
+    "computedOn": "2026-10-01"
   }
 };

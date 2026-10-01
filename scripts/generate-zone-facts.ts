@@ -6,13 +6,14 @@
  * Requêtes séquentielles, 3 essais chacune. Une donnée non obtenue vaut null et n'est pas affichée.
  * Si la base ne peut pas être géocodée, rien n'est écrit.
  * Usage : npm run facts:zones -- paris-11e nanterre
- *         npm run facts:zones            (les 67 zones de Paris et de la petite couronne)
+ *         npm run facts:zones            (toutes les zones de Paris et de la petite couronne)
  * Les zones de grande couronne (77, 78, 91, 95) sont refusées : elles n'ont pas de fiche.
+ * Un appel avec des slugs conserve les codes INSEE des zones non recalculées.
  */
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
 import { company } from "../src/data/company";
-import { zoneFacts as previousFacts, type ZoneFacts } from "../src/data/zone-facts";
+import { zoneFacts as previousFacts, zoneInsee as previousInsee, type ZoneFacts } from "../src/data/zone-facts";
 import { zones } from "../src/data/zones";
 
 const OUT_PATH = join(process.cwd(), "src", "data", "zone-facts.ts");
@@ -171,6 +172,12 @@ async function main() {
   const [baseLng, baseLat] = baseHit.geometry.coordinates;
 
   const insee: Record<string, string> = {};
+  if (requested.length) {
+    for (const z of zones) {
+      const kept = previousInsee[z.slug];
+      if (!requested.includes(z.slug) && kept) insee[z.slug] = kept;
+    }
+  }
   for (const z of targets) {
     const code = await inseeCode(z.slug, z.name, z.departement, z.postalCodes[0]);
     if (code) insee[z.slug] = code;
