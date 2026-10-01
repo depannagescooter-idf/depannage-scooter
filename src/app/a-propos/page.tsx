@@ -82,7 +82,7 @@ export default function AProposPage() {
           <p>
             Chaque dépanneur dispose d&apos;un plateau ou d&apos;un attelage sécurisé, d&apos;un
             booster professionnel, d&apos;un compresseur, d&apos;outillage de dépannage et d&apos;un
-            stock de pièces courantes (batteries, rustines, câbles). Avant tout déplacement, nous
+            stock de pièces courantes (batteries, mèches, câbles). Avant tout déplacement, nous
             confirmons le délai estimé et le tarif — consultez notre{" "}
             <Link href="/tarifs/" className="text-gyro hover:underline">
               grille tarifaire

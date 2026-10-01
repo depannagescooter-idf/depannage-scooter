@@ -165,7 +165,7 @@ export const guides: Guide[] = [
       {
         question: "Quand réparer sur place par mèche ?",
         answer:
-          "La réparation sur place convient aux pneus tubeless (sans chambre à air) lorsque la perforation est au centre de la bande de roulement, causée par un clou, une vis ou un petit objet. Le technicien retire l'objet, perce légèrement le trou si nécessaire, insère une mèche à froid (rustine enrobée), coupe l'excédent et gonfle à la pression constructeur. Un test à l'eau savonneuse confirme l'étanchéité avant remise en route. Cette méthode est standard en bord de route : pas de poste à chaud, pas de démontage complet de la roue si l'accès le permet. Les maxi-scooters comme le Honda X-ADV, de nombreuses motos routières et la majorité des scooters récents sont en tubeless, y compris sur jantes à rayons.",
+          "La réparation sur place convient aux pneus tubeless (sans chambre à air) lorsque la perforation est au centre de la bande de roulement, causée par un clou, une vis ou un petit objet. Le technicien localise le trou, pose une mèche par l'extérieur sans démontage quand c'est possible, passe de l'eau savonneuse pour vérifier l'étanchéité, puis regonfle et contrôle la pression. Le démontage et le remplacement du pneu ne concernent que les cas où la mèche est impossible : flanc, déchirure, jante voilée. Les maxi-scooters comme le Honda X-ADV, de nombreuses motos routières et la majorité des scooters récents sont en tubeless, y compris sur jantes à rayons.",
       },
       {
         question: "Les jantes à rayons imposent-elles un remorquage ?",
@@ -180,7 +180,7 @@ export const guides: Guide[] = [
       {
         question: "Comment se déroule l'intervention sur place ?",
         answer:
-          "Le dépanneur localise la perforation, démonte la roue si l'accès est difficile (selle, carénage, chaîne), pose la mèche avec le kit professionnel, regonfle au compresseur portable et contrôle la pression au manomètre. L'opération dure en moyenne 30 à 60 minutes selon le modèle. Sur un maxi-scooter comme le X-ADV, la roue arrière est accessible après dépose de la protection plastique et du silencieux — un outillage adapté évite d'endommager la jante. Après réparation, un trajet prudent vers un garage dans les 48 heures permet de vérifier la tenue de la mèche sur la durée.",
+          "Le dépanneur localise d'abord la perforation. Si elle est dans la bande de roulement, il pose une mèche par l'extérieur, sans démontage, roue en place. Il passe ensuite de l'eau savonneuse sur la zone pour vérifier qu'aucune bulle ne sort, regonfle le pneu et contrôle la pression. Le démontage et le remplacement du pneu ne concernent que les cas où la mèche est impossible : flanc, déchirure, jante voilée. L'opération dure en moyenne 30 à 60 minutes selon le modèle.",
       },
       {
         question: "Que faire immédiatement après la crevaison ?",
@@ -195,12 +195,12 @@ export const guides: Guide[] = [
       {
         question: "Une mèche est-elle fiable pour repartir ?",
         answer:
-          "Oui, pour une perforation petite et centrale sur pneu tubeless en bon état. La mèche scelle la carcasse de l'intérieur ; correctement posée, elle permet de repartir immédiatement et de rouler normalement en attendant un contrôle en garage. En revanche, une perforation sur le flanc, une déchirure longue ou un pneu déjà très usé ne se réparent pas durablement à froid : le technicien vous le signale avant toute intervention et propose le remorquage si nécessaire.",
+          "Oui, pour une petite perforation de la bande de roulement sur un pneu tubeless en bon état. La mèche, posée par l'extérieur, permet de repartir après le test à l'eau savonneuse et le contrôle de pression. Un flanc, une déchirure ou une jante voilée ne se traitent pas ainsi : le technicien le dit avant toute intervention et propose le remplacement du pneu ou le remorquage.",
       },
       {
         question: "Scooter ou maxi-scooter : la réponse change-t-elle ?",
         answer:
-          "Le principe reste le même : tubeless réparable par mèche, chambre à air plutôt orientée garage. Sur un scooter 50 cm³ urbain, la roue arrière se démonte souvent rapidement. Sur un maxi-scooter (X-ADV, TMAX, Forza), le poids et le carénage demandent un outillage plus complet, ce qui allonge légèrement l'intervention sans changer la décision réparer/remorquer. En cas de doute, décrivez votre modèle au téléphone : le dépanneur confirme la faisabilité sur place avant de partir.",
+          "Le principe reste le même : tubeless réparable par mèche, chambre à air plutôt orientée garage. Sur un scooter 50 cm³ comme sur un maxi-scooter, la mèche se pose roue en place quand la bande de roulement est accessible. Le poids et le carénage allongent un peu l'intervention, sans changer la décision : mèche si c'est possible, démontage seulement pour un flanc, une déchirure ou une jante voilée. En cas de doute, décrivez votre modèle au téléphone : le dépanneur confirme la faisabilité sur place avant de partir.",
       },
     ],
     author: { name: "Équipe DépannageScooter", role: "Dépannage deux-roues Île-de-France", experienceYears: 8 },

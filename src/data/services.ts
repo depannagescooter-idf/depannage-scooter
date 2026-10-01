@@ -10,9 +10,9 @@ const servicesData: Service[] = [
     metaDescription:
       "Crevaison sur route en Île-de-France ? Réparation sur place de pneu scooter ou moto, déplacement rapide 24h/24. Intervention en 25 à 40 minutes selon zone.",
     shortAnswer:
-      "DépannageScooter répare les crevaisons de scooters et motos directement sur le lieu de panne en Île-de-France. Le technicien localise la perforation, retire la roue si nécessaire, installe une rustine ou remplace le pneu selon l'état du gonflage, puis contrôle la pression avant remise en route. Disponible 24h/24 et 7j/7.",
+      "DépannageScooter répare un pneu crevé de scooter ou de moto sur place en Île-de-France. Le technicien localise la perforation, pose une mèche sans démonter la roue quand c'est possible, vérifie l'étanchéité à l'eau savonneuse, puis regonfle et contrôle la pression. Le démontage ne concerne que le flanc, la déchirure ou la jante voilée. Disponible 24h/24.",
     intro:
-      "Une crevaison, un pneu crevé, une roue à plat ou un pneu à plat : ce sont les mêmes mots pour la même panne, au pire moment, en bord de route, dans un parking ou sur une voie de bus. Notre équipe se déplace avec le matériel de réparation adapté aux pneus scooter, moto et trois-roues — Piaggio MP3 et Yamaha Tricity compris. L'objectif est de vous remettre en route sur place lorsque la carcasse n'est pas endommagée. Si le pneu ou la jante est trop abîmé, un changement de pneu ou un remorquage vers un garage partenaire reste possible.",
+      "Une crevaison, un pneu crevé, une roue à plat ou un pneu à plat : ce sont les mêmes mots pour la même panne, au pire moment, en bord de route, dans un parking ou sur une voie de bus. Notre équipe se déplace avec le matériel de réparation adapté aux pneus scooter, moto et trois-roues — Piaggio MP3 et Yamaha Tricity compris. Quand la perforation est dans la bande de roulement, la mèche se pose par l'extérieur, roue en place. Le démontage et le changement de pneu ne viennent que si la mèche est impossible : flanc, déchirure ou jante voilée. Sinon, un remorquage vers un garage partenaire reste possible.",
     symptoms: [
       "Pneu complètement à plat ou perte de pression rapide",
       "Claquement ou bruit de roulement irrégulier avant l'immobilisation",
@@ -22,24 +22,24 @@ const servicesData: Service[] = [
     ],
     interventionSteps: [
       {
-        title: "Diagnostic sur place",
+        title: "Localisation de la perforation",
         detail:
-          "Le technicien inspecte le pneu, repère la zone de perforation et vérifie l'état de la jante et de la carcasse avant toute réparation.",
+          "Le technicien cherche le trou : bande de roulement, épaule ou flanc. Un clou ou une vis encore en place indique souvent une perforation qui se répare par l'extérieur.",
       },
       {
-        title: "Démontage de la roue",
+        title: "Pose d'une mèche, roue en place",
         detail:
-          "Sur la majorité des scooters et petites cylindrées, la roue arrière ou avant est démontée pour accéder au pneu et travailler en sécurité.",
+          "Quand la perforation est petite et dans la bande de roulement, la mèche est posée par l'extérieur, sans démontage. Le démontage et le remplacement du pneu ne concernent que les cas où la mèche est impossible : flanc, déchirure, jante voilée.",
       },
       {
-        title: "Réparation ou remplacement",
+        title: "Test d'étanchéité à l'eau savonneuse",
         detail:
-          "Crevaison réparable : pose d'une rustine ou d'un champignon selon la taille de la perforation. Pneu irrécupérable : montage d'un pneu neuf si disponible pour votre référence.",
+          "Après la mèche, de l'eau savonneuse est passée sur la zone. Si aucune bulle n'apparaît, la perforation est close.",
       },
       {
-        title: "Gonflage et contrôle",
+        title: "Regonflage et contrôle de la pression",
         detail:
-          "Gonflage à la pression constructeur, contrôle d'étanchéité, remontage de la roue et essai statique avant votre départ.",
+          "Le pneu est regonflé, puis la pression est contrôlée avant de vous laisser repartir.",
       },
     ],
     duration: "30 à 60 minutes sur place",
@@ -54,7 +54,7 @@ const servicesData: Service[] = [
       {
         question: "Réparez-vous la crevaison sans remorquer le véhicule ?",
         answer:
-          "Oui, dans la majorité des cas. Si la carcasse du pneu n'est pas déchirée et que la jante n'est pas voilée, la réparation se fait sur place. Un remorquage n'est proposé que si le pneu est irrécupérable ou si la roue ne peut pas être démontée sur site.",
+          "Oui, dans la majorité des cas. Si la perforation est dans la bande de roulement, la mèche se pose sur place, roue en place. Un remorquage n'est proposé que si le pneu est irrécupérable : flanc, déchirure ou jante voilée.",
       },
       {
         question: "Faut-il fournir un pneu de rechange ?",
@@ -67,9 +67,9 @@ const servicesData: Service[] = [
           "Non. Le périphérique, les autoroutes, voies express et voies rapides urbaines sont réservés aux dépanneurs agréés. Composez le 112 ou utilisez une borne d'appel d'urgence. Nous intervenons dès que le véhicule est sorti de la voie rapide et accessible en sécurité.",
       },
       {
-        question: "Une rustine est-elle fiable pour repartir ?",
+        question: "Une mèche est-elle fiable pour repartir ?",
         answer:
-          "Une rustine correctement posée sur une perforation petite et centrale permet de repartir immédiatement. Pour une perforation sur le flanc ou une déchirure, le pneu doit être remplacé : nous vous l'indiquons avant toute intervention.",
+          "Une mèche posée sur une petite perforation de la bande de roulement permet de repartir. Un flanc, une déchirure ou une jante voilée ne se traitent pas ainsi : le pneu est alors remplacé, ou le véhicule est remorqué. Nous le disons avant toute intervention.",
       },
       {
         question: "Gonflez-vous aussi un pneu crevé lentement sans objet visible ?",

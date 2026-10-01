@@ -19,7 +19,7 @@ export function RemorquageGallery() {
               alt={photo.alt}
               width={photo.width}
               height={photo.height}
-              sizes="(max-width: 640px) 50vw, 33vw"
+              sizes="(max-width: 640px) calc((100vw - 2.75rem) / 2), (max-width: 1024px) calc((100vw - 4.5rem) / 3), (max-width: 1152px) calc((100vw - 5rem) / 3), 22rem"
               loading="lazy"
               className="h-auto w-full object-cover"
             />
