@@ -59,8 +59,8 @@ export default function CgvPage() {
                 panne d&apos;essence, ouverture de selle bloquée.
               </li>
               <li>
-                <strong>Batterie voiture</strong> : démarrage au booster ou remplacement de batterie à
-                domicile (citadines, berlines, SUV, utilitaires légers).
+                <strong>Dépannage voiture</strong> : batterie (démarrage au booster ou remplacement) et
+                pneu (réparation, changement de roue, montage sur place). Pas de remorquage automobile.
               </li>
               <li>
                 <strong>Remorquage sur plateau</strong> : transport sécurisé vers domicile, garage,
@@ -69,7 +69,7 @@ export default function CgvPage() {
             </ul>
             <p className="mt-3">
               Véhicules pris en charge : scooters 50 à 125 cm³, maxi-scooters, motos, la plupart des
-              trois-roues et batterie voiture (démarrage ou remplacement sur place), sous réserve de
+              trois-roues, et voitures pour la batterie et le pneu seulement, sous réserve de
               faisabilité technique annoncée au téléphone.
             </p>
             <p className="mt-3">

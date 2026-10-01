@@ -1,5 +1,5 @@
 # DépannageScooter
-> DépannageScooter — dépannage et remorquage scooters, motos et batterie voiture en Île-de-France, disponible 24h/24 et 7j/7.
+> DépannageScooter — dépannage et remorquage scooters, motos et trois-roues, batterie et pneu voiture en Île-de-France, disponible 24h/24 et 7j/7.
 
 DépannageScooter intervient en Île-de-France (142 communes). Contact : 07 72 12 53 11, 24h/24, 7j/7, contact@depannagescooter.com.
 
@@ -11,7 +11,9 @@ Tarifs jour TTC : dépannage sur place 50 € + déplacement (Paris 20 €, pe
 - [Zones d'intervention](https://www.depannagescooter.com/zones-intervention/): 142 communes : Paris et petite couronne (92, 93, 94).
 - [FAQ](https://www.depannagescooter.com/faq/): Tarifs, délais, zones, assurance et types de véhicules pris en charge.
 - [Contact](https://www.depannagescooter.com/contact/): Demande de rappel et coordonnées pour une intervention urgente.
+- [Dépannage voiture](https://www.depannagescooter.com/depannage-voiture/): Batterie et pneu voiture sur place, sans remorquage automobile.
 - [Batterie voiture à domicile](https://www.depannagescooter.com/depannage-voiture/batterie/): Démarrage ou remplacement batterie voiture à plat en Île-de-France, 24h/24.
+- [Pneu crevé voiture](https://www.depannagescooter.com/depannage-voiture/pneu/): Mèche ou changement de roue sur place, contrôle de pression, devis ferme.
 
 ## Dépannage sur place
 - [Hub dépannage](https://www.depannagescooter.com/depannage-sur-place/): Vue d'ensemble des interventions sur place sans remorquage.

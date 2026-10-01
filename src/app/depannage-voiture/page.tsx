@@ -6,14 +6,13 @@ import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
-import { company } from "@/data/company";
 import { createPageMetadata } from "@/lib/metadata";
 import { carBatteryServiceSchema, webPageSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Dépannage voiture batterie Paris et Île-de-France",
+  title: "Dépannage voiture : batterie et pneu 24h/24",
   description:
-    `Batterie voiture à plat en Île-de-France : booster ou remplacement à domicile, 24h/24. Devis ferme au ${company.phoneDisplay} avant déplacement.`,
+    "Dépannage voiture : batterie et pneu crevé sur place, 24h/24. Changement de roue, devis ferme avant le déplacement. Pas de remorquage automobile.",
   path: "/depannage-voiture/",
 });
 
@@ -24,7 +23,8 @@ export default function DepannageVoitureHubPage() {
         data={[
           webPageSchema({
             name: "Dépannage voiture DépannageScooter",
-            description: "Dépannage batterie voiture à domicile en Île-de-France.",
+            description:
+              "Dépannage voiture sur place : batterie et pneu. Pas de remorquage automobile.",
             path: "/depannage-voiture/",
           }),
           carBatteryServiceSchema(),
@@ -37,25 +37,40 @@ export default function DepannageVoitureHubPage() {
         </h1>
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
-            {company.name} intervient pour la batterie voiture à plat en Île-de-France : démarrage
-            au booster ou remplacement à domicile, 24h/24. Service distinct du dépannage scooter et
-            moto.
+            Deux prestations, sur place, sans remorquage automobile. La batterie : démarrage au
+            booster ou remplacement. Le pneu : pneu crevé, roue à plat ou pneu à plat, réparé par
+            une mèche quand c&apos;est possible, ou par un changement de roue et un montage sur
+            place. Devis ferme par téléphone avant le déplacement, 24h/24.
           </ShortAnswer>
         </div>
         <div className="mt-6 flex flex-wrap gap-3">
           <CallButton origin="inline" />
           <WhatsAppButton origin="inline" />
         </div>
-        <section className="mt-10">
-          <Link
-            href="/depannage-voiture/batterie/"
-            className="card block px-6 py-5 hover:shadow-card"
-          >
-            <h2 className="font-display text-xl font-bold text-asphalte">
-              Dépannage batterie voiture à domicile
-            </h2>
+        <div className="mt-8 max-w-3xl space-y-4 leading-relaxed text-asphalte">
+          <p>
+            La batterie et le pneu sont les deux pannes voiture traitées ici. Un tableau de bord
+            éteint ou un démarreur qui claque relève de la batterie. Une roue à plat, un pneu crevé
+            ou un pneu à plat relèvent de l&apos;autre page : localisation de la perforation, mèche
+            ou changement de pneu, puis contrôle de la pression.
+          </p>
+          <p>
+            Dans les deux cas le véhicule reste sur place. Le technicien confirme le devis avant de
+            partir, et n&apos;intervient pas sans accord. Le paiement se fait sur place, par carte
+            ou en espèces.
+          </p>
+        </div>
+        <section className="mt-10 grid gap-4 sm:grid-cols-2">
+          <Link href="/depannage-voiture/batterie/" className="card block px-6 py-5 hover:shadow-card">
+            <h2 className="font-display text-xl font-bold text-asphalte">Batterie voiture</h2>
             <p className="mt-2 text-sm text-beton">
-              Booster, test batterie et remplacement — citadines, berlines, SUV.
+              Booster, test et remplacement — citadines, berlines, SUV.
+            </p>
+          </Link>
+          <Link href="/depannage-voiture/pneu/" className="card block px-6 py-5 hover:shadow-card">
+            <h2 className="font-display text-xl font-bold text-asphalte">Pneu crevé, roue à plat</h2>
+            <p className="mt-2 text-sm text-beton">
+              Mèche ou changement de roue, montage sur place, contrôle de pression.
             </p>
           </Link>
         </section>

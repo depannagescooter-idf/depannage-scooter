@@ -20,7 +20,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { faqPageSchema, organizationSchema, webSiteSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Dépannage scooter & moto 24h/24 Paris et Île-de-France",
+  title: "Dépannage scooter et moto 24h/24, remorquage ensuite",
   description:
     `Dépannage et remorquage scooter et moto en Île-de-France, 24h/24. Intervention en ${company.defaultEtaMinutes[0]}–${company.defaultEtaMinutes[1]} min. Devis ferme au ${company.phoneDisplay} avant départ.`,
   path: "/",
@@ -43,11 +43,11 @@ export default function HomePage() {
             ● Équipes disponibles — {company.openingHours}
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight text-asphalte sm:text-5xl lg:text-6xl">
-            Dépannage et remorquage scooter &amp; moto 24h/24 en Île-de-France
+            Dépannage scooter et moto 24h/24 en Île-de-France, remorquage si la panne ne se répare pas sur place
           </h1>
           <div className="mt-6 max-w-2xl">
             <ShortAnswer>
-              {company.name} dépanne et remorque scooters et motos 24h/24 en Île-de-France.
+              {company.name} dépanne d&apos;abord, et ne remorque que si la réparation sur place est impossible. Scooters, motos et trois-roues (Piaggio MP3, Yamaha Tricity), 24h/24 en Île-de-France.
               Crevaison, batterie, panne sèche ou remorquage plateau : intervention en{" "}
               <span className="font-data font-semibold tabular-nums">
                 {company.defaultEtaMinutes[0]}–{company.defaultEtaMinutes[1]} min
@@ -121,17 +121,19 @@ export default function HomePage() {
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
-        <h2 className="section-title">Batterie voiture à plat en Île-de-France ?</h2>
+        <h2 className="section-title">Dépannage voiture : batterie et pneu</h2>
         <p className="mt-2 max-w-2xl text-beton">
-          Démarrage au booster ou remplacement de batterie à domicile — service distinct des
-          deux-roues, disponible 24h/24.
+          Batterie à plat, ou pneu crevé : démarrage, remplacement, réparation et changement de
+          roue sur place. Pas de remorquage automobile. Disponible 24h/24.
         </p>
-        <Link
-          href="/depannage-voiture/batterie/"
-          className="mt-4 inline-block text-sm font-medium text-gyro hover:underline"
-        >
-          Dépannage batterie voiture →
-        </Link>
+        <p className="mt-4 flex flex-wrap gap-4 text-sm font-medium">
+          <Link href="/depannage-voiture/batterie/" className="text-gyro hover:underline">
+            Dépannage batterie voiture →
+          </Link>
+          <Link href="/depannage-voiture/pneu/" className="text-gyro hover:underline">
+            Pneu crevé, roue à plat →
+          </Link>
+        </p>
       </section>
 
       <section className="mx-auto max-w-6xl px-4 py-12 sm:px-6">

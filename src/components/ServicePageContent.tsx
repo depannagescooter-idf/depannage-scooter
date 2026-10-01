@@ -71,7 +71,11 @@ export function ServicePageContent({
           <p className="mt-8 leading-relaxed text-beton">{service.intro}</p>
 
           <section className="mt-10">
-            <h2 className="section-title">Quels sont les symptômes ?</h2>
+            <h2 className="section-title">
+              {service.slug === "crevaison"
+                ? "Pneu crevé, roue à plat ou pneu à plat : quels symptômes ?"
+                : "Quels sont les symptômes ?"}
+            </h2>
             <ul className="mt-4 list-inside list-disc space-y-2 text-beton">
               {service.symptoms.map((s) => (
                 <li key={s}>{s}</li>

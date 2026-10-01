@@ -7,8 +7,6 @@ import type { CallOrigin } from "./CallButton";
 
 export type WhatsAppOrigin = CallOrigin;
 
-const CAR_BATTERY_PATH = "/depannage-voiture/batterie";
-
 /** Pages mixtes 2-roues + voiture : message neutre. */
 const NEUTRAL_PATHS = new Set(["/", "/contact", "/tarifs"]);
 
@@ -23,7 +21,7 @@ function getWhatsAppMessage(pathname: string): string {
     return "Bonjour, je suis en panne en Île-de-France. Pouvez-vous m'aider ?";
   }
 
-  if (path.includes(CAR_BATTERY_PATH)) {
+  if (path.startsWith("/depannage-voiture")) {
     return "Bonjour, je suis en panne avec ma voiture en Île-de-France. Pouvez-vous m'aider ?";
   }
 

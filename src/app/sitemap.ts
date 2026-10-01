@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/depannage-moto/", priority: 0.88, changeFrequency: "monthly" },
     { path: "/depannage-voiture/", priority: 0.85, changeFrequency: "monthly" },
     { path: "/depannage-voiture/batterie/", priority: 0.88, changeFrequency: "monthly" },
+    { path: "/depannage-voiture/pneu/", priority: 0.88, changeFrequency: "monthly" },
     { path: "/remorquage/", priority: 0.9, changeFrequency: "weekly" },
     { path: "/tarifs/", priority: 0.95, changeFrequency: "monthly" },
     { path: "/zones-intervention/", priority: 0.9, changeFrequency: "weekly" },

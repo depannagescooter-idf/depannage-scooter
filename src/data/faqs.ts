@@ -16,7 +16,7 @@ export const globalFaqs: Faq[] = [
   {
     question: "Quels véhicules prenez-vous en charge ?",
     answer:
-      "Scooters 50 à 125 cm³, maxi-scooters, motos et trois-roues. Pour les voitures, seule la batterie est prise en charge (démarrage au booster ou remplacement sur place) — pas de remorquage automobile. Indiquez marque et modèle lors de l'appel.",
+      "Scooters 50 à 125 cm³, maxi-scooters, motos et trois-roues, dont Piaggio MP3 et Yamaha Tricity. Pour les voitures : batterie (démarrage au booster ou remplacement) et pneu (réparation, changement de roue, montage sur place). Pas de remorquage automobile. Indiquez marque et modèle lors de l'appel.",
   },
   {
     question: "Intervenez-vous pour une batterie de voiture à plat ?",

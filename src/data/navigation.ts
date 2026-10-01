@@ -2,6 +2,7 @@
 export const mainNavItems = [
   { href: "/depannage-sur-place/", label: "Dépannage" },
   { href: "/depannage-moto/", label: "Dépannage moto" },
+  { href: "/depannage-voiture/", label: "Dépannage voiture" },
   { href: "/remorquage/", label: "Remorquage" },
   { href: "/tarifs/", label: "Tarifs" },
   { href: "/zones-intervention/", label: "Zones" },

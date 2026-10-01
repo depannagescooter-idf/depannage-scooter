@@ -5,14 +5,14 @@ const servicesData: Service[] = [
     slug: "crevaison",
     category: "depannage",
     name: "Réparation de crevaison",
-    h1: "Dépannage crevaison scooter et moto en Île-de-France",
-    metaTitle: "Crevaison scooter & moto sur place 24h/24 Île-de-France",
+    h1: "Pneu crevé ou roue à plat : dépannage crevaison scooter et moto",
+    metaTitle: "Pneu crevé scooter et moto, réparation 24h/24",
     metaDescription:
       "Crevaison sur route en Île-de-France ? Réparation sur place de pneu scooter ou moto, déplacement rapide 24h/24. Intervention en 25 à 40 minutes selon zone.",
     shortAnswer:
       "DépannageScooter répare les crevaisons de scooters et motos directement sur le lieu de panne en Île-de-France. Le technicien localise la perforation, retire la roue si nécessaire, installe une rustine ou remplace le pneu selon l'état du gonflage, puis contrôle la pression avant remise en route. Disponible 24h/24 et 7j/7.",
     intro:
-      "Une crevaison immobilise votre deux-roues au pire moment : bord de route, parking souterrain, voie de bus. Notre équipe se déplace avec le matériel de réparation adapté aux pneus scooter et moto — outillage pour démontage de roue, rustines, compresseur portable et pneus de secours courants. L'objectif est de vous remettre en route sur place lorsque la carcasse n'est pas endommagée. Si le pneu ou la jante est trop abîmé, le remorquage vers un garage partenaire reste possible.",
+      "Une crevaison, un pneu crevé, une roue à plat ou un pneu à plat : ce sont les mêmes mots pour la même panne, au pire moment, en bord de route, dans un parking ou sur une voie de bus. Notre équipe se déplace avec le matériel de réparation adapté aux pneus scooter, moto et trois-roues — Piaggio MP3 et Yamaha Tricity compris. L'objectif est de vous remettre en route sur place lorsque la carcasse n'est pas endommagée. Si le pneu ou la jante est trop abîmé, un changement de pneu ou un remorquage vers un garage partenaire reste possible.",
     symptoms: [
       "Pneu complètement à plat ou perte de pression rapide",
       "Claquement ou bruit de roulement irrégulier avant l'immobilisation",
@@ -47,6 +47,7 @@ const servicesData: Service[] = [
       "Scooters 50 cm³ à 125 cm³",
       "Scooters maxi-scooter",
       "Motos légères et moyennes cylindrées",
+      "Trois-roues, dont Piaggio MP3 et Yamaha Tricity",
       "Cyclomoteurs et quadricycles légers L6e",
     ],
     faqs: [
@@ -95,7 +96,7 @@ const servicesData: Service[] = [
     shortAnswer:
       "Batterie scooter ou moto à plat en Île-de-France : DépannageScooter teste l'accumulateur et le circuit de charge sur place, remplace la batterie si nécessaire (références YTX, gel ou plomb courantes) et vérifie le démarrage avant votre départ. Devis ferme par téléphone. Intervention 24h/24 et 7j/7.",
     intro:
-      "Une batterie faible ou déchargée est la première cause de panne sur scooter et moto — surtout après immobilisation, trajets courts ou fin de vie de l'accumulateur (plomb, gel ou lithium selon modèle). Symptômes : tableau de bord éteint, démarreur qui fait clic sans lancer le moteur, phares faibles. Nous nous déplaçons avec des batteries adaptées (YTX et références courantes). Le technicien contrôle cosses, fusible et charge alternateur avant de conclure au remplacement. Pour une voiture, voir notre page dépannage batterie voiture.",
+      "Une batterie faible ou déchargée est la première cause de panne sur scooter, moto et trois-roues — Piaggio MP3 et Yamaha Tricity compris — surtout après immobilisation, trajets courts ou fin de vie de l'accumulateur (plomb, gel ou lithium selon modèle). Symptômes : tableau de bord éteint, démarreur qui fait clic sans lancer le moteur, phares faibles. Nous nous déplaçons avec des batteries adaptées (YTX et références courantes). Le technicien contrôle cosses, fusible et charge alternateur avant de conclure au remplacement. Pour une voiture, voir notre page dépannage batterie voiture.",
     symptoms: [
       "Aucun voyant au contact ou tableau de bord éteint",
       "Démarreur qui fait clic sans lancer le moteur",
@@ -689,7 +690,7 @@ const servicesData: Service[] = [
     slug: "remorquage-3-roues",
     category: "remorquage",
     name: "Remorquage 3 roues",
-    h1: "Remorquage scooter et moto 3 roues en Île-de-France",
+    h1: "Remorquage trois-roues en Île-de-France : Piaggio MP3 et Yamaha Tricity",
     metaTitle: "Remorquage 3 roues — Paris et Île-de-France 24h/24",
     metaDescription:
       "Remorquage de scooters et motos 3 roues en IDF : Piaggio MP3, Can-Am, Yamaha Tricity. Plateau adapté, calage renforcé. Service disponible 24h/24.",

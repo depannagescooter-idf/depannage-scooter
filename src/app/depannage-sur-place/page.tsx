@@ -78,7 +78,20 @@ export default function DepannageHubPage() {
               <p className="mt-1 text-sm text-beton">Démarrage ou remplacement — citadines, berlines, SUV</p>
             </Link>
           </li>
+          <li>
+            <Link href="/depannage-voiture/pneu/" className="card block px-5 py-4 hover:shadow-card">
+              <h2 className="font-display font-semibold text-asphalte">Pneu voiture : crevaison et changement de roue</h2>
+              <p className="mt-1 text-sm text-beton">Mèche ou montage sur place — pas de remorquage automobile</p>
+            </Link>
+          </li>
         </ul>
+        <p className="mt-6 text-sm text-beton">
+          Le remorquage vient ensuite, seulement si le dépannage sur place ne suffit pas.{" "}
+          <Link href="/remorquage/" className="font-medium text-gyro hover:underline">
+            Voir le remorquage
+          </Link>
+          .
+        </p>
         <section className="mt-10">
           <h2 className="section-title">Zones couvertes en Île-de-France</h2>
           <p className="mt-2 text-sm text-beton">

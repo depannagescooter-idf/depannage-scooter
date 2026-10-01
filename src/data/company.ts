@@ -28,7 +28,7 @@ export const company: Company = {
   currenciesAccepted: "EUR",
   sameAs: ["https://maps.app.goo.gl/4CnLYiEUFJzzbtb48"],
   description:
-    "DépannageScooter — dépannage et remorquage scooters, motos et batterie voiture en Île-de-France, disponible 24h/24 et 7j/7.",
+    "DépannageScooter — dépannage et remorquage scooters, motos et trois-roues, batterie et pneu voiture en Île-de-France, disponible 24h/24 et 7j/7.",
   url: "https://www.depannagescooter.com",
   logoPath: "/images/logo-carre-orange.png",
   serviceAreas: [
