@@ -1,4 +1,4 @@
-/** 10 villes majeures pour pages prestation × ville (pas les 127 communes). */
+/** Villes majeures pour les pages prestation × ville, dans la zone encore desservie. */
 export const majorCitySlugs = [
   "boulogne-billancourt",
   "nanterre",
@@ -6,10 +6,6 @@ export const majorCitySlugs = [
   "vincennes",
   "neuilly-sur-seine",
   "creteil",
-  "versailles",
-  "evry-courcouronnes",
-  "argenteuil",
-  "cergy",
 ] as const;
 
 export type MajorCitySlug = (typeof majorCitySlugs)[number];

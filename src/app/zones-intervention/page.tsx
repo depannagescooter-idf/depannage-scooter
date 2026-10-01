@@ -12,7 +12,7 @@ import { itemListSchema, webPageSchema } from "@/lib/schema";
 export const metadata: Metadata = createPageMetadata({
   title: "Zones dépannage scooter moto Île-de-France",
   description:
-    "Zones d'intervention DépannageScooter en Île-de-France : Paris, 77, 78, 91, 92, 93, 94, 95. Dépannage et remorquage scooter moto 24h/24.",
+    "Zones d'intervention DépannageScooter : Paris et la petite couronne (92, 93, 94). Dépannage et remorquage de scooters et motos, 24h/24 et 7j/7.",
   path: "/zones-intervention/",
 });
 
@@ -42,8 +42,8 @@ export default function ZonesHubPage() {
         </h1>
         <div className="mt-4 max-w-2xl">
           <ShortAnswer>
-            DépannageScooter couvre Paris (20 arrondissements), la petite couronne (92, 93, 94)
-            et la grande couronne (77, 78, 91, 95) : {getZoneCountLabel()} en Île-de-France.
+            DépannageScooter intervient à Paris (20 arrondissements) et en petite couronne
+            (92, 93, 94) : {getZoneCountLabel()}. La grande couronne n&apos;est plus desservie.
             Intervention 24h/24, délai annoncé selon la zone.
           </ShortAnswer>
         </div>

@@ -9,7 +9,6 @@ import type { TravelZoneKey } from "@/data/types";
 const ZONE_COLUMNS: { key: TravelZoneKey; label: string }[] = [
   { key: "PARIS", label: "Paris" },
   { key: "PETITE_COURONNE", label: "Petite couronne" },
-  { key: "GRANDE_COURONNE", label: "Grande couronne" },
 ];
 
 export interface CarBatteryPriceTableProps {
@@ -69,7 +68,7 @@ export function CarBatteryPriceTable({ showSurcharges = true }: CarBatteryPriceT
                 <td className="px-4 py-3 text-beton">
                   Batterie voiture (standard, EFB, AGM start-stop)
                 </td>
-                <td colSpan={3} className="px-4 py-3 font-data tabular-nums text-asphalte">
+                <td colSpan={ZONE_COLUMNS.length} className="px-4 py-3 font-data tabular-nums text-asphalte">
                   à partir de {formatPrice(carBattery.batteryFrom)} selon modèle
                 </td>
               </tr>
@@ -77,8 +76,7 @@ export function CarBatteryPriceTable({ showSurcharges = true }: CarBatteryPriceT
           </table>
         </div>
         <p className="border-t border-border-soft px-4 py-3 text-xs text-beton">
-          Petite couronne : +{formatPrice(carBattery.travelFees.PETITE_COURONNE - carBattery.travelFees.PARIS)} vs Paris ·
-          Grande couronne : +{formatPrice(carBattery.travelFees.GRANDE_COURONNE - carBattery.travelFees.PARIS)} vs Paris
+          Petite couronne : +{formatPrice(carBattery.travelFees.PETITE_COURONNE - carBattery.travelFees.PARIS)} par rapport à Paris.
         </p>
       </div>
 

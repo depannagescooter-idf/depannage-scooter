@@ -80,7 +80,7 @@ export const guides: Guide[] = [
       {
         question: "Comment est calculé le dépannage sur place ?",
         answer:
-          "Toutes les prestations (crevaison, batterie, booster, essence, selle) sont facturées 50 € TTC, auxquels s'ajoute un forfait de déplacement : 20 € à Paris, 30 € en petite couronne (92, 93, 94) et 40 € en grande couronne (77, 78, 91, 95).",
+          "Toutes les prestations (crevaison, batterie, booster, essence, selle) sont facturées 50 € TTC, auxquels s'ajoute un forfait de déplacement : 20 € à Paris et 30 € en petite couronne (92, 93, 94). La grande couronne n'est plus desservie.",
       },
       {
         question: "Quels paliers pour le remorquage ?",
@@ -190,7 +190,7 @@ export const guides: Guide[] = [
       {
         question: "Combien coûte une réparation de crevaison en Île-de-France ?",
         answer:
-          "Le forfait dépannage sur place s'ajoute au déplacement selon la zone (Paris, petite ou grande couronne). Une crevaison réparable par mèche entre dans ce forfait, sans surprise si le devis est confirmé au téléphone. Un remorquage est facturé au palier kilométrique (0–5 km, 5–10 km, etc.) jusqu'à la destination choisie — garage, domicile ou concession. Les majorations nuit, week-end et jours fériés s'appliquent selon la grille tarifaire. Consultez la page tarifs ou appelez pour un devis ferme avant départ.",
+          "Le forfait dépannage sur place s'ajoute au déplacement selon la zone (Paris ou petite couronne). Une crevaison réparable par mèche entre dans ce forfait, sans surprise si le devis est confirmé au téléphone. Un remorquage est facturé au palier kilométrique (0–5 km, 5–10 km, etc.) jusqu'à la destination choisie — garage, domicile ou concession. Les majorations nuit, week-end et jours fériés s'appliquent selon la grille tarifaire. Consultez la page tarifs ou appelez pour un devis ferme avant départ.",
       },
       {
         question: "Une mèche est-elle fiable pour repartir ?",

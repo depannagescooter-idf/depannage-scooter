@@ -109,11 +109,12 @@ export function getDspTotal(zone: TravelZoneKey): number {
   return pricing.dsp.baseFee + pricing.travelFees[zone].amount;
 }
 
-/** Fourchette dépannage (Paris min → grande couronne max). */
+/** Zones encore proposées. La grande couronne reste dans la grille mais n'est plus affichée. */
+export const offeredTravelZones = ["PARIS", "PETITE_COURONNE"] as const satisfies readonly TravelZoneKey[];
+
+/** Fourchette dépannage (Paris → petite couronne). */
 export function getDspPriceRangeLabel(): string {
-  const totals = Object.keys(pricing.travelFees).map((z) =>
-    getDspTotal(z as TravelZoneKey),
-  );
+  const totals = offeredTravelZones.map((z) => getDspTotal(z));
   return `${formatPrice(Math.min(...totals))} à ${formatPrice(Math.max(...totals))}`;
 }
 

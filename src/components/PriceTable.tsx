@@ -1,10 +1,9 @@
 import {
   formatPrice,
   getDspTotal,
+  offeredTravelZones,
   pricing,
 } from "@/data/pricing";
-import type { TravelZoneKey } from "@/data/types";
-
 export interface PriceTableProps {
   showDsp?: boolean;
   showTowing?: boolean;
@@ -102,8 +101,9 @@ export function PriceTable({
                 </tr>
               </thead>
               <tbody>
-                {(Object.entries(pricing.travelFees) as [TravelZoneKey, (typeof pricing.travelFees)[TravelZoneKey]][]).map(
-                  ([zone, tier], i) => (
+                {offeredTravelZones.map((zone, i) => {
+                  const tier = pricing.travelFees[zone];
+                  return (
                     <tr
                       key={zone}
                       className={i % 2 === 0 ? "bg-surface" : "bg-surface-muted/40"}
@@ -116,8 +116,8 @@ export function PriceTable({
                         {formatPrice(getDspTotal(zone))}
                       </td>
                     </tr>
-                  ),
-                )}
+                  );
+                })}
               </tbody>
             </table>
           </TableCard>

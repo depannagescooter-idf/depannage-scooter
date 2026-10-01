@@ -7,10 +7,6 @@ const TOP_CITIES_BY_DEPT: Record<string, string[]> = {
   "92": ["boulogne-billancourt", "nanterre", "neuilly-sur-seine", "issy-les-moulineaux", "courbevoie", "levallois-perret"],
   "93": ["montreuil", "saint-denis", "aubervilliers", "pantin", "bobigny", "drancy"],
   "94": ["creteil", "vincennes", "vitry-sur-seine", "ivry-sur-seine", "alfortville", "charenton-le-port"],
-  "77": ["meaux", "melun", "chelles", "pontault-combault", "fontainebleau", "savigny-le-temple"],
-  "78": ["versailles", "saint-germain-en-laye", "poissy", "sartrouville", "mantes-la-jolie", "conflans-sainte-honorine"],
-  "91": ["evry-courcouronnes", "massy", "palaiseau", "corbeil-essonnes", "savigny-sur-orge", "viry-chatillon"],
-  "95": ["argenteuil", "cergy", "pontoise", "sarcelles", "garges-les-gonesse", "franconville"],
 };
 
 export function ServiceZonesCompact() {

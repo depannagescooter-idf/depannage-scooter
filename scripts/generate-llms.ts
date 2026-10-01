@@ -32,7 +32,6 @@ function llmsLink(path: string, title: string, description: string): string {
 const travelSummary = [
   `Paris ${formatPrice(pricing.travelFees.PARIS.amount)}`,
   `petite couronne ${formatPrice(pricing.travelFees.PETITE_COURONNE.amount)}`,
-  `grande couronne ${formatPrice(pricing.travelFees.GRANDE_COURONNE.amount)}`,
 ].join(", ");
 
 const hasReviews = getVerifiedReviews().length > 0;
@@ -65,7 +64,7 @@ const lines: string[] = [
   "## Pages principales",
   llmsLink("/", "Accueil", "Dépannage et remorquage scooter et moto 24h/24 en Île-de-France."),
   llmsLink("/tarifs/", "Tarifs", "Grille complète dépannage et remorquage, majorations et mentions."),
-  llmsLink("/zones-intervention/", "Zones d'intervention", `${publishedZones.length} communes : Paris, 77, 78, 91, 92, 93, 94, 95.`),
+  llmsLink("/zones-intervention/", "Zones d'intervention", `${publishedZones.length} communes : Paris et petite couronne (92, 93, 94).`),
   llmsLink("/faq/", "FAQ", "Tarifs, délais, zones, assurance et types de véhicules pris en charge."),
   llmsLink("/contact/", "Contact", "Demande de rappel et coordonnées pour une intervention urgente."),
   llmsLink(

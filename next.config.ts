@@ -1,4 +1,32 @@
 import type { NextConfig } from "next";
+import { retiredZoneSlugList } from "./src/data/retired-zone-slugs";
+import { depannageServices, remorquageServices } from "./src/data/services";
+
+const retiredDepartmentSlugs = ["seine-et-marne", "yvelines", "essonne", "val-doise"];
+const retiredCitySlugs = ["versailles", "evry-courcouronnes", "argenteuil", "cergy"];
+
+function permanentRedirect(source: string, destination: string) {
+  return { source, destination, permanent: true as const };
+}
+
+function bothSlashes(source: string, destination: string) {
+  const bare = source.endsWith("/") ? source.slice(0, -1) : source;
+  const dest = destination.endsWith("/") ? destination : `${destination}/`;
+  return [permanentRedirect(bare, dest), permanentRedirect(`${bare}/`, dest)];
+}
+
+const retiredRedirects = [
+  ...retiredZoneSlugList.flatMap((slug) => bothSlashes(`/zones-intervention/${slug}/`, "/zones-intervention/")),
+  ...retiredDepartmentSlugs.flatMap((slug) => bothSlashes(`/zones-intervention/${slug}/`, "/zones-intervention/")),
+  ...retiredCitySlugs.flatMap((city) => [
+    ...depannageServices.flatMap((service) =>
+      bothSlashes(`/depannage-sur-place/${service.slug}/${city}/`, `/depannage-sur-place/${service.slug}/`),
+    ),
+    ...remorquageServices.flatMap((service) =>
+      bothSlashes(`/remorquage/${service.slug}/${city}/`, `/remorquage/${service.slug}/`),
+    ),
+  ]),
+];
 
 const nextConfig: NextConfig = {
   trailingSlash: true,
@@ -18,6 +46,7 @@ const nextConfig: NextConfig = {
   },
   async redirects() {
     return [
+      ...retiredRedirects,
       {
         source: "/:path*",
         has: [{ type: "host", value: "depannagescooter.com" }],

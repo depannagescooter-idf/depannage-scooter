@@ -5,6 +5,7 @@ import {
   getCarBatteryReplacementTotal,
   getDspTotal,
   getStartingPrice,
+  offeredTravelZones,
   pricing,
 } from "@/data/pricing";
 import type { TravelZoneKey } from "@/data/types";
@@ -241,7 +242,7 @@ export function serviceOfferCatalogSchema(priceKey: string): Record<string, unkn
   }
 
   const service = pricing.dsp.services[priceKey as keyof typeof pricing.dsp.services];
-  const zoneKeys: TravelZoneKey[] = ["PARIS", "PETITE_COURONNE", "GRANDE_COURONNE"];
+  const zoneKeys: TravelZoneKey[] = [...offeredTravelZones];
 
   return {
     "@type": "OfferCatalog",

@@ -1,14 +1,14 @@
 # DépannageScooter
 > DépannageScooter — dépannage et remorquage scooters, motos et batterie voiture en Île-de-France, disponible 24h/24 et 7j/7.
 
-DépannageScooter intervient en Île-de-France (127 communes). Contact : 07 72 12 53 11, 24h/24, 7j/7, contact@depannagescooter.com.
+DépannageScooter intervient en Île-de-France (67 communes). Contact : 07 72 12 53 11, 24h/24, 7j/7, contact@depannagescooter.com.
 
-Tarifs jour TTC : dépannage sur place 50 € + déplacement (Paris 20 €, petite couronne 30 €, grande couronne 40 €) ; remorquage 79 € à 120 €, au-delà de 20 km sur devis.
+Tarifs jour TTC : dépannage sur place 50 € + déplacement (Paris 20 €, petite couronne 30 €) ; remorquage 79 € à 120 €, au-delà de 20 km sur devis.
 
 ## Pages principales
 - [Accueil](https://www.depannagescooter.com/): Dépannage et remorquage scooter et moto 24h/24 en Île-de-France.
 - [Tarifs](https://www.depannagescooter.com/tarifs/): Grille complète dépannage et remorquage, majorations et mentions.
-- [Zones d'intervention](https://www.depannagescooter.com/zones-intervention/): 127 communes : Paris, 77, 78, 91, 92, 93, 94, 95.
+- [Zones d'intervention](https://www.depannagescooter.com/zones-intervention/): 67 communes : Paris et petite couronne (92, 93, 94).
 - [FAQ](https://www.depannagescooter.com/faq/): Tarifs, délais, zones, assurance et types de véhicules pris en charge.
 - [Contact](https://www.depannagescooter.com/contact/): Demande de rappel et coordonnées pour une intervention urgente.
 - [Batterie voiture à domicile](https://www.depannagescooter.com/depannage-voiture/batterie/): Démarrage ou remplacement batterie voiture à plat en Île-de-France, 24h/24.

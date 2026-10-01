@@ -18,7 +18,7 @@ alwaysApply: true
 - Densité minimale : 700 mots sur une page service, hors navigation.
 - Page zone : aucune intro, aucun axe, aucun repère et aucune liste d'interventions rédigés pour remplir la page. Le contenu propre est la fiche factuelle (tableau HTML) et le champ libre `clientContent`, vide tant que le client n'a rien écrit.
 - La fiche ne contient que des données calculées ou lues dans la grille : distance et durée OSRM jusqu'à la mairie, délai annoncé, tarif, population INSEE, limitrophes officiels, voies retrouvées dans la Base Adresse Nationale. Une donnée absente n'est pas affichée et n'est pas inventée. Le délai et le tarif n'apparaissent qu'une fois, dans la fiche. Si plusieurs zones partagent le même point de mairie, la ligne distance n'est affichée pour aucune d'elles.
-- `validate:data` exige, pour chaque zone de Paris et de la petite couronne, au moins 50 mots (fiche et `clientContent` confondus) et la présence de la distance, du délai annoncé et du tarif. Les zones de grande couronne (77, 78, 91, 95) n'ont pas de fiche.
+- `validate:data` exige, pour chaque zone publiée, au moins 50 mots (fiche et `clientContent` confondus) et la présence de la distance, du délai annoncé et du tarif. Les communes de grande couronne ne sont plus publiées.
 - Écrire pour un lecteur en panne : phrases courtes, verbes d'action, information utile avant argumentaire.
 - Chiffres toujours en `font-data` avec `tabular-nums`.
 

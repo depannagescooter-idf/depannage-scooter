@@ -82,7 +82,7 @@ export default function DepannageHubPage() {
         <section className="mt-10">
           <h2 className="section-title">Zones couvertes en Île-de-France</h2>
           <p className="mt-2 text-sm text-beton">
-            {publishedZones.length} communes couvertes — Paris, petite et grande couronne.
+            {publishedZones.length} communes couvertes — Paris et petite couronne (92, 93, 94).
           </p>
           <ZonesByDepartment />
         </section>

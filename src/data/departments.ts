@@ -36,34 +36,6 @@ export const departments: Department[] = [
     intro:
       "Remorquage et dépannage deux-roues dans le Val-de-Marne (94) : Créteil, Vincennes, Vitry, Ivry et toutes les communes du département.",
   },
-  {
-    slug: "seine-et-marne",
-    code: "77",
-    name: "Seine-et-Marne",
-    intro:
-      "Dépannage scooter et moto en Seine-et-Marne (77) : Meaux, Melun, Chelles, Fontainebleau et grande couronne est. Devis ferme au téléphone.",
-  },
-  {
-    slug: "yvelines",
-    code: "78",
-    name: "Yvelines",
-    intro:
-      "Intervention dans les Yvelines (78) : Versailles, Saint-Germain, Poissy, Mantes et communes de l'ouest parisien. Remorquage plateau 24h/24.",
-  },
-  {
-    slug: "essonne",
-    code: "91",
-    name: "Essonne",
-    intro:
-      "Dépannage et remorquage en Essonne (91) : Évry, Massy, Palaiseau, Corbeil et sud de l'Île-de-France. Délai annoncé selon la commune.",
-  },
-  {
-    slug: "val-doise",
-    code: "95",
-    name: "Val-d'Oise",
-    intro:
-      "Service 24h/24 dans le Val-d'Oise (95) : Argenteuil, Cergy, Pontoise, Roissy et nord de l'Île-de-France. Scooters, motos et trois-roues.",
-  },
 ];
 
 export function getDepartmentBySlug(slug: string): Department | undefined {

@@ -2,7 +2,8 @@ import type { Zone } from "./types";
 import { buildExtendedZones } from "./zones-extended";
 
 /**
- * Données zones — Paris (20 arrondissements) + petite couronne + grande couronne IDF.
+ * Données zones publiées — Paris (20 arrondissements) et petite couronne (92, 93, 94).
+ * La grande couronne n'est plus desservie : ses communes restent dans les seeds pour les redirections.
  * Aucun texte généré : le contenu propre à une zone vient uniquement de `clientContent`.
  */
 const coreZones: Zone[] = [
@@ -641,10 +642,19 @@ const clientContent: Record<string, string> = {
   "arcueil": "",
 };
 
-export const zones: Zone[] = [...coreZones, ...buildExtendedZones(coreZones)].map((z) => ({
+const SERVED_DEPARTEMENTS = new Set(["75", "92", "93", "94"]);
+
+const builtZones: Zone[] = [...coreZones, ...buildExtendedZones(coreZones)].map((z) => ({
   ...z,
   clientContent: clientContent[z.slug] ?? "",
 }));
+
+/** Communes retirées : le client n'y intervient plus. Leurs URL redirigent en 301. */
+export const retiredZoneSlugs: string[] = builtZones
+  .filter((z) => !SERVED_DEPARTEMENTS.has(z.departement))
+  .map((z) => z.slug);
+
+export const zones: Zone[] = builtZones.filter((z) => SERVED_DEPARTEMENTS.has(z.departement));
 
 /** Zones publiées (identique à zones — aucune en draft). */
 export const publishedZones: Zone[] = zones;

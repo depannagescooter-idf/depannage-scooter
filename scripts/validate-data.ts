@@ -3,17 +3,10 @@
  * Usage: npm run validate:data
  */
 import { guides } from "../src/data/guides";
+import { retiredZoneSlugList } from "../src/data/retired-zone-slugs";
 import { services } from "../src/data/services";
-import type { Zone } from "../src/data/types";
-import { zones } from "../src/data/zones";
+import { retiredZoneSlugs, zones } from "../src/data/zones";
 import { missingRequiredFacts, zoneFactSheetText } from "../src/lib/zone-fact-sheet";
-
-/** Seules ces zones publient une fiche. La grande couronne n'en a pas : elle sort du site ensuite. */
-const FACT_SHEET_DEPTS = new Set(["75", "92", "93", "94"]);
-
-function requiresFactSheet(zone: Zone): boolean {
-  return FACT_SHEET_DEPTS.has(zone.departement);
-}
 
 function jaccardSimilarity(a: string, b: string): number {
   const wordsA = new Set(a.toLowerCase().split(/\s+/));
@@ -43,6 +36,12 @@ const allSlugs = [
 const dupes = allSlugs.filter((s, i) => allSlugs.indexOf(s) !== i);
 if (dupes.length) fail(`Slugs dupliqués: ${dupes.join(", ")}`);
 else ok("Slugs uniques");
+
+const retiredSorted = [...retiredZoneSlugs].sort();
+const listedSorted = [...retiredZoneSlugList].sort();
+if (retiredSorted.join() !== listedSorted.join()) {
+  fail("retired-zone-slugs.ts ne correspond pas aux communes retirées de zones.ts");
+} else ok(`${retiredZoneSlugs.length} communes retirées, liste de redirection alignée`);
 
 // Services
 for (const s of services) {
@@ -78,9 +77,7 @@ for (let i = 0; i < zones.length; i++) {
   // Minimum abaissé de 150 à 50 mots, texte client et fiche de données confondus : une fiche factuelle
   // honnête fait 60 à 90 mots, et les 150 mots n'étaient atteints qu'avec du texte de remplissage.
   const zone = zones[i]!;
-  // Le contrôle porte sur chaque zone qui doit publier une fiche. Il n'est pas élargi aux 60 zones
-  // de grande couronne, qui n'ont pas de fiche, et son seuil n'est pas abaissé.
-  if (!requiresFactSheet(zone)) continue;
+  // Chaque zone publiée a une fiche. La grande couronne n'est plus dans `zones`.
   const wordCount = `${zone.clientContent ?? ""} ${zoneFactSheetText(zone)}`.split(/\s+/).filter(Boolean).length;
   if (wordCount < 50) fail(`${zone.slug}: fiche ${wordCount} mots < 50`);
   // Une fiche contient au minimum la distance, le délai annoncé et le tarif ; sinon la validation échoue.
