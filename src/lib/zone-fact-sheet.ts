@@ -30,9 +30,29 @@ function zoneLabel(code: string, officialName: string): FactLink {
   return zone ? { label: zone.name, href: `/zones-intervention/${zone.slug}/` } : { label: officialName };
 }
 
+/** « Arrondissements limitrophes », « Communes limitrophes » ou les deux, selon la zone. */
+export function limitrophesTitle(zone: Zone): string {
+  const limitrophes = zoneFacts[zone.slug]?.limitrophes ?? [];
+  const arrondissements = limitrophes.filter((l) => l.code.startsWith("751")).length;
+  if (arrondissements === limitrophes.length) return "Arrondissements limitrophes";
+  return arrondissements === 0 ? "Communes limitrophes" : "Communes et arrondissements limitrophes";
+}
+
+/** Communes ou arrondissements limitrophes officiels qui ont une page sur le site. */
+export function limitrophesWithPage(zone: Zone): Required<FactLink>[] {
+  return (zoneFacts[zone.slug]?.limitrophes ?? [])
+    .map((l) => zoneLabel(l.code, l.nom))
+    .filter((l): l is Required<FactLink> => Boolean(l.href));
+}
+
+/** Prestations du site, affichées en liens sur chaque page de zone. */
+export function prestationsText(): string {
+  return `${services.map((s, i) => (i === 0 ? s.name : lowerFirst(s.name))).join(", ")}.`;
+}
+
 /**
  * Fiche factuelle d'une zone : uniquement des données calculées (OSRM, geo.api.gouv.fr, BAN)
- * ou lues dans la grille tarifaire et les services. Une donnée absente n'est pas affichée.
+ * ou lues dans la grille tarifaire. Une donnée absente n'est pas affichée.
  */
 export function buildZoneFactRows(zone: Zone): FactRow[] {
   const facts = zoneFacts[zone.slug];
@@ -70,24 +90,23 @@ export function buildZoneFactRows(zone: Zone): FactRow[] {
   }
   if (facts?.limitrophes?.length) {
     const links = facts.limitrophes.map((l) => zoneLabel(l.code, l.nom));
-    const arrondissements = facts.limitrophes.filter((l) => l.code.startsWith("751")).length;
-    const label =
-      arrondissements === facts.limitrophes.length
-        ? "Arrondissements limitrophes"
-        : arrondissements === 0
-          ? "Communes limitrophes"
-          : "Communes et arrondissements limitrophes";
-    rows.push({ label, value: links.map((l) => l.label).join(", "), links });
+    rows.push({ label: limitrophesTitle(zone), value: links.map((l) => l.label).join(", "), links });
   }
   const voies = zoneVoies[zone.slug] ?? [];
   if (voies.length) {
     rows.push({ label: "Voies vérifiées dans la Base Adresse Nationale", value: voies.join(", ") });
   }
-  rows.push({
-    label: "Prestations",
-    value: `${services.map((s, i) => (i === 0 ? s.name : lowerFirst(s.name))).join(", ")}.`,
-  });
   return rows;
+}
+
+/** Données sans lesquelles une fiche n'est pas publiable : distance, délai annoncé, tarif. */
+export function missingRequiredFacts(zone: Zone): string[] {
+  const missing: string[] = [];
+  if (!zoneFacts[zone.slug]?.route) missing.push("distance");
+  const [min, max] = zone.etaMinutes;
+  if (!(min > 0 && max >= min)) missing.push("délai");
+  if (!(getDspTotal(getTravelZoneForZone(zone)) > 0)) missing.push("tarif");
+  return missing;
 }
 
 export function buildZoneFactCaption(zone: Zone): string {
@@ -107,8 +126,11 @@ export function buildZoneFactSources(zone: Zone): string {
   return `Sources : ${parts.join(" ; ")}.${date}`;
 }
 
-/** Texte de la fiche tel qu'affiché : sert au décompte de mots de validate:data. */
+/**
+ * Texte propre à la zone, pour le décompte de mots de validate:data : la fiche et ses sources,
+ * plus les prestations, retirées de la fiche mais affichées en liens sur la même page.
+ */
 export function zoneFactSheetText(zone: Zone): string {
   const rows = buildZoneFactRows(zone).map((r) => `${r.label} ${r.value}`);
-  return [buildZoneFactCaption(zone), ...rows, buildZoneFactSources(zone)].join(" ");
+  return [buildZoneFactCaption(zone), ...rows, buildZoneFactSources(zone), `Prestations ${prestationsText()}`].join(" ");
 }

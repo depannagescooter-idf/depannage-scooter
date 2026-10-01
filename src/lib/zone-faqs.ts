@@ -1,4 +1,3 @@
-import { formatPrice, getDspTotal, pricing } from "@/data/pricing";
 import type { TravelZoneKey, Zone } from "@/data/types";
 
 export function getTravelZoneForZone(zone: Zone): TravelZoneKey {
@@ -7,17 +6,9 @@ export function getTravelZoneForZone(zone: Zone): TravelZoneKey {
   return "GRANDE_COURONNE";
 }
 
+/** Le délai et le tarif de la zone ne figurent que dans sa fiche : aucune question ne les répète. */
 export function getZoneFaqs(zone: Zone) {
-  const dspTotal = getDspTotal(getTravelZoneForZone(zone));
   const base = [
-    {
-      question: `Quel délai pour un dépannage scooter ou moto à ${zone.name} ?`,
-      answer: `En journée, comptez ${zone.etaMinutes[0]} à ${zone.etaMinutes[1]} minutes selon le trafic et le point exact de panne. Le délai vous est confirmé par téléphone avant le départ du dépanneur.`,
-    },
-    {
-      question: `Combien coûte un dépannage sur place à ${zone.name} ?`,
-      answer: `Le forfait prestation est de ${formatPrice(pricing.dsp.baseFee)} + déplacement selon zone, soit ${formatPrice(dspTotal)} TTC en tarif jour pour ${zone.name}. Majorations nuit, week-end et jours fériés selon la grille tarifaire.`,
-    },
     {
       question: `Intervenez-vous la nuit et le week-end à ${zone.name} ?`,
       answer: `Oui, ${zone.name} est couvert 24h/24 et 7j/7. Les majorations applicables vous sont annoncées par téléphone avant toute intervention.`,

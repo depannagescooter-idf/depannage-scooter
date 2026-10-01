@@ -64,66 +64,6 @@ export const zoneInsee: Record<string, string> = {
   "charenton-le-pont": "94018",
   "alfortville": "94002",
   "villejuif": "94076",
-  "meaux": "77284",
-  "melun": "77288",
-  "chelles": "77108",
-  "pontault-combault": "77373",
-  "savigny-le-temple": "77445",
-  "fontainebleau": "77186",
-  "torcy": "77468",
-  "lagny-sur-marne": "77243",
-  "brie-comte-robert": "77053",
-  "combs-la-ville": "77122",
-  "lieusaint": "77251",
-  "ozoir-la-ferriere": "77350",
-  "roissy-en-brie": "77390",
-  "dammarie-les-lys": "77152",
-  "provins": "77379",
-  "versailles": "78646",
-  "saint-germain-en-laye": "78551",
-  "poissy": "78498",
-  "conflans-sainte-honorine": "78172",
-  "mantes-la-jolie": "78361",
-  "sartrouville": "78586",
-  "houilles": "78311",
-  "montigny-le-bretonneux": "78423",
-  "trappes": "78621",
-  "rambouillet": "78517",
-  "plaisir": "78490",
-  "les-mureaux": "78440",
-  "chatou": "78146",
-  "le-chesnay-rocquencourt": "78158",
-  "guyancourt": "78297",
-  "evry-courcouronnes": "91228",
-  "massy": "91377",
-  "palaiseau": "91477",
-  "corbeil-essonnes": "91174",
-  "savigny-sur-orge": "91589",
-  "athis-mons": "91027",
-  "viry-chatillon": "91687",
-  "grigny": "91286",
-  "bretigny-sur-orge": "91103",
-  "sainte-genevieve-des-bois": "91549",
-  "longjumeau": "91345",
-  "les-ulis": "91692",
-  "yerres": "91691",
-  "draveil": "91201",
-  "montgeron": "91421",
-  "argenteuil": "95018",
-  "cergy": "95127",
-  "sarcelles": "95585",
-  "garges-les-gonesse": "95268",
-  "franconville": "95252",
-  "ermont": "95219",
-  "montmorency": "95428",
-  "enghien-les-bains": "95210",
-  "goussainville": "95280",
-  "taverny": "95607",
-  "bezons": "95063",
-  "herblay-sur-seine": "95306",
-  "pontoise": "95500",
-  "gonesse": "95277",
-  "roissy-en-france": "95527",
   "rueil-malmaison": "92063",
   "colombes": "92025",
   "antony": "92002",
@@ -149,6 +89,338 @@ export const zoneInsee: Record<string, string> = {
 };
 
 export const zoneFacts: Record<string, ZoneFacts> = {
+  "paris-1er": {
+    "officialName": "Paris 1er Arrondissement",
+    "population": 15114,
+    "surfaceHa": 182.73,
+    "limitrophes": [
+      {
+        "code": "75102",
+        "nom": "Paris 2e Arrondissement"
+      },
+      {
+        "code": "75103",
+        "nom": "Paris 3e Arrondissement"
+      },
+      {
+        "code": "75104",
+        "nom": "Paris 4e Arrondissement"
+      },
+      {
+        "code": "75106",
+        "nom": "Paris 6e Arrondissement"
+      },
+      {
+        "code": "75107",
+        "nom": "Paris 7e Arrondissement"
+      },
+      {
+        "code": "75108",
+        "nom": "Paris 8e Arrondissement"
+      },
+      {
+        "code": "75109",
+        "nom": "Paris 9e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 3.6,
+      "durationMin": 10
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-2e": {
+    "officialName": "Paris 2e Arrondissement",
+    "population": 19847,
+    "surfaceHa": 99.16,
+    "limitrophes": [
+      {
+        "code": "75101",
+        "nom": "Paris 1er Arrondissement"
+      },
+      {
+        "code": "75103",
+        "nom": "Paris 3e Arrondissement"
+      },
+      {
+        "code": "75109",
+        "nom": "Paris 9e Arrondissement"
+      },
+      {
+        "code": "75110",
+        "nom": "Paris 10e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 3.6,
+      "durationMin": 10
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-3e": {
+    "officialName": "Paris 3e Arrondissement",
+    "population": 32179,
+    "surfaceHa": 116.95,
+    "limitrophes": [
+      {
+        "code": "75101",
+        "nom": "Paris 1er Arrondissement"
+      },
+      {
+        "code": "75102",
+        "nom": "Paris 2e Arrondissement"
+      },
+      {
+        "code": "75104",
+        "nom": "Paris 4e Arrondissement"
+      },
+      {
+        "code": "75110",
+        "nom": "Paris 10e Arrondissement"
+      },
+      {
+        "code": "75111",
+        "nom": "Paris 11e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 3.6,
+      "durationMin": 10
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-4e": {
+    "officialName": "Paris 4e Arrondissement",
+    "population": 27332,
+    "surfaceHa": 159.51,
+    "limitrophes": [
+      {
+        "code": "75101",
+        "nom": "Paris 1er Arrondissement"
+      },
+      {
+        "code": "75103",
+        "nom": "Paris 3e Arrondissement"
+      },
+      {
+        "code": "75105",
+        "nom": "Paris 5e Arrondissement"
+      },
+      {
+        "code": "75111",
+        "nom": "Paris 11e Arrondissement"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 3.6,
+      "durationMin": 10
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-5e": {
+    "officialName": "Paris 5e Arrondissement",
+    "population": 55252,
+    "surfaceHa": 254.14,
+    "limitrophes": [
+      {
+        "code": "75104",
+        "nom": "Paris 4e Arrondissement"
+      },
+      {
+        "code": "75106",
+        "nom": "Paris 6e Arrondissement"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      },
+      {
+        "code": "75113",
+        "nom": "Paris 13e Arrondissement"
+      },
+      {
+        "code": "75114",
+        "nom": "Paris 14e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 2.8,
+      "durationMin": 8
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-6e": {
+    "officialName": "Paris 6e Arrondissement",
+    "population": 40389,
+    "surfaceHa": 215.09,
+    "limitrophes": [
+      {
+        "code": "75101",
+        "nom": "Paris 1er Arrondissement"
+      },
+      {
+        "code": "75105",
+        "nom": "Paris 5e Arrondissement"
+      },
+      {
+        "code": "75107",
+        "nom": "Paris 7e Arrondissement"
+      },
+      {
+        "code": "75114",
+        "nom": "Paris 14e Arrondissement"
+      },
+      {
+        "code": "75115",
+        "nom": "Paris 15e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 3.7,
+      "durationMin": 10
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-7e": {
+    "officialName": "Paris 7e Arrondissement",
+    "population": 48015,
+    "surfaceHa": 408.5,
+    "limitrophes": [
+      {
+        "code": "75101",
+        "nom": "Paris 1er Arrondissement"
+      },
+      {
+        "code": "75106",
+        "nom": "Paris 6e Arrondissement"
+      },
+      {
+        "code": "75108",
+        "nom": "Paris 8e Arrondissement"
+      },
+      {
+        "code": "75115",
+        "nom": "Paris 15e Arrondissement"
+      },
+      {
+        "code": "75116",
+        "nom": "Paris 16e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 4.8,
+      "durationMin": 13
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-8e": {
+    "officialName": "Paris 8e Arrondissement",
+    "population": 35317,
+    "surfaceHa": 387.8,
+    "limitrophes": [
+      {
+        "code": "75101",
+        "nom": "Paris 1er Arrondissement"
+      },
+      {
+        "code": "75107",
+        "nom": "Paris 7e Arrondissement"
+      },
+      {
+        "code": "75109",
+        "nom": "Paris 9e Arrondissement"
+      },
+      {
+        "code": "75116",
+        "nom": "Paris 16e Arrondissement"
+      },
+      {
+        "code": "75117",
+        "nom": "Paris 17e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 6.1,
+      "durationMin": 16
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-9e": {
+    "officialName": "Paris 9e Arrondissement",
+    "population": 57271,
+    "surfaceHa": 217.78,
+    "limitrophes": [
+      {
+        "code": "75101",
+        "nom": "Paris 1er Arrondissement"
+      },
+      {
+        "code": "75102",
+        "nom": "Paris 2e Arrondissement"
+      },
+      {
+        "code": "75108",
+        "nom": "Paris 8e Arrondissement"
+      },
+      {
+        "code": "75110",
+        "nom": "Paris 10e Arrondissement"
+      },
+      {
+        "code": "75117",
+        "nom": "Paris 17e Arrondissement"
+      },
+      {
+        "code": "75118",
+        "nom": "Paris 18e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 4.5,
+      "durationMin": 13
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-10e": {
+    "officialName": "Paris 10e Arrondissement",
+    "population": 83873,
+    "surfaceHa": 288.8,
+    "limitrophes": [
+      {
+        "code": "75102",
+        "nom": "Paris 2e Arrondissement"
+      },
+      {
+        "code": "75103",
+        "nom": "Paris 3e Arrondissement"
+      },
+      {
+        "code": "75109",
+        "nom": "Paris 9e Arrondissement"
+      },
+      {
+        "code": "75111",
+        "nom": "Paris 11e Arrondissement"
+      },
+      {
+        "code": "75118",
+        "nom": "Paris 18e Arrondissement"
+      },
+      {
+        "code": "75119",
+        "nom": "Paris 19e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 3.6,
+      "durationMin": 10
+    },
+    "computedOn": "2026-10-01"
+  },
   "paris-11e": {
     "officialName": "Paris 11e Arrondissement",
     "population": 138170,
@@ -179,7 +451,427 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 2.3,
       "durationMin": 6
     },
-    "computedOn": "2026-09-30"
+    "computedOn": "2026-10-01"
+  },
+  "paris-12e": {
+    "officialName": "Paris 12e Arrondissement",
+    "population": 138024,
+    "surfaceHa": 1637.05,
+    "limitrophes": [
+      {
+        "code": "94018",
+        "nom": "Charenton-le-Pont"
+      },
+      {
+        "code": "94033",
+        "nom": "Fontenay-sous-Bois"
+      },
+      {
+        "code": "94042",
+        "nom": "Joinville-le-Pont"
+      },
+      {
+        "code": "94052",
+        "nom": "Nogent-sur-Marne"
+      },
+      {
+        "code": "75104",
+        "nom": "Paris 4e Arrondissement"
+      },
+      {
+        "code": "75105",
+        "nom": "Paris 5e Arrondissement"
+      },
+      {
+        "code": "75111",
+        "nom": "Paris 11e Arrondissement"
+      },
+      {
+        "code": "75113",
+        "nom": "Paris 13e Arrondissement"
+      },
+      {
+        "code": "75120",
+        "nom": "Paris 20e Arrondissement"
+      },
+      {
+        "code": "94067",
+        "nom": "Saint-Mandé"
+      },
+      {
+        "code": "94069",
+        "nom": "Saint-Maurice"
+      },
+      {
+        "code": "94080",
+        "nom": "Vincennes"
+      }
+    ],
+    "route": {
+      "distanceKm": 2,
+      "durationMin": 5
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-13e": {
+    "officialName": "Paris 13e Arrondissement",
+    "population": 181271,
+    "surfaceHa": 713.37,
+    "limitrophes": [
+      {
+        "code": "94037",
+        "nom": "Gentilly"
+      },
+      {
+        "code": "94041",
+        "nom": "Ivry-sur-Seine"
+      },
+      {
+        "code": "94043",
+        "nom": "Le Kremlin-Bicêtre"
+      },
+      {
+        "code": "75105",
+        "nom": "Paris 5e Arrondissement"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      },
+      {
+        "code": "75114",
+        "nom": "Paris 14e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 2.3,
+      "durationMin": 7
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-14e": {
+    "officialName": "Paris 14e Arrondissement",
+    "population": 136455,
+    "surfaceHa": 560.97,
+    "limitrophes": [
+      {
+        "code": "94037",
+        "nom": "Gentilly"
+      },
+      {
+        "code": "92046",
+        "nom": "Malakoff"
+      },
+      {
+        "code": "92049",
+        "nom": "Montrouge"
+      },
+      {
+        "code": "75105",
+        "nom": "Paris 5e Arrondissement"
+      },
+      {
+        "code": "75106",
+        "nom": "Paris 6e Arrondissement"
+      },
+      {
+        "code": "75113",
+        "nom": "Paris 13e Arrondissement"
+      },
+      {
+        "code": "75115",
+        "nom": "Paris 15e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 4.2,
+      "durationMin": 12
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-15e": {
+    "officialName": "Paris 15e Arrondissement",
+    "population": 229713,
+    "surfaceHa": 846.64,
+    "limitrophes": [
+      {
+        "code": "92040",
+        "nom": "Issy-les-Moulineaux"
+      },
+      {
+        "code": "75106",
+        "nom": "Paris 6e Arrondissement"
+      },
+      {
+        "code": "75107",
+        "nom": "Paris 7e Arrondissement"
+      },
+      {
+        "code": "75114",
+        "nom": "Paris 14e Arrondissement"
+      },
+      {
+        "code": "75116",
+        "nom": "Paris 16e Arrondissement"
+      },
+      {
+        "code": "92075",
+        "nom": "Vanves"
+      }
+    ],
+    "route": {
+      "distanceKm": 6.4,
+      "durationMin": 17
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-16e": {
+    "officialName": "Paris 16e Arrondissement",
+    "population": 159386,
+    "surfaceHa": 1639.85,
+    "limitrophes": [
+      {
+        "code": "92012",
+        "nom": "Boulogne-Billancourt"
+      },
+      {
+        "code": "92051",
+        "nom": "Neuilly-sur-Seine"
+      },
+      {
+        "code": "75107",
+        "nom": "Paris 7e Arrondissement"
+      },
+      {
+        "code": "75108",
+        "nom": "Paris 8e Arrondissement"
+      },
+      {
+        "code": "75115",
+        "nom": "Paris 15e Arrondissement"
+      },
+      {
+        "code": "75117",
+        "nom": "Paris 17e Arrondissement"
+      },
+      {
+        "code": "92062",
+        "nom": "Puteaux"
+      },
+      {
+        "code": "92064",
+        "nom": "Saint-Cloud"
+      },
+      {
+        "code": "92073",
+        "nom": "Suresnes"
+      }
+    ],
+    "route": {
+      "distanceKm": 8.3,
+      "durationMin": 21
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-17e": {
+    "officialName": "Paris 17e Arrondissement",
+    "population": 159212,
+    "surfaceHa": 566.11,
+    "limitrophes": [
+      {
+        "code": "92024",
+        "nom": "Clichy"
+      },
+      {
+        "code": "92044",
+        "nom": "Levallois-Perret"
+      },
+      {
+        "code": "92051",
+        "nom": "Neuilly-sur-Seine"
+      },
+      {
+        "code": "75108",
+        "nom": "Paris 8e Arrondissement"
+      },
+      {
+        "code": "75109",
+        "nom": "Paris 9e Arrondissement"
+      },
+      {
+        "code": "75116",
+        "nom": "Paris 16e Arrondissement"
+      },
+      {
+        "code": "75118",
+        "nom": "Paris 18e Arrondissement"
+      },
+      {
+        "code": "93070",
+        "nom": "Saint-Ouen-sur-Seine"
+      }
+    ],
+    "route": {
+      "distanceKm": 6.7,
+      "durationMin": 19
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-18e": {
+    "officialName": "Paris 18e Arrondissement",
+    "population": 183127,
+    "surfaceHa": 599.13,
+    "limitrophes": [
+      {
+        "code": "93001",
+        "nom": "Aubervilliers"
+      },
+      {
+        "code": "75109",
+        "nom": "Paris 9e Arrondissement"
+      },
+      {
+        "code": "75110",
+        "nom": "Paris 10e Arrondissement"
+      },
+      {
+        "code": "75117",
+        "nom": "Paris 17e Arrondissement"
+      },
+      {
+        "code": "75119",
+        "nom": "Paris 19e Arrondissement"
+      },
+      {
+        "code": "93066",
+        "nom": "Saint-Denis"
+      },
+      {
+        "code": "93070",
+        "nom": "Saint-Ouen-sur-Seine"
+      }
+    ],
+    "route": {
+      "distanceKm": 5.9,
+      "durationMin": 17
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-19e": {
+    "officialName": "Paris 19e Arrondissement",
+    "population": 178691,
+    "surfaceHa": 677.99,
+    "limitrophes": [
+      {
+        "code": "93001",
+        "nom": "Aubervilliers"
+      },
+      {
+        "code": "93061",
+        "nom": "Le Pré-Saint-Gervais"
+      },
+      {
+        "code": "93045",
+        "nom": "Les Lilas"
+      },
+      {
+        "code": "93055",
+        "nom": "Pantin"
+      },
+      {
+        "code": "75110",
+        "nom": "Paris 10e Arrondissement"
+      },
+      {
+        "code": "75118",
+        "nom": "Paris 18e Arrondissement"
+      },
+      {
+        "code": "75120",
+        "nom": "Paris 20e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 5.3,
+      "durationMin": 14
+    },
+    "computedOn": "2026-10-01"
+  },
+  "paris-20e": {
+    "officialName": "Paris 20e Arrondissement",
+    "population": 185140,
+    "surfaceHa": 599.65,
+    "limitrophes": [
+      {
+        "code": "93006",
+        "nom": "Bagnolet"
+      },
+      {
+        "code": "93061",
+        "nom": "Le Pré-Saint-Gervais"
+      },
+      {
+        "code": "93045",
+        "nom": "Les Lilas"
+      },
+      {
+        "code": "93048",
+        "nom": "Montreuil"
+      },
+      {
+        "code": "75111",
+        "nom": "Paris 11e Arrondissement"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      },
+      {
+        "code": "75119",
+        "nom": "Paris 19e Arrondissement"
+      },
+      {
+        "code": "94067",
+        "nom": "Saint-Mandé"
+      }
+    ],
+    "route": {
+      "distanceKm": 4.6,
+      "durationMin": 13
+    },
+    "computedOn": "2026-10-01"
+  },
+  "boulogne-billancourt": {
+    "officialName": "Boulogne-Billancourt",
+    "population": 119019,
+    "surfaceHa": 615.22,
+    "limitrophes": [
+      {
+        "code": "92040",
+        "nom": "Issy-les-Moulineaux"
+      },
+      {
+        "code": "92048",
+        "nom": "Meudon"
+      },
+      {
+        "code": "75116",
+        "nom": "Paris 16e Arrondissement"
+      },
+      {
+        "code": "92064",
+        "nom": "Saint-Cloud"
+      },
+      {
+        "code": "92072",
+        "nom": "Sèvres"
+      }
+    ],
+    "route": {
+      "distanceKm": 11.9,
+      "durationMin": 26
+    },
+    "computedOn": "2026-10-01"
   },
   "nanterre": {
     "officialName": "Nanterre",
@@ -227,7 +919,791 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 14.6,
       "durationMin": 31
     },
-    "computedOn": "2026-09-30"
+    "computedOn": "2026-10-01"
+  },
+  "levallois-perret": {
+    "officialName": "Levallois-Perret",
+    "population": 68092,
+    "surfaceHa": 241.57,
+    "limitrophes": [
+      {
+        "code": "92004",
+        "nom": "Asnières-sur-Seine"
+      },
+      {
+        "code": "92024",
+        "nom": "Clichy"
+      },
+      {
+        "code": "92026",
+        "nom": "Courbevoie"
+      },
+      {
+        "code": "92051",
+        "nom": "Neuilly-sur-Seine"
+      },
+      {
+        "code": "75117",
+        "nom": "Paris 17e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.4,
+      "durationMin": 23
+    },
+    "computedOn": "2026-10-01"
+  },
+  "neuilly-sur-seine": {
+    "officialName": "Neuilly-sur-Seine",
+    "population": 59538,
+    "surfaceHa": 371.71,
+    "limitrophes": [
+      {
+        "code": "92026",
+        "nom": "Courbevoie"
+      },
+      {
+        "code": "92044",
+        "nom": "Levallois-Perret"
+      },
+      {
+        "code": "75116",
+        "nom": "Paris 16e Arrondissement"
+      },
+      {
+        "code": "75117",
+        "nom": "Paris 17e Arrondissement"
+      },
+      {
+        "code": "92062",
+        "nom": "Puteaux"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.5,
+      "durationMin": 23
+    },
+    "computedOn": "2026-10-01"
+  },
+  "issy-les-moulineaux": {
+    "officialName": "Issy-les-Moulineaux",
+    "population": 67669,
+    "surfaceHa": 424.49,
+    "limitrophes": [
+      {
+        "code": "92012",
+        "nom": "Boulogne-Billancourt"
+      },
+      {
+        "code": "92023",
+        "nom": "Clamart"
+      },
+      {
+        "code": "92048",
+        "nom": "Meudon"
+      },
+      {
+        "code": "75115",
+        "nom": "Paris 15e Arrondissement"
+      },
+      {
+        "code": "92075",
+        "nom": "Vanves"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.3,
+      "durationMin": 22
+    },
+    "computedOn": "2026-10-01"
+  },
+  "courbevoie": {
+    "officialName": "Courbevoie",
+    "population": 82902,
+    "surfaceHa": 416.04,
+    "limitrophes": [
+      {
+        "code": "92004",
+        "nom": "Asnières-sur-Seine"
+      },
+      {
+        "code": "92009",
+        "nom": "Bois-Colombes"
+      },
+      {
+        "code": "92035",
+        "nom": "La Garenne-Colombes"
+      },
+      {
+        "code": "92044",
+        "nom": "Levallois-Perret"
+      },
+      {
+        "code": "92050",
+        "nom": "Nanterre"
+      },
+      {
+        "code": "92051",
+        "nom": "Neuilly-sur-Seine"
+      },
+      {
+        "code": "92062",
+        "nom": "Puteaux"
+      }
+    ],
+    "route": {
+      "distanceKm": 11.9,
+      "durationMin": 26
+    },
+    "computedOn": "2026-10-01"
+  },
+  "clichy": {
+    "officialName": "Clichy",
+    "population": 64410,
+    "surfaceHa": 307.94,
+    "limitrophes": [
+      {
+        "code": "92004",
+        "nom": "Asnières-sur-Seine"
+      },
+      {
+        "code": "92044",
+        "nom": "Levallois-Perret"
+      },
+      {
+        "code": "75117",
+        "nom": "Paris 17e Arrondissement"
+      },
+      {
+        "code": "93070",
+        "nom": "Saint-Ouen-sur-Seine"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.9,
+      "durationMin": 23
+    },
+    "computedOn": "2026-10-01"
+  },
+  "asnieres-sur-seine": {
+    "officialName": "Asnières-sur-Seine",
+    "population": 93941,
+    "surfaceHa": 482.12,
+    "limitrophes": [
+      {
+        "code": "92009",
+        "nom": "Bois-Colombes"
+      },
+      {
+        "code": "92024",
+        "nom": "Clichy"
+      },
+      {
+        "code": "92025",
+        "nom": "Colombes"
+      },
+      {
+        "code": "92026",
+        "nom": "Courbevoie"
+      },
+      {
+        "code": "92036",
+        "nom": "Gennevilliers"
+      },
+      {
+        "code": "93039",
+        "nom": "L'Île-Saint-Denis"
+      },
+      {
+        "code": "92044",
+        "nom": "Levallois-Perret"
+      },
+      {
+        "code": "93070",
+        "nom": "Saint-Ouen-sur-Seine"
+      }
+    ],
+    "route": {
+      "distanceKm": 10.8,
+      "durationMin": 25
+    },
+    "computedOn": "2026-10-01"
+  },
+  "montrouge": {
+    "officialName": "Montrouge",
+    "population": 46324,
+    "surfaceHa": 207.06,
+    "limitrophes": [
+      {
+        "code": "94003",
+        "nom": "Arcueil"
+      },
+      {
+        "code": "92007",
+        "nom": "Bagneux"
+      },
+      {
+        "code": "92020",
+        "nom": "Châtillon"
+      },
+      {
+        "code": "94037",
+        "nom": "Gentilly"
+      },
+      {
+        "code": "92046",
+        "nom": "Malakoff"
+      },
+      {
+        "code": "75114",
+        "nom": "Paris 14e Arrondissement"
+      }
+    ],
+    "route": {
+      "distanceKm": 6.3,
+      "durationMin": 16
+    },
+    "computedOn": "2026-10-01"
+  },
+  "saint-denis": {
+    "officialName": "Saint-Denis",
+    "population": 149077,
+    "surfaceHa": 1577.25,
+    "limitrophes": [
+      {
+        "code": "93001",
+        "nom": "Aubervilliers"
+      },
+      {
+        "code": "93031",
+        "nom": "Épinay-sur-Seine"
+      },
+      {
+        "code": "93039",
+        "nom": "L'Île-Saint-Denis"
+      },
+      {
+        "code": "93027",
+        "nom": "La Courneuve"
+      },
+      {
+        "code": "95427",
+        "nom": "Montmagny"
+      },
+      {
+        "code": "75118",
+        "nom": "Paris 18e Arrondissement"
+      },
+      {
+        "code": "93070",
+        "nom": "Saint-Ouen-sur-Seine"
+      },
+      {
+        "code": "95585",
+        "nom": "Sarcelles"
+      },
+      {
+        "code": "93072",
+        "nom": "Stains"
+      },
+      {
+        "code": "93079",
+        "nom": "Villetaneuse"
+      }
+    ],
+    "route": {
+      "distanceKm": 11.1,
+      "durationMin": 26
+    },
+    "computedOn": "2026-10-01"
+  },
+  "montreuil": {
+    "officialName": "Montreuil",
+    "population": 111934,
+    "surfaceHa": 890.68,
+    "limitrophes": [
+      {
+        "code": "93006",
+        "nom": "Bagnolet"
+      },
+      {
+        "code": "94033",
+        "nom": "Fontenay-sous-Bois"
+      },
+      {
+        "code": "93053",
+        "nom": "Noisy-le-Sec"
+      },
+      {
+        "code": "75120",
+        "nom": "Paris 20e Arrondissement"
+      },
+      {
+        "code": "93063",
+        "nom": "Romainville"
+      },
+      {
+        "code": "93064",
+        "nom": "Rosny-sous-Bois"
+      },
+      {
+        "code": "94067",
+        "nom": "Saint-Mandé"
+      },
+      {
+        "code": "94080",
+        "nom": "Vincennes"
+      }
+    ],
+    "route": {
+      "distanceKm": 8.6,
+      "durationMin": 16
+    },
+    "computedOn": "2026-10-01"
+  },
+  "aubervilliers": {
+    "officialName": "Aubervilliers",
+    "population": 88365,
+    "surfaceHa": 576.7,
+    "limitrophes": [
+      {
+        "code": "93027",
+        "nom": "La Courneuve"
+      },
+      {
+        "code": "93055",
+        "nom": "Pantin"
+      },
+      {
+        "code": "75118",
+        "nom": "Paris 18e Arrondissement"
+      },
+      {
+        "code": "75119",
+        "nom": "Paris 19e Arrondissement"
+      },
+      {
+        "code": "93066",
+        "nom": "Saint-Denis"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.2,
+      "durationMin": 22
+    },
+    "computedOn": "2026-10-01"
+  },
+  "pantin": {
+    "officialName": "Pantin",
+    "population": 61929,
+    "surfaceHa": 500.44,
+    "limitrophes": [
+      {
+        "code": "93001",
+        "nom": "Aubervilliers"
+      },
+      {
+        "code": "93008",
+        "nom": "Bobigny"
+      },
+      {
+        "code": "93027",
+        "nom": "La Courneuve"
+      },
+      {
+        "code": "93061",
+        "nom": "Le Pré-Saint-Gervais"
+      },
+      {
+        "code": "93045",
+        "nom": "Les Lilas"
+      },
+      {
+        "code": "75119",
+        "nom": "Paris 19e Arrondissement"
+      },
+      {
+        "code": "93063",
+        "nom": "Romainville"
+      }
+    ],
+    "route": {
+      "distanceKm": 11,
+      "durationMin": 20
+    },
+    "computedOn": "2026-10-01"
+  },
+  "saint-ouen": {
+    "officialName": "Saint-Ouen-sur-Seine",
+    "population": 53615,
+    "surfaceHa": 430.25,
+    "limitrophes": [
+      {
+        "code": "92004",
+        "nom": "Asnières-sur-Seine"
+      },
+      {
+        "code": "92024",
+        "nom": "Clichy"
+      },
+      {
+        "code": "93039",
+        "nom": "L'Île-Saint-Denis"
+      },
+      {
+        "code": "75117",
+        "nom": "Paris 17e Arrondissement"
+      },
+      {
+        "code": "75118",
+        "nom": "Paris 18e Arrondissement"
+      },
+      {
+        "code": "93066",
+        "nom": "Saint-Denis"
+      }
+    ],
+    "route": {
+      "distanceKm": 8.2,
+      "durationMin": 21
+    },
+    "computedOn": "2026-10-01"
+  },
+  "bobigny": {
+    "officialName": "Bobigny",
+    "population": 56927,
+    "surfaceHa": 677.82,
+    "limitrophes": [
+      {
+        "code": "93010",
+        "nom": "Bondy"
+      },
+      {
+        "code": "93029",
+        "nom": "Drancy"
+      },
+      {
+        "code": "93027",
+        "nom": "La Courneuve"
+      },
+      {
+        "code": "93053",
+        "nom": "Noisy-le-Sec"
+      },
+      {
+        "code": "93055",
+        "nom": "Pantin"
+      },
+      {
+        "code": "93063",
+        "nom": "Romainville"
+      }
+    ],
+    "route": {
+      "distanceKm": 12.5,
+      "durationMin": 22
+    },
+    "computedOn": "2026-10-01"
+  },
+  "noisy-le-grand": {
+    "officialName": "Noisy-le-Grand",
+    "population": 72978,
+    "surfaceHa": 1312.94,
+    "limitrophes": [
+      {
+        "code": "94015",
+        "nom": "Bry-sur-Marne"
+      },
+      {
+        "code": "77083",
+        "nom": "Champs-sur-Marne"
+      },
+      {
+        "code": "77169",
+        "nom": "Émerainville"
+      },
+      {
+        "code": "93033",
+        "nom": "Gournay-sur-Marne"
+      },
+      {
+        "code": "94059",
+        "nom": "Le Plessis-Trévise"
+      },
+      {
+        "code": "93049",
+        "nom": "Neuilly-Plaisance"
+      },
+      {
+        "code": "93050",
+        "nom": "Neuilly-sur-Marne"
+      },
+      {
+        "code": "77373",
+        "nom": "Pontault-Combault"
+      },
+      {
+        "code": "94079",
+        "nom": "Villiers-sur-Marne"
+      }
+    ],
+    "route": {
+      "distanceKm": 19,
+      "durationMin": 22
+    },
+    "computedOn": "2026-10-01"
+  },
+  "aulnay-sous-bois": {
+    "officialName": "Aulnay-sous-Bois",
+    "population": 87599,
+    "surfaceHa": 1615.42,
+    "limitrophes": [
+      {
+        "code": "93010",
+        "nom": "Bondy"
+      },
+      {
+        "code": "95277",
+        "nom": "Gonesse"
+      },
+      {
+        "code": "93007",
+        "nom": "Le Blanc-Mesnil"
+      },
+      {
+        "code": "93057",
+        "nom": "Les Pavillons-sous-Bois"
+      },
+      {
+        "code": "93046",
+        "nom": "Livry-Gargan"
+      },
+      {
+        "code": "93071",
+        "nom": "Sevran"
+      },
+      {
+        "code": "93078",
+        "nom": "Villepinte"
+      }
+    ],
+    "route": {
+      "distanceKm": 17.7,
+      "durationMin": 24
+    },
+    "computedOn": "2026-10-01"
+  },
+  "creteil": {
+    "officialName": "Créteil",
+    "population": 93397,
+    "surfaceHa": 1141.93,
+    "limitrophes": [
+      {
+        "code": "94002",
+        "nom": "Alfortville"
+      },
+      {
+        "code": "94011",
+        "nom": "Bonneuil-sur-Marne"
+      },
+      {
+        "code": "94022",
+        "nom": "Choisy-le-Roi"
+      },
+      {
+        "code": "94044",
+        "nom": "Limeil-Brévannes"
+      },
+      {
+        "code": "94046",
+        "nom": "Maisons-Alfort"
+      },
+      {
+        "code": "94068",
+        "nom": "Saint-Maur-des-Fossés"
+      },
+      {
+        "code": "94074",
+        "nom": "Valenton"
+      }
+    ],
+    "route": {
+      "distanceKm": 13.8,
+      "durationMin": 17
+    },
+    "computedOn": "2026-10-01"
+  },
+  "vitry-sur-seine": {
+    "officialName": "Vitry-sur-Seine",
+    "population": 93963,
+    "surfaceHa": 1165.9,
+    "limitrophes": [
+      {
+        "code": "94002",
+        "nom": "Alfortville"
+      },
+      {
+        "code": "94021",
+        "nom": "Chevilly-Larue"
+      },
+      {
+        "code": "94022",
+        "nom": "Choisy-le-Roi"
+      },
+      {
+        "code": "94041",
+        "nom": "Ivry-sur-Seine"
+      },
+      {
+        "code": "94073",
+        "nom": "Thiais"
+      },
+      {
+        "code": "94076",
+        "nom": "Villejuif"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.6,
+      "durationMin": 15
+    },
+    "computedOn": "2026-10-01"
+  },
+  "ivry-sur-seine": {
+    "officialName": "Ivry-sur-Seine",
+    "population": 65064,
+    "surfaceHa": 611.46,
+    "limitrophes": [
+      {
+        "code": "94002",
+        "nom": "Alfortville"
+      },
+      {
+        "code": "94018",
+        "nom": "Charenton-le-Pont"
+      },
+      {
+        "code": "94043",
+        "nom": "Le Kremlin-Bicêtre"
+      },
+      {
+        "code": "75113",
+        "nom": "Paris 13e Arrondissement"
+      },
+      {
+        "code": "94076",
+        "nom": "Villejuif"
+      },
+      {
+        "code": "94081",
+        "nom": "Vitry-sur-Seine"
+      }
+    ],
+    "route": {
+      "distanceKm": 6.5,
+      "durationMin": 12
+    },
+    "computedOn": "2026-10-01"
+  },
+  "vincennes": {
+    "officialName": "Vincennes",
+    "population": 48193,
+    "surfaceHa": 190.34,
+    "limitrophes": [
+      {
+        "code": "94033",
+        "nom": "Fontenay-sous-Bois"
+      },
+      {
+        "code": "93048",
+        "nom": "Montreuil"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      },
+      {
+        "code": "94067",
+        "nom": "Saint-Mandé"
+      }
+    ],
+    "route": {
+      "distanceKm": 5.9,
+      "durationMin": 12
+    },
+    "computedOn": "2026-10-01"
+  },
+  "saint-maur-des-fosses": {
+    "officialName": "Saint-Maur-des-Fossés",
+    "population": 76572,
+    "surfaceHa": 1125.56,
+    "limitrophes": [
+      {
+        "code": "94011",
+        "nom": "Bonneuil-sur-Marne"
+      },
+      {
+        "code": "94017",
+        "nom": "Champigny-sur-Marne"
+      },
+      {
+        "code": "94019",
+        "nom": "Chennevières-sur-Marne"
+      },
+      {
+        "code": "94028",
+        "nom": "Créteil"
+      },
+      {
+        "code": "94042",
+        "nom": "Joinville-le-Pont"
+      },
+      {
+        "code": "94046",
+        "nom": "Maisons-Alfort"
+      },
+      {
+        "code": "94071",
+        "nom": "Sucy-en-Brie"
+      }
+    ],
+    "route": {
+      "distanceKm": 11.8,
+      "durationMin": 19
+    },
+    "computedOn": "2026-10-01"
+  },
+  "charenton-le-pont": {
+    "officialName": "Charenton-le-Pont",
+    "population": 28830,
+    "surfaceHa": 184.99,
+    "limitrophes": [
+      {
+        "code": "94002",
+        "nom": "Alfortville"
+      },
+      {
+        "code": "94041",
+        "nom": "Ivry-sur-Seine"
+      },
+      {
+        "code": "94046",
+        "nom": "Maisons-Alfort"
+      },
+      {
+        "code": "75112",
+        "nom": "Paris 12e Arrondissement"
+      },
+      {
+        "code": "94069",
+        "nom": "Saint-Maurice"
+      }
+    ],
+    "route": {
+      "distanceKm": 6.3,
+      "durationMin": 14
+    },
+    "computedOn": "2026-10-01"
   },
   "alfortville": {
     "officialName": "Alfortville",
@@ -263,6 +1739,862 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 8.3,
       "durationMin": 14
     },
-    "computedOn": "2026-09-30"
+    "computedOn": "2026-10-01"
+  },
+  "villejuif": {
+    "officialName": "Villejuif",
+    "population": 60183,
+    "surfaceHa": 527.95,
+    "limitrophes": [
+      {
+        "code": "94003",
+        "nom": "Arcueil"
+      },
+      {
+        "code": "94016",
+        "nom": "Cachan"
+      },
+      {
+        "code": "94041",
+        "nom": "Ivry-sur-Seine"
+      },
+      {
+        "code": "94038",
+        "nom": "L'Haÿ-les-Roses"
+      },
+      {
+        "code": "94043",
+        "nom": "Le Kremlin-Bicêtre"
+      },
+      {
+        "code": "94081",
+        "nom": "Vitry-sur-Seine"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.3,
+      "durationMin": 17
+    },
+    "computedOn": "2026-10-01"
+  },
+  "rueil-malmaison": {
+    "officialName": "Rueil-Malmaison",
+    "population": 82874,
+    "surfaceHa": 1452.83,
+    "limitrophes": [
+      {
+        "code": "78092",
+        "nom": "Bougival"
+      },
+      {
+        "code": "78146",
+        "nom": "Chatou"
+      },
+      {
+        "code": "78190",
+        "nom": "Croissy-sur-Seine"
+      },
+      {
+        "code": "92033",
+        "nom": "Garches"
+      },
+      {
+        "code": "78126",
+        "nom": "La Celle-Saint-Cloud"
+      },
+      {
+        "code": "92050",
+        "nom": "Nanterre"
+      },
+      {
+        "code": "92064",
+        "nom": "Saint-Cloud"
+      },
+      {
+        "code": "92073",
+        "nom": "Suresnes"
+      },
+      {
+        "code": "92076",
+        "nom": "Vaucresson"
+      }
+    ],
+    "route": {
+      "distanceKm": 16.5,
+      "durationMin": 33
+    },
+    "computedOn": "2026-10-01"
+  },
+  "colombes": {
+    "officialName": "Colombes",
+    "population": 91053,
+    "surfaceHa": 777.84,
+    "limitrophes": [
+      {
+        "code": "95018",
+        "nom": "Argenteuil"
+      },
+      {
+        "code": "92004",
+        "nom": "Asnières-sur-Seine"
+      },
+      {
+        "code": "95063",
+        "nom": "Bezons"
+      },
+      {
+        "code": "92009",
+        "nom": "Bois-Colombes"
+      },
+      {
+        "code": "92036",
+        "nom": "Gennevilliers"
+      },
+      {
+        "code": "92035",
+        "nom": "La Garenne-Colombes"
+      },
+      {
+        "code": "92050",
+        "nom": "Nanterre"
+      }
+    ],
+    "route": {
+      "distanceKm": 15.1,
+      "durationMin": 32
+    },
+    "computedOn": "2026-10-01"
+  },
+  "antony": {
+    "officialName": "Antony",
+    "population": 64263,
+    "surfaceHa": 956.17,
+    "limitrophes": [
+      {
+        "code": "92014",
+        "nom": "Bourg-la-Reine"
+      },
+      {
+        "code": "92019",
+        "nom": "Châtenay-Malabry"
+      },
+      {
+        "code": "94034",
+        "nom": "Fresnes"
+      },
+      {
+        "code": "94038",
+        "nom": "L'Haÿ-les-Roses"
+      },
+      {
+        "code": "91377",
+        "nom": "Massy"
+      },
+      {
+        "code": "92071",
+        "nom": "Sceaux"
+      },
+      {
+        "code": "91645",
+        "nom": "Verrières-le-Buisson"
+      },
+      {
+        "code": "91689",
+        "nom": "Wissous"
+      }
+    ],
+    "route": {
+      "distanceKm": 19.4,
+      "durationMin": 28
+    },
+    "computedOn": "2026-10-01"
+  },
+  "clamart": {
+    "officialName": "Clamart",
+    "population": 58576,
+    "surfaceHa": 875.91,
+    "limitrophes": [
+      {
+        "code": "91064",
+        "nom": "Bièvres"
+      },
+      {
+        "code": "92019",
+        "nom": "Châtenay-Malabry"
+      },
+      {
+        "code": "92020",
+        "nom": "Châtillon"
+      },
+      {
+        "code": "92032",
+        "nom": "Fontenay-aux-Roses"
+      },
+      {
+        "code": "92040",
+        "nom": "Issy-les-Moulineaux"
+      },
+      {
+        "code": "92060",
+        "nom": "Le Plessis-Robinson"
+      },
+      {
+        "code": "92046",
+        "nom": "Malakoff"
+      },
+      {
+        "code": "92048",
+        "nom": "Meudon"
+      },
+      {
+        "code": "92075",
+        "nom": "Vanves"
+      },
+      {
+        "code": "78640",
+        "nom": "Vélizy-Villacoublay"
+      }
+    ],
+    "route": {
+      "distanceKm": 11,
+      "durationMin": 26
+    },
+    "computedOn": "2026-10-01"
+  },
+  "puteaux": {
+    "officialName": "Puteaux",
+    "population": 44002,
+    "surfaceHa": 318.99,
+    "limitrophes": [
+      {
+        "code": "92026",
+        "nom": "Courbevoie"
+      },
+      {
+        "code": "92050",
+        "nom": "Nanterre"
+      },
+      {
+        "code": "92051",
+        "nom": "Neuilly-sur-Seine"
+      },
+      {
+        "code": "75116",
+        "nom": "Paris 16e Arrondissement"
+      },
+      {
+        "code": "92073",
+        "nom": "Suresnes"
+      }
+    ],
+    "route": {
+      "distanceKm": 13,
+      "durationMin": 29
+    },
+    "computedOn": "2026-10-01"
+  },
+  "suresnes": {
+    "officialName": "Suresnes",
+    "population": 48956,
+    "surfaceHa": 379.65,
+    "limitrophes": [
+      {
+        "code": "92050",
+        "nom": "Nanterre"
+      },
+      {
+        "code": "75116",
+        "nom": "Paris 16e Arrondissement"
+      },
+      {
+        "code": "92062",
+        "nom": "Puteaux"
+      },
+      {
+        "code": "92063",
+        "nom": "Rueil-Malmaison"
+      },
+      {
+        "code": "92064",
+        "nom": "Saint-Cloud"
+      }
+    ],
+    "route": {
+      "distanceKm": 13.2,
+      "durationMin": 29
+    },
+    "computedOn": "2026-10-01"
+  },
+  "gennevilliers": {
+    "officialName": "Gennevilliers",
+    "population": 50979,
+    "surfaceHa": 1162.71,
+    "limitrophes": [
+      {
+        "code": "95018",
+        "nom": "Argenteuil"
+      },
+      {
+        "code": "92004",
+        "nom": "Asnières-sur-Seine"
+      },
+      {
+        "code": "92025",
+        "nom": "Colombes"
+      },
+      {
+        "code": "93039",
+        "nom": "L'Île-Saint-Denis"
+      },
+      {
+        "code": "92078",
+        "nom": "Villeneuve-la-Garenne"
+      }
+    ],
+    "route": {
+      "distanceKm": 12.8,
+      "durationMin": 28
+    },
+    "computedOn": "2026-10-01"
+  },
+  "bagneux": {
+    "officialName": "Bagneux",
+    "population": 44572,
+    "surfaceHa": 418.4,
+    "limitrophes": [
+      {
+        "code": "94003",
+        "nom": "Arcueil"
+      },
+      {
+        "code": "92014",
+        "nom": "Bourg-la-Reine"
+      },
+      {
+        "code": "94016",
+        "nom": "Cachan"
+      },
+      {
+        "code": "92020",
+        "nom": "Châtillon"
+      },
+      {
+        "code": "92032",
+        "nom": "Fontenay-aux-Roses"
+      },
+      {
+        "code": "92049",
+        "nom": "Montrouge"
+      },
+      {
+        "code": "92071",
+        "nom": "Sceaux"
+      }
+    ],
+    "route": {
+      "distanceKm": 9.2,
+      "durationMin": 23
+    },
+    "computedOn": "2026-10-01"
+  },
+  "bondy": {
+    "officialName": "Bondy",
+    "population": 50595,
+    "surfaceHa": 546.28,
+    "limitrophes": [
+      {
+        "code": "93005",
+        "nom": "Aulnay-sous-Bois"
+      },
+      {
+        "code": "93008",
+        "nom": "Bobigny"
+      },
+      {
+        "code": "93029",
+        "nom": "Drancy"
+      },
+      {
+        "code": "93007",
+        "nom": "Le Blanc-Mesnil"
+      },
+      {
+        "code": "93057",
+        "nom": "Les Pavillons-sous-Bois"
+      },
+      {
+        "code": "93053",
+        "nom": "Noisy-le-Sec"
+      },
+      {
+        "code": "93064",
+        "nom": "Rosny-sous-Bois"
+      },
+      {
+        "code": "93077",
+        "nom": "Villemomble"
+      }
+    ],
+    "route": {
+      "distanceKm": 14.3,
+      "durationMin": 20
+    },
+    "computedOn": "2026-10-01"
+  },
+  "le-raincy": {
+    "officialName": "Le Raincy",
+    "population": 14735,
+    "surfaceHa": 222.73,
+    "limitrophes": [
+      {
+        "code": "93014",
+        "nom": "Clichy-sous-Bois"
+      },
+      {
+        "code": "93032",
+        "nom": "Gagny"
+      },
+      {
+        "code": "93057",
+        "nom": "Les Pavillons-sous-Bois"
+      },
+      {
+        "code": "93046",
+        "nom": "Livry-Gargan"
+      },
+      {
+        "code": "93077",
+        "nom": "Villemomble"
+      }
+    ],
+    "route": {
+      "distanceKm": 15.9,
+      "durationMin": 23
+    },
+    "computedOn": "2026-10-01"
+  },
+  "livry-gargan": {
+    "officialName": "Livry-Gargan",
+    "population": 47228,
+    "surfaceHa": 736.74,
+    "limitrophes": [
+      {
+        "code": "93005",
+        "nom": "Aulnay-sous-Bois"
+      },
+      {
+        "code": "93014",
+        "nom": "Clichy-sous-Bois"
+      },
+      {
+        "code": "93015",
+        "nom": "Coubron"
+      },
+      {
+        "code": "93062",
+        "nom": "Le Raincy"
+      },
+      {
+        "code": "93057",
+        "nom": "Les Pavillons-sous-Bois"
+      },
+      {
+        "code": "93071",
+        "nom": "Sevran"
+      },
+      {
+        "code": "93074",
+        "nom": "Vaujours"
+      }
+    ],
+    "route": {
+      "distanceKm": 18.5,
+      "durationMin": 25
+    },
+    "computedOn": "2026-10-01"
+  },
+  "sevran": {
+    "officialName": "Sevran",
+    "population": 52535,
+    "surfaceHa": 725.61,
+    "limitrophes": [
+      {
+        "code": "93005",
+        "nom": "Aulnay-sous-Bois"
+      },
+      {
+        "code": "93046",
+        "nom": "Livry-Gargan"
+      },
+      {
+        "code": "93074",
+        "nom": "Vaujours"
+      },
+      {
+        "code": "93078",
+        "nom": "Villepinte"
+      }
+    ],
+    "route": {
+      "distanceKm": 19.8,
+      "durationMin": 28
+    },
+    "computedOn": "2026-10-01"
+  },
+  "drancy": {
+    "officialName": "Drancy",
+    "population": 72390,
+    "surfaceHa": 776.13,
+    "limitrophes": [
+      {
+        "code": "93008",
+        "nom": "Bobigny"
+      },
+      {
+        "code": "93010",
+        "nom": "Bondy"
+      },
+      {
+        "code": "93027",
+        "nom": "La Courneuve"
+      },
+      {
+        "code": "93007",
+        "nom": "Le Blanc-Mesnil"
+      },
+      {
+        "code": "93013",
+        "nom": "Le Bourget"
+      }
+    ],
+    "route": {
+      "distanceKm": 16.3,
+      "durationMin": 23
+    },
+    "computedOn": "2026-10-01"
+  },
+  "le-blanc-mesnil": {
+    "officialName": "Le Blanc-Mesnil",
+    "population": 62376,
+    "surfaceHa": 807.79,
+    "limitrophes": [
+      {
+        "code": "93005",
+        "nom": "Aulnay-sous-Bois"
+      },
+      {
+        "code": "93010",
+        "nom": "Bondy"
+      },
+      {
+        "code": "95088",
+        "nom": "Bonneuil-en-France"
+      },
+      {
+        "code": "93029",
+        "nom": "Drancy"
+      },
+      {
+        "code": "93030",
+        "nom": "Dugny"
+      },
+      {
+        "code": "95277",
+        "nom": "Gonesse"
+      },
+      {
+        "code": "93013",
+        "nom": "Le Bourget"
+      }
+    ],
+    "route": {
+      "distanceKm": 18.3,
+      "durationMin": 24
+    },
+    "computedOn": "2026-10-01"
+  },
+  "epinay-sur-seine": {
+    "officialName": "Épinay-sur-Seine",
+    "population": 52833,
+    "surfaceHa": 457.59,
+    "limitrophes": [
+      {
+        "code": "95018",
+        "nom": "Argenteuil"
+      },
+      {
+        "code": "95197",
+        "nom": "Deuil-la-Barre"
+      },
+      {
+        "code": "95210",
+        "nom": "Enghien-les-Bains"
+      },
+      {
+        "code": "93039",
+        "nom": "L'Île-Saint-Denis"
+      },
+      {
+        "code": "95427",
+        "nom": "Montmagny"
+      },
+      {
+        "code": "93066",
+        "nom": "Saint-Denis"
+      },
+      {
+        "code": "95555",
+        "nom": "Saint-Gratien"
+      },
+      {
+        "code": "93079",
+        "nom": "Villetaneuse"
+      }
+    ],
+    "route": {
+      "distanceKm": 15.3,
+      "durationMin": 31
+    },
+    "computedOn": "2026-10-01"
+  },
+  "l-hay-les-roses": {
+    "officialName": "L'Haÿ-les-Roses",
+    "population": 31188,
+    "surfaceHa": 389.56,
+    "limitrophes": [
+      {
+        "code": "92002",
+        "nom": "Antony"
+      },
+      {
+        "code": "92014",
+        "nom": "Bourg-la-Reine"
+      },
+      {
+        "code": "94016",
+        "nom": "Cachan"
+      },
+      {
+        "code": "94021",
+        "nom": "Chevilly-Larue"
+      },
+      {
+        "code": "94034",
+        "nom": "Fresnes"
+      },
+      {
+        "code": "94076",
+        "nom": "Villejuif"
+      }
+    ],
+    "route": {
+      "distanceKm": 11.7,
+      "durationMin": 21
+    },
+    "computedOn": "2026-10-01"
+  },
+  "thiais": {
+    "officialName": "Thiais",
+    "population": 32918,
+    "surfaceHa": 642.45,
+    "limitrophes": [
+      {
+        "code": "94021",
+        "nom": "Chevilly-Larue"
+      },
+      {
+        "code": "94022",
+        "nom": "Choisy-le-Roi"
+      },
+      {
+        "code": "94054",
+        "nom": "Orly"
+      },
+      {
+        "code": "94065",
+        "nom": "Rungis"
+      },
+      {
+        "code": "94081",
+        "nom": "Vitry-sur-Seine"
+      }
+    ],
+    "route": {
+      "distanceKm": 12.6,
+      "durationMin": 19
+    },
+    "computedOn": "2026-10-01"
+  },
+  "choisy-le-roi": {
+    "officialName": "Choisy-le-Roi",
+    "population": 45946,
+    "surfaceHa": 542.14,
+    "limitrophes": [
+      {
+        "code": "94002",
+        "nom": "Alfortville"
+      },
+      {
+        "code": "94028",
+        "nom": "Créteil"
+      },
+      {
+        "code": "94054",
+        "nom": "Orly"
+      },
+      {
+        "code": "94073",
+        "nom": "Thiais"
+      },
+      {
+        "code": "94074",
+        "nom": "Valenton"
+      },
+      {
+        "code": "94078",
+        "nom": "Villeneuve-Saint-Georges"
+      },
+      {
+        "code": "94081",
+        "nom": "Vitry-sur-Seine"
+      }
+    ],
+    "route": {
+      "distanceKm": 13.1,
+      "durationMin": 20
+    },
+    "computedOn": "2026-10-01"
+  },
+  "orly": {
+    "officialName": "Orly",
+    "population": 24658,
+    "surfaceHa": 669.04,
+    "limitrophes": [
+      {
+        "code": "94022",
+        "nom": "Choisy-le-Roi"
+      },
+      {
+        "code": "91479",
+        "nom": "Paray-Vieille-Poste"
+      },
+      {
+        "code": "94073",
+        "nom": "Thiais"
+      },
+      {
+        "code": "94077",
+        "nom": "Villeneuve-le-Roi"
+      },
+      {
+        "code": "94078",
+        "nom": "Villeneuve-Saint-Georges"
+      }
+    ],
+    "route": {
+      "distanceKm": 15.4,
+      "durationMin": 23
+    },
+    "computedOn": "2026-10-01"
+  },
+  "fresnes": {
+    "officialName": "Fresnes",
+    "population": 29528,
+    "surfaceHa": 355.15,
+    "limitrophes": [
+      {
+        "code": "92002",
+        "nom": "Antony"
+      },
+      {
+        "code": "94021",
+        "nom": "Chevilly-Larue"
+      },
+      {
+        "code": "94038",
+        "nom": "L'Haÿ-les-Roses"
+      },
+      {
+        "code": "94065",
+        "nom": "Rungis"
+      },
+      {
+        "code": "91689",
+        "nom": "Wissous"
+      }
+    ],
+    "route": {
+      "distanceKm": 16.6,
+      "durationMin": 23
+    },
+    "computedOn": "2026-10-01"
+  },
+  "cachan": {
+    "officialName": "Cachan",
+    "population": 31103,
+    "surfaceHa": 278.72,
+    "limitrophes": [
+      {
+        "code": "94003",
+        "nom": "Arcueil"
+      },
+      {
+        "code": "92007",
+        "nom": "Bagneux"
+      },
+      {
+        "code": "92014",
+        "nom": "Bourg-la-Reine"
+      },
+      {
+        "code": "94038",
+        "nom": "L'Haÿ-les-Roses"
+      },
+      {
+        "code": "94076",
+        "nom": "Villejuif"
+      }
+    ],
+    "route": {
+      "distanceKm": 10.2,
+      "durationMin": 20
+    },
+    "computedOn": "2026-10-01"
+  },
+  "arcueil": {
+    "officialName": "Arcueil",
+    "population": 22200,
+    "surfaceHa": 233.47,
+    "limitrophes": [
+      {
+        "code": "92007",
+        "nom": "Bagneux"
+      },
+      {
+        "code": "94016",
+        "nom": "Cachan"
+      },
+      {
+        "code": "94037",
+        "nom": "Gentilly"
+      },
+      {
+        "code": "94043",
+        "nom": "Le Kremlin-Bicêtre"
+      },
+      {
+        "code": "92049",
+        "nom": "Montrouge"
+      },
+      {
+        "code": "94076",
+        "nom": "Villejuif"
+      }
+    ],
+    "route": {
+      "distanceKm": 8.8,
+      "durationMin": 17
+    },
+    "computedOn": "2026-10-01"
   }
 };

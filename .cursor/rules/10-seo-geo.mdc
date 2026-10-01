@@ -15,13 +15,16 @@ alwaysApply: true
 
 # Contenu
 
-- Densité minimale : 700 mots sur une page service, 500 sur une page zone, hors navigation.
+- Densité minimale : 700 mots sur une page service, hors navigation.
+- Page zone : aucune intro, aucun axe, aucun repère et aucune liste d'interventions rédigés pour remplir la page. Le contenu propre est la fiche factuelle (tableau HTML) et le champ libre `clientContent`, vide tant que le client n'a rien écrit.
+- La fiche ne contient que des données calculées ou lues dans la grille : distance et durée OSRM jusqu'à la mairie, délai annoncé, tarif, population INSEE, limitrophes officiels, voies retrouvées dans la Base Adresse Nationale. Une donnée absente n'est pas affichée et n'est pas inventée. Le délai et le tarif n'apparaissent qu'une fois, dans la fiche.
+- `validate:data` exige, pour chaque zone de Paris et de la petite couronne, au moins 50 mots (fiche et `clientContent` confondus) et la présence de la distance, du délai annoncé et du tarif. Les zones de grande couronne (77, 78, 91, 95) n'ont pas de fiche.
 - Écrire pour un lecteur en panne : phrases courtes, verbes d'action, information utile avant argumentaire.
 - Chiffres toujours en `font-data` avec `tabular-nums`.
 
 # Visibilité IA (GEO) — même niveau de priorité que le SEO
 
-1. **Bloc réponse directe.** Chaque page service, zone et `/tarifs/` commence par un paragraphe autoportant de 40 à 60 mots, juste sous le H1, avant toute mise en forme. Il doit rester vrai sorti de son contexte.
+1. **Bloc réponse directe.** Chaque page service et `/tarifs/` commence par un paragraphe autoportant de 40 à 60 mots, juste sous le H1, avant toute mise en forme. Il doit rester vrai sorti de son contexte. Une page zone commence par une réponse courte factuelle (couverture 24h/24, distance jusqu'à la mairie si elle est calculée, téléphone), puis la fiche. Elle ne répète ni le délai ni le tarif.
 2. **H2 en questions.** Formuler les H2 comme un humain poserait la question, puis répondre immédiatement en dessous en factuel, avant tout développement.
 3. **Tableaux HTML natifs.** Tarifs, délais, zones en `<table>` sémantique avec `<thead>`/`<th scope>`. Jamais en image, jamais en `<div>` stylé.
 4. **Rendu sans JS.** Tout le contenu textuel doit être dans le HTML source. Les accordéons utilisent `<details>/<summary>` natif pour rester lisibles fermés.
@@ -31,7 +34,8 @@ alwaysApply: true
 
 # Anti-patterns — refuser de les produire
 
-- Pages zone générées par template à variables. Si la zone n'a pas de contenu propre dans les données, ne pas générer la page.
+- Pages zone générées par template à variables, intros de remplissage, ou texte ajouté seulement pour atteindre un nombre de mots.
+- Relever le seuil de similarité Jaccard. Il reste à 0,8 et ne se mesure que sur les `clientContent` non vides.
 - Bourrage de mots-clés, texte caché, listes de villes en pied de page.
 - Contenu recopié d'une page à l'autre.
 - `noindex` en production, `robots` manquant.

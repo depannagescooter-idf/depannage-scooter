@@ -10,7 +10,7 @@ import { ZoneFactSheet } from "@/components/ZoneFactSheet";
 import { getDepartmentSlugByCode } from "@/data/departments";
 import { depannageServices, remorquageServices } from "@/data/services";
 import type { Zone } from "@/data/types";
-import { getZoneBySlug } from "@/data/zones";
+import { limitrophesTitle, limitrophesWithPage } from "@/lib/zone-fact-sheet";
 import { buildZoneShortAnswer } from "@/lib/zone-short-answer";
 import { getZoneFaqs } from "@/lib/zone-faqs";
 import { faqPageSchema, zoneServiceSchema } from "@/lib/schema";
@@ -27,10 +27,7 @@ const DEPT_LABELS: Record<string, string> = {
 };
 
 export function ZonePageContent({ zone }: { zone: Zone }) {
-  const neighbours = zone.neighbours
-    .slice(0, 6)
-    .map((slug) => getZoneBySlug(slug))
-    .filter((z): z is Zone => Boolean(z));
+  const limitrophes = limitrophesWithPage(zone);
 
   const shortAnswer = buildZoneShortAnswer(zone);
   const zoneFaqs = getZoneFaqs(zone);
@@ -83,17 +80,6 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
               .
             </p>
           )}
-
-          <section className="mt-10">
-            <h2 className="section-title">Combien de temps pour arriver à {zone.name} ?</h2>
-            <p className="mt-2 text-beton">
-              En journée, comptez{" "}
-              <span className="font-data font-semibold tabular-nums text-asphalte">
-                {zone.etaMinutes[0]}–{zone.etaMinutes[1]} minutes
-              </span>{" "}
-              selon le trafic et le point de panne exact. Le délai vous est confirmé par téléphone.
-            </p>
-          </section>
 
           <section className="mt-10">
             <h2 className="section-title">Quels dépannages sur place à {zone.name} ?</h2>
@@ -159,17 +145,17 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
             </div>
           </section>
 
-          {neighbours.length > 0 && (
+          {limitrophes.length > 0 && (
             <section className="mt-10">
-              <h2 className="section-title">Villes voisines</h2>
+              <h2 className="section-title">{limitrophesTitle(zone)}</h2>
               <ul className="mt-4 flex flex-wrap gap-2">
-                {neighbours.map((n) => (
-                  <li key={n.slug}>
+                {limitrophes.map((l) => (
+                  <li key={l.href}>
                     <Link
-                      href={`/zones-intervention/${n.slug}/`}
+                      href={l.href}
                       className="rounded-full border border-border px-3 py-1 text-sm hover:border-signal hover:text-signal"
                     >
-                      {n.name}
+                      {l.label}
                     </Link>
                   </li>
                 ))}
@@ -182,9 +168,7 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
           <h2 className="font-display text-xl font-bold text-asphalte">
             Panne à {zone.name} ?
           </h2>
-          <p className="mt-2 text-beton">
-            Délai {zone.etaMinutes[0]}–{zone.etaMinutes[1]} min — devis confirmé au téléphone.
-          </p>
+          <p className="mt-2 text-beton">Devis confirmé au téléphone avant toute intervention.</p>
           <div className="mt-4 flex flex-wrap justify-center gap-3">
             <CallButton origin="inline" />
             <WhatsAppButton origin="inline" />

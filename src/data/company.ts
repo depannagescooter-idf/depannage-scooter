@@ -20,8 +20,8 @@ export const company: Company = {
     country: "FR",
   },
   geo: {
-    latitude: 48.8506,
-    longitude: 2.3688,
+    latitude: 48.846723,
+    longitude: 2.367233,
   },
   openingHours: "24h/24, 7j/7",
   paymentAccepted: "Carte bancaire, Espèces",

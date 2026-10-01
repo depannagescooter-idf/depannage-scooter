@@ -5,7 +5,9 @@
  * - OSRM (router.project-osrm.org) : distance et durée routières de la base à la mairie, sans circulation.
  * Requêtes séquentielles, 3 essais chacune. Une donnée non obtenue vaut null et n'est pas affichée.
  * Si la base ne peut pas être géocodée, rien n'est écrit.
- * Usage : npm run facts:zones -- paris-11e nanterre   (sans argument : toutes les zones)
+ * Usage : npm run facts:zones -- paris-11e nanterre
+ *         npm run facts:zones            (les 67 zones de Paris et de la petite couronne)
+ * Les zones de grande couronne (77, 78, 91, 95) sont refusées : elles n'ont pas de fiche.
  */
 import { writeFileSync } from "node:fs";
 import { join } from "node:path";
@@ -18,14 +20,15 @@ const USER_AGENT = "depannagescooter.com (fiches de zones)";
 const TOLERANCE_M = 25;
 const MIN_SHARED_VERTICES = 2;
 const IDF_DEPARTMENTS = ["77", "78", "91", "92", "93", "94", "95"];
+const FACT_SHEET_DEPTS = new Set(["75", "92", "93", "94"]);
 
 const warnings: string[] = [];
 const sleep = (ms: number) => new Promise((r) => setTimeout(r, ms));
 
-async function getJson<T>(url: string, pauseMs = 150): Promise<T | null> {
+async function getJson<T>(url: string, pauseMs = 150, timeoutMs = 20_000): Promise<T | null> {
   for (let attempt = 1; attempt <= 3; attempt++) {
     try {
-      const res = await fetch(url, { headers: { "User-Agent": USER_AGENT }, signal: AbortSignal.timeout(20_000) });
+      const res = await fetch(url, { headers: { "User-Agent": USER_AGENT }, signal: AbortSignal.timeout(timeoutMs) });
       if (res.ok) {
         const json = (await res.json()) as T;
         await sleep(pauseMs);
@@ -97,8 +100,11 @@ function segmentDistance(p: [number, number], a: [number, number], b: [number, n
   return Math.hypot(p[0] - (a[0] + t * dx), p[1] - (a[1] + t * dy));
 }
 
-/** Deux zones sont limitrophes si au moins deux sommets de l'une sont sur la limite de l'autre (à 25 m près). */
-function isAdjacent(a: Shape, b: Shape): boolean {
+/**
+ * Vrai si au moins deux sommets de `a` sont sur la limite de `b` (à 25 m près).
+ * Un simple coin commun ne compte pas : la relation retenue est le ET des deux sens.
+ */
+function sharesVertices(a: Shape, b: Shape): boolean {
   const [ax0, ay0, ax1, ay1] = a.bbox;
   const [bx0, by0, bx1, by1] = b.bbox;
   if (ax0 > bx1 + TOLERANCE_M || bx0 > ax1 + TOLERANCE_M || ay0 > by1 + TOLERANCE_M || by0 > ay1 + TOLERANCE_M) return false;
@@ -122,7 +128,7 @@ async function loadShapes(): Promise<Shape[] | null> {
   ];
   const shapes: Shape[] = [];
   for (const url of urls) {
-    const fc = await getJson<FeatureCollection>(url);
+    const fc = await getJson<FeatureCollection>(url, 150, 60_000);
     if (!fc) return null;
     shapes.push(...fc.features.filter((f) => f.geometry).map(toShape));
   }
@@ -135,10 +141,23 @@ interface OsrmRoute {
 }
 
 async function main() {
-  const requested = process.argv.slice(2);
+  const args = process.argv.slice(2);
+  if (args.some((a) => a.startsWith("--"))) {
+    throw new Error("ce script ne calcule que des fiches complètes : aucune option n'est acceptée");
+  }
+  const requested = args;
   const unknown = requested.filter((s) => !zones.some((z) => z.slug === s));
   if (unknown.length) throw new Error(`zones inconnues : ${unknown.join(", ")}`);
-  const targets = requested.length ? zones.filter((z) => requested.includes(z.slug)) : zones;
+  const outside = requested.filter((s) => {
+    const zone = zones.find((z) => z.slug === s);
+    return zone && !FACT_SHEET_DEPTS.has(zone.departement);
+  });
+  if (outside.length) {
+    throw new Error(`grande couronne, fiche non calculée : ${outside.join(", ")}`);
+  }
+  const targets = requested.length
+    ? zones.filter((z) => requested.includes(z.slug))
+    : zones.filter((z) => FACT_SHEET_DEPTS.has(z.departement));
   const computedOn = new Date().toISOString().slice(0, 10);
 
   const address = `${company.address.street}, ${company.address.postalCode} ${company.address.city}`;
@@ -152,7 +171,7 @@ async function main() {
   const [baseLng, baseLat] = baseHit.geometry.coordinates;
 
   const insee: Record<string, string> = {};
-  for (const z of zones) {
+  for (const z of targets) {
     const code = await inseeCode(z.slug, z.name, z.departement, z.postalCodes[0]);
     if (code) insee[z.slug] = code;
     else warnings.push(`code INSEE introuvable : ${z.slug}`);
@@ -162,7 +181,11 @@ async function main() {
   const shapes = await loadShapes();
   if (!shapes) warnings.push("contours incomplets : limitrophes non calculés");
 
-  const facts: Record<string, ZoneFacts> = { ...previousFacts };
+  const facts: Record<string, ZoneFacts> = {};
+  for (const [slug, value] of Object.entries(previousFacts)) {
+    const zone = zones.find((z) => z.slug === slug);
+    if (zone && FACT_SHEET_DEPTS.has(zone.departement)) facts[slug] = value;
+  }
   for (const z of targets) {
     const code = insee[z.slug];
     if (!code) continue;
@@ -173,7 +196,7 @@ async function main() {
     const limitrophes =
       shapes && own
         ? shapes
-            .filter((s) => s.code !== code && isAdjacent(own, s))
+            .filter((s) => s.code !== code && sharesVertices(own, s) && sharesVertices(s, own))
             .map((s) => ({ code: s.code, nom: s.nom }))
             .sort((a, b) => a.nom.localeCompare(b.nom, "fr", { numeric: true }))
         : null;
