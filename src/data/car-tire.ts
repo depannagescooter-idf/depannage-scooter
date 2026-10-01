@@ -26,7 +26,7 @@ export const carTirePage = {
     {
       title: "Mèche, ou changement de roue",
       detail:
-        "Si la perforation est petite et dans la bande de roulement, une mèche est posée par l'extérieur, roue en place, quand l'accès le permet. Si la mèche est impossible, le technicien démonte la roue et monte le pneu de secours, ou un pneu que vous avez déjà, sur place. Le changement de pneu complet n'est fait que dans ce second cas.",
+        "Si la perforation est petite et dans la bande de roulement, une mèche est posée par l'extérieur, roue en place, quand l'accès le permet. Si la mèche est impossible, le technicien monte la roue de secours du client. Un pneu neuf, s'il faut le remplacer, est facturé en plus du forfait, sur devis.",
     },
     {
       title: "Contrôle de la pression",
@@ -41,7 +41,7 @@ export const carTirePage = {
   ],
   priceTitle: "Tarif",
   priceText:
-    "Il n'y a pas de forfait pneu voiture publié dans la grille : le montant dépend de l'opération, mèche ou changement de roue, et du déplacement. Le devis est ferme, confirmé par téléphone avant tout déplacement. Aucune intervention ne commence sans votre accord. Le paiement se fait sur place, par carte bancaire ou en espèces. Les majorations de nuit, de week-end et de jour férié, lorsqu'elles s'appliquent, sont annoncées dans le même appel.",
+    "Le forfait couvre la main-d'œuvre et le déplacement. Il ne comprend pas le pneu neuf. La réparation par mèche, roue en place, et le montage de la roue de secours du client ont le même total. Le remplacement du pneu est sur devis, et le pneu est facturé en plus. Les majorations de nuit, de samedi, de dimanche et de jour férié, ainsi que le supplément de pénibilité, sont annoncées au téléphone avant le déplacement.",
   faqs: [
     {
       question: "Réparez-vous un pneu crevé sans démonter la roue ?",
@@ -56,7 +56,7 @@ export const carTirePage = {
     {
       question: "Le changement de pneu est-il fait sur place ?",
       answer:
-        "Le montage sur place est prévu : dépose de la roue, pose de la roue de secours ou du pneu fourni, puis contrôle de la pression. Nous ne vendons pas un stock de pneus voiture de toutes les références.",
+        "Le montage de votre roue de secours se fait sur place, au même forfait que la mèche. Ce forfait couvre la main-d'œuvre et le déplacement. Un pneu neuf est facturé en plus, sur devis : le forfait publié ne le comprend pas.",
     },
     {
       question: "Une roue à plat et un pneu à plat, est-ce la même intervention ?",

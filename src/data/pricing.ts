@@ -109,6 +109,15 @@ export function getDspTotal(zone: TravelZoneKey): number {
   return pricing.dsp.baseFee + pricing.travelFees[zone].amount;
 }
 
+/**
+ * Pneu voiture sur place : réparation par mèche et montage de la roue de secours du client.
+ * Même forfait que le dépannage sur place (main-d'œuvre) + déplacement.
+ * Le remplacement d'un pneu neuf n'a pas de montant : sur devis, pneu facturé en plus.
+ */
+export function getCarTireOnSiteTotal(zone: TravelZoneKey): number {
+  return getDspTotal(zone);
+}
+
 /** Zones encore proposées. La grande couronne reste dans la grille mais n'est plus affichée. */
 export const offeredTravelZones = ["PARIS", "PETITE_COURONNE"] as const satisfies readonly TravelZoneKey[];
 
