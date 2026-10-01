@@ -11,6 +11,8 @@ export interface ZoneFacts {
   limitrophes: { code: string; nom: string }[] | null;
   /** Itinéraire routier OSRM depuis la base jusqu'à la mairie, sans circulation. */
   route: { distanceKm: number; durationMin: number } | null;
+  /** Point de la mairie (geo.api.gouv.fr). Identique pour les zones qui partagent un bâtiment. */
+  mairie: { lng: number; lat: number } | null;
   /** Date du calcul, AAAA-MM-JJ. */
   computedOn: string;
 }
@@ -127,7 +129,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 3.6,
       "durationMin": 10
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3618,
+      "lat": 48.8639
+    }
   },
   "paris-2e": {
     "officialName": "Paris 2e Arrondissement",
@@ -155,7 +161,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 3.6,
       "durationMin": 10
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3618,
+      "lat": 48.8639
+    }
   },
   "paris-3e": {
     "officialName": "Paris 3e Arrondissement",
@@ -187,7 +197,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 3.6,
       "durationMin": 10
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3617,
+      "lat": 48.8639
+    }
   },
   "paris-4e": {
     "officialName": "Paris 4e Arrondissement",
@@ -219,7 +233,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 3.6,
       "durationMin": 10
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3618,
+      "lat": 48.8639
+    }
   },
   "paris-5e": {
     "officialName": "Paris 5e Arrondissement",
@@ -251,7 +269,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 2.8,
       "durationMin": 8
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3444,
+      "lat": 48.846
+    }
   },
   "paris-6e": {
     "officialName": "Paris 6e Arrondissement",
@@ -283,7 +305,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 3.7,
       "durationMin": 10
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3323,
+      "lat": 48.8506
+    }
   },
   "paris-7e": {
     "officialName": "Paris 7e Arrondissement",
@@ -315,7 +341,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 4.8,
       "durationMin": 13
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3204,
+      "lat": 48.8573
+    }
   },
   "paris-8e": {
     "officialName": "Paris 8e Arrondissement",
@@ -347,7 +377,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 6.1,
       "durationMin": 16
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3176,
+      "lat": 48.8775
+    }
   },
   "paris-9e": {
     "officialName": "Paris 9e Arrondissement",
@@ -383,7 +417,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 4.5,
       "durationMin": 13
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3414,
+      "lat": 48.8724
+    }
   },
   "paris-10e": {
     "officialName": "Paris 10e Arrondissement",
@@ -419,7 +457,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 3.6,
       "durationMin": 10
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3577,
+      "lat": 48.8718
+    }
   },
   "paris-11e": {
     "officialName": "Paris 11e Arrondissement",
@@ -451,7 +493,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 2.3,
       "durationMin": 6
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3793,
+      "lat": 48.8587
+    }
   },
   "paris-12e": {
     "officialName": "Paris 12e Arrondissement",
@@ -511,7 +557,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 2,
       "durationMin": 5
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3882,
+      "lat": 48.8408
+    }
   },
   "paris-13e": {
     "officialName": "Paris 13e Arrondissement",
@@ -547,7 +597,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 2.3,
       "durationMin": 7
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3555,
+      "lat": 48.8326
+    }
   },
   "paris-14e": {
     "officialName": "Paris 14e Arrondissement",
@@ -587,7 +641,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 4.2,
       "durationMin": 12
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3269,
+      "lat": 48.8331
+    }
   },
   "paris-15e": {
     "officialName": "Paris 15e Arrondissement",
@@ -623,7 +681,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 6.4,
       "durationMin": 17
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3003,
+      "lat": 48.8414
+    }
   },
   "paris-16e": {
     "officialName": "Paris 16e Arrondissement",
@@ -671,7 +733,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 8.3,
       "durationMin": 21
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2765,
+      "lat": 48.8637
+    }
   },
   "paris-17e": {
     "officialName": "Paris 17e Arrondissement",
@@ -715,7 +781,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 6.7,
       "durationMin": 19
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3221,
+      "lat": 48.8846
+    }
   },
   "paris-18e": {
     "officialName": "Paris 18e Arrondissement",
@@ -755,7 +825,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 5.9,
       "durationMin": 17
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3444,
+      "lat": 48.8921
+    }
   },
   "paris-19e": {
     "officialName": "Paris 19e Arrondissement",
@@ -795,7 +869,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 5.3,
       "durationMin": 14
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3819,
+      "lat": 48.8829
+    }
   },
   "paris-20e": {
     "officialName": "Paris 20e Arrondissement",
@@ -839,7 +917,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 4.6,
       "durationMin": 13
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3994,
+      "lat": 48.8652
+    }
   },
   "boulogne-billancourt": {
     "officialName": "Boulogne-Billancourt",
@@ -871,7 +953,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 11.9,
       "durationMin": 26
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2405,
+      "lat": 48.836
+    }
   },
   "nanterre": {
     "officialName": "Nanterre",
@@ -919,7 +1005,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 14.6,
       "durationMin": 31
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2072,
+      "lat": 48.892
+    }
   },
   "levallois-perret": {
     "officialName": "Levallois-Perret",
@@ -951,7 +1041,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 9.4,
       "durationMin": 23
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2877,
+      "lat": 48.8928
+    }
   },
   "neuilly-sur-seine": {
     "officialName": "Neuilly-sur-Seine",
@@ -983,7 +1077,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 9.5,
       "durationMin": 23
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2697,
+      "lat": 48.8848
+    }
   },
   "issy-les-moulineaux": {
     "officialName": "Issy-les-Moulineaux",
@@ -1015,7 +1113,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 9.3,
       "durationMin": 22
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2738,
+      "lat": 48.8245
+    }
   },
   "courbevoie": {
     "officialName": "Courbevoie",
@@ -1055,7 +1157,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 11.9,
       "durationMin": 26
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2555,
+      "lat": 48.8954
+    }
   },
   "clichy": {
     "officialName": "Clichy",
@@ -1083,7 +1189,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 9.9,
       "durationMin": 23
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3049,
+      "lat": 48.9028
+    }
   },
   "asnieres-sur-seine": {
     "officialName": "Asnières-sur-Seine",
@@ -1127,7 +1237,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 10.8,
       "durationMin": 25
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2889,
+      "lat": 48.9107
+    }
   },
   "montrouge": {
     "officialName": "Montrouge",
@@ -1163,7 +1277,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 6.3,
       "durationMin": 16
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3205,
+      "lat": 48.8188
+    }
   },
   "saint-denis": {
     "officialName": "Saint-Denis",
@@ -1215,7 +1333,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 11.1,
       "durationMin": 26
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3584,
+      "lat": 48.9362
+    }
   },
   "montreuil": {
     "officialName": "Montreuil",
@@ -1259,7 +1381,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 8.6,
       "durationMin": 16
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.441,
+      "lat": 48.8624
+    }
   },
   "aubervilliers": {
     "officialName": "Aubervilliers",
@@ -1291,7 +1417,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 9.2,
       "durationMin": 22
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3818,
+      "lat": 48.9146
+    }
   },
   "pantin": {
     "officialName": "Pantin",
@@ -1331,7 +1461,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 11,
       "durationMin": 20
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4012,
+      "lat": 48.8969
+    }
   },
   "saint-ouen": {
     "officialName": "Saint-Ouen-sur-Seine",
@@ -1367,7 +1501,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 8.2,
       "durationMin": 21
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3344,
+      "lat": 48.9117
+    }
   },
   "bobigny": {
     "officialName": "Bobigny",
@@ -1403,7 +1541,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 12.5,
       "durationMin": 22
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4451,
+      "lat": 48.9061
+    }
   },
   "noisy-le-grand": {
     "officialName": "Noisy-le-Grand",
@@ -1451,7 +1593,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 19,
       "durationMin": 22
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.5524,
+      "lat": 48.8496
+    }
   },
   "aulnay-sous-bois": {
     "officialName": "Aulnay-sous-Bois",
@@ -1491,7 +1637,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 17.7,
       "durationMin": 24
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.5001,
+      "lat": 48.9342
+    }
   },
   "creteil": {
     "officialName": "Créteil",
@@ -1531,7 +1681,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 13.8,
       "durationMin": 17
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4531,
+      "lat": 48.7778
+    }
   },
   "vitry-sur-seine": {
     "officialName": "Vitry-sur-Seine",
@@ -1567,7 +1721,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 9.6,
       "durationMin": 15
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3885,
+      "lat": 48.7886
+    }
   },
   "ivry-sur-seine": {
     "officialName": "Ivry-sur-Seine",
@@ -1603,7 +1761,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 6.5,
       "durationMin": 12
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3875,
+      "lat": 48.812
+    }
   },
   "vincennes": {
     "officialName": "Vincennes",
@@ -1631,7 +1793,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 5.9,
       "durationMin": 12
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4397,
+      "lat": 48.8477
+    }
   },
   "saint-maur-des-fosses": {
     "officialName": "Saint-Maur-des-Fossés",
@@ -1671,7 +1837,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 11.8,
       "durationMin": 19
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4853,
+      "lat": 48.8029
+    }
   },
   "charenton-le-pont": {
     "officialName": "Charenton-le-Pont",
@@ -1703,7 +1873,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 6.3,
       "durationMin": 14
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4161,
+      "lat": 48.8197
+    }
   },
   "alfortville": {
     "officialName": "Alfortville",
@@ -1739,7 +1913,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 8.3,
       "durationMin": 14
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4203,
+      "lat": 48.8054
+    }
   },
   "villejuif": {
     "officialName": "Villejuif",
@@ -1775,7 +1953,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 9.3,
       "durationMin": 17
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3631,
+      "lat": 48.7919
+    }
   },
   "rueil-malmaison": {
     "officialName": "Rueil-Malmaison",
@@ -1823,7 +2005,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 16.5,
       "durationMin": 33
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.1806,
+      "lat": 48.8779
+    }
   },
   "colombes": {
     "officialName": "Colombes",
@@ -1863,7 +2049,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 15.1,
       "durationMin": 32
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2544,
+      "lat": 48.9225
+    }
   },
   "antony": {
     "officialName": "Antony",
@@ -1907,7 +2097,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 19.4,
       "durationMin": 28
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2956,
+      "lat": 48.7537
+    }
   },
   "clamart": {
     "officialName": "Clamart",
@@ -1959,7 +2153,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 11,
       "durationMin": 26
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2628,
+      "lat": 48.8007
+    }
   },
   "puteaux": {
     "officialName": "Puteaux",
@@ -1991,7 +2189,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 13,
       "durationMin": 29
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2381,
+      "lat": 48.884
+    }
   },
   "suresnes": {
     "officialName": "Suresnes",
@@ -2023,7 +2225,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 13.2,
       "durationMin": 29
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2251,
+      "lat": 48.8711
+    }
   },
   "gennevilliers": {
     "officialName": "Gennevilliers",
@@ -2055,7 +2261,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 12.8,
       "durationMin": 28
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.2933,
+      "lat": 48.9255
+    }
   },
   "bagneux": {
     "officialName": "Bagneux",
@@ -2095,7 +2305,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 9.2,
       "durationMin": 23
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.304,
+      "lat": 48.7994
+    }
   },
   "bondy": {
     "officialName": "Bondy",
@@ -2139,7 +2353,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 14.3,
       "durationMin": 20
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4813,
+      "lat": 48.9018
+    }
   },
   "le-raincy": {
     "officialName": "Le Raincy",
@@ -2171,7 +2389,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 15.9,
       "durationMin": 23
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.5161,
+      "lat": 48.8985
+    }
   },
   "livry-gargan": {
     "officialName": "Livry-Gargan",
@@ -2211,7 +2433,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 18.5,
       "durationMin": 25
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.5365,
+      "lat": 48.9191
+    }
   },
   "sevran": {
     "officialName": "Sevran",
@@ -2239,7 +2465,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 19.8,
       "durationMin": 28
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.5258,
+      "lat": 48.9395
+    }
   },
   "drancy": {
     "officialName": "Drancy",
@@ -2271,7 +2501,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 16.3,
       "durationMin": 23
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.445,
+      "lat": 48.9233
+    }
   },
   "le-blanc-mesnil": {
     "officialName": "Le Blanc-Mesnil",
@@ -2311,7 +2545,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 18.3,
       "durationMin": 24
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4637,
+      "lat": 48.9388
+    }
   },
   "epinay-sur-seine": {
     "officialName": "Épinay-sur-Seine",
@@ -2355,7 +2593,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 15.3,
       "durationMin": 31
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3134,
+      "lat": 48.9515
+    }
   },
   "l-hay-les-roses": {
     "officialName": "L'Haÿ-les-Roses",
@@ -2391,7 +2633,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 11.7,
       "durationMin": 21
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3374,
+      "lat": 48.7792
+    }
   },
   "thiais": {
     "officialName": "Thiais",
@@ -2423,7 +2669,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 12.6,
       "durationMin": 19
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.391,
+      "lat": 48.7642
+    }
   },
   "choisy-le-roi": {
     "officialName": "Choisy-le-Roi",
@@ -2463,7 +2713,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 13.1,
       "durationMin": 20
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4095,
+      "lat": 48.7624
+    }
   },
   "orly": {
     "officialName": "Orly",
@@ -2495,7 +2749,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 15.4,
       "durationMin": 23
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.4006,
+      "lat": 48.7431
+    }
   },
   "fresnes": {
     "officialName": "Fresnes",
@@ -2527,7 +2785,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 16.6,
       "durationMin": 23
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.322,
+      "lat": 48.7551
+    }
   },
   "cachan": {
     "officialName": "Cachan",
@@ -2559,7 +2821,11 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 10.2,
       "durationMin": 20
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3341,
+      "lat": 48.7946
+    }
   },
   "arcueil": {
     "officialName": "Arcueil",
@@ -2595,6 +2861,10 @@ export const zoneFacts: Record<string, ZoneFacts> = {
       "distanceKm": 8.8,
       "durationMin": 17
     },
-    "computedOn": "2026-10-01"
+    "computedOn": "2026-10-01",
+    "mairie": {
+      "lng": 2.3369,
+      "lat": 48.806
+    }
   }
 };

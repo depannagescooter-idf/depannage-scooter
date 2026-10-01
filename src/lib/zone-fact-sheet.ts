@@ -23,6 +23,26 @@ const integer = new Intl.NumberFormat("fr-FR", { maximumFractionDigits: 0 });
 const decimal = new Intl.NumberFormat("fr-FR", { minimumFractionDigits: 1, maximumFractionDigits: 1 });
 const lowerFirst = (s: string) => s.charAt(0).toLowerCase() + s.slice(1);
 const slugByInsee = new Map(Object.entries(zoneInsee).map(([slug, code]) => [code, slug]));
+/** Deux mairies à moins de 50 m sont le même bâtiment. */
+const SHARED_MAIRIE_M = 50;
+
+function metersApart(a: { lng: number; lat: number }, b: { lng: number; lat: number }): number {
+  const x = (a.lng - b.lng) * 111_320 * Math.cos((48.85 * Math.PI) / 180);
+  const y = (a.lat - b.lat) * 110_574;
+  return Math.hypot(x, y);
+}
+
+/**
+ * Vrai quand geo.api.gouv.fr donne le même point de mairie à plusieurs zones.
+ * La distance n'est alors pas affichée : la répéter sur chaque page ressemble à une erreur.
+ */
+export function sharesMairieWithAnotherZone(slug: string): boolean {
+  const mine = zoneFacts[slug]?.mairie;
+  if (!mine) return false;
+  return Object.entries(zoneFacts).some(
+    ([other, facts]) => other !== slug && facts.mairie != null && metersApart(mine, facts.mairie) < SHARED_MAIRIE_M,
+  );
+}
 
 function zoneLabel(code: string, officialName: string): FactLink {
   const slug = slugByInsee.get(code);
@@ -61,7 +81,7 @@ export function buildZoneFactRows(zone: Zone): FactRow[] {
   const travelLabel = pricing.travelFees[travel].label;
   const rows: FactRow[] = [];
 
-  if (facts?.route) {
+  if (facts?.route && !sharesMairieWithAnotherZone(zone.slug)) {
     rows.push({
       label: "Distance depuis notre base",
       value: `${decimal.format(facts.route.distanceKm)} km par la route jusqu'à ${mairie}, environ ${facts.route.durationMin} min sans circulation`,
@@ -117,7 +137,9 @@ export function buildZoneFactCaption(zone: Zone): string {
 export function buildZoneFactSources(zone: Zone): string {
   const facts = zoneFacts[zone.slug];
   const parts = [
-    facts?.route && zoneFactsBase ? `itinéraire OSRM depuis ${zoneFactsBase.address}, sans circulation` : null,
+    facts?.route && zoneFactsBase && !sharesMairieWithAnotherZone(zone.slug)
+      ? `itinéraire OSRM depuis ${zoneFactsBase.address}, sans circulation`
+      : null,
     facts?.population || facts?.limitrophes ? "population et limites : geo.api.gouv.fr (INSEE)" : null,
     zoneVoies[zone.slug]?.length ? "voies : Base Adresse Nationale" : null,
     "tarifs : grille DépannageScooter",

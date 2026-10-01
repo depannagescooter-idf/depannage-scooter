@@ -219,6 +219,7 @@ async function main() {
       surfaceHa: commune?.surface ?? null,
       limitrophes,
       route,
+      mairie: mairie ? { lng: mairie[0], lat: mairie[1] } : null,
       computedOn,
     };
     console.log(`  ${z.slug} : ${JSON.stringify(facts[z.slug])}`);
@@ -240,6 +241,8 @@ export interface ZoneFacts {
   limitrophes: { code: string; nom: string }[] | null;
   /** Itinéraire routier OSRM depuis la base jusqu'à la mairie, sans circulation. */
   route: { distanceKm: number; durationMin: number } | null;
+  /** Point de la mairie (geo.api.gouv.fr). Identique pour les zones qui partagent un bâtiment. */
+  mairie: { lng: number; lat: number } | null;
   /** Date du calcul, AAAA-MM-JJ. */
   computedOn: string;
 }
