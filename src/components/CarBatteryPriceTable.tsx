@@ -80,6 +80,7 @@ export function CarBatteryPriceTable({ showSurcharges = true }: CarBatteryPriceT
           Petite couronne : +{formatPrice(carBattery.travelFees.PETITE_COURONNE - carBattery.travelFees.PARIS)} par rapport à Paris.
         </p>
       </div>
+      <PriceInclusions includeStrapping={false} />
 
       {showSurcharges && (
         <>
@@ -117,13 +118,13 @@ export function CarBatteryPriceTable({ showSurcharges = true }: CarBatteryPriceT
               </table>
             </div>
           </div>
+          <PriceInclusions includeStrapping={false} />
           <p className="text-sm text-beton">
             Supplément pénibilité (+{formatPrice(difficultySurcharge.amount)}) : parking souterrain,
             accès difficile, véhicule accidenté.
           </p>
         </>
       )}
-      <PriceInclusions includeStrapping={false} />
     </div>
   );
 }

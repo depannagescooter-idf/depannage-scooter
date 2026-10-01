@@ -43,6 +43,7 @@ export function ServicePriceTable({ priceKey }: ServicePriceTableProps) {
             </tbody>
           </table>
         </div>
+        <PriceInclusions />
         <div className="card overflow-hidden">
           <table className="w-full text-sm">
             <thead>

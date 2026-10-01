@@ -24,14 +24,17 @@ function TableCard({
   children: React.ReactNode;
 }) {
   return (
-    <section aria-labelledby={id} className="card overflow-hidden">
-      <div className="border-b border-border-soft bg-surface-muted/60 px-5 py-3.5">
-        <h3 id={id} className="font-display text-sm font-semibold text-asphalte">
-          {title}
-        </h3>
-      </div>
-      <div className="overflow-x-auto">{children}</div>
-    </section>
+    <div className="space-y-3">
+      <section aria-labelledby={id} className="card overflow-hidden">
+        <div className="border-b border-border-soft bg-surface-muted/60 px-5 py-3.5">
+          <h3 id={id} className="font-display text-sm font-semibold text-asphalte">
+            {title}
+          </h3>
+        </div>
+        <div className="overflow-x-auto">{children}</div>
+      </section>
+      <PriceInclusions />
+    </div>
   );
 }
 
@@ -161,7 +164,6 @@ export function PriceTable({
           </table>
         </TableCard>
       )}
-      <PriceInclusions />
     </div>
   );
 }
