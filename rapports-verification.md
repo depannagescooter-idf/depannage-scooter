@@ -1,6 +1,6 @@
 # Rapports de vérification — depannagescooter.com
 
-Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle : `1c080b2`.
+Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle : `333a6fc`.
 
 Le domaine, les URL absolues et les redirections n’ont pas été modifiés.
 
@@ -144,3 +144,67 @@ Les majorations sont celles du reste du site : nuit +30 %, samedi +30 %, dimanch
 Sous les deux tableaux (prestations, puis majorations) : déplacement inclus, assurance responsabilité civile professionnelle, devis ferme confirmé par téléphone avant tout déplacement, aucune intervention sans accord du client, paiement par carte ou espèces sur place, et l'encart « Votre assurance peut prendre en charge » vers la FAQ assistance 0 km. Le sanglage n'y figure pas.
 
 Phrases du sitemap : **179 contrôles, 179 conformes.** Non conformes : aucune.
+
+---
+
+## Titre, délais, duplication, logo et bouton d'appel
+
+Déployé (`333a6fc`). Contrôlé sur le HTML servi après le déploiement Vercel.
+
+### Titre et H1 de l'accueil
+
+| Champ | Texte servi | Longueur |
+|---|---|---|
+| `<title>` | Dépannage scooter, moto et voiture 24h/24 en Île-de-France | 58 |
+| `og:title` | Dépannage scooter, moto et voiture 24h/24 en Île-de-France | 58 |
+| `twitter:title` | Dépannage scooter, moto et voiture 24h/24 en Île-de-France | 58 |
+| H1 | Dépannage scooter, moto et voiture 24h/24 en Île-de-France | 58 |
+
+Meta description servie : « Dépannage scooter, moto et voiture en Île-de-France, 24h/24. Intervention en 25–40 min. Devis ferme au 07 72 12 53 11 avant départ. » Elle contient « voiture ».
+
+Le H2 « Quand faut-il un remorquage scooter ou moto ? » est toujours présent.
+
+### Délais des 75 nouvelles pages
+
+Le délai annoncé est le temps de trajet OSRM déjà enregistré dans la fiche, plus 10 minutes de préparation, arrondi au multiple de 5 le plus proche. La fourchette fait 15 minutes. Cette marge de 10 minutes reprend l'écart médian de 8 minutes observé sur les 67 pages d'origine. Ces 67 pages gardent leur délai.
+
+Les 10 délais les plus longs, lus sur le HTML servi, classés par fourchette puis par distance :
+
+| Commune | Délai annoncé | Distance |
+|---|---|---|
+| Périgny | 45 à 60 min | 27,2 km |
+| Mandres-les-Roses | 45 à 60 min | 26,0 km |
+| Vaucresson | 45 à 60 min | 20,6 km |
+| Chaville | 45 à 60 min | 17,7 km |
+| Marnes-la-Coquette | 45 à 60 min | 17,0 km |
+| Garches | 45 à 60 min | 16,6 km |
+| Ville-d'Avray | 45 à 60 min | 16,2 km |
+| Santeny | 40 à 55 min | 26,5 km |
+| Marolles-en-Brie | 40 à 55 min | 25,3 km |
+| Tremblay-en-France | 40 à 55 min | 24,0 km |
+
+Santeny affiche 40 à 55 min pour 26,5 km. L'Haÿ-les-Roses reste à 28 à 44 min. Paris 1er reste à 22 à 35 min.
+
+Sept communes proches restent à 25 à 40 min, trajet de 13 à 17 min : Gentilly (4,8 km), Le Kremlin-Bicêtre, Les Lilas, Maisons-Alfort, Joinville-le-Pont, Le Pré-Saint-Gervais, Romainville. Gentilly et Les Lilas ont été relus en production.
+
+### Surveillance de la duplication
+
+Le contrôle qui fait échouer le build est inchangé : Jaccard supérieur à 0,8 sur `clientContent` non vide. Ce champ est vide sur les 142 pages. `validate:data` passe.
+
+Second contrôle, informatif, affiché par le build déployé :
+
+`Surveillance duplication : ressemblance moyenne 0,745, 6 paires au-dessus de 0,9 sur 10011 (seuil informatif, le build n'échoue pas).`
+
+Texte comparé : H1, réponse courte, contenu client, fiche, listes de prestations, FAQ et limitrophes. Hors en-tête, pied de page et grille tarifaire.
+
+Les 6 paires : Bois-Colombes / La Garenne-Colombes (0,915), Les Lilas / Le Pré-Saint-Gervais (0,912), Chevilly-Larue / Rungis (0,911), Noiseau / Ormesson-sur-Marne (0,910), Coubron / Montfermeil (0,905), Noiseau / La Queue-en-Brie (0,901).
+
+### Logo et bouton d'appel
+
+`sizes="64px"` faisait choisir `w=3840` à Next.js, une taille fixe sans `vw` ne limitant pas la largeur. Le logo est déclaré en 64×64, sans `sizes`. Sur l'accueil servi, le `src` est `w=128`, avec un `srcset` en `w=64` (1x) et `w=128` (2x). Aucune image du logo n'est demandée en `w=3840`. Header et pied de page sont dans ce cas.
+
+Les boutons d'appel qui portent les deux libellés ont, balises retirées, le texte « 07 72 12 53 11 · Appeler ». Le point médian est dans le HTML et masqué à l'écran. Le lien du pied de page qui n'affiche que le numéro reste « 07 72 12 53 11 ».
+
+### Phrases
+
+179 URL du sitemap, 179 conformes. Aucune phrase ne se termine par un article, une préposition ou une conjonction, formes sans accent comprises. Les balises ont été remplacées par des espaces. Non conformes : aucune.
