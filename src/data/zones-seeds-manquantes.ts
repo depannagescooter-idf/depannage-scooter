@@ -5,7 +5,7 @@ import type { ZoneSeed } from "@/lib/zone-builder";
  * Nom, codes postaux et centre : geo.api.gouv.fr, relevé le 2026-10-01.
  * 75 communes. L'API en recense 122 (36 + 39 + 47) ; 47 avaient déjà une page.
  * Aucune voie : pas de liste validée par la BAN pour ces communes.
- * Le délai annoncé est appliqué à part : company.defaultEtaMinutes, pas une fourchette inventée.
+ * Le délai annoncé est calculé à part : temps de trajet OSRM déjà dans la fiche, plus une marge de préparation, en fourchette de 15 minutes.
  */
 export const seedsPetiteCouronneManquantes: ZoneSeed[] = [
   {

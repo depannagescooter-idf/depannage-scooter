@@ -684,8 +684,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9151,
     "lng": 2.2688,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -694,8 +694,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7801,
     "lng": 2.3167,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -704,8 +704,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7697,
     "lng": 2.2603,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -714,8 +714,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8031,
     "lng": 2.2887,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -724,8 +724,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8091,
     "lng": 2.191,
     "etaMinutes": [
-      25,
-      40
+      45,
+      60
     ]
   },
   {
@@ -734,8 +734,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7895,
     "lng": 2.2876,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -744,8 +744,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8469,
     "lng": 2.1861,
     "etaMinutes": [
-      25,
-      40
+      45,
+      60
     ]
   },
   {
@@ -754,8 +754,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9071,
     "lng": 2.2437,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -764,8 +764,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.817,
     "lng": 2.2943,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -774,8 +774,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8286,
     "lng": 2.1689,
     "etaMinutes": [
-      25,
-      40
+      45,
+      60
     ]
   },
   {
@@ -784,8 +784,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8028,
     "lng": 2.2288,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -794,8 +794,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7815,
     "lng": 2.2592,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -804,8 +804,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.844,
     "lng": 2.2032,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -814,8 +814,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.776,
     "lng": 2.2963,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -824,8 +824,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8223,
     "lng": 2.2056,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -834,8 +834,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8214,
     "lng": 2.2869,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -844,8 +844,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8377,
     "lng": 2.1628,
     "etaMinutes": [
-      25,
-      40
+      45,
+      60
     ]
   },
   {
@@ -854,8 +854,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8215,
     "lng": 2.1759,
     "etaMinutes": [
-      25,
-      40
+      45,
+      60
     ]
   },
   {
@@ -864,8 +864,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9354,
     "lng": 2.3231,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -874,8 +874,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8671,
     "lng": 2.4252,
     "etaMinutes": [
-      25,
-      40
+      20,
+      35
     ]
   },
   {
@@ -884,8 +884,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9378,
     "lng": 2.4287,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -894,8 +894,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9081,
     "lng": 2.5432,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -904,8 +904,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9173,
     "lng": 2.5759,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -914,8 +914,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9341,
     "lng": 2.3986,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -924,8 +924,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9494,
     "lng": 2.4255,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -934,8 +934,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8826,
     "lng": 2.545,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -944,8 +944,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8607,
     "lng": 2.5761,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -954,8 +954,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9465,
     "lng": 2.3204,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -974,8 +974,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8976,
     "lng": 2.5678,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -984,8 +984,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8641,
     "lng": 2.5097,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -994,8 +994,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8645,
     "lng": 2.5419,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1004,8 +1004,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8917,
     "lng": 2.4578,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1014,8 +1014,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.907,
     "lng": 2.5057,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1044,8 +1044,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8744,
     "lng": 2.4872,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1054,8 +1054,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9578,
     "lng": 2.3868,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1064,8 +1064,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9744,
     "lng": 2.5481,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1074,8 +1074,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9338,
     "lng": 2.5799,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1084,8 +1084,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8866,
     "lng": 2.5085,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1094,8 +1094,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.956,
     "lng": 2.5323,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1104,8 +1104,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.9574,
     "lng": 2.3441,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1114,8 +1114,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7236,
     "lng": 2.4229,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1124,8 +1124,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7453,
     "lng": 2.5251,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1134,8 +1134,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7721,
     "lng": 2.493,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1144,8 +1144,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8392,
     "lng": 2.5224,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1154,8 +1154,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8173,
     "lng": 2.5206,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1164,8 +1164,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7951,
     "lng": 2.5443,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1174,8 +1174,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7679,
     "lng": 2.3507,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1184,8 +1184,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8503,
     "lng": 2.4736,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1224,8 +1224,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7463,
     "lng": 2.4924,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1244,8 +1244,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7068,
     "lng": 2.5477,
     "etaMinutes": [
-      25,
-      40
+      45,
+      60
     ]
   },
   {
@@ -1254,8 +1254,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7385,
     "lng": 2.5539,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1264,8 +1264,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.837,
     "lng": 2.4811,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1274,8 +1274,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7757,
     "lng": 2.556,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1284,8 +1284,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7873,
     "lng": 2.5371,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1294,8 +1294,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.6974,
     "lng": 2.562,
     "etaMinutes": [
-      25,
-      40
+      45,
+      60
     ]
   },
   {
@@ -1304,8 +1304,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8433,
     "lng": 2.5045,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1314,8 +1314,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.808,
     "lng": 2.5763,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1324,8 +1324,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7769,
     "lng": 2.5855,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1334,8 +1334,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7493,
     "lng": 2.3499,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   },
   {
@@ -1344,8 +1344,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8414,
     "lng": 2.4195,
     "etaMinutes": [
-      25,
-      40
+      20,
+      35
     ]
   },
   {
@@ -1354,8 +1354,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8179,
     "lng": 2.4423,
     "etaMinutes": [
-      25,
-      40
+      20,
+      35
     ]
   },
   {
@@ -1364,8 +1364,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7362,
     "lng": 2.5771,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1374,8 +1374,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7688,
     "lng": 2.5374,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1384,8 +1384,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7497,
     "lng": 2.46,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1394,8 +1394,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7221,
     "lng": 2.5328,
     "etaMinutes": [
-      25,
-      40
+      40,
+      55
     ]
   },
   {
@@ -1404,8 +1404,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.732,
     "lng": 2.4076,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1414,8 +1414,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.7389,
     "lng": 2.4493,
     "etaMinutes": [
-      25,
-      40
+      35,
+      50
     ]
   },
   {
@@ -1424,8 +1424,8 @@ export const zoneCoords: ZoneCoord[] = [
     "lat": 48.8278,
     "lng": 2.5482,
     "etaMinutes": [
-      25,
-      40
+      30,
+      45
     ]
   }
 ];

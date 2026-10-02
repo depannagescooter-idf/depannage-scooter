@@ -21,13 +21,16 @@ export function Logo({ variant = "default", priority = false }: LogoProps) {
       className="group flex shrink-0 items-center gap-2.5 focus-visible:outline-offset-4 lg:gap-3"
       aria-label={`${company.name} — accueil`}
     >
+      {/*
+        Affiché à 52–64 px. Pas de sizes : une valeur fixe sans vw fait choisir à Next.js
+        le plus grand deviceSize (w=3840) comme src. Sans sizes, le src est la largeur × 2.
+      */}
       <Image
         src={company.logoPath}
         alt={LOGO_ALT}
-        width={720}
-        height={720}
+        width={64}
+        height={64}
         priority={priority}
-        sizes="64px"
         className="h-[52px] w-[52px] shrink-0 rounded-sm object-cover lg:h-16 lg:w-16"
       />
       <span className={`hidden min-w-0 flex-col lg:flex ${nameColor}`}>

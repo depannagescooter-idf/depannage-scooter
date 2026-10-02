@@ -2,10 +2,11 @@
  * Valide l'intégrité des données src/data/
  * Usage: npm run validate:data
  */
-import { departments } from "../src/data/departments";
+import { departments, getDepartmentBySlug, getDepartmentSlugByCode } from "../src/data/departments";
 import { guides } from "../src/data/guides";
 import { retiredZoneSlugList } from "../src/data/retired-zone-slugs";
-import { services } from "../src/data/services";
+import { depannageServices, remorquageServices, services } from "../src/data/services";
+import type { Zone } from "../src/data/types";
 import { retiredZoneSlugs, zones } from "../src/data/zones";
 import {
   departmentDelayText,
@@ -14,7 +15,14 @@ import {
   departmentParagraphs,
   departmentDelayStats,
 } from "../src/lib/department-hub";
-import { missingRequiredFacts, zoneFactSheetText } from "../src/lib/zone-fact-sheet";
+import { getZoneFaqs } from "../src/lib/zone-faqs";
+import {
+  limitrophesTitle,
+  limitrophesWithPage,
+  missingRequiredFacts,
+  zoneFactSheetText,
+} from "../src/lib/zone-fact-sheet";
+import { buildZoneShortAnswer } from "../src/lib/zone-short-answer";
 
 function jaccardSimilarity(a: string, b: string): number {
   const wordsA = new Set(a.toLowerCase().split(/\s+/));
@@ -94,6 +102,57 @@ for (let i = 0; i < zones.length; i++) {
 }
 
 if (errors === 0) ok("Zones: textes clients distincts, fiches d'au moins 50 mots avec distance, délai et tarif");
+
+// Second contrôle, informatif : le texte complet de la page de zone.
+// clientContent est vide sur les 142 pages, le contrôle ci-dessus ne compare donc rien.
+// Celui-ci n'échoue jamais le build. Il exclut l'en-tête, le pied de page et la grille tarifaire,
+// identiques d'une page à l'autre.
+function zoneMainText(zone: Zone): string {
+  const deptSlug = getDepartmentSlugByCode(zone.departement);
+  const department = deptSlug ? getDepartmentBySlug(deptSlug) : undefined;
+  const faqs = getZoneFaqs(zone);
+  const limitrophes = limitrophesWithPage(zone);
+  return [
+    `Dépannage et remorquage scooter et moto à ${zone.name}`,
+    buildZoneShortAnswer(zone),
+    zone.clientContent ?? "",
+    zoneFactSheetText(zone),
+    department ? `Voir aussi le dépannage scooter ${department.where} (${zone.departement})` : "",
+    `Quels dépannages sur place à ${zone.name}`,
+    ...depannageServices.map((service) => service.name),
+    `Dépannage batterie à ${zone.name}`,
+    `Batterie scooter ou moto à plat : test sur place, booster ou remplacement selon le modèle. Dépannage batterie à ${zone.name}`,
+    `Remorquage moto à ${zone.name}`,
+    ...remorquageServices.map((service) => service.name),
+    `Quel tarif de remorquage depuis ${zone.name}`,
+    `Questions fréquentes à ${zone.name}`,
+    ...faqs.flatMap((faq) => [faq.question, faq.answer]),
+    limitrophesTitle(zone),
+    ...limitrophes.map((item) => item.label),
+    `Panne à ${zone.name}`,
+    "Devis confirmé au téléphone avant toute intervention.",
+  ].join(" ");
+}
+
+const pageTexts = zones.map((zone) => zoneMainText(zone));
+let pairCount = 0;
+let similaritySum = 0;
+let aboveNine = 0;
+for (let i = 0; i < pageTexts.length; i++) {
+  for (let j = i + 1; j < pageTexts.length; j++) {
+    const sim = jaccardSimilarity(pageTexts[i]!, pageTexts[j]!);
+    pairCount++;
+    similaritySum += sim;
+    if (sim > 0.9) aboveNine++;
+  }
+}
+const average = pairCount === 0 ? 0 : similaritySum / pairCount;
+console.log(
+  `Surveillance duplication : ressemblance moyenne ${average.toFixed(3).replace(".", ",")}, ${aboveNine} paires au-dessus de 0,9 sur ${pairCount} (seuil informatif, le build n'échoue pas).`,
+);
+console.log(
+  "Texte comparé : H1, réponse courte, contenu client, fiche, listes de prestations, FAQ et limitrophes. Hors en-tête, pied de page et grille tarifaire.",
+);
 
 for (const department of departments) {
   const length = department.metaDescription.length;

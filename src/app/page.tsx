@@ -20,9 +20,10 @@ import { createPageMetadata } from "@/lib/metadata";
 import { faqPageSchema, organizationSchema, webSiteSchema } from "@/lib/schema";
 
 export const metadata: Metadata = createPageMetadata({
-  title: "Dépannage scooter et moto 24h/24, remorquage ensuite",
+  title: "Dépannage scooter, moto et voiture 24h/24 en Île-de-France",
+  absoluteTitle: true,
   description:
-    `Dépannage et remorquage scooter et moto en Île-de-France, 24h/24. Intervention en ${company.defaultEtaMinutes[0]}–${company.defaultEtaMinutes[1]} min. Devis ferme au ${company.phoneDisplay} avant départ.`,
+    `Dépannage scooter, moto et voiture en Île-de-France, 24h/24. Intervention en ${company.defaultEtaMinutes[0]}–${company.defaultEtaMinutes[1]} min. Devis ferme au ${company.phoneDisplay} avant départ.`,
   path: "/",
 });
 
@@ -43,7 +44,7 @@ export default function HomePage() {
             ● Équipes disponibles — {company.openingHours}
           </span>
           <h1 className="mt-4 max-w-3xl font-display text-4xl font-extrabold tracking-tight text-asphalte sm:text-5xl lg:text-6xl">
-            Dépannage scooter et moto 24h/24 en Île-de-France, remorquage si la panne ne se répare pas sur place
+            Dépannage scooter, moto et voiture 24h/24 en Île-de-France
           </h1>
           <div className="mt-6 max-w-2xl">
             <ShortAnswer>

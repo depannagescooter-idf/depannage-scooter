@@ -24,6 +24,23 @@ function distanceKm(lat1: number, lng1: number, lat2: number, lng2: number): num
   return r * 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
 }
 
+/**
+ * Marge de préparation après l'appel, avant le départ.
+ * Sur les 67 pages d'origine, l'écart médian entre le bas de fourchette annoncé
+ * et le temps de trajet OSRM est de 8 minutes. Dix minutes restent au-dessus du trajet
+ * après l'arrondi (au plus 2 minutes vers le bas).
+ */
+export const PREP_MARGIN_MIN = 10;
+
+/**
+ * Fourchette annoncée de 15 minutes à partir du temps de trajet OSRM déjà calculé.
+ * Le bas est le trajet plus la marge, arrondi au multiple de 5 le plus proche.
+ */
+export function etaFromOsrmDuration(durationMin: number): [number, number] {
+  const low = Math.round((durationMin + PREP_MARGIN_MIN) / 5) * 5;
+  return [low, low + 15];
+}
+
 export function etaFromDistance(lat: number, lng: number): [number, number] {
   const km = distanceKm(PARIS_LAT, PARIS_LNG, lat, lng);
   if (km < 8) return [25, 40];

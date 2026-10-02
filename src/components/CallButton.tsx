@@ -31,6 +31,8 @@ export function CallButton({ origin, labelOnly = false, className = "" }: CallBu
       ) : (
         <>
           <span className="hidden font-data tabular-nums lg:inline">{company.phoneDisplay}</span>
+          {/* Sépare les deux libellés dans le HTML. Masqué à l'écran : un seul des deux s'affiche. */}
+          <span className="hidden"> · </span>
           <span className="lg:hidden">Appeler</span>
         </>
       )}

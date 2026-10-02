@@ -31,6 +31,11 @@ export interface PageMetadataInput {
   follow?: boolean;
   /** true = laisser Next.js utiliser opengraph-image.tsx du dossier route */
   useRouteOg?: boolean;
+  /**
+   * true = ce titre est servi tel quel, sans le suffixe du template du layout.
+   * og:title et twitter:title reçoivent la même chaîne.
+   */
+  absoluteTitle?: boolean;
 }
 
 export function createPageMetadata({
@@ -40,6 +45,7 @@ export function createPageMetadata({
   index = isProduction(),
   follow,
   useRouteOg = false,
+  absoluteTitle = false,
 }: PageMetadataInput): Metadata {
   const shouldIndex = index;
   const shouldFollow = follow ?? shouldIndex;
@@ -52,7 +58,7 @@ export function createPageMetadata({
       };
 
   return {
-    title,
+    title: absoluteTitle ? { absolute: title } : title,
     description,
     alternates: {
       canonical: url,

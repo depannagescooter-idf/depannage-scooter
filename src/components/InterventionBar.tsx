@@ -38,6 +38,7 @@ export function InterventionBar() {
         >
           <IconPhone className="size-4" />
           <span className="hidden font-data tabular-nums lg:inline">{company.phoneDisplay}</span>
+          <span className="hidden"> · </span>
           <span className="lg:hidden">Appeler</span>
         </a>
       </div>
