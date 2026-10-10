@@ -1,6 +1,6 @@
 # Rapports de vérification — depannagescooter.com
 
-Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle : `333a6fc`.
+Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle : `b3e7f36`.
 
 Le domaine, les URL absolues et les redirections n’ont pas été modifiés.
 
@@ -208,3 +208,45 @@ Les boutons d'appel qui portent les deux libellés ont, balises retirées, le te
 ### Phrases
 
 179 URL du sitemap, 179 conformes. Aucune phrase ne se termine par un article, une préposition ou une conjonction, formes sans accent comprises. Les balises ont été remplacées par des espaces. Non conformes : aucune.
+
+---
+
+## Quatre photos d'intervention
+
+Déployé (`b3e7f36`). Contrôlé sur le HTML servi après le déploiement Vercel. Chemins relatifs `/images/interventions/`. Le domaine et les URL absolues n'ont pas été modifiés.
+
+Dix emplacements, dix conformes. Chaque photo a l'alt exact, `loading="lazy"` et un `sizes` qui contient `vw`.
+
+| Page | Photo |
+|---|---|
+| /depannage-moto/ | BMW GS, 11,7 V |
+| /depannage-sur-place/demarrage-booster/ | BMW GS, 11,7 V |
+| /zones-intervention/paris-3e/ | BMW GS, 11,7 V |
+| /depannage-sur-place/batterie/ | scooter, 14,5 V |
+| /zones-intervention/paris-2e/ | scooter, 14,5 V |
+| /depannage-sur-place/crevaison/ | crevaison de nuit, dans la galerie |
+| /zones-intervention/paris-1er/ | crevaison de nuit |
+| /depannage-sur-place/crevaison/ | pneu usé, hors galerie |
+| /remorquage/remorquage-scooter/ | pneu usé |
+| /zones-intervention/paris-19e/ | pneu usé |
+
+Les quatre fichiers et les quatre URL `/_next/image/` citées en `src` répondent **200**.
+
+Galerie crevaison : 4 images, classe `grid-cols-1 sm:grid-cols-2 lg:grid-cols-4`. La photo du pneu usé n'est pas dans cette liste. Elle est dans la section « Quand faut-il un remorquage plutôt ? », avant la galerie. La phrase « mèche est impossible » reste dans l'étape « Pose d'une mèche ».
+
+Le `src` de repli écrit par Next.js est `w=3840` dès qu'un attribut `sizes` est présent : c'est le plus grand candidat du `srcset`, comme sur la galerie de remorquage déjà en ligne. Le `sizes` n'est pas une valeur fixe en pixels. La largeur réellement téléchargée par le navigateur via `srcset` n'a pas été mesurée.
+
+Textes client, exacts, avec la photo, avant la fiche : Paris 1er, Paris 2e, Paris 3e, Paris 19e.
+
+Jaccard sur `clientContent` non vide, seuil 0,8 inchangé. Six paires, aucune au-dessus de 0,8. `validate:data` passe.
+
+| Paire | Similarité |
+|---|---|
+| Paris 1er / Paris 2e | 0,029 |
+| Paris 1er / Paris 3e | 0,054 |
+| Paris 1er / Paris 19e | 0,125 |
+| Paris 2e / Paris 3e | 0,261 |
+| Paris 2e / Paris 19e | 0,129 |
+| Paris 3e / Paris 19e | 0,056 |
+
+Phrases : **179 contrôles, 179 conformes.** Non conformes : aucune.
