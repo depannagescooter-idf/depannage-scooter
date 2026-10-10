@@ -10,7 +10,14 @@ import { ServicePriceTable } from "@/components/ServicePriceTable";
 import type { Service } from "@/data/types";
 import { getServiceBySlug } from "@/data/services";
 import { CrevaisonGallery } from "@/components/CrevaisonGallery";
+import { InterventionFigure } from "@/components/InterventionFigure";
 import { RemorquageGallery } from "@/components/RemorquageGallery";
+import {
+  photoBmwGsParis3e,
+  photoPneuUseParis19e,
+  photoScooterParis2e,
+  type InterventionPhoto,
+} from "@/data/intervention-photos";
 import { ServiceZonesCompact } from "@/components/ServiceZonesCompact";
 import { faqPageSchema, serviceSchema } from "@/lib/schema";
 
@@ -33,6 +40,15 @@ export function ServicePageContent({
         ? "remorquage-scooter"
         : "remorquage-moto"
       : undefined;
+
+  const leadPhoto: InterventionPhoto | undefined =
+    service.slug === "demarrage-booster"
+      ? photoBmwGsParis3e
+      : service.slug === "batterie"
+        ? photoScooterParis2e
+        : service.slug === "remorquage-scooter"
+          ? photoPneuUseParis19e
+          : undefined;
 
   return (
     <>
@@ -67,6 +83,8 @@ export function ServicePageContent({
             <CallButton origin="inline" />
             <WhatsAppButton origin="inline" />
           </div>
+
+          {leadPhoto && <InterventionFigure photo={leadPhoto} className="mt-8" />}
 
           <p className="mt-8 leading-relaxed text-beton">{service.intro}</p>
 
@@ -156,6 +174,9 @@ export function ServicePageContent({
                   </>
                 )}
               </p>
+              {service.slug === "crevaison" && (
+                <InterventionFigure photo={photoPneuUseParis19e} className="mt-4" />
+              )}
             </section>
           )}
 

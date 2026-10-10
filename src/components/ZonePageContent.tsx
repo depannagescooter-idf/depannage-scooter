@@ -6,7 +6,9 @@ import { JsonLd } from "@/components/JsonLd";
 import { PriceTable } from "@/components/PriceTable";
 import { ShortAnswer } from "@/components/ShortAnswer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { InterventionFigure } from "@/components/InterventionFigure";
 import { ZoneFactSheet } from "@/components/ZoneFactSheet";
+import { zoneInterventionPhotos } from "@/data/intervention-photos";
 import { getDepartmentBySlug, getDepartmentSlugByCode } from "@/data/departments";
 import { depannageServices, remorquageServices } from "@/data/services";
 import type { Zone } from "@/data/types";
@@ -20,6 +22,7 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
 
   const shortAnswer = buildZoneShortAnswer(zone);
   const zoneFaqs = getZoneFaqs(zone);
+  const interventionPhoto = zoneInterventionPhotos[zone.slug];
   const deptSlug = getDepartmentSlugByCode(zone.departement);
   const department = deptSlug ? getDepartmentBySlug(deptSlug) : undefined;
 
@@ -47,11 +50,16 @@ export function ZonePageContent({ zone }: { zone: Zone }) {
             <WhatsAppButton origin="inline" />
           </div>
 
-          {zone.clientContent && (
-            <div className="mt-8 space-y-4 leading-relaxed text-asphalte">
-              {zone.clientContent.split(/\n\s*\n/).map((paragraph) => (
-                <p key={paragraph}>{paragraph}</p>
-              ))}
+          {(interventionPhoto || zone.clientContent) && (
+            <div className="mt-8 space-y-4">
+              {interventionPhoto && <InterventionFigure photo={interventionPhoto} />}
+              {zone.clientContent && (
+                <div className="space-y-4 leading-relaxed text-asphalte">
+                  {zone.clientContent.split(/\n\s*\n/).map((paragraph) => (
+                    <p key={paragraph}>{paragraph}</p>
+                  ))}
+                </div>
+              )}
             </div>
           )}
 

@@ -1,4 +1,6 @@
-/** Photos réelles de réparation de crevaison Honda X-ADV sur place. */
+import { photoCrevaisonParis1er } from "@/data/intervention-photos";
+
+/** Photos réelles de réparation de crevaison sur place. */
 export interface CrevaisonPhoto {
   src: string;
   alt: string;
@@ -25,4 +27,5 @@ export const crevaisonGallery: CrevaisonPhoto[] = [
     width: 1200,
     height: 1600,
   },
+  photoCrevaisonParis1er,
 ];

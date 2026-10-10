@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { InterventionFigure } from "@/components/InterventionFigure";
 import { PageShell } from "@/components/PageShell";
+import { photoBmwGsParis3e } from "@/data/intervention-photos";
 import { Breadcrumb } from "@/components/Breadcrumb";
 import { CallButton } from "@/components/CallButton";
 import { JsonLd } from "@/components/JsonLd";
@@ -57,6 +59,7 @@ export default function DepannageMotoPage() {
             {company.phoneDisplay} avant départ.
           </ShortAnswer>
         </div>
+        <InterventionFigure photo={photoBmwGsParis3e} className="mt-6" />
         <div className="mt-6 flex flex-wrap gap-3">
           <CallButton origin="inline" />
           <WhatsAppButton origin="inline" />
