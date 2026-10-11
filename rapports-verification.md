@@ -1,6 +1,6 @@
 # Rapports de vérification — depannagescooter.com
 
-Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle : `b3e7f36`.
+Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle des pages : `ea3683c`.
 
 Le domaine, les URL absolues et les redirections n’ont pas été modifiés.
 
@@ -250,3 +250,44 @@ Jaccard sur `clientContent` non vide, seuil 0,8 inchangé. Six paires, aucune au
 | Paris 3e / Paris 19e | 0,056 |
 
 Phrases : **179 contrôles, 179 conformes.** Non conformes : aucune.
+
+---
+
+## Mentions tarifaires et périmètre des 142 zones
+
+Déployé (`ea3683c`), fast-forward de `7947b93`. Vercel : déploiement terminé. Contrôle sur le HTML servi, en-tête `Cache-Control: no-cache`.
+
+Le title et le H1 de l'accueil restent « Dépannage scooter, moto et voiture 24h/24 en Île-de-France ». Le title et le H1 de `/zones-intervention/` n'ont pas été modifiés. L'introduction de cette page disait déjà « Paris (20 arrondissements) et en petite couronne (92, 93, 94) : 142 communes. La grande couronne n'est plus desservie. » Elle n'a pas été réécrite.
+
+La légende de la galerie remorquage dit « Sangles », pour que le mot « sanglage » ne reste que dans la note du tableau de remorquage. Les textes alternatifs « sanglée » n'ont pas changé.
+
+**1 675 contrôles, 1 675 conformes.** Non conformes : aucune.
+
+| Contrôle | Nombre | Conformes |
+|---|---|---|
+| « déplacement inclus » après un tableau qui ne contient pas le déplacement (330 tableaux) | 330 | 330 |
+| Phrase de distance et de trajet d'approche après chaque tableau de remorquage | 154 | 154 |
+| « sanglage » hors note de remorquage | 161 | 161 |
+| Forfait 50 € : main-d'œuvre couverte, déplacement en plus, pas de sanglage | 11 | 11 |
+| Frais de déplacement : aucun bloc d'inclusion | 11 | 11 |
+| Grille en total : « Déplacement inclus dans le total. » | 3 | 3 |
+| Pneu voiture : « Le pneu neuf est facturé en plus. » | 1 | 1 |
+| Quatre mentions communes, une fois chacune | 644 | 644 |
+| « 142 zones en Île-de-France » | 179 | 179 |
+| Phrase terminée par un article, une préposition ou une conjonction | 179 | 179 |
+| Accueil : « 142 zones : Paris et petite couronne (92, 93, 94) » | 1 | 1 |
+| Introduction `/zones-intervention/` | 1 | 1 |
+
+161 pages portent un tableau tarifaire, pas 160 : `/depannage-voiture/pneu/` a une grille. Répartition : 142 zones, 4 hubs, accueil, `/tarifs/`, `/remorquage/`, 5 dépannages, 5 remorquages, batterie voiture, pneu voiture.
+
+Les mentions ont été comptées dans le HTML visible, balises `script` retirées, entités décodées. Le fichier brut en contient deux : la seconde est le payload React, pas un second bloc affiché. `data-price-conditions` et le lien `/faq/#assistance-0-km` sont visibles une fois sur chaque page tarifaire.
+
+Phrases du sitemap : balises remplacées par des espaces, y compris le contenu des scripts. 179 URL, 179 conformes.
+
+Exemples servis, texte visible, balises retirées.
+
+Accueil : remorquage 79 €, 89 €, 99 €, 120 €, sur devis au-delà de 20 km. « Tarif calculé sur la distance entre le lieu de la panne et la destination. Le trajet du dépanneur jusqu'à votre véhicule n'est pas facturé. Sanglage et calage adaptés aux deux-roues, assurance responsabilité civile professionnelle. » Forfait 50 €. « Le forfait couvre la main-d'œuvre. Le déplacement s'ajoute selon la zone. » Frais de déplacement : Paris + 20 €, total 70 € ; petite couronne + 30 €, total 80 €. Rien sous ce tableau, puis une seule fois le devis ferme, l'accord du client, le paiement par carte ou espèces, et l'encart assurance.
+
+`/tarifs/` : batterie 70 € / 80 € (booster) et 90 € / 100 € (remplacement), « déplacement inclus » dans les cellules, puis « Déplacement inclus dans le total. » Majorations sans inclusion. Remorquage avec la phrase de distance et le sanglage. Forfait 50 € avec la phrase de main-d'œuvre. Frais de déplacement sans inclusion. Majorations deux-roues sans inclusion. Mentions communes une fois, après le dernier tableau.
+
+Paris 1er : la fiche dit dans la cellule « 70 € TTC déplacement inclus ». Le tableau de remorquage est suivi de la phrase de distance, du sanglage, puis des mentions communes une fois.
