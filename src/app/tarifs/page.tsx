@@ -64,7 +64,7 @@ export default function TarifsPage() {
             .
           </p>
           <div className="mt-4">
-            <CarBatteryPriceTable />
+            <CarBatteryPriceTable showCommonNotes={false} />
           </div>
         </section>
 

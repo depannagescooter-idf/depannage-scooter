@@ -8,7 +8,7 @@ export function RemorquageGallery() {
         Remorquage sécurisé sur plateau
       </h2>
       <p className="mt-2 text-sm text-beton">
-        Sanglage, bloque-roue et rails de fixation — scooters, motos et trois-roues pris en charge
+        Sangles, bloque-roue et rails de fixation — scooters, motos et trois-roues pris en charge
         en Île-de-France.
       </p>
       <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:gap-4">

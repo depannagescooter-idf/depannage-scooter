@@ -1,4 +1,4 @@
-import { PriceInclusions } from "@/components/PriceInclusions";
+import { PriceConditions, TablePriceNote } from "@/components/PriceInclusions";
 import {
   formatPrice,
   getCarBatteryBoostTotal,
@@ -14,9 +14,14 @@ const ZONE_COLUMNS: { key: TravelZoneKey; label: string }[] = [
 
 export interface CarBatteryPriceTableProps {
   showSurcharges?: boolean;
+  /** Faux quand un autre bloc de tableaux suit sur la même page. */
+  showCommonNotes?: boolean;
 }
 
-export function CarBatteryPriceTable({ showSurcharges = true }: CarBatteryPriceTableProps) {
+export function CarBatteryPriceTable({
+  showSurcharges = true,
+  showCommonNotes = true,
+}: CarBatteryPriceTableProps) {
   const { carBattery, surcharges, difficultySurcharge } = pricing;
 
   const serviceRows = [
@@ -80,7 +85,7 @@ export function CarBatteryPriceTable({ showSurcharges = true }: CarBatteryPriceT
           Petite couronne : +{formatPrice(carBattery.travelFees.PETITE_COURONNE - carBattery.travelFees.PARIS)} par rapport à Paris.
         </p>
       </div>
-      <PriceInclusions includeStrapping={false} />
+      <TablePriceNote kind="total" />
 
       {showSurcharges && (
         <>
@@ -118,13 +123,13 @@ export function CarBatteryPriceTable({ showSurcharges = true }: CarBatteryPriceT
               </table>
             </div>
           </div>
-          <PriceInclusions includeStrapping={false} />
           <p className="text-sm text-beton">
             Supplément pénibilité (+{formatPrice(difficultySurcharge.amount)}) : parking souterrain,
             accès difficile, véhicule accidenté.
           </p>
         </>
       )}
+      {showCommonNotes ? <PriceConditions /> : null}
     </div>
   );
 }

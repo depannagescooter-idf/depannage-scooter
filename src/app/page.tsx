@@ -197,7 +197,7 @@ export default function HomePage() {
           href="/zones-intervention/"
           className="mt-4 inline-block text-sm font-medium text-gyro hover:underline"
         >
-          {publishedZones.length} zones en Île-de-France →
+          {publishedZones.length} zones : Paris et petite couronne (92, 93, 94) →
         </Link>
       </section>
 

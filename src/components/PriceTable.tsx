@@ -1,4 +1,4 @@
-import { PriceInclusions } from "@/components/PriceInclusions";
+import { PriceConditions, TablePriceNote, type PriceTableKind } from "@/components/PriceInclusions";
 import {
   formatPrice,
   getDspTotal,
@@ -12,15 +12,19 @@ export interface PriceTableProps {
   showSurcharges?: boolean;
   /** Colonnes de déplacement affichées. Par défaut : Paris et petite couronne. */
   travelZones?: readonly TravelZoneKey[];
+  /** Faux quand un autre bloc de tableaux suit sur la même page. */
+  showCommonNotes?: boolean;
 }
 
 function TableCard({
   title,
   id,
+  note,
   children,
 }: {
   title: string;
   id: string;
+  note?: PriceTableKind;
   children: React.ReactNode;
 }) {
   return (
@@ -33,7 +37,7 @@ function TableCard({
         </div>
         <div className="overflow-x-auto">{children}</div>
       </section>
-      <PriceInclusions />
+      {note ? <TablePriceNote kind={note} /> : null}
     </div>
   );
 }
@@ -43,12 +47,13 @@ export function PriceTable({
   showTowing = true,
   showSurcharges = true,
   travelZones = offeredTravelZones,
+  showCommonNotes = true,
 }: PriceTableProps) {
   const showZoneColumn = travelZones.length > 1;
   return (
     <div className="space-y-4">
       {showTowing && (
-        <TableCard title="Remorquage — tarifs jour TTC" id="price-towing">
+        <TableCard title="Remorquage — tarifs jour TTC" id="price-towing" note="towing">
           <table className="w-full min-w-[280px] text-sm">
             <thead>
               <tr className="border-b border-border-soft text-left text-xs uppercase tracking-wide text-beton">
@@ -79,7 +84,7 @@ export function PriceTable({
 
       {showDsp && (
         <>
-          <TableCard title="Dépannage sur place — forfait prestation" id="price-dsp-base">
+          <TableCard title="Dépannage sur place — forfait prestation" id="price-dsp-base" note="dsp">
             <table className="w-full min-w-[280px] text-sm">
               <tbody>
                 <tr className="bg-surface">
@@ -164,6 +169,7 @@ export function PriceTable({
           </table>
         </TableCard>
       )}
+      {showCommonNotes ? <PriceConditions /> : null}
     </div>
   );
 }

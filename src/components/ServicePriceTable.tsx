@@ -1,4 +1,4 @@
-import { PriceInclusions } from "@/components/PriceInclusions";
+import { PriceConditions, TablePriceNote } from "@/components/PriceInclusions";
 import {
   formatPrice,
   getDspTotal,
@@ -43,7 +43,7 @@ export function ServicePriceTable({ priceKey }: ServicePriceTableProps) {
             </tbody>
           </table>
         </div>
-        <PriceInclusions />
+        <TablePriceNote kind="dsp" />
         <div className="card overflow-hidden">
           <table className="w-full text-sm">
             <thead>
@@ -80,7 +80,7 @@ export function ServicePriceTable({ priceKey }: ServicePriceTableProps) {
             </tbody>
           </table>
         </div>
-        <PriceInclusions />
+        <PriceConditions />
       </div>
     );
   }
@@ -121,7 +121,8 @@ export function ServicePriceTable({ priceKey }: ServicePriceTableProps) {
           </p>
         )}
         </div>
-        <PriceInclusions />
+        <TablePriceNote kind="towing" />
+        <PriceConditions />
       </div>
     );
   }

@@ -1,4 +1,4 @@
-import { PriceInclusions } from "@/components/PriceInclusions";
+import { PriceConditions, TablePriceNote } from "@/components/PriceInclusions";
 import {
   formatPrice,
   getCarTireOnSiteTotal,
@@ -68,7 +68,7 @@ export function CarTirePriceTable() {
           Ce total couvre la main-d&apos;œuvre et le déplacement. Le pneu neuf est facturé en plus.
         </p>
       </div>
-      <PriceInclusions includeStrapping={false} />
+      <TablePriceNote kind="total-tire" />
 
       <div className="card overflow-hidden">
         <div className="border-b border-border-soft bg-surface-muted/60 px-5 py-3.5">
@@ -102,11 +102,11 @@ export function CarTirePriceTable() {
           </table>
         </div>
       </div>
-      <PriceInclusions includeStrapping={false} />
       <p className="text-sm text-beton">
         Supplément pénibilité (+{formatPrice(difficultySurcharge.amount)}) :{" "}
         {difficultySurcharge.label}.
       </p>
+      <PriceConditions />
     </div>
   );
 }
