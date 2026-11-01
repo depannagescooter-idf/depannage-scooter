@@ -1,4 +1,8 @@
-import { photoCrevaisonParis1er } from "@/data/intervention-photos";
+import {
+  photoCrevaisonParis1er,
+  photoMp3Paris16e,
+  photoSilenceParis3e,
+} from "@/data/intervention-photos";
 
 /** Photos réelles de réparation de crevaison sur place. */
 export interface CrevaisonPhoto {
@@ -21,11 +25,7 @@ export const crevaisonGallery: CrevaisonPhoto[] = [
     width: 1200,
     height: 1600,
   },
-  {
-    src: "/images/crevaison/pose-meche-pneu-honda-x-adv.jpg",
-    alt: "Pose d'une mèche dans le pneu arrière crevé d'un Honda X-ADV, kit de réparation et compresseur posés à côté de la roue",
-    width: 1200,
-    height: 1600,
-  },
   photoCrevaisonParis1er,
+  photoMp3Paris16e,
+  photoSilenceParis3e,
 ];

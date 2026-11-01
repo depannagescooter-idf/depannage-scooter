@@ -2,28 +2,34 @@ import Image from "next/image";
 import type { InterventionPhoto } from "@/data/intervention-photos";
 
 /**
- * Photo seule, colonne de 42rem (max-w-2xl) dans une page en max-w-6xl.
- * sizes en vw : une valeur fixe en pixels seuls fait choisir w=3840 à Next.js.
- * Mobile : 100vw moins le padding de la page (1rem de chaque côté).
- * À partir de sm : padding 1,5rem. Au-delà de 720px la colonne est plafonnée à 42rem.
+ * Photo d'intervention. Le jeton vw est séparé par un espace : un vw seulement
+ * dans calc() n'est pas vu par Next.js, qui retombe alors sur toutes les largeurs.
+ * Au-delà de 720px la colonne seule est plafonnée à 42rem.
  */
-const LEAD_SIZES = "(max-width: 640px) calc(100vw - 2rem), (max-width: 720px) calc(100vw - 3rem), 42rem";
+const LEAD_SIZES = "(max-width: 640px) 100vw, (max-width: 720px) 100vw, 42rem";
+
+/** Deux photos côte à côte à partir de sm, empilées en dessous. */
+export const PAIR_SIZES = "(max-width: 639px) 100vw, 50vw";
 
 export function InterventionFigure({
   photo,
   className = "",
+  sizes = LEAD_SIZES,
+  constrain = true,
 }: {
   photo: InterventionPhoto;
   className?: string;
+  sizes?: string;
+  constrain?: boolean;
 }) {
   return (
-    <figure className={`max-w-2xl ${className}`}>
+    <figure className={constrain ? `max-w-2xl ${className}` : className}>
       <Image
         src={photo.src}
         alt={photo.alt}
         width={photo.width}
         height={photo.height}
-        sizes={LEAD_SIZES}
+        sizes={sizes}
         loading="lazy"
         className="h-auto w-full rounded-sm border border-border object-cover"
       />

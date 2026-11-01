@@ -1,3 +1,5 @@
+import { photoApriliaSrMotard } from "@/data/intervention-photos";
+
 /** Photos réelles de remorquage — alt textes depuis textes-alternatifs.pdf */
 export interface RemorquagePhoto {
   src: string;
@@ -61,4 +63,5 @@ export const remorquageGallery: RemorquagePhoto[] = [
     width: 600,
     height: 600,
   },
+  photoApriliaSrMotard,
 ];

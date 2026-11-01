@@ -1,5 +1,5 @@
-import Image from "next/image";
 import { remorquageGallery } from "@/data/remorquage-gallery";
+import { PhotoGallery } from "@/components/PhotoGallery";
 
 export function RemorquageGallery() {
   return (
@@ -11,21 +11,7 @@ export function RemorquageGallery() {
         Sangles, bloque-roue et rails de fixation — scooters, motos et trois-roues pris en charge
         en Île-de-France.
       </p>
-      <ul className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:gap-4">
-        {remorquageGallery.map((photo) => (
-          <li key={photo.src} className="overflow-hidden rounded-sm border border-border">
-            <Image
-              src={photo.src}
-              alt={photo.alt}
-              width={photo.width}
-              height={photo.height}
-              sizes="(max-width: 640px) calc((100vw - 2.75rem) / 2), (max-width: 1024px) calc((100vw - 4.5rem) / 3), (max-width: 1152px) calc((100vw - 5rem) / 3), 22rem"
-              loading="lazy"
-              className="h-auto w-full object-cover"
-            />
-          </li>
-        ))}
-      </ul>
+      <PhotoGallery photos={remorquageGallery} />
     </section>
   );
 }

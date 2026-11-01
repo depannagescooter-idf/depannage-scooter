@@ -10,12 +10,13 @@ import { ServicePriceTable } from "@/components/ServicePriceTable";
 import type { Service } from "@/data/types";
 import { getServiceBySlug } from "@/data/services";
 import { CrevaisonGallery } from "@/components/CrevaisonGallery";
-import { InterventionFigure } from "@/components/InterventionFigure";
+import { InterventionFigure, PAIR_SIZES } from "@/components/InterventionFigure";
 import { RemorquageGallery } from "@/components/RemorquageGallery";
 import {
   photoBmwGsParis3e,
   photoPneuUseParis19e,
   photoScooterParis2e,
+  photoTracerParis12e,
   type InterventionPhoto,
 } from "@/data/intervention-photos";
 import { ServiceZonesCompact } from "@/components/ServiceZonesCompact";
@@ -42,13 +43,11 @@ export function ServicePageContent({
       : undefined;
 
   const leadPhoto: InterventionPhoto | undefined =
-    service.slug === "demarrage-booster"
-      ? photoBmwGsParis3e
-      : service.slug === "batterie"
-        ? photoScooterParis2e
-        : service.slug === "remorquage-scooter"
-          ? photoPneuUseParis19e
-          : undefined;
+    service.slug === "batterie"
+      ? photoScooterParis2e
+      : service.slug === "remorquage-scooter"
+        ? photoPneuUseParis19e
+        : undefined;
 
   return (
     <>
@@ -84,7 +83,18 @@ export function ServicePageContent({
             <WhatsAppButton origin="inline" />
           </div>
 
-          {leadPhoto && <InterventionFigure photo={leadPhoto} className="mt-8" />}
+          {service.slug === "demarrage-booster" ? (
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              <InterventionFigure photo={photoBmwGsParis3e} sizes={PAIR_SIZES} constrain={false} />
+              <InterventionFigure
+                photo={photoTracerParis12e}
+                sizes={PAIR_SIZES}
+                constrain={false}
+              />
+            </div>
+          ) : (
+            leadPhoto && <InterventionFigure photo={leadPhoto} className="mt-8" />
+          )}
 
           <p className="mt-8 leading-relaxed text-beton">{service.intro}</p>
 

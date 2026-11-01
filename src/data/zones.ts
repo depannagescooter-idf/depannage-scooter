@@ -1,3 +1,4 @@
+import { clientTextForZone } from "./intervention-photos";
 import type { Zone } from "./types";
 import { buildExtendedZones } from "./zones-extended";
 
@@ -513,12 +514,6 @@ const coreZones: Zone[] = [
  * texte comparé par le contrôle de similarité de validate:data.
  */
 const clientContent: Record<string, string> = {
-  "paris-1er":
-    "Crevaison réparée de nuit sur un scooter, sur les pavés du 1er arrondissement : pose d'une mèche, test d'étanchéité à l'eau savonneuse et regonflage.",
-  "paris-2e":
-    "Démarrage au booster d'un scooter dans le 2e arrondissement ; le booster affiche 14,5 volts.",
-  "paris-3e":
-    "Démarrage au booster d'une moto BMW GS dans le 3e arrondissement, batterie mesurée à 11,7 volts.",
   "paris-4e": "",
   "paris-5e": "",
   "paris-6e": "",
@@ -534,8 +529,6 @@ const clientContent: Record<string, string> = {
   "paris-16e": "",
   "paris-17e": "",
   "paris-18e": "",
-  "paris-19e":
-    "Pneu de scooter usé jusqu'à la carcasse dans le 19e arrondissement : réparation refusée, scooter remorqué vers un atelier pour le remplacement du pneu.",
   "paris-20e": "",
   "boulogne-billancourt": "",
   "nanterre": "",
@@ -650,7 +643,7 @@ const SERVED_DEPARTEMENTS = new Set(["75", "92", "93", "94"]);
 
 const builtZones: Zone[] = [...coreZones, ...buildExtendedZones(coreZones)].map((z) => ({
   ...z,
-  clientContent: clientContent[z.slug] ?? "",
+  clientContent: clientTextForZone(z.slug) ?? clientContent[z.slug] ?? "",
 }));
 
 /** Communes retirées : le client n'y intervient plus. Leurs URL redirigent en 301. */
