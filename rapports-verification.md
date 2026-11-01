@@ -1,6 +1,6 @@
 # Rapports de vérification — depannagescooter.com
 
-Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle des pages : `22b63fe`.
+Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle complet des pages : `22b63fe`. L'échange des deux photos de pneu est `365e1ea`.
 
 Le domaine, les URL absolues et les redirections n’ont pas été modifiés.
 
@@ -311,7 +311,7 @@ Quatre fichiers JPEG ont été ajoutés tels quels, sans réencodage.
 | `public/images/interventions/reparation-crevaison-scooter-electrique-silence-paris-3e.jpg` | 1200×1600 | 346 186 octets | Pneu plus étroit, mèche visible, roue au-dessus d'un marquage blanc |
 | `public/images/remorquage/remorquage-scooter-aprilia-sr-motard-ile-de-france.jpg` | 600×600 | 76 298 octets | Scooter sanglé dans un camion, selle rouge et noire, « SR MOTARD » lisible sur le flanc |
 
-Les noms de véhicules viennent des noms de fichiers et des textes demandés. Sur les trois premières photos, le modèle n'est pas écrit dans l'image. Seule la photo de remorquage porte un libellé lisible, « SR MOTARD ». Les deux photos de pneu ont été distinguées par la scène : l'une avec le gonfleur, l'autre avec la mèche seule au-dessus du marquage. Si l'affectation MP3 / Silence devait être inversée, ce sont ces deux fichiers-là.
+Les noms de véhicules viennent des noms de fichiers et des textes demandés. Sur les trois premières photos, le modèle n'est pas écrit dans l'image. Seule la photo de remorquage porte un libellé lisible, « SR MOTARD ». Les deux photos de pneu ont été distinguées par la scène : l'une avec le gonfleur, l'autre avec la mèche seule au-dessus du marquage. Cette affectation était fausse. Le contenu des deux fichiers a été échangé ensuite (`365e1ea`). Le tableau ci-dessus décrit l'état du premier déploiement, avant cet échange.
 
 `pose-meche-pneu-honda-x-adv.jpg` a été retiré de la galerie crevaison seulement. Le fichier reste dans le dépôt (768×1024, 132 399 octets) et dans le guide `/guides/crevaison-scooter-reparer-ou-remorquer/`.
 
@@ -383,3 +383,41 @@ Phrases du sitemap : 179 URL, balises remplacées par des espaces, y compris le 
 | Jaccard ≤ 0,8 | 15 | 15 |
 | Sitemap : 179 URL | 1 | 1 |
 | Phrase du sitemap terminée par un mot outil | 1 | 1 |
+
+---
+
+## Titres des photos, et échange des deux pneus
+
+Le client indique que chacune des quatre photos envoyées avait un titre.
+
+### Ce qui est arrivé
+
+Les quatre images jointes portaient toutes le même nom de fichier : `image.jpg`. Elles ont été enregistrées sous des identifiants sans rapport avec ces titres : `dddcdfcc-f493-487f-8627-7762226dd855.jpg`, `6dbf1585-6b43-4277-a741-47a2ae734cc8.jpg`, `5f22b313-90bd-4c16-9985-aaa6017e114c.jpg`, `fb55db93-b7a6-49ee-a4fc-d4ec59d212b0.jpg`.
+
+Les noms prévus pour le site figuraient dans le texte du message, à côté de la liste, et non sur le fichier :
+
+- `reparation-crevaison-piaggio-mp3-paris-16e.jpg`
+- `demarrage-booster-yamaha-tracer-700-paris-12e.jpg`
+- `reparation-crevaison-scooter-electrique-silence-paris-3e.jpg`
+- `remorquage-scooter-aprilia-sr-motard-ile-de-france.jpg`
+
+À l'intérieur des JPEG reçus : pas d'EXIF, pas de titre IPTC, pas de `dc:title`. Une mention C2PA dit que le fichier a été fourni par Claude et qu'il a pu être modifié. L'image parente y est citée par un identifiant, pas par un titre.
+
+Les copies mises sur le site sont ces mêmes octets, sans réencodage. Aucun titre n'a été retiré de ces fichiers : il n'y en avait pas. Les titres d'origine, qu'ils aient été le nom du fichier sur l'appareil ou une métadonnée, n'étaient pas dans ce qui a été livré. Ils n'ont donc pas pu servir à savoir quelle image allait avec quel nom.
+
+### Conséquence
+
+L'association s'est faite en regardant les photos. Elle était fausse pour les deux pneus. La roue avec le gonfleur a d'abord été enregistrée sous le nom du MP3. La roue avec la mèche et le marquage blanc, sans gonfleur, a d'abord été enregistrée sous le nom du Silence.
+
+### Correction
+
+Déployé (`365e1ea`), fast-forward de `48b63b9`. Vercel terminé le 1er novembre 2026 à 16:25, heure de Paris. Seul le contenu des deux fichiers a été échangé. Les noms, les textes alternatifs, les emplacements et les phrases des pages de zones n'ont pas changé.
+
+Les JPEG servis et les images `/_next/image/` demandées par les pages (AVIF, cache `MISS`) ont été téléchargés et regardés.
+
+- `reparation-crevaison-piaggio-mp3-paris-16e.jpg`, 346 186 octets : une roue, une mèche, un marquage blanc au sol. Pas de gonfleur. C'est la photo de `/zones-intervention/paris-16e/` et celle de la galerie crevaison.
+- `reparation-crevaison-scooter-electrique-silence-paris-3e.jpg`, 288 989 octets : une roue, une mèche, un gonfleur posé au sol avec son tuyau. C'est la seconde photo de `/zones-intervention/paris-3e/`, après la BMW GS et avant la fiche, et la même image dans la galerie crevaison.
+
+Ces quatre contrôles visuels sont conformes.
+
+Règle retenue : si un fichier joint arrive sans titre exploitable, ou s'il faut deviner quelle image correspond à quel nom, demander avant de l'intégrer.
