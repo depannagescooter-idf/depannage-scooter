@@ -1,6 +1,6 @@
 # Rapports de vérification — depannagescooter.com
 
-Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle des pages : `ea3683c`.
+Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle des pages : `22b63fe`.
 
 Le domaine, les URL absolues et les redirections n’ont pas été modifiés.
 
@@ -291,3 +291,95 @@ Accueil : remorquage 79 €, 89 €, 99 €, 120 €, sur devis au-delà de 20 k
 `/tarifs/` : batterie 70 € / 80 € (booster) et 90 € / 100 € (remplacement), « déplacement inclus » dans les cellules, puis « Déplacement inclus dans le total. » Majorations sans inclusion. Remorquage avec la phrase de distance et le sanglage. Forfait 50 € avec la phrase de main-d'œuvre. Frais de déplacement sans inclusion. Majorations deux-roues sans inclusion. Mentions communes une fois, après le dernier tableau.
 
 Paris 1er : la fiche dit dans la cellule « 70 € TTC déplacement inclus ». Le tableau de remorquage est suivi de la phrase de distance, du sanglage, puis des mentions communes une fois.
+
+---
+
+## Quatre photos d'intervention — MP3, Tracer, Silence, Aprilia
+
+Déployé (`22b63fe`), fast-forward de `c3c2a9f` vers GitHub `main`. Vercel : déploiement terminé. Contrôle le 1er novembre 2026, sur le HTML servi, en-tête `Cache-Control: no-cache`. Le domaine, les URL absolues et les redirections n'ont pas été modifiés. Les chemins d'images restent relatifs.
+
+**109 contrôles, 109 conformes.** Non conformes : aucune.
+
+### Ce qui a été fait
+
+Quatre fichiers JPEG ont été ajoutés tels quels, sans réencodage.
+
+| Fichier | Taille | Poids | Ce que montre le fichier |
+|---|---|---|---|
+| `public/images/interventions/reparation-crevaison-piaggio-mp3-paris-16e.jpg` | 1200×1600 | 288 989 octets | Pneu large, petite réparation dans la bande de roulement, gonfleur posé au sol sur un revêtement mouillé |
+| `public/images/interventions/demarrage-booster-yamaha-tracer-700-paris-12e.jpg` | 1200×1600 | 241 265 octets | Batterie sous la selle, pince rouge et câbles branchés, mallette d'outils au sol |
+| `public/images/interventions/reparation-crevaison-scooter-electrique-silence-paris-3e.jpg` | 1200×1600 | 346 186 octets | Pneu plus étroit, mèche visible, roue au-dessus d'un marquage blanc |
+| `public/images/remorquage/remorquage-scooter-aprilia-sr-motard-ile-de-france.jpg` | 600×600 | 76 298 octets | Scooter sanglé dans un camion, selle rouge et noire, « SR MOTARD » lisible sur le flanc |
+
+Les noms de véhicules viennent des noms de fichiers et des textes demandés. Sur les trois premières photos, le modèle n'est pas écrit dans l'image. Seule la photo de remorquage porte un libellé lisible, « SR MOTARD ». Les deux photos de pneu ont été distinguées par la scène : l'une avec le gonfleur, l'autre avec la mèche seule au-dessus du marquage. Si l'affectation MP3 / Silence devait être inversée, ce sont ces deux fichiers-là.
+
+`pose-meche-pneu-honda-x-adv.jpg` a été retiré de la galerie crevaison seulement. Le fichier reste dans le dépôt (768×1024, 132 399 octets) et dans le guide `/guides/crevaison-scooter-reparer-ou-remorquer/`.
+
+La galerie crevaison compte 5 photos, dans cet ordre : X-ADV mèche sur place, X-ADV gonflage, crevaison de nuit du 1er, MP3, Silence.
+
+La galerie remorquage compte 10 photos. L'Aprilia est la dixième, ajoutée à la fin de la liste partagée par `/remorquage/` et ses 5 pages de service.
+
+Une page de zone peut maintenant porter plusieurs interventions. Chaque intervention a sa photo, puis sa phrase, avant la fiche. Le `clientContent` comparé par `validate:data` est la suite de ces phrases, séparées par une ligne vide. Les phrases de Paris 1er, Paris 2e, Paris 19e et la première phrase de Paris 3e n'ont pas été réécrites.
+
+Le Tracer est placé après la BMW GS sur `/depannage-moto/`. Sur `/depannage-sur-place/demarrage-booster/`, la BMW GS et le Tracer sont côte à côte à partir de 640 px, empilés en dessous.
+
+Les deux galeries calculent le nombre de colonnes selon le nombre de photos. Maximum : 2 en mobile, 3 en tablette, 4 en ordinateur. Si un nombre de colonnes laisserait une seule photo sur la dernière ligne, on descend d'un cran. Si aucun nombre à partir de 2 ne convient, les photos s'empilent en une colonne.
+
+### Ce qui a été constaté en production
+
+Les 13 emplacements ont l'alt exact, `loading="lazy"`, un `src` relatif, et un `sizes` qui contient un jeton `vw`. Chaque URL `/_next/image/` répond 200. Les quatre fichiers neufs et `pose-meche-pneu-honda-x-adv.jpg` répondent aussi 200.
+
+| Photo | Pages |
+|---|---|
+| MP3 | `/depannage-sur-place/crevaison/`, `/zones-intervention/paris-16e/` |
+| Tracer | `/depannage-moto/`, `/depannage-sur-place/demarrage-booster/`, `/zones-intervention/paris-12e/` |
+| Silence | `/depannage-sur-place/crevaison/`, `/zones-intervention/paris-3e/` |
+| Aprilia | `/remorquage/`, `/remorquage/remorquage-scooter/`, `/remorquage/remorquage-moto/`, `/remorquage/remorquage-moto-accidentee/`, `/remorquage/remorquage-3-roues/`, `/remorquage/transfert-garage-concession/` |
+
+Le `src` de repli écrit par Next.js est `w=3840` dès qu'un attribut `sizes` est présent. C'est le plus grand candidat du `srcset`. Le `sizes` n'est pas une valeur fixe en pixels. La largeur réellement téléchargée par le navigateur n'a pas été mesurée.
+
+Galerie crevaison servie : `data-gallery-count="5"`, `data-gallery-cols="1-3-3"`. Le fichier de pose de mèche du X-ADV n'y figure pas. Il est dans le guide, avec son alt : « Pose d'une mèche dans le pneu arrière crevé d'un Honda X-ADV, kit de réparation et compresseur posés à côté de la roue ».
+
+Galerie remorquage servie, sur les 6 pages : `data-gallery-count="10"`, `data-gallery-cols="2-2-4"`, Aprilia dans la liste.
+
+La mise en page a été lue dans le HTML et dans la feuille CSS servie (`min-width: 640px` et `min-width: 1024px`). Elle n'a pas été mesurée par une capture d'écran.
+
+- Crevaison, mobile (moins de 640 px) : 1 colonne, 5 lignes pleine largeur. Deux colonnes finiraient par une photo seule.
+- Crevaison, tablette (640–1023 px) : 3 colonnes, ligne de 3 puis ligne de 2.
+- Crevaison, ordinateur (à partir de 1024 px) : 3 colonnes, ligne de 3 puis ligne de 2.
+- Remorquage, mobile : 2 colonnes, 5 lignes de 2.
+- Remorquage, tablette : 2 colonnes. Trois colonnes finiraient par une photo seule.
+- Remorquage, ordinateur : 4 colonnes, lignes de 4, 4, puis 2.
+
+Textes client servis, photo puis phrase, avant la fiche.
+
+- Paris 16e : « Pneu arrière d'un Piaggio MP3 réparé sur place dans le 16e arrondissement, par pose d'une mèche. »
+- Paris 12e : « Démarrage au booster d'une moto Yamaha Tracer 700 dans le 12e arrondissement. »
+- Paris 3e, première phrase inchangée : « Démarrage au booster d'une moto BMW GS dans le 3e arrondissement, batterie mesurée à 11,7 volts. »
+- Paris 3e, seconde phrase : « Crevaison réparée sur place sur un scooter électrique Silence dans le 3e arrondissement, par pose d'une mèche. »
+
+Paris 1er, Paris 2e et Paris 19e ont aussi été relus. Leurs phrases sont celles d'avant ce déploiement.
+
+Jaccard sur les six `clientContent` non vides. Seuil 0,8 inchangé. Quinze paires, toutes en dessous. Paire la plus proche : Paris 3e / Paris 16e, score **0,2647** (9 mots communs sur 34).
+
+Phrases du sitemap : 179 URL, balises remplacées par des espaces, y compris le contenu des scripts, coupures sur `.` `!` `?`. Aucune phrase ne se termine par un article, une préposition ou une conjonction, formes sans accent comprises. Le mot « a » n'est compté que si le mot d'origine est « a » ou « à ».
+
+| Contrôle | Nombre | Conformes |
+|---|---|---|
+| Alt exact | 13 | 13 |
+| Image `/_next/image/` en 200, `src` relatif | 13 | 13 |
+| `sizes` avec un jeton `vw` | 13 | 13 |
+| `loading="lazy"` | 13 | 13 |
+| Fichiers sources en 200, y compris la pose de mèche du X-ADV | 5 | 5 |
+| Galerie crevaison : 5 images, sans cette pose de mèche | 3 | 3 |
+| Pose de mèche toujours dans le guide | 1 | 1 |
+| Galerie remorquage : 10 images et Aprilia, sur 6 pages | 12 | 12 |
+| Dernière ligne sans image seule | 2 | 2 |
+| CSS de la galerie servi | 1 | 1 |
+| Tracer après la BMW, et à côté d'elle sur la page booster | 2 | 2 |
+| Texte client avant la fiche | 6 | 6 |
+| Phrases exactes de Paris 1er, 2e, 12e, 16e et 19e | 5 | 5 |
+| Paris 3e : première phrase inchangée, seconde ajoutée, photos dans cet ordre | 3 | 3 |
+| Jaccard ≤ 0,8 | 15 | 15 |
+| Sitemap : 179 URL | 1 | 1 |
+| Phrase du sitemap terminée par un mot outil | 1 | 1 |
