@@ -9,7 +9,7 @@ const photos = [
   },
   {
     photo: photoPcxDejanteApres,
-    caption: "Après.",
+    caption: "Après : le pneu est remis en place sur la jante.",
   },
 ] as const;
 
