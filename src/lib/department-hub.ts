@@ -66,7 +66,7 @@ export function departmentFaqs(department: Department): Faq[] {
   return [
     {
       question: "Quels véhicules prenez-vous en charge ?",
-      answer: `Les scooters et les motos ${where}. Le devis téléphonique confirme que l'intervention est possible avant le départ. Le matériel et le plateau sont prévus pour ces deux-roues.`,
+      answer: `Les scooters, les trois-roues et les motos ${where}. Le devis téléphonique confirme que l'intervention est possible avant le départ. Le matériel et le plateau sont prévus pour les scooters, les trois-roues et les motos.`,
     },
     {
       question: "Intervenez-vous la nuit et le week-end ?",

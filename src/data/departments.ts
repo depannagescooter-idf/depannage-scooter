@@ -4,7 +4,7 @@ export interface Department {
   slug: string;
   code: string;
   name: string;
-  /** « à Paris », « en Hauts-de-Seine », « en Seine-Saint-Denis », « dans le Val-de-Marne ». */
+  /** « à Paris », « dans les Hauts-de-Seine », « en Seine-Saint-Denis », « dans le Val-de-Marne ». */
   where: string;
   intro: string;
   /** Meta description complète, 140 à 155 caractères, sans troncature. */
@@ -26,11 +26,11 @@ export const departments: Department[] = [
     slug: "hauts-de-seine",
     code: "92",
     name: "Hauts-de-Seine",
-    where: "en Hauts-de-Seine",
+    where: "dans les Hauts-de-Seine",
     intro:
-      "Dépannage et remorquage de scooters et motos en Hauts-de-Seine, 24h/24, avec un devis ferme confirmé par téléphone avant le déplacement.",
+      "Dépannage et remorquage de scooters et motos dans les Hauts-de-Seine, 24h/24, avec un devis ferme confirmé par téléphone avant le déplacement.",
     metaDescription:
-      "Dépannage et remorquage de scooters et motos en Hauts-de-Seine, 24h/24. Devis ferme par téléphone avant le déplacement, tarif du jour affiché.",
+      "Dépannage et remorquage de scooters et motos dans les Hauts-de-Seine, 24h/24. Devis ferme par téléphone avant le déplacement, tarif du jour affiché.",
   },
   {
     slug: "seine-saint-denis",
