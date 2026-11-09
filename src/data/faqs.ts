@@ -1,5 +1,6 @@
 import type { Faq } from "./types";
 import { company } from "./company";
+import { pneuDejanteFaq } from "./pneu-dejante-faq";
 import { publishedZones } from "./zones";
 
 export const globalFaqs: Faq[] = [
@@ -49,6 +50,7 @@ export const globalFaqs: Faq[] = [
     answer:
       "Ne roulez pas sur le pneu crevé. Appelez-nous avec votre localisation précise. Nous réparons sur place si la crevaison est réparable, sinon nous organisons un remorquage vers un professionnel.",
   },
+  pneuDejanteFaq,
   {
     question: "Proposez-vous un dépannage batterie à domicile ?",
     answer:

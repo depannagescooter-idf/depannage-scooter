@@ -1,4 +1,5 @@
 import type { Service, ServiceCategory } from "./types";
+import { pneuDejanteFaq } from "./pneu-dejante-faq";
 
 const servicesData: Service[] = [
   {
@@ -81,6 +82,7 @@ const servicesData: Service[] = [
         answer:
           "Comptez en moyenne 25 à 40 minutes entre votre appel et l'arrivée du technicien, selon le trafic et la zone exacte. Le délai précis vous est annoncé au téléphone.",
       },
+      pneuDejanteFaq,
     ],
     relatedServices: ["batterie", "demarrage-booster", "remorquage-scooter"],
     priceKey: "DSP_CREVAISON",

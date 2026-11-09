@@ -55,6 +55,20 @@ export const photoSilenceParis3e: InterventionPhoto = {
   height: 1600,
 };
 
+export const photoPcxDejanteAvant: InterventionPhoto = {
+  src: "/images/interventions/pneu-dejante-honda-pcx-avant.jpg",
+  alt: "Scooter Honda PCX au pneu arrière déjanté à Paris 5e, avant l'intervention",
+  width: 1200,
+  height: 1600,
+};
+
+export const photoPcxDejanteApres: InterventionPhoto = {
+  src: "/images/interventions/pneu-dejante-honda-pcx-apres-remise-en-place.jpg",
+  alt: "Pneu arrière d'un Honda PCX remis en place sur sa jante à Paris 5e, encore couvert d'eau savonneuse",
+  width: 1386,
+  height: 1600,
+};
+
 export const photoApriliaSrMotard: InterventionPhoto = {
   src: "/images/remorquage/remorquage-scooter-aprilia-sr-motard-ile-de-france.jpg",
   alt: "Scooter Aprilia SR Motard sanglé dans le camion plateau de DépannageScooter",
@@ -93,6 +107,12 @@ export const zoneInterventions: Record<string, readonly ZoneIntervention[]> = {
     {
       photo: photoSilenceParis3e,
       text: "Crevaison réparée sur place sur un scooter électrique Silence dans le 3e arrondissement, par pose d'une mèche.",
+    },
+  ],
+  "paris-5e": [
+    {
+      photo: photoPcxDejanteApres,
+      text: "Pneu arrière d'un Honda PCX déjanté, remis en place sur sa jante sur place dans le 5e arrondissement.",
     },
   ],
   "paris-12e": [

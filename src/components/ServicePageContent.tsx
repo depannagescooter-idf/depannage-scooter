@@ -10,6 +10,7 @@ import { ServicePriceTable } from "@/components/ServicePriceTable";
 import type { Service } from "@/data/types";
 import { getServiceBySlug } from "@/data/services";
 import { CrevaisonGallery } from "@/components/CrevaisonGallery";
+import { PneuDejanteSection } from "@/components/PneuDejanteSection";
 import { InterventionFigure, PAIR_SIZES } from "@/components/InterventionFigure";
 import { RemorquageGallery } from "@/components/RemorquageGallery";
 import {
@@ -131,6 +132,8 @@ export function ServicePageContent({
               ))}
             </ol>
           </section>
+
+          {service.slug === "crevaison" && <PneuDejanteSection />}
 
           <section className="mt-10">
             <h2 className="section-title">Combien ça coûte ?</h2>
