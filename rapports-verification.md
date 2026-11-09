@@ -1,6 +1,6 @@
 # Rapports de vérification — depannagescooter.com
 
-Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle des pages : `cc0f71f`. L'échange des deux photos de pneu est `365e1ea`.
+Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle des pages : `1ec93b6`. Le contrôle du pneu déjanté est `cc0f71f`. L'échange des deux photos de pneu est `365e1ea`.
 
 Le domaine, les URL absolues et les redirections n’ont pas été modifiés.
 
@@ -490,3 +490,75 @@ Phrases du sitemap : 179 URL, balises remplacées par des espaces, y compris le 
 | `clientContent` exact sur les 7 zones qui en ont un | 7 | 7 |
 | Jaccard ≤ 0,8 | 21 | 21 |
 | Sitemap : 179 URL, phrases sans mot outil en fin | 2 | 2 |
+
+---
+
+## Hubs — texte pour un client en panne
+
+Déployé (`1ec93b6`), fast-forward de `dd743be`. Vercel terminé le 9 novembre 2026 à 01:46, heure de Paris. Contrôle sur le HTML servi, en-tête `Cache-Control: no-cache`. Le domaine, les URL absolues, les redirections, les titres, les H1, les metas et les tarifs n'ont pas été modifiés.
+
+**196 contrôles, 196 conformes.** Non conformes : aucune.
+
+### Couverture, vérifiée avant d'écrire « partout »
+
+Les communes officielles viennent de geo.api.gouv.fr, comparées aux pages déjà publiées.
+
+| Département | Pages publiées | Communes officielles | Manquante |
+|---|---|---|---|
+| Paris | 20 arrondissements, du 1er au 20e | 20 arrondissements | aucune |
+| Hauts-de-Seine | 36 | 36 | aucune |
+| Seine-Saint-Denis | 39 | 39 | aucune |
+| Val-de-Marne | 47 | 47 | aucune |
+
+En Seine-Saint-Denis, la commune officielle Saint-Ouen-sur-Seine est la page déjà publiée sous le nom Saint-Ouen. Aucune commune n'a été ajoutée.
+
+### Ce qui a été réécrit
+
+Les quatre hubs sont produits par le même texte, avec le lieu et les moyennes de chacun. Ces moyennes sont celles déjà calculées sur les délais enregistrés des pages de zone, arrondies : Paris 25 à 40, Hauts-de-Seine 34 à 50, Seine-Saint-Denis 32 à 48, Val-de-Marne 32 à 47. Aucun délai n'a été inventé.
+
+Le paragraphe qui expliquait l'origine des données de chaque page a été retiré. Les fiches de commune n'ont pas été modifiées.
+
+Le décompte de mots du hub, hors listes de liens, reste au-dessus du plancher de 400 : Paris 478, Hauts-de-Seine 484, Seine-Saint-Denis 484, Val-de-Marne 490. Le plancher n'a pas été abaissé.
+
+### Phrases servies
+
+Paris, `/zones-intervention/paris/` :
+
+« En journée, comptez en général 25 à 40 minutes à Paris. Le délai exact vous est confirmé par téléphone avant le départ, selon l'endroit où vous êtes. »
+
+« Non. C'est un délai moyen en journée ; celui de votre intervention vous est confirmé au téléphone. »
+
+« Intervenez-vous partout à Paris ? » — « Oui, dans les vingt arrondissements. »
+
+Hauts-de-Seine, `/zones-intervention/hauts-de-seine/` :
+
+« En journée, comptez en général 34 à 50 minutes en Hauts-de-Seine. Le délai exact vous est confirmé par téléphone avant le départ, selon l'endroit où vous êtes. »
+
+Même réponse sur le délai. « Intervenez-vous partout en Hauts-de-Seine ? » — « Oui, dans toutes les communes du département. »
+
+Seine-Saint-Denis, `/zones-intervention/seine-saint-denis/` :
+
+« En journée, comptez en général 32 à 48 minutes en Seine-Saint-Denis. Le délai exact vous est confirmé par téléphone avant le départ, selon l'endroit où vous êtes. »
+
+Même réponse sur le délai. « Intervenez-vous partout en Seine-Saint-Denis ? » — « Oui, dans toutes les communes du département. »
+
+Val-de-Marne, `/zones-intervention/val-de-marne/` :
+
+« En journée, comptez en général 32 à 47 minutes dans le Val-de-Marne. Le délai exact vous est confirmé par téléphone avant le départ, selon l'endroit où vous êtes. »
+
+Même réponse sur le délai. « Intervenez-vous partout dans le Val-de-Marne ? » — « Oui, dans toutes les communes du département. »
+
+### Ce qui a été constaté en production
+
+Sur les quatre hubs, le texte visible hors en-tête, navigation, pied de page et scripts ne contient aucun des mots entiers « page », « pages », « bloc », « blocs », « fourchette », « fourchettes ». « Selle bloquée » n'est pas compté : ce n'est pas le mot « bloc ».
+
+Les phrases du sitemap : 179 URL, balises remplacées par des espaces, y compris le contenu des scripts, coupures sur `.` `!` `?`. Aucune phrase ne se termine par un article, une préposition ou une conjonction, formes sans accent comprises. Le mot « a » n'est compté que si le mot d'origine est « a » ou « à ».
+
+| Contrôle | Nombre | Conformes |
+|---|---|---|
+| Mots page, bloc, fourchette absents du texte visible | 4 | 4 |
+| Phrase de délai servie telle qu'écrite | 4 | 4 |
+| Réponse FAQ du délai servie telle qu'écrite | 4 | 4 |
+| Question et réponse de couverture servies | 4 | 4 |
+| Sitemap : 179 URL | 1 | 1 |
+| Chaque URL du sitemap, phrase sans mot outil en fin | 179 | 179 |
