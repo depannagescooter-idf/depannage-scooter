@@ -21,7 +21,7 @@ import { faqPageSchema } from "@/lib/schema";
 export function DepartmentHubContent({ department }: { department: Department }) {
   const zones = getDepartmentZones(department.slug);
   const stats = departmentDelayStats(zones);
-  const paragraphs = departmentParagraphs(department, stats);
+  const paragraphs = departmentParagraphs(department);
   const faqs = departmentFaqs(department);
 
   return (
@@ -49,7 +49,9 @@ export function DepartmentHubContent({ department }: { department: Department })
         <div data-hub-copy>
           <section className="mt-10 max-w-3xl">
             <h2 className="section-title">Délai moyen</h2>
-            <p className="mt-4 leading-relaxed text-asphalte">{departmentDelayText(stats)}</p>
+            <p className="mt-4 leading-relaxed text-asphalte">
+              {departmentDelayText(stats, department.where)}
+            </p>
           </section>
 
           <section className="mt-10">

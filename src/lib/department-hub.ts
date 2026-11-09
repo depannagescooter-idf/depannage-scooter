@@ -33,11 +33,11 @@ function money(amount: number | null): string {
   return formatPrice(amount);
 }
 
-export function departmentDelayText(stats: DelayStats): string {
-  return `Sur les ${stats.count} pages, les délais annoncés vont de ${stats.low} à ${stats.high} minutes. La moyenne des bornes basses est ${stats.avgMin} minutes, et la moyenne des bornes hautes est ${stats.avgMax} minutes. Cette moyenne décrit les pages déjà publiées. Elle ne remplace pas le délai de la course, confirmé par téléphone avant le départ, quand le lieu de panne est connu.`;
+export function departmentDelayText(stats: DelayStats, where: string): string {
+  return `En journée, comptez en général ${stats.avgMin} à ${stats.avgMax} minutes ${where}. Le délai exact vous est confirmé par téléphone avant le départ, selon l'endroit où vous êtes.`;
 }
 
-export function departmentParagraphs(department: Department, stats: DelayStats): string[] {
+export function departmentParagraphs(department: Department): string[] {
   const travel = departmentTravelKey(department.code);
   const total = money(getDspTotal(travel));
   const base = money(pricing.dsp.baseFee);
@@ -49,14 +49,9 @@ export function departmentParagraphs(department: Department, stats: DelayStats):
   const sunday = pricing.surcharges.weekendSunday.percent;
   const holiday = pricing.surcharges.holiday.percent;
   const where = department.where;
-  const pages =
-    department.code === "75"
-      ? `Les ${stats.count} arrondissements ont chacun une page.`
-      : `Les ${stats.count} communes ont chacune une page.`;
 
   return [
     `Le dépannage sur place ${where} couvre la crevaison, la batterie à plat, le démarrage au booster, la livraison de carburant et l'ouverture d'une selle bloquée. Le technicien se déplace avec le matériel et intervient sur le scooter ou la moto. Si la réparation n'est pas possible sur place, le remorquage sur plateau emmène le deux-roues à l'adresse d'arrivée choisie. Le prix du plateau dépend de la distance entre le lieu de panne et cette adresse. Personne ne part tant que le devis n'a pas été confirmé par téléphone.`,
-    `${pages} Chacune indique la distance routière jusqu'à la mairie, le délai annoncé, le tarif du jour et la population. La distance et la population viennent de données publiques. Le tarif vient de la grille. Le délai inscrit sur une page est celui enregistré pour cette page. La moyenne du bloc précédent est la moyenne de ces fourchettes, rien d'autre. Le délai utile reste celui que l'opérateur confirme au téléphone.`,
     `Un dépannage sur place ${where} est facturé ${total} TTC en journée : ${base} pour la prestation et ${travelFee} pour le déplacement. Le remorquage de jour va de ${towMin} à ${towMax} jusqu'à 20 kilomètres, puis sur devis au-delà. La nuit, de 20 h à 8 h, la majoration est de ${night} %. Le samedi, elle est de ${saturday} %. Le dimanche, elle est de ${sunday} %. Un jour férié, elle est de ${holiday} %. Ces taux sont ceux de la grille. Le paiement se fait sur place, par carte bancaire ou en espèces.`,
   ];
 }
@@ -85,7 +80,7 @@ export function departmentFaqs(department: Department): Faq[] {
     {
       question: "Le délai moyen est-il garanti ?",
       answer:
-        "Non. C'est la moyenne des fourchettes annoncées sur les pages de ce département. Le délai de votre course est celui confirmé au téléphone, selon la position du véhicule au moment de l'appel.",
+        "Non. C'est un délai moyen en journée ; celui de votre intervention vous est confirmé au téléphone.",
     },
     {
       question: "Que faut-il indiquer au téléphone ?",
@@ -93,9 +88,11 @@ export function departmentFaqs(department: Department): Faq[] {
         "L'adresse de la panne, le type de deux-roues, ce qui ne fonctionne plus et, pour un remorquage, l'adresse d'arrivée. Ces éléments permettent de confirmer le devis avant le déplacement.",
     },
     {
-      question: "Une adresse hors des pages listées est-elle couverte ?",
+      question: `Intervenez-vous partout ${where} ?`,
       answer:
-        "Non. Le déplacement au tarif de cette page vaut pour les pages listées plus bas. Une adresse absente de cette liste n'est pas desservie.",
+        department.code === "75"
+          ? "Oui, dans les vingt arrondissements."
+          : "Oui, dans toutes les communes du département.",
     },
   ];
 }
@@ -105,8 +102,8 @@ export function departmentHubWordCount(department: Department, zones: Zone[]): n
   const stats = departmentDelayStats(zones);
   const text = [
     department.intro,
-    departmentDelayText(stats),
-    ...departmentParagraphs(department, stats),
+    departmentDelayText(stats, department.where),
+    ...departmentParagraphs(department),
     ...departmentFaqs(department).flatMap((faq) => [faq.question, faq.answer]),
     "Délai moyen",
     "Tarifs",
