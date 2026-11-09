@@ -1,6 +1,6 @@
 # Rapports de vérification — depannagescooter.com
 
-Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle complet des pages : `22b63fe`. L'échange des deux photos de pneu est `365e1ea`.
+Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle des pages : `cc0f71f`. L'échange des deux photos de pneu est `365e1ea`.
 
 Le domaine, les URL absolues et les redirections n’ont pas été modifiés.
 
@@ -421,3 +421,72 @@ Les JPEG servis et les images `/_next/image/` demandées par les pages (AVIF, ca
 Ces quatre contrôles visuels sont conformes.
 
 Règle retenue : si un fichier joint arrive sans titre exploitable, ou s'il faut deviner quelle image correspond à quel nom, demander avant de l'intégrer.
+
+---
+
+## Pneu déjanté — remise en place sur la jante
+
+Déployé (`cc0f71f`), fast-forward de `cf363ba`. Vercel terminé le 9 novembre 2026 à 01:26, heure de Paris. Contrôle sur le HTML servi, en-tête `Cache-Control: no-cache`. Le domaine, les URL absolues et les redirections n'ont pas été modifiés. Les chemins d'images restent relatifs. Les plaques blanchies n'ont pas été retouchées.
+
+**63 contrôles, 63 conformes.** Non conformes : aucune.
+
+### Identification des photos
+
+Les pièces jointes sont arrivées sous le nom `image.jpg`. Elles ont été reconnues par les dimensions, puis confirmées à l'œil, avant d'être copiées sans réencodage.
+
+| Fichier | Taille lue | Ce que montre le fichier |
+|---|---|---|
+| `pneu-dejante-honda-pcx-avant.jpg` | 1200×1600 | Pneu, carter et ressort secs, logo « PCX » en haut, aucune trace d'eau |
+| `pneu-dejante-honda-pcx-apres-remise-en-place.jpg` | 1386×1600 | Pneu, carter et ressort mouillés, bulles d'eau savonneuse sur le pneu |
+
+### Ce qui a été fait
+
+Section ajoutée sur `/depannage-sur-place/crevaison/`, après « Comment se déroule l'intervention ? » et avant « Combien ça coûte ? ». Titre : « Pneu déjanté : remise en place sur la jante ».
+
+Le texte dit ce qu'est un pneu déjanté (talon sorti de la jante, souvent après un roulage à basse pression, un choc contre un trottoir ou un nid-de-poule, ou une perte d'air brutale), ce qui est fait sur place (lubrification du talon à l'eau savonneuse, regonflage pour remettre le pneu sur la jante, contrôle de la pression, de l'étanchéité, du pneu et de la jante) et quand il faut remorquer (talon abîmé, jante voilée ou fissurée, pneu déchiré). Aucun tarif propre à cette prestation.
+
+Les deux photos sont côte à côte à partir de 640 px, empilées en dessous. Légendes : « Avant : le pneu était sorti de sa jante. » et « Après : le pneu est remis en place sur la jante. » Elles ne sont pas dans la galerie crevaison.
+
+La question « Pouvez-vous remettre en place un pneu déjanté ? » est dans les FAQ de la page crevaison et de `/faq/`, donc aussi dans les données structurées FAQ des deux pages. Réponse : « Oui, sur place, si le pneu et la jante ne sont pas abîmés ; sinon, remorquage vers un atelier. »
+
+`/zones-intervention/paris-5e/` affiche la photo d'après, puis la phrase exacte, avant la fiche : « Pneu arrière d'un Honda PCX déjanté, remis en place sur sa jante sur place dans le 5e arrondissement. »
+
+Le premier déploiement (`cf363ba`) avait pour légende le seul mot « Après. ». Cette phrase se terminait par la préposition « après ». La légende a été allongée avant le contrôle final.
+
+### Ce qui a été constaté en production
+
+Les JPEG servis et les images `/_next/image/` demandées par les pages ont été téléchargés et regardés.
+
+- Avant, 1200×1600, 239 642 octets. Scooter Honda PCX, logo « PCX » en haut. Pneu, carter et ressort secs. Pas de trace d'eau. Le talon sorti de la jante ne se voit pas. C'est la photo « Avant » de la page crevaison.
+- Après, 1386×1600, 314 280 octets. Même angle. Pneu, carter et ressort mouillés, bulles d'eau savonneuse sur le pneu. C'est la photo « Après » de la page crevaison et la photo de Paris 5e.
+
+Sous 640 px les deux photos sont empilées. À partir de 640 px elles sont côte à côte. Cette mise en page est lue dans la classe servie `grid gap-4 sm:grid-cols-2`. Elle n'a pas été mesurée par une capture d'écran.
+
+Les trois expressions sont dans la section : « pneu déjanté », « pneu sorti de la jante », « remettre un pneu sur sa jante ».
+
+Chaque emplacement a l'alt exact, `loading="lazy"`, un `src` relatif et un `sizes` qui contient un jeton `vw`. Les URL d'image répondent 200. Le `src` de repli de Next.js reste `w=3840` dès qu'un `sizes` est présent. La largeur réellement téléchargée par le navigateur n'a pas été mesurée.
+
+Galerie crevaison : 5 images. Les deux photos du PCX n'y figurent pas.
+
+La question et la réponse sont visibles sur la page crevaison et sur `/faq/`, et présentes dans le JSON-LD `FAQPage` des deux pages.
+
+La section nouvelle et la réponse FAQ ne contiennent aucun montant.
+
+Jaccard sur les sept `clientContent` non vides. Seuil 0,8 inchangé. Vingt et une paires, toutes en dessous. Paire la plus proche : Paris 5e / Paris 16e, score **0,28**.
+
+Phrases du sitemap : 179 URL, balises remplacées par des espaces, y compris le contenu des scripts, coupures sur `.` `!` `?`. Aucune phrase ne se termine par un article, une préposition ou une conjonction, formes sans accent comprises. Le mot « a » n'est compté que si le mot d'origine est « a » ou « à ».
+
+| Contrôle | Nombre | Conformes |
+|---|---|---|
+| H2 présent, après le déroulé et avant le tarif | 2 | 2 |
+| Les trois expressions | 3 | 3 |
+| Légendes Avant et Après, grille côte à côte | 3 | 3 |
+| Section et réponse FAQ sans nouveau montant | 2 | 2 |
+| Alt exact, `sizes` avec `vw`, chargement différé, image en 200 | 12 | 12 |
+| Galerie crevaison à 5 images, sans les photos du PCX | 2 | 2 |
+| Question et réponse visibles, et dans les deux JSON-LD FAQ | 4 | 4 |
+| Paris 5e : photo d'après, phrase exacte, avant la fiche | 3 | 3 |
+| Fichiers JPEG servis en 200 | 2 | 2 |
+| `clientContent` exact sur les 7 zones qui en ont un | 7 | 7 |
+| Jaccard ≤ 0,8 | 21 | 21 |
+| Sitemap : 179 URL, phrases sans mot outil en fin | 2 | 2 |
