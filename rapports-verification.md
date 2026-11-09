@@ -1,6 +1,6 @@
 # Rapports de vérification — depannagescooter.com
 
-Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle des pages : `1ec93b6`. Le contrôle du pneu déjanté est `cc0f71f`. L'échange des deux photos de pneu est `365e1ea`.
+Mesurés sur le HTML servi en production (`https://www.depannagescooter.com`), après déploiement. Les entités HTML ont été décodées avant les recherches. GitHub `main` au moment du dernier contrôle des pages : `9dc36c1`. Le contrôle des hubs client est `1ec93b6`. Le contrôle du pneu déjanté est `cc0f71f`. L'échange des deux photos de pneu est `365e1ea`.
 
 Le domaine, les URL absolues et les redirections n’ont pas été modifiés.
 
@@ -562,3 +562,100 @@ Les phrases du sitemap : 179 URL, balises remplacées par des espaces, y compris
 | Question et réponse de couverture servies | 4 | 4 |
 | Sitemap : 179 URL | 1 | 1 |
 | Chaque URL du sitemap, phrase sans mot outil en fin | 179 | 179 |
+
+---
+
+## Hauts-de-Seine et trois-roues
+
+Déployé (`9dc36c1`), fast-forward de `26f5763`. Vercel terminé le 9 novembre 2026 à 02:19, heure de Paris. Contrôle sur le HTML servi, en-tête `Cache-Control: no-cache`. « en Seine-Saint-Denis » et « dans le Val-de-Marne » n'ont pas été modifiés.
+
+**363 contrôles, 363 conformes.** Non conformes : aucune.
+
+« du Hauts-de-Seine » était déjà absent des 179 pages avant la correction. Il l'est encore.
+
+| Contrôle | Nombre | Conformes |
+|---|---|---|
+| Le plan du site compte 179 adresses | 1 | 1 |
+| Ni « en Hauts-de-Seine » ni « du Hauts-de-Seine », description pour les moteurs comprise | 179 | 179 |
+| Réponse « Quels véhicules prenez-vous en charge ? » servie telle qu'écrite | 4 | 4 |
+| Aucune phrase ne finit par un article, une préposition ou une conjonction | 179 | 179 |
+
+Phrases lues sur le HTML, après retrait des commentaires laissés entre les mots :
+
+- Titre : « Dépannage scooter et moto dans les Hauts-de-Seine (92) ».
+- Description : « Dépannage et remorquage de scooters et motos dans les Hauts-de-Seine, 24h/24. Devis ferme par téléphone avant le déplacement, tarif du jour affiché. »
+- Délai : « En journée, comptez en général 34 à 50 minutes dans les Hauts-de-Seine. »
+- Intertitre : « Nos prestations dans les Hauts-de-Seine ».
+- Lien depuis Neuilly-sur-Seine : « dépannage scooter dans les Hauts-de-Seine (92) ».
+- Véhicules, les quatre hubs : « Les scooters, les trois-roues et les motos [lieu]. Le devis téléphonique confirme que l'intervention est possible avant le départ. Le matériel et le plateau sont prévus pour les scooters, les trois-roues et les motos. »
+
+---
+
+## État du site au 9 novembre 2026
+
+Version en ligne : `9dc36c1`, mise en ligne le 9 novembre 2026 à 02:19, heure de Paris. Le plan des pages compte 179 adresses.
+
+| Type | Nombre |
+|---|---|
+| Accueil | 1 |
+| Services (dépannage sur place, moto, voiture, remorquage, avec leurs pages d'entrée) | 16 |
+| Arrondissements et communes | 142 |
+| Pages de département | 4 |
+| Liste des zones | 1 |
+| Guides, page d'entrée comprise | 10 |
+| Tarifs, questions, à propos, contact, avis | 5 |
+
+Les mentions légales, les conditions de vente, la confidentialité et la page de remerciement ne sont pas dans cette liste. Soixante pages « un service dans une ville » existent aussi et sont écartées de la liste. Elles n'ont pas été rouvertes une par une aujourd'hui.
+
+### Depuis septembre
+
+- Mi-septembre : le site est en place, avec les textes légaux, la batterie voiture, le logo et la première structure de pages.
+- 22 septembre : textes qui se contredisaient, page d'avis, retrait des pages ville du plan, réglages techniques.
+- 30 septembre : une réécriture des zones a été annulée, les pages se ressemblaient trop.
+- 1er octobre : fiches chiffrées, distance cachée quand plusieurs zones partagent la même mairie, grande couronne retirée, 75 communes ajoutées (142 zones), quatre pages de département, dépannage mis devant le remorquage, précisions de prix, crevaison par mèche, grille du pneu voiture.
+- 2 octobre : titre de l'accueil, délais des 75 communes, logo, bouton d'appel.
+- 10 octobre : quatre photos d'intervention.
+- 11 octobre : mentions sous les tableaux de prix.
+- 1er novembre : quatre autres photos, puis échange des deux photos de pneu qui avaient été inversées.
+- 9 novembre : remise en place d'un pneu déjanté, texte des départements réécrit pour un client en panne, puis « dans les Hauts-de-Seine » et les trois-roues.
+
+### Interventions publiées
+
+Sept récits nomment l'arrondissement.
+
+- Scooter, crevaison de nuit : Paris 1er. Page du 1er et galerie de la page crevaison.
+- Scooter, démarrage au booster : Paris 2e. Page du 2e et page batterie.
+- BMW GS, démarrage au booster : Paris 3e. Page du 3e, page dépannage moto, page démarrage.
+- Scooter électrique Silence, crevaison par mèche : Paris 3e. Page du 3e et galerie crevaison.
+- Honda PCX, pneu déjanté remis sur la jante : Paris 5e. Page du 5e (photo d'après) et section de la page crevaison (avant et après).
+- Yamaha Tracer 700, démarrage au booster : Paris 12e. Page du 12e, page dépannage moto, page démarrage.
+- Piaggio MP3, crevaison par mèche : Paris 16e. Page du 16e et galerie crevaison.
+- Scooter au pneu usé, réparation refusée, remorquage : Paris 19e. Page du 19e, page crevaison, page remorquage scooter.
+
+La galerie crevaison montre aussi un Honda X-ADV, sans commune écrite. Le guide crevaison reprend ces photos, plus une troisième du même véhicule.
+
+La galerie remorquage, sur la page remorquage et les cinq pages de remorquage, montre un scooter blanc, une Kawasaki Ninja, une Honda Goldwing, une Suzuki GSX-R, un Piaggio MP3 500, un maxi-scooter, une Royal Enfield Classic, une Royal Enfield Himalayan, une Harley-Davidson Sportster et un Aprilia SR Motard. Seule la Ninja est située, « en Île-de-France ». Les autres textes ne donnent pas de commune.
+
+### Ressemblance des pages de zones
+
+En moyenne, deux pages de zone partagent 74,3 % de leurs mots (0,743). Sept paires sur 10 011 dépassent 90 % : Bois-Colombes et La Garenne-Colombes, Les Lilas et Le Pré-Saint-Gervais, Chevilly-Larue et Rungis, Noiseau et Ormesson-sur-Marne, Coubron et Montfermeil, Garches et Vaucresson, Noiseau et La Queue-en-Brie. Avant cette correction, le compte était 0,742 et six paires. Sept pages portent un récit propre. La plus proche de ces paires, Paris 5e et Paris 16e, partage 28 % des mots. Le seuil de 80 % sur ces récits n'est pas franchi.
+
+### Points ouverts
+
+1. Ces sept paires se ressemblent assez pour pouvoir être prises pour des copies. Elles n'ont pas été réécrites.
+2. Hors de la question sur les véhicules, les pages de département parlent encore de « scooter ou moto » et de « deux-roues ». Les introductions de commune aussi. L'accueil et la question corrigée, eux, citent les trois-roues.
+3. Aucun avis rédigé n'est affiché. La page annonce 4,7 sur 5 et 168 avis Google. Cette note n'a pas été revérifiée sur Google aujourd'hui. Dix avis devaient être ajoutés ; ils ne le sont pas.
+4. La page À propos dit qu'une assurance est souscrite, sans le nom de l'assureur.
+5. La page de Saint-Ouen ne porte pas le nom officiel Saint-Ouen-sur-Seine.
+6. La plupart des photos de remorquage ne disent pas où le véhicule a été pris en charge.
+7. L'image de partage des pages de département ne reçoit pas le nom du département. L'image elle-même n'a pas été ouverte aujourd'hui.
+
+### Vérifié, et non vérifié
+
+Vérifié sur les pages servies : les deux formulations interdites, les quatre réponses véhicules, les fins de phrases, et les phrases citées plus haut. Vercel a confirmé la mise en ligne.
+
+Non vérifié : l'affichage dans un navigateur, les fichiers image de cette mise en ligne, la note Google, la fréquentation du site, le bon fonctionnement d'un appel, et chaque page écartée du plan.
+
+### Anomalies laissées en l'état
+
+Les phrases des hubs et des communes qui oublient les trois-roues. Le nom Saint-Ouen. L'assureur absent. Les lieux manquants sur les photos de remorquage. La photo « avant » du Honda PCX, vue le matin du 9 novembre, ne montre pas clairement le pneu sorti de la jante. « du Hauts-de-Seine » n'existait pas : il n'y avait rien à remplacer.
